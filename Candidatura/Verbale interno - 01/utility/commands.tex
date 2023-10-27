@@ -2,59 +2,49 @@
 \newcommand{\Gruppo}{SWEnergy}
 \newcommand{\Data}{17/10/2023}
 \newcommand{\Mail}{\href{mailto:project.swenergy@gmail.com}{project.swenergy@gmail.com}}
-\newcommand{\Versione}{1.0.0}
-\newcommand{\Descrizione}{Primo incontro, definizione di nome, logo e canali di comunicazione}
-\newcommand{\Stato}{Approvato}
-\newcommand{\Redattori}{Alessandro Tigani Sava}
-\newcommand{\Verificatori}{Matteo Bando}
-\newcommand{\Approvatori}{Niccolò Carlesso}
-\newcommand{\Responsabile}{}
+\newcommand{\Versione}{0.1.0}
+\newcommand{\Descrizione}{Primo incontro, nome, logo e metodi di comunicazione}
 
 \newcommand{\copertina}{
 	\begin{titlepage}
-		\vspace*{-3.5cm}
-    	\makebox[\textwidth]{\includegraphics[width=1\paperwidth]{img/header.png}}
 		\begin{center}
-			\includegraphics[width=1\textwidth]{img/logo}	\\
+			\includegraphics[width=0.5\textwidth]{img/logo}	\\
 			\vspace{1cm}
 			\Mail{}	\\
 			\vspace{0.5cm}
-			\textbf{\begin{LARGE} \Titolo \end{LARGE}}	\\
+			\textbf{\begin{large} \Titolo{} \end{large}}	\\
 			\vspace{1cm}
 			\textbf{Descrizione:} \Descrizione{} \\
 			\vspace{1cm}
 		\end{center}
 		\begin{center}
-			{
-			\renewcommand{\arraystretch}{1.5}
-			\begin{tabular}{ll}
-				\textbf{Stato} 			& \Stato		\\ 
-				\textbf{Data}			& \Data			\\
+			\begin{tabular}{lll}
+				\textbf{Stato} 			& Non approvato	&	\\ 
+				\textbf{Data}			& \Data{}	&	\\
 				\midrule
-				\textbf{Redattori} 		& \Redattori 	\\  
-				\textbf{Verificatori} 	& \Verificatori	\\
-				\textbf{Approvatori} 	& \Approvatori	\\    
+				\textbf{Redattori} 		& Alessandro Tigani Sava 	&	\\  
+				\textbf{Verificatori} 	&	&	\\
+				\textbf{Approvatori} 	&	&  	\\    
 				\midrule
-				\textbf{Versione}		& \Versione		\\
-			\end{tabular}
-			}
+				\textbf{Versione}		& \Versione{}	& 	\\
+			   \end{tabular}
 		\end{center}
-		%\vspace{4cm}
-		%\begin{flushright}
-		%	\begin{tabular}{ll}
-		%		Il responsabile:	&  	\Responsabile	\\
-		%							&					\\
-		%							&	\underline{\hspace{3cm}} 	\\
-		%	\end{tabular}
-		%\end{flushright}
+		\vspace{5cm}
+		\begin{flushright}
+			\begin{tabular}{ll}
+				Il responsabile:	&  	Nuvolaris	\\
+									&				\\
+									&	\underline{\hspace{3cm}} 	\\
+			\end{tabular}
+		\end{flushright}
 	\end{titlepage}
 }
 
 \fancypagestyle{plain}{
   	\fancyhf{}
-  	\rhead{ \includegraphics[scale=0.05]{img/horizontal_logo.png}}
-  	\lhead{\Titolo}
-  	%\lfoot{\Titolo}
+  	\rhead{ \includegraphics[scale=0.02]{img/logo.png}}
+  	\lhead{\Gruppo}
+  	\lfoot{\Titolo{}}
   	\rfoot{\thepage{}} 
   	\renewcommand{\headrulewidth}{0.2pt}
   	\renewcommand{\footrulewidth}{0.2pt}
