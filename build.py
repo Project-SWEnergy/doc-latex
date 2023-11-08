@@ -1,5 +1,7 @@
 import os
 import subprocess
+import re
+
 
 # Define the source (target) directory where your LaTeX files are located
 source_directory = input("Enter the source directory: ")
@@ -23,77 +25,98 @@ to_delete = [
 ]
 
 
-def convert_file(source_directory, destination_directory, to_delete):
-    # List all LaTeX files in the source directory
-    print("Compiling in ", source_directory, "...")
-    latex_files = [
-        file for file in os.listdir(source_directory) if file.endswith(".tex")
-    ]
-
-    current_working_directory = os.getcwd()
-    os.chdir(source_directory)
-
-    for latex_file in latex_files:
-        latex_file_path = os.path.join(latex_file)
-
-        try:
-            # Run pdflatex to compile the LaTeX file into a PDF and specify the output directory
-            subprocess.check_call(
-                [
-                    "pdflatex",
-                    latex_file_path,
-                ],
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.DEVNULL,
-            )
-
-            # Delete intermediate files except for the PDF file
-            intermediate_files = [
-                file for file in os.listdir("./") if file in to_delete
-            ]
-            for intermediate_file in intermediate_files:
-                intermediate_file_path = os.path.join(
-                    source_directory, intermediate_file
-                )
-                os.remove(intermediate_file_path)
-
-            # Move the PDF file to the destination directory
-            pdf_file = latex_file.replace(".tex", ".pdf")
-            destination_file_path = os.path.join(
-                destination_directory, os.path.basename(source_directory + ".pdf")
-            )
-            os.rename(pdf_file, destination_file_path)
-
-            print("Compiled ", latex_file, " successfully!")
-        except subprocess.CalledProcessError as e:
-            print(f"Error compiling {latex_file}: {e}")
-    os.chdir(current_working_directory)
-
-
-# Get a list of all directories in the specified path
-# directories = [
-#    d
-#    for d in os.listdir(source_directory)
-#    if os.path.isdir(os.path.join(source_directory, d))
-# ]
-def get_dir(path):
-    dirs = os.listdir(path)
+def get_version(path):
+    dirs = [d for d in os.listdir(path) if os.path.isdir(os.path.join(path, d))]
     for d in dirs:
-        if ".tex" in d:
-            return [path]
-    dirs = [os.path.join(path, d) for d in dirs]
+        files = os.listdir(os.path.join(path, d))
+        if "registro_modifiche.tex" in files:
+            with open(os.path.join(path, d, "registro_modifiche.tex")) as f:
+                # Define a regular expression pattern to match version numbers
+                version_pattern = r"\d+\.\d+\.\d+"
+
+                # Find all matches of version numbers in the text
+                versions = re.findall(version_pattern, f.read())
+
+                if versions:
+                    # The latest version is the first match in the list
+                    latest_version = versions[0]
+                    return (True, ("v" + latest_version))
+    return (False, "v0")  # No version found in the text
+
+
+def convert_file(source_directory, destination_directory, to_delete):
+    # Define the name of the LaTeX file to be compiled
+    # there needs to be for how get_dir works
+    latex_file = "main.tex"
+    os.chdir(source_directory)
+    print("Compiling ", os.path.basename(destination_directory), "...")
+
+    try:
+        # Run pdflatex to compile the LaTeX file into a PDF and specify the output directory
+        subprocess.check_call(
+            [
+                "pdflatex",
+                latex_file,
+            ],
+            stdout=subprocess.DEVNULL,  # no output in the terminal
+            stderr=subprocess.DEVNULL,  # no output in the terminal
+        )
+
+        # Delete intermediate files except for the PDF file
+        intermediate_files = [file for file in os.listdir("./") if file in to_delete]
+        for intermediate_file in intermediate_files:
+            os.remove(intermediate_file)
+
+        # Rename the PDF file to include the version number, if applicable
+        # Move the PDF file to the destination directory
+        isVersioned, version = get_version(source_directory)
+        if isVersioned:
+            os.rename(
+                latex_file.replace(".tex", ".pdf"),
+                destination_directory.replace(".pdf", f"-{version}.pdf"),
+            )
+        else:
+            os.rename(latex_file.replace(".tex", ".pdf"), destination_directory)
+
+        print("Compiled ", os.path.basename(destination_directory), " successfully!")
+    except subprocess.CalledProcessError as e:
+        print(f"Error compiling {latex_file}: {e}")
+
+
+# Get a list of all directories in the specified path which contain the main.tex file
+def get_src_dir(path):
+    # list all the files (and directories) in the specified path
+    dirs = os.listdir(path)
+
+    # if the main.tex file is in the specified path, return the path
+    if "main.tex" in dirs:
+        return [path]
+
+    # add path to each directory
+    dirs = [os.path.join(path, d) for d in dirs if os.path.isdir(os.path.join(path, d))]
+
+    # recurse to each directory in the specified path
     for d in dirs:
         dirs.remove(d)
-        dirs.extend(get_dir(d))
+        dirs.extend(get_src_dir(d))
+
+    # return the list of directories which contain the main.tex file
     return dirs
 
 
-for directory in get_dir(source_directory):
-    destination_path = directory.replace(source_directory, "")
-    destination_path = os.path.dirname(destination_path)
-    destination_path = destination_directory + destination_path
-    os.makedirs(destination_path, exist_ok=True)
-    convert_file(directory, destination_path, to_delete)
+# src: folder in which is located the main.tex file
+for src_dir in get_src_dir(source_directory):
+    print("src_dir: ", src_dir)
+    # file name without extension and without path
+    destination_path = src_dir.replace(source_directory, "")
+
+    # add path to destination directory and extension
+    destination_path = destination_directory + destination_path + ".pdf"
+
+    # create directory if it doesn't exist (all parent directories will be
+    # created, if necessary)
+    os.makedirs(os.path.dirname(destination_path), exist_ok=True)
+    convert_file(src_dir, destination_path, to_delete)
 
 
 print("Compilation complete.")
