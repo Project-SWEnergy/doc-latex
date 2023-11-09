@@ -62,6 +62,15 @@ def convert_file(source_directory, destination_directory, to_delete):
             stderr=subprocess.DEVNULL,  # no output in the terminal
         )
 
+        subprocess.check_call(
+            [
+                "pdflatex",
+                latex_file,
+            ],
+            stdout=subprocess.DEVNULL,  # no output in the terminal
+            stderr=subprocess.DEVNULL,  # no output in the terminal
+        )
+
         # Delete intermediate files except for the PDF file
         intermediate_files = [file for file in os.listdir("./") if file in to_delete]
         for intermediate_file in intermediate_files:
@@ -71,13 +80,9 @@ def convert_file(source_directory, destination_directory, to_delete):
         # Move the PDF file to the destination directory
         isVersioned, version = get_version(source_directory)
         if isVersioned:
-            os.rename(
-                latex_file.replace(".tex", ".pdf"),
-                destination_directory.replace(".pdf", f"-{version}.pdf"),
-            )
-        else:
-            os.rename(latex_file.replace(".tex", ".pdf"), destination_directory)
+            destination_directory = destination_directory.replace(".pdf", f"-{version}.pdf")
 
+        os.rename(latex_file.replace(".tex", ".pdf"), destination_directory)
         print("Compiled ", os.path.basename(destination_directory), " successfully!")
     except subprocess.CalledProcessError as e:
         print(f"Error compiling {latex_file}: {e}")
