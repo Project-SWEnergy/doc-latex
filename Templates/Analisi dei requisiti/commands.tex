@@ -71,7 +71,8 @@
 \titleformat{\subusecase}[block]{\normalfont\large\bfseries}{UC-\thesubusecase}{1.5em}{}
 \newcommand{\subusecase}[1]{%
 	\refstepcounter{subusecase}%
-	\noindent\textbf{UC-\thesubusecase: #1}%
+	%
+	\noindent\textbf{\newline\newline\noindent UC-\thesubusecase: #1}%
 	\newline\noindent\ignorespaces%
 }
 
@@ -81,7 +82,8 @@
 \titleformat{\subsubusecase}[block]{\normalfont\normalsize\bfseries}{UC-\thesubsubusecase}{1em}{}
 \newcommand{\subsubusecase}[1]{%
 	\refstepcounter{subsubusecase}%
-	\noindent\textbf{UC-\thesubsubusecase: #1}%
+	%
+	\noindent\textbf{\newline\newline\noindent UC-\thesubsubusecase: #1}%
 	\newline\noindent\ignorespaces%
 }
 
