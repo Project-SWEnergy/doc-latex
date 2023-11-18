@@ -1,0 +1,28 @@
+Accesso, Utente sconosciuto
+Cerca ristoranti, Utente sconosciuto, Cerca per nome, Cerca per indirizzo, Cerca per cucina, Cerca per fascia di prezzo, Cerca per fascia di valutazione
+Lista ristoranti, Utente sconosciuto, Ristorante nome, Ristorante feedback, Ristorante descrizione
+Dettaglio ristorante, Utente sconosciuto, Ristorante orario, Ristorante menu, Ristorante feedback
+Ordine condiviso, Utente sconosciuto
+
+Contatta ristorante, Utente autenticato, Ristorante telefono, Chat con ristorante
+Prenota un tavolo, Utente autenticato, Numero di persone, Data e ora prenotazione
+Lista degli ordini, Utente autenticato, Dettaglio ordine, Filtra per stato ordine
+
+Dettaglio ordine, Utente prenotato, Stato ordine, Modifica ordine
+Modifica ordine, Utente prenotato, Aggiungi piatto, Rimuovi piatto, Modifica numero di persone, Modifica data e ora, Conferma ordine
+Inserimento di feedback, Utente prenotato, Voto, Commento, Conferma feedback
+Ordine collaborativo, Utente prenotato, Copia link, Condividi link
+Divisione del conto, Utente prenotato, Modalità di divisione, Selezione dei piatti, Conferma divisione
+
+Lista dei tavoli, Utente ristoratore, Dettaglio tavolo
+Dettaglio tavolo, Utente ristoratore, Modifica tavolo, Rimuovi tavolo
+Modifica tavolo, Utente ristoratore, Numero tavolo, Numero posti, Stato tavolo, Conferma modifica
+Lista delle prenotazioni, Utente ristoratore, Dettaglio prenotazione, Rifiuta prenotazione, Conferma prenotazione
+Dettaglio prenotazione, Utente ristoratore, Numero di persone, Data e ora prenotazione, Stato prenotazione
+Lista dei feedback, Utente ristoratore, Dettaglio feedback, Rispondi al cliente
+Dettaglio feedback, Utente ristoratore, Voto, Commento
+Chat col cliente, Utente ristoratore
+Profilo ristorante, Utente ristoratore, Menu ristorante, Orario ristorante, Nome ristorante, Indirizzo ristorante, Cucina ristorante, Fascia di prezzo ristorante, Modifica ristorante
+Menu ristorante, Utente ristoratore, Aggiungi piatto, Dettaglio piatto
+Dettaglio piatto, Utente ristoratore, Modifica piatto, Rimuovi piatto
+Modifica piatto, Utente ristoratore, Nome piatto, Descrizione piatto, Prezzo piatto, Categoria piatto, Allergeni piatto, Conferma modifica
