@@ -1,16 +1,19 @@
 \usecase{Chat con cliente}
 \label{usecase:Chat con cliente}
 \begin{itemize}
-\item \textbf{Attore principale:} Utente ristoratore
-\item \textbf{Precondizioni:}
-Un Utente ristoratore è connesso al sistema.
-\item \textbf{Postcondizioni:}
-\item \textbf{Scenario principale:}
-\begin{itemize}
-\item Utente ristoratore:
-\begin{enumerate}
-\item needed
-\end{enumerate}
-\end{itemize}
-
+	\item \textbf{Attore principale:} Utente ristoratore
+	\item \textbf{Precondizioni:}
+	      Un Utente ristoratore è connesso al sistema e ha ricevuto un messaggio da un
+	      Utente autenticato.
+	\item \textbf{Postcondizioni:}
+	      L'utente ristoratore ha risposto all'utente autenticato.
+	\item \textbf{Scenario principale:}
+	      \begin{itemize}
+		      \item Utente ristoratore:
+		            \begin{enumerate}
+			            \item Clicca per accedere alla chat;
+			            \item Visualizza la chat con l'utente autenticato;
+			            \item Invia un messaggio all'utente autenticato;
+		            \end{enumerate}
+	      \end{itemize}
 \end{itemize}

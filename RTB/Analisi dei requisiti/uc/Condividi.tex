@@ -1,16 +1,22 @@
 \usecase{Condividi}
 \label{usecase:Condividi}
 \begin{itemize}
-\item \textbf{Attore principale:} Utente autenticato
-\item \textbf{Precondizioni:}
-Un Utente autenticato è connesso al sistema e ha risolto il caso d'uso "Ristorante dettaglio" (vedi \autoref{usecase:Ristorante dettaglio}).
-\item \textbf{Postcondizioni:}
-\item \textbf{Scenario principale:}
-\begin{itemize}
-\item Utente autenticato:
-\begin{enumerate}
-\item needed
-\end{enumerate}
-\end{itemize}
-
+	\item \textbf{Attore principale:} Utente autenticato
+	\item \textbf{Precondizioni:}
+	      Un Utente autenticato è connesso al sistema e ha risolto uno dei seguenti casi
+	      d'uso:
+	      \begin{itemize}
+		      \item "Ristorante dettaglio" (vedi \autoref{usecase:Ristorante dettaglio}).
+		      \item "Ordine dettaglio" (vedi \autoref{usecase:Ordine dettaglio}).
+	      \end{itemize}
+	\item \textbf{Postcondizioni:}
+	      L'utente copia il link di condivisione.
+	\item \textbf{Scenario principale:}
+	      \begin{itemize}
+		      \item Utente autenticato:
+		            \begin{enumerate}
+			            \item Clicca sul pulsante di condivisione;
+			            \item Copia il link di condivisione.
+		            \end{enumerate}
+	      \end{itemize}
 \end{itemize}

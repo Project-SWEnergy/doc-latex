@@ -59,7 +59,6 @@
 % Redefine usecase command to create a new hierarchy
 \titleformat{\usecase}[block]{\normalfont\Large\bfseries}{UC-\theusecase}{2em}{}
 \newcommand{\usecase}[1]{%
-	\clearpage
 	\refstepcounter{usecase}%
 	\noindent\textbf{UC-\theusecase: #1}%
 	\newline\noindent\ignorespaces%
