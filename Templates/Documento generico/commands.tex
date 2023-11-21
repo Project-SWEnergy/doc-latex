@@ -1,0 +1,54 @@
+\usepackage{../package}
+\graphicspath{{../../Assets}}
+
+\newcommand{\copertina}{
+	\begin{titlepage}
+		\vspace*{-3.5cm}
+		\makebox[\textwidth]{\includegraphics[width=\paperwidth]{header.png}}
+		\begin{center}
+			\includegraphics[width=1\textwidth]{logo.png}	\\
+			\vspace{1cm}
+			\Mail{}	\\
+			\vspace{0.5cm}
+			\textbf{\begin{LARGE} \Titolo \end{LARGE}}	\\
+			\vspace{1cm}
+			\textbf{Descrizione:} \Descrizione{} \\
+			\vspace{0.5cm}
+		\end{center}
+		\begin{center}
+			{
+				\renewcommand{\arraystretch}{1.5}
+				\begin{tabular}{ll}
+					\textbf{Stato}        & \Stato        \\
+					\textbf{Data}         & \Data         \\
+					\midrule
+					\textbf{Redattori}    & \Redattori    \\
+					\textbf{Verificatori} & \Verificatori \\
+					\textbf{Approvatori}  & \Approvatori  \\
+					\textbf{Destinatari}  & \Destinatari  \\
+					\midrule
+					\textbf{Versione}     & \Versione     \\
+				\end{tabular}
+			}
+		\end{center}
+		\vspace{3cm}
+		\begin{flushright}
+			\begin{tabular}{ll}
+				Il responsabile:	&  	\Responsabile	\\
+									&					\\
+									&	\underline{\hspace{3cm}} 	\\
+			\end{tabular}
+		\end{flushright}
+	\end{titlepage}
+}
+
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\rhead{ \includegraphics[scale=0.05]{horizontal_logo.png}}
+	\lhead{\Titolo}
+	%\lfoot{\Titolo}
+	\rfoot{\thepage{}}
+	\renewcommand{\headrulewidth}{0.2pt}
+	\renewcommand{\footrulewidth}{0.2pt}
+}
+\pagestyle{plain}
