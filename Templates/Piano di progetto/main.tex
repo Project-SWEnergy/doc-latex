@@ -1,0 +1,35 @@
+\documentclass[a4paper, 12pt]{article}
+\input{commands.tex}
+
+\newcommand{\Titolo}{Presentazione costi e assunzione impegni}
+\newcommand{\Gruppo}{SWEnergy}
+\newcommand{\Data}{DD/MM/YYYY}
+\newcommand{\Mail}{\href{mailto:project.swenergy@gmail.com}{project.swenergy@gmail.com}}
+\newcommand{\Versione}{0.1.X}
+\newcommand{\Descrizione}{XXX}
+\newcommand{\Stato}{Non approvato / Approvato}
+\newcommand{\Redattori}{Nome 1 \\ & Nome 2}
+\newcommand{\Verificatori}{Nome 1 \\ & Nome 2}
+\newcommand{\Approvatori}{Nome 1 \\ & Nome 2}
+\newcommand{\Responsabile}{Nome 1}
+
+
+\begin{document}
+% Cambio colore della prima pagina
+%\newpagecolor{gray}            
+%\afterpage{\restorepagecolor}
+
+\copertina{}
+\newpage
+\input{sec/registro_modifiche.tex}
+\newpage
+\tableofcontents
+\newpage
+
+\input{sec/introduzione.tex}
+\input{sec/descrizione_prodotto.tex}
+\input{sec/use_case.tex}
+\input{sec/divisione_conto.tex}
+\input{sec/requisiti.tex}
+
+\end{document}
