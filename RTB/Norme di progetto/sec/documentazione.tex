@@ -1,0 +1,171 @@
+\section{Documentazione}
+\subsection{Strumenti}
+Gli strumenti utilizzati per la creazione dei documenti sono:
+\begin{itemize}
+    \item \textbf{LaTeX}: linguaggio di \textit{markup} per la creazione di documenti \\
+        \href{https://www.latex-project.org/}{(www.latex-project.org)};
+    \item \textbf{VisualStudio Code}: GUI con integrazioni per la creazione di documenti scritti in LaTeX e per la gestione delle repository git \\
+        \href{https://code.visualstudio.com/}{(code.visualstudio.com)}
+        \begin{itemize}
+            \item \textbf{LaTeX Workshop}: estensione utilizzata in VisualStudio Code per la compilazione e la scrittura dei documenti.
+        \end{itemize}
+\end{itemize}
+
+
+\subsection{Creazione e modifica di un documento}
+Lo strumento utilizzato per la redazione di documenti è LaTeX, quando si crea un nuovo documento è obbligatorio l'utilizzo di uno dei \textit{template} disponibili, al fine di uniformare la documentazione rilasciata.
+La versione di partenza deve sempre essere \texttt{0.1.0} e venire aggiornata ad ogni modifica (sezione \S\ref{documentazione_versionamento}).
+I \textit{template} disponibili sono quattro:
+\begin{itemize}
+    \item \textbf{Verbale interno}: per i resoconti degli incontri interni al gruppo, prevede una struttura per i contenuti che deve essere mantenuta per ogni documento.\\
+    Visionabile all'interno della cartella \href{https://github.com/Project-SWEnergy/doc-latex/tree/main/Templates}{\texttt{Template}} della repository \texttt{doc-latex}.
+    \item \textbf{Verbale esterno}: per i resoconti degli incontri con le aziende proponenti o con soggetti esterni al gruppo, prevede una struttura per i contenuti che deve essere mantenuta per ogni documento. \\
+    Visionabile all'interno della cartella \href{https://github.com/Project-SWEnergy/doc-latex/tree/main/Templates}{\texttt{Template}} della repository \texttt{doc-latex}.
+    \item \textbf{Documento}: da utilizzare per i documenti richiesti nelle varie fasi di avanzamento, non presenta una struttura fissa per i contenuti ma solo i comandi per la definizione della copertina.\\
+    Visionabile all'interno della cartella \href{https://github.com/Project-SWEnergy/doc-latex/tree/main/Templates}{\texttt{Template}} della repository \texttt{doc-latex}.
+    \item \textbf{Presentazione}: utilizzata per le presentazioni dei diari di bordo. \\
+    Visionabile all'interno della sezione Google Presentazioni a disposizione del gruppo.
+\end{itemize}
+Ogni documento creato dovrà quindi importare al suo interno i template appena descritti. \\
+Qualora sia necessaria una diversa tipologia di documento le sue caratteristiche grafiche ed organizzative dovranno essere discusse nel gruppo.\\
+Ogni documento, ad esclusione di verbali e presentazioni, prevede obbligatoriamente la presenza di un registro delle modifiche (sezione \S\ref{documentazione_registromodifiche}).
+
+
+
+\subsection{Descrizione template}
+\subsubsection{Verbale interno}
+Nella prima pagina di ogni verbale è sempre presente un riassunto dei ruoli svolti dai componenti del gruppo. 
+In particolare dovrà comparire:
+\begin{itemize}
+    \item Descrizione.
+    \item Stato.
+    \item Data.
+    \item Redattori.
+    \item Verificatori.
+    \item Approvatori.
+    \item Versione.
+\end{itemize}
+L'indicazione del nominativo dei membri del gruppo segue sempre l'ordine alfabetico del nome e successivamente del cognome. \\
+Sulla porzione inferiore della copertina deve essere presente la firma del responsabile. \\
+
+\noindent
+Le sezioni del documento saranno le seguenti:
+\begin{itemize}
+    \item \textbf{Partecipanti}: Indicare ora di inizio e fine incontro, in una tabella apposita bisogna poi indicare gli assenti, i partecipanti ed il tempo totale di partecipazione per ogni persona. Per ogni persona deve essere esplicitato il ruolo ricoperto durante la fase di progetto.
+    \item \textbf{Ordine del giorno}: Elenco puntuale degli argomenti di discussione.
+    \item \textbf{Resoconto}: Descrizione estesa degli argomenti trattati durante l'incontro e delle decisioni prese.
+    \item \textbf{Assegnazione incarichi}: Tabella riportante gli incarichi assegnati durante la riunione. Deve riportare le colonne Assegnatario, Descrizione, Riferimento. Gli incarichi vanno raggruppati secondo il nome dell'assegnatario, l'elenco deve essere alfabetico.
+\end{itemize}
+
+
+\subsubsection{Verbale esterno}
+Nella prima pagina di ogni verbale è sempre presente un riassunto dei ruoli svolti dai componenti del gruppo. 
+In particolare dovrà comparire:
+\begin{itemize}
+    \item Descrizione.
+    \item Stato.
+    \item Data.
+    \item Redattori.
+    \item Verificatori.
+    \item Approvatore intero.
+    \item Approvatore esterno.
+    \item Versione.
+\end{itemize}
+L'indicazione del nominativo dei membri del gruppo segue sempre l'ordine alfabetico del nome e successivamente del cognome. \\
+Sulla porzione inferiore della copertina deve essere presente la firma del responsabile e dell'approvatore esterno. \\
+
+\noindent
+Le sezioni del documento saranno le seguenti:
+\begin{itemize}
+    \item \textbf{Partecipanti}: Indicare ora di inizio e fine incontro, in una tabella apposita bisogna poi indicare gli assenti, i partecipanti ed il tempo totale di partecipazione per ogni persona. Per ogni persona deve essere esplicitato il ruolo ricoperto durante la fase di progetto. Indicare anche il nome del referente esterno.
+    \item \textbf{Ordine del giorno}: Elenco puntuale degli argomenti di discussione.
+    \item \textbf{Resoconto}: Descrizione estesa degli argomenti trattati durante l'incontro e delle decisioni prese.
+    \item \textbf{Conclusioni}: Riassunto delle considerazioni fatte durante l'incontro e delle decisioni prese. 
+    Inserire il riferimento ad un eventuale verbale interno in cui sono state rielaborate le informazioni ottenute.
+\end{itemize}
+
+
+\subsubsection{Documento}
+Nella prima pagina di ogni documento è sempre presente un riassunto dei ruoli svolti dai componenti del gruppo, poi esteso all'interno del registro delle modifiche (sezione \S\ref{documentazione_registromodifiche}). 
+In particolare dovrà comparire:
+\begin{itemize}
+    \item Descrizione.
+    \item Stato.
+    \item Data.
+    \item Redattori.
+    \item Verificatori.
+    \item Approvatore.
+    \item Versione.
+\end{itemize}
+La posizione di redattore e verificatore può essere assunta da più membri del gruppo, ciascuno dei quali può anche ricoprire entrambi i ruoli in base al contributo dato nelle differenti versioni di ogni documento.
+L'indicazione del nominativo dei membri del gruppo segue sempre l'ordine alfabetico del nome e successivamente del cognome. \\
+Sulla porzione inferiore della copertina deve essere presente la firma del responsabile. \\
+
+\noindent
+Non si hanno vincoli sulle sezioni, che dovranno essere discusse in base a necessità e che potranno variare nel corso del progetto.
+
+
+\subsubsection{Presentazione}
+Disponibile all'interno di Google Presentation a disposizione del gruppo. \\
+Ogni \textit{slide} dovrà indicare:
+\begin{itemize}
+    \item Nome dell'evento.
+    \item Luogo dell'evento.
+    \item Data.
+    \item Nome e logo del gruppo.
+    \item Numero di pagina.
+\end{itemize} 
+Nel caso specifico della presentazione dei diari di bordo sarà necessario suddividere i contenuti in: cose da fare, dubbi, attività svolte, problemi.
+
+
+
+
+\subsection{Registro delle modifiche}
+\label{documentazione_registromodifiche}
+Ogni documento, esclusi verbali e presentazione, include subito dopo la copertina un registro delle modifiche in forma tabellare.
+Vi sono le seguenti voci:
+\begin{itemize}
+    \item \textbf{Versione}: indica da versione del documento alla riga di modifica.
+    \item \textbf{Data}: indica la data di redazione, verifica o approvazione.
+    \item \textbf{Redattore}: nome del componente del gruppo che ha effettuato la redazione.
+    \item \textbf{Verificatore}: nome del componente del gruppo che ha effettuato la verifica.
+    \item \textbf{Approvatore}: nome del componente del gruppo che ha effettuato l'approvazione.
+    \item \textbf{Descrizione}: breve descrizione della sezione oggetto di redazione e verifica, in caso di approvazione indica l'azione svolta e la fase di avanzamento attuale.
+\end{itemize}
+\noindent
+La tabella viene riportata in ordine decrescente di modifica, così da mantenere sempre in cima le azioni più recenti eseguite.
+
+\subsection{Versionamento}
+\label{documentazione_versionamento}
+Tutto il codice sorgente della documentazione prodotta dovrà essere inserito in un \textit{repository} git presente su GitHub (\href{https://github.com/Project-SWEnergy/doc-latex/}{github.com/Project-SWEnergy/doc-latex}).\\ 
+Ogni documento rilasciato dovrà presentare anche un versionamento interno indicato con tre interi positivi nel formato \texttt{X.Y.Z}, dove:
+\begin{itemize}
+    \item \textbf{X}: da incrementare in fase di verifica e rilascio di un documento, indica l'ultima versione ufficialmente rilasciata.
+    \item \textbf{Y}: da incrementare in caso avvenga una sostanziale modifica, creazione o eliminazione di una sezione.
+    \item \textbf{Z}: da incrementare in caso avvenga una sostanziale modifica, creazione o eliminazione di una sottosezione a partire dal secondo livello.
+\end{itemize}
+Ogni documento dovrà essere creato partendo dalla versione \texttt{0.1.0}, ogni successivo incremento alla versione dovrà essere accompagnato da una nuova riga nella tabella "Registro delle modifiche" che espliciti i cambiamenti effettuati.
+Modifiche quali correzioni grammaticali o leggere variazioni nel testo non vanno riportate nel registro delle modifiche e non producono un avanzamento di versione.
+L'avanzamento di versione non deve avvenire prima che il contenuto della modifica sia stato verificato.
+L'approvazione di un documento avviene solo quando il documento deve essere rilasciato per una specifica fase di avanzamento.
+
+\subsection{Verifica di un documento}
+Ogni documento deve essere necessariamente verificato da un Verificatore, il quale si occuperà di revisionare i seguenti aspetti:
+\begin{itemize}
+    \item Correttezza grammaticale.
+    \item Correttezza logica.
+    \item Correttezza e completezza del contenuto in modo che risulti coerente con il documento.
+    \item Adesione al Way of Working.
+\end{itemize}
+\noindent
+In caso il verificatore dovesse riscontrare dei problemi questi vanno segnalati su GitHub tramite i commenti presenti all'interno dell'apposita sezione "Pull Request".
+Questa azione genera una notifica immediata al redattore, il quale provvederà ad apportare le modifiche necessarie. \\
+In caso invece il documento non richieda modifiche si dovrà procedere ad un avanzamento di versione come descritto in sezione \S\ref{documentazione_versionamento}.
+
+
+\subsection{Approvazione di un documento}
+Ogni documento approvato deve subire un avanzamento di versione come descritto alla sezione \S\ref{documentazione_versionamento}, inoltre l'approvatore si occuperà di spostare il PDF finale compilato nell'apposito \textit{repository} git presente su GitHub (\href{https://github.com/Project-SWEnergy/documentazione}{github.com/Project-SWEnergy/documentazione}). \\
+
+\noindent
+In caso il documento in questione sia un verbale esterno, l'approvatore dovrà occuparsi di effettuare una approvazione interna e, successivamente, inviare il documento in allegato ad una \textit{email} al fine di ottenere l'approvazione esterna del verbale. \\
+Una volta ottenuta la relativa conferma, l'approvatore potrà procedere ad effettuare l'avanzamento di versione seguendo quando indicato in sezione \S\ref{documentazione_versionamento}, indicando nella copertina del documento il nome degli approvatori esterni ed interni.

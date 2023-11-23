@@ -1,0 +1,36 @@
+\documentclass[a4paper, 12pt]{article}
+\newcommand{\template}{../../templates}
+\usepackage{\template/package}
+\graphicspath{{../../assets}}
+
+\newcommand{\Titolo}{Norme di progetto}
+\newcommand{\Gruppo}{SWEnergy}
+\newcommand{\Data}{21/11/2023}
+\newcommand{\Mail}{\href{mailto:project.swenergy@gmail.com}{project.swenergy@gmail.com}}
+\newcommand{\Versione}{1.1.0}
+\newcommand{\Descrizione}{Elenco delle procedure interne e delle buone pratiche di progetto adottate dal gruppo.}
+\newcommand{\Stato}{Non approvato}
+\newcommand{\Redattori}{Alessandro Tigani Sava \\
+						& Matteo Bando
+}
+\newcommand{\Verificatori}{Niccolò Carlesso}
+\newcommand{\Approvatori}{Giacomo Gualato}
+\newcommand{\Responsabile}{}
+
+\include{\template/Documento generico/commands.tex}
+
+\begin{document}
+    \copertina{}
+
+    \newpage
+    \input{sec/registro_modifiche.tex}
+    \newpage
+
+    \setcounter{tocdepth}{2}
+    \tableofcontents
+    \newpage
+    \input{sec/introduzione.tex}
+    \newpage
+    \input{sec/documentazione.tex}
+
+\end{document}
