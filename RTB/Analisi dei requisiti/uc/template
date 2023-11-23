@@ -1,0 +1,18 @@
+\usecase{name}
+\label{usecase:name}
+\begin{itemize}
+\item \textbf{Attore principale:} actor
+
+\item \textbf{Precondizioni:}
+
+\item \textbf{Postcondizioni:}
+
+\item \textbf{Scenario principale:}
+\begin{enumerate}
+\item 
+\end{enumerate}
+
+\item \textbf{Generalizzazioni:}
+\begin{itemize}
+\end{itemize}
+\end{itemize}

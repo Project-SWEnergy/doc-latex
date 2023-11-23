@@ -1,0 +1,29 @@
+\usecase{Effettua accesso}
+\label{usecase:Effettua accesso}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente generico.
+	\item \textbf{Attori secondari:}
+	      \begin{itemize}
+		      \item Sistema;
+		      \item Sistema di autenticazione esterno.
+	      \end{itemize}
+	\item \textbf{Precondizioni:}
+	      Un Utente esterno è connesso al Sistema.
+	\item \textbf{Postcondizioni:}
+	      L'Utente esterno è stato identificato dal Sistema come uno solo dei seguenti:
+	      \begin{itemize}
+		      \item Utente ristoratore;
+		      \item Utente base.
+	      \end{itemize}
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente esterno seleziona la modalità di accesso per terze parti;
+		      \item Il Sistema reindirizza l'Utente esterno alla pagina di accesso per terze parti;
+		      \item L'Utente esterno inserisce le proprie credenziali;
+		      \item Il Sistema di autenticazione esterno verifica le credenziali;
+		      \item Il Sistema di autenticazione esterno invia al Sistema le informazioni dell'Utente esterno;
+		      \item Il Sistema verifica se l'Utente esterno è un Utente ristoratore;
+		      \item Altrimenti il Sistema identifica l'Utente esterno come Utente base;
+		      \item Il Sistema reindirizza l'Utente generale alla pagina principale.
+	      \end{enumerate}
+\end{itemize}

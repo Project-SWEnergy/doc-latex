@@ -1,0 +1,36 @@
+\usecase{Accedi alla prenotazione}
+\label{usecase:Accedi alla prenotazione}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente esterno.
+
+	\item \textbf{Attore secondario:} Sistema.
+
+	\item \textbf{Precondizione:} L'utente esterno ha il link di una prenotazione
+	      (vedi \autoref{usecase:Condividi la prenotazione}).
+
+	\item \textbf{Postcondizione:} L'utente esterno ha effettuato l'accesso, la
+	      prenotazione è stata aggiunta alle sue prenotazioni e viene visualizzato il
+	      riepilogo della prenotazione.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente esterno si connette al Sistema mediante il link ricevuto;
+		      \item L'Utente esterno effettua l'accesso al Sistema (vedi
+		            \autoref{usecase:Effettua accesso});
+		      \item Il Sistema identifica l'Utente esterno come Utente base;
+		      \item Il Sistema aggiunge la prenotazione alle prenotazioni dell'Utente base;
+		      \item Il Sistema mostra il riepilogo della prenotazione.
+	      \end{enumerate}
+
+	\item \textbf{Estensioni:}
+	      \begin{itemize}
+		      \item Il Sistema identifica l'Utente esterno come Utente ristoratore (vedi
+		            \autoref{usecase:Errore utente ristoratore}).
+		            %\begin{enumerate}
+		            %    \item L'Utente esterno effettua l'accesso al Sistema (vedi
+		            %          \autoref{usecase:Effettua accesso});
+		            %    \item Il Sistema identifica l'Utente esterno come Utente ristoratore;
+		            %    \item Il Sistema mostra un messaggio di errore.
+		            %\end{enumerate}
+	      \end{itemize}
+\end{itemize}

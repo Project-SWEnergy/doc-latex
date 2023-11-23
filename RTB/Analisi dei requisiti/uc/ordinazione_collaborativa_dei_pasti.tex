@@ -1,0 +1,77 @@
+\usecase{Ordinazine collaborativa dei pasti}
+\label{usecase:Ordinazione collaborativa dei pasti}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente base.
+
+	\item \textbf{Attori secondari:}
+	      \begin{itemize}
+		      \item Sistema;
+		      \item Utente ristoratore.
+	      \end{itemize}
+
+	\item \textbf{Precondizioni:}
+	      Un Utente base ha effettuato l'accesso al Sistema e sta
+	      visualizzando il riepilogo della prenotazione (vedi \autoref{usecase:Visualizzazione del riepilogo}).
+
+	\item \textbf{Postcondizioni:}
+	      Un Utente base ha ordinato le pietanze per la prenotazione effettuata.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item \label{item:riepilogo}
+		            Il Sistema mostra il riepilogo della prenotazione;
+
+		      \item L'Utente base modifica il riepilogo della prenotazione
+		            (vedi \autoref{usecase:Aggiornamento del riepilogo});
+
+		      \item Se l'Utente base ha modificato il riepilogo della
+		            prenotazione: torna al punto \ref{item:riepilogo};
+
+		      \item L'Utente base conferma il riepilogo dell'ordinazione;
+	      \end{enumerate}
+
+	\item \textbf{Scenario secondario:}
+	      \begin{itemize}
+		      \item L'Utente base annulla l'ordinazione.
+		            \begin{enumerate}
+			            \item L'Utente base annulla l'ordinazione;
+			            \item Il Sistema aggiorna l'ordinazione.
+			            \item Il Sistema notifica l'annullamento dell'ordinazione
+			                  all'Utente ristoratore.
+		            \end{enumerate}
+
+		      \item Tutti gli Utenti base di una prenotazione confermano il
+		            riepilogo dell'ordinazione.
+		            \begin{enumerate}
+			            \item Il Sistema notifica l'ordinazione all'Utente ristoratore.
+		            \end{enumerate}
+	      \end{itemize}
+\end{itemize}
+
+
+\subusecase{Aggiornamento del riepilogo}
+\label{usecase:Aggiornamento del riepilogo}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente base.
+
+	\item \textbf{Attore secondario:} Sistema.
+
+	\item \textbf{Precondizioni:}
+	      Un Utente base ha effettuato l'accesso al Sistema, ha effettuato una
+	      prenotazione (vedi \autoref{usecase:Prenotazione di un tavolo}) e
+	      sta visualizzando il riepilogo della prenotazione
+	      (vedi \autoref{usecase:Visualizzazione del riepilogo}).
+
+	\item \textbf{Postcondizioni:}
+	      L'Utente base ha modificato il riepilogo della prenotazione e il Sistema
+	      aggiorna le informazioni inerenti alla prenotazione.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente base entra nella sezione di modifica del riepilogo;
+		      \item L'Utente base modifica il riepilogo della prenotazione, aggiungendo o
+		            rimuovendo pietanze;
+		      \item L'Utente base conferma le modifiche;
+		      \item Il Sistema aggiorna il riepilogo della prenotazione.
+	      \end{enumerate}
+\end{itemize}

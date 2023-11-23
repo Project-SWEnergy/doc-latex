@@ -1,0 +1,3 @@
+Utente base,si tratta di un attore autenticato, rappresenta il cliente di un ristorante.
+Utente ristoratore,si tratta di un attore autenticato, rappresenta l'amministratore del ristorante.
+Utente autenticato,si tratta di un Utente base o di un Utente ristoratore

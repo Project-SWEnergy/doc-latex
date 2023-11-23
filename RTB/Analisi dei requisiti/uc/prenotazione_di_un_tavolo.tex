@@ -1,0 +1,25 @@
+\usecase{Prenotazione di un tavolo}
+\label{usecase:Prenotazione di un tavolo}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente base.
+	\item \textbf{Attori secondari:}
+	      \begin{itemize}
+		      \item Utente ristoratore;
+		      \item Sistema.
+	      \end{itemize}
+	\item \textbf{Precondizioni:}
+	      Un Utente base ha effettuato l'accesso al Sistema e visualizza la
+	      pagina di dettaglio di un ristorante (vedi \autoref{usecase:Visualizzazione di un ristorante}).
+	\item \textbf{Postcondizioni:}
+	      L'Utente base ha prenotato un tavolo.
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente base crea un \textit{form} di prenotazione;
+		      \item L'Utente base seleziona il giorno e l'ora;
+		      \item L'Utente base seleziona il numero di persone;
+		      \item L'Utente base conferma la prenotazione.
+		      \item Il Sistema registra la prenotazione.
+		      \item Il Sistema notifica la prenotazione all'Utente ristoratore.
+	      \end{enumerate}
+\end{itemize}
+

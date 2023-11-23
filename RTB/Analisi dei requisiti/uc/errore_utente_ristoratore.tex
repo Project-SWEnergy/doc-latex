@@ -1,0 +1,15 @@
+\usecase{Errore utente ristoratore}
+\label{usecase:Errore utente ristoratore}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente esterno.
+	\item \textbf{Attore secondario:} Sistema.
+	\item \textbf{Precondizione:} L'Utente esterno sta effettuando l'accesso al
+	      Sistema.
+	\item \textbf{Postcondizione:} L'Utente esterno ha ricevuto un messaggio di errore.
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'utente esterno effettua l'accesso al Sistema (vedi \autoref{usecase:Effettua accesso});
+		      \item Il Sistema rileva che l'Utente esterno è un Utente ristoratore;
+		      \item Il Sistema mostra un messaggio di errore.
+	      \end{enumerate}
+\end{itemize}

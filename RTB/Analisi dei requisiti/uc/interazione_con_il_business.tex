@@ -1,0 +1,102 @@
+\usecase{Interazione con il business}
+\label{usecase:Interazione con il business}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente base.
+	\item \textbf{Attori secondari:}
+	      \begin{itemize}
+		      \item Utente ristoratore;
+		      \item Sistema.
+	      \end{itemize}
+	\item \textbf{Precondizioni:} L'Utente base è connesso al Sistema.
+	\item \textbf{Postcondizioni:} L'Utente base ha interagito con il business.
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente base accetta i termini di utilizzo delle
+		            conversazioni, se non l'ha già fatto;
+
+		      \item L'Utente base visualizza un ristorante (vedi
+		            \autoref{usecase:Visualizzazione di un ristorante});
+
+		      \item L'Utente base accede alla sezione per \textit{chattare} con
+		            l'Utente ristoratore;
+
+		      \item L'Utente base invia un messaggio all'Utente ristoratore;
+
+		      \item Il Sistema instaura una canale di comunicazione
+		            crittografato tra l'Utente base e l'Utente ristoratore, se
+		            non l'ha già fatto;
+
+		      \item L'Utente ristoratore e l'Utente base comunicano tra di loro
+		            fino a quando l'Utente base non termina la conversazione (vedi
+		            \autoref{usecase:Visualizza la conversaione}, \autoref{usecase:Invia un
+			            messaggio} %e \autoref{usecase:Elimina la conversaione}
+		            ).
+	      \end{enumerate}
+\end{itemize}
+
+\subusecase{Visualizza la conversaione}
+\label{usecase:Visualizza la conversaione}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente autenticato$_1$.
+	\item \textbf{Attori secondari:}
+	      \begin{itemize}
+		      \item Utente autenticato$_2$;
+		      \item Sistema.
+	      \end{itemize}
+	\item \textbf{Precondizioni:} L'Utente autenticato$_1$ è connesso al
+	      Sistema.
+	\item \textbf{Postcondizioni:} L'Utente autenticato$_1$ visualizza la conversaione
+	      con l'Utente autenticato$_2$.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente autenticato$_1$ accede alla sezione delle conversazioni;
+		      \item L'Utente autenticato$_1$ seleziona la conversaione con l'Utente
+		            autenticato$_2$;
+		      \item Il Sistema mostra i messaggi scambiati tra l'Utente
+		            autenticato$_1$ e l'Utente autenticato$_2$.
+	      \end{enumerate}
+\end{itemize}
+
+\subusecase{Invia un messaggio}
+\label{usecase:Invia un messaggio}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente autenticato$_1$.
+	\item \textbf{Attori secondari:}
+	      \begin{itemize}
+		      \item Utente autenticato$_2$;
+		      \item Sistema.
+	      \end{itemize}
+	\item \textbf{Precondizioni:} L'Utente autenticato$_1$ è connesso al
+	      Sistema e sta visualizzando la conversaione con l'Utente autenticato$_2$ (vedi
+	      \autoref{usecase:Visualizza la conversaione}).
+
+	\item \textbf{Postcondizioni:} L'Utente autenticato$_1$ ha inviato un
+	      messaggio all'Utente autenticato$_2$.
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente autenticato$_1$ invia un messaggio all'Utente
+		            autenticato$_2$;
+		      \item Il Sistema memorizza il messaggio nel database;
+		      \item Il Sistema invia una notifica all'Utente autenticato$_2$.
+	      \end{enumerate}
+\end{itemize}
+
+%\subusecase{Elimina la conversaione}
+%\label{usecase:Elimina la conversaione}
+%\begin{itemize}
+%\item \textbf{Attore principale:} Utente autenticato$_1$.
+%\item \textbf{Attore secondario:} Nessuno.
+%\item \textbf{Precondizioni:} L'Utente autenticato$_1$ è connesso al
+%Sistema e sta visualizzando la conversaione con l'Utente autenticato$_2$ (vedi
+%\autoref{usecase:Visualizza la conversaione}).
+%
+%\item \textbf{Postcondizioni:} L'Utente autenticato$_1$ ha eliminato la
+%conversaione con l'Utente autenticato$_2$.
+%\item \textbf{Scenario principale:}
+%\begin{enumerate}
+%	\item L'Utente autenticato$_1$ elimina la conversaione con l'Utente
+%	      autenticato$_2$;
+%	\item Il Sistema cancella il \textit{link} tra l'Utente autenticato$_1$ e
+%	      l'Utente autenticato$_2$ nel database.
+%\end{enumerate}

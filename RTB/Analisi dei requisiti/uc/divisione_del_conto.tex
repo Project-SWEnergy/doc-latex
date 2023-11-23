@@ -1,0 +1,77 @@
+\usecase{Divisione del conto}
+\label{usecase:Divisione del conto}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente base.
+
+	\item \textbf{Attore secondario:} Sistema.
+
+	\item \textbf{Precondizioni:} L'Utente base è connesso al Sistema e
+	      visualizza il riepilogo di una prenotazione
+	      (vedi \autoref{usecase:Visualizzazione del riepilogo}) che è stata
+	      condivisa con altri Utenti base
+	      (vedi \autoref{usecase:Condividi la prenotazione}).
+
+	\item \textbf{Postcondizioni:} L'Utente base ha diviso il conto secondo le
+	      sue preferenze.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente base seleziona la modalità di divisione del conto
+		            (vedi \autoref{usecase:Selezione della modalità di divisione del conto});
+
+		      \item Il Sistema mostra il riepilogo della prenotazione aggiornato
+		            (vedi \autoref{usecase:Visualizzazione del riepilogo});
+
+		      \item L'Utente base seleziona i piatti che vuole pagare oppure la
+		            quota che vuole pagare;
+
+		      \item L'Utente base conferma la selezione dei piatti;
+
+		      \item Il Sistema memorizza la selezione dei piatti;
+
+		      \item Il Sistema mostra il riepilogo della prenotazione aggiornato
+		            (vedi \autoref{usecase:Visualizzazione del riepilogo});
+
+		      \item Il Sistema invia la notifica di divisione del conto
+		            all'Utente ristoratore;
+	      \end{enumerate}
+\end{itemize}
+
+\subusecase{Selezione della modalità di divisione del conto}
+\label{usecase:Selezione della modalità di divisione del conto}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente base.
+
+	\item \textbf{Attore secondario:} Sistema.
+
+	\item \textbf{Precondizioni:}
+	      L'Utente base è connesso al sistema e visualizza il riepilogo di una
+	      prenotazione (vedi \autoref{usecase:Visualizzazione del riepilogo})
+	      che è stata condivisa con altri Utenti base (vedi
+	      \autoref{usecase:Condividi la prenotazione}).
+
+	\item \textbf{Postcondizioni:}
+	      L'Utente base ha selezionato la modalità di divisione del conto.
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente base seleziona la modalità di divisione del conto
+		            tra quelle disponibili;
+
+		      \item L'Utente base conferma la modalità di divisione del conto.
+
+		      \item Il Sistema memorizza la modalità di divisione del conto.
+	      \end{enumerate}
+
+	\item \textbf{Scenario secondario:}
+	      Scelta della modalità di divisione del conto già effettuata.
+	      \begin{enumerate}
+		      \item L'Utente base seleziona la modalità di divisione del conto
+		            tra quelle disponibili;
+
+		      \item L'Utente base conferma la modalità di divisione del conto.
+
+		      \item Il Sistema mostra un messaggio di errore e spiega che la
+		            modalità di divisione del conto è già stata scelta.
+	      \end{enumerate}
+\end{itemize}
+
