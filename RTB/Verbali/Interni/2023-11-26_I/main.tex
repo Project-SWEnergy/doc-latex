@@ -1,0 +1,34 @@
+\documentclass[a4paper, 12pt]{article}
+
+\newcommand{\template}{../../../../Templates}
+\usepackage{\template/package}
+\graphicspath{{../../../../Assets}}
+
+\newcommand{\Titolo}{Verbale interno}
+\newcommand{\Gruppo}{SWEnergy}
+\newcommand{\Data}{19/11/2023}
+\newcommand{\Mail}{\href{mailto:project.swenergy@gmail.com}{project.swenergy@gmail.com}}
+\newcommand{\Versione}{0.1.0}
+\newcommand{\Descrizione}{Brainstorming e organizzazione del lavoro per
+l'incontro con il proponente del 24/11/2023.}
+\newcommand{\Stato}{Verificato}
+\newcommand{\Redattori}{Carlo Rosso}
+\newcommand{\Verificatori}{Davide Maffei}
+\newcommand{\Approvatori}{Nessuno}
+\newcommand{\Responsabile}{Carlo Rosso}
+
+\input{\template/verbale interno/commands.tex}
+
+\begin{document}
+
+\copertina{}
+\newpage
+
+\input{chapters/partecipanti}
+\renewcommand{\contentsname}{Ordine del giorno}
+\tableofcontents
+\newpage
+
+\input{chapters/contenuto}
+\input{chapters/incarichi}
+\end{document}
