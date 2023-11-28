@@ -2,8 +2,6 @@
 \newcommand{\template}{../../Templates}
 \usepackage{\template/package}
 \usepackage[utf8]{inputenc}
-\usepackage{siunitx}  %per utilizzare le unità di misura
-\usepackage{eurosym}
 
 \graphicspath{{../../Assets}}
 
@@ -12,7 +10,7 @@
 \newcommand{\Data}{17/11/2023}
 \newcommand{\Mail}{\href{mailto:project.swenergy@gmail.com}{project.swenergy@gmail.com}}
 \newcommand{\Versione}{0.1.0}
-\newcommand{\Descrizione}{XXX}
+\newcommand{\Descrizione}{Documento che riporta un'analisi su casi d'uso e requisiti presenti nel capitolato.}
 \newcommand{\Stato}{Non approvato / Approvato}
 \newcommand{\Redattori}{Nome 1 \\ & Nome 2}
 \newcommand{\Verificatori}{Nome 1 \\ & Nome 2}
@@ -32,10 +30,10 @@
 \input{sec/registro_modifiche.tex}
 \newpage
 \tableofcontents
-\newpage
 
-\input{sec/introduzione.tex}
-\input{sec/descrizione_prodotto.tex}
+
+\include{sec/introduzione.tex}
+\include{sec/descrizione_prodotto.tex}
 \input{sec/use_case.tex}
 
 \input{uc/effettua_accesso.tex}
