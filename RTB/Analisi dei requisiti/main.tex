@@ -1,6 +1,10 @@
 \documentclass[a4paper, 12pt]{article}
 \newcommand{\template}{../../Templates}
 \usepackage{\template/package}
+\usepackage[utf8]{inputenc}
+\usepackage{siunitx}  %per utilizzare le unità di misura
+\usepackage{eurosym}
+
 \graphicspath{{../../Assets}}
 
 \newcommand{\Titolo}{Analisi dei requisiti}
@@ -50,6 +54,14 @@
 \input{uc/accedi_alla_prenotazione.tex}
 \input{uc/errore_utente_ristoratore.tex}
 \input{uc/notifica_un_feedback.tex}
+
+\input{uc/visualizza_lista_ingredienti.tex}
+\input{uc/creazione_lista_ingredienti.tex}
+\input{uc/modifica_lista_degli_ingredienti.tex}
+\input{uc/elimina_lista_degli_ingredienti.tex}
+
+\input{uc/visualizza_stato_ordine.tex}
+\input{uc/filtraggio_ristorante.tex}
 
 
 \input{sec/technology_baseline.tex} % diapositiva 11 di T5
