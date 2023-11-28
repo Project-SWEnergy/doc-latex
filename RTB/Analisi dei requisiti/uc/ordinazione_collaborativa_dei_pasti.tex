@@ -11,7 +11,9 @@
 
 	\item \textbf{Precondizioni:}
 	      Un Utente base ha effettuato l'accesso al Sistema e sta
-	      visualizzando il riepilogo della prenotazione (vedi \autoref{usecase:Visualizzazione del riepilogo}).
+	      visualizzando il riepilogo di una prenotazione che si trova in uno
+	      degli stati: \textit{In attesa} o \textit{Confermata dal ristoratore}
+	      (vedi \autoref{usecase:Visualizzazione del riepilogo}).
 
 	\item \textbf{Postcondizioni:}
 	      Un Utente base ha ordinato le pietanze per la prenotazione effettuata.
@@ -28,22 +30,21 @@
 		            prenotazione: torna al punto \ref{item:riepilogo};
 
 		      \item L'Utente base conferma il riepilogo dell'ordinazione;
+
+		      \item Se tutti gli Utenti base che hanno accesso alla prenotazione
+		            hanno confermato il riepilogo dell'ordinazione: il Sistema
+		            notifica l'ordinazione all'Utente ristoratore.
 	      \end{enumerate}
 
 	\item \textbf{Scenario secondario:}
 	      \begin{itemize}
-		      \item L'Utente base annulla l'ordinazione.
+		      \item L'Utente base annulla l'ordinazione (vedi
+		            \autoref{usecase:Annullamento della prenotazione}).
 		            \begin{enumerate}
 			            \item L'Utente base annulla l'ordinazione;
 			            \item Il Sistema aggiorna l'ordinazione.
 			            \item Il Sistema notifica l'annullamento dell'ordinazione
 			                  all'Utente ristoratore.
-		            \end{enumerate}
-
-		      \item Tutti gli Utenti base di una prenotazione confermano il
-		            riepilogo dell'ordinazione.
-		            \begin{enumerate}
-			            \item Il Sistema notifica l'ordinazione all'Utente ristoratore.
 		            \end{enumerate}
 	      \end{itemize}
 \end{itemize}
@@ -69,9 +70,13 @@
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
 		      \item L'Utente base entra nella sezione di modifica del riepilogo;
-		      \item L'Utente base modifica il riepilogo della prenotazione, aggiungendo o
-		            rimuovendo pietanze;
+		      \item L'Utente base modifica il riepilogo della prenotazione pietanze;
 		      \item L'Utente base conferma le modifiche;
 		      \item Il Sistema aggiorna il riepilogo della prenotazione.
 	      \end{enumerate}
+
+	\item \textbf{Descrizione:} L'Utente base può modificare il riepilogo della
+	      prenotazione: modificando le quantità (numero piatti) o gli
+	      ingredienti delle pietanze già presenti; oppure aggiungendo nuove
+	      pietanze; o rimuovendo pietanze già presenti.
 \end{itemize}

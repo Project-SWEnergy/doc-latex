@@ -19,4 +19,46 @@
 		      \item L'Utente base seleziona una prenotazione;
 		      \item Il Sistema mostra il riepilogo della prenotazione.
 	      \end{enumerate}
+
+	\item \textbf{Descrizione:}
+	      I campi del riepilogo sono almeno:
+	      \begin{itemize}
+		      \item \textbf{Nome ristorante:} nome del ristorante;
+		      \item \textbf{Data e ora:} data e ora della prenotazione;
+		      \item \textbf{Numero di persone:} numero di persone per cui è
+		            stata effettuata la prenotazione;
+		      \item \textbf{Username:} username dell'Utente base
+		            associato alla prenotazione o lista degli username degli
+		            Utenti base associati alla prenotazione;
+
+		      \item \textbf{Stato:} stato della prenotazione. Una
+		            prenotazione si può trovare in uno dei seguenti stati:
+		            \begin{itemize}
+			            \item \textbf{In attesa:} la prenotazione è
+			                  in attesa di conferma da parte del ristorante;
+
+			            \item \textbf{Confermata dal ristoratore:} la prenotazione è
+			                  stata confermata dal ristorante;
+
+			            \item \textbf{Annullata:} la prenotazione è
+			                  stata annullata dal ristorante o dall'Utente base
+			                  oppure è scaduta;
+
+			            \item \textbf{Confermata dal cliente:} da tutti gli
+			                  Utenti base (vedi
+			                  \autoref{usecase:Ordinazione collaborativa dei pasti});
+
+			            \item \textbf{In corso:} la prenotazione è
+			                  in corso;
+
+			            \item \textbf{Terminata:} la prenotazione è
+			                  terminata e il conto è stato pagato.
+		            \end{itemize}
+
+		            Ogni volta che lo stato della prenotazione cambia, il Sistema
+		            invia una notifica a tutti gli Utenti autenticati associati alla
+		            prenotazione che non hanno effettuato l'azione che ha portato al
+		            cambio di stato.
+	      \end{itemize}
+
 \end{itemize}
