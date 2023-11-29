@@ -1,3 +1,37 @@
 \section{Casi d'uso}
 
+Di seguito sono riportati i casi d'uso individuati per il sistema. Si noti che i
+casi d'uso sono stati organizzati seguendo l'ordine del capitolato. SWEnergy
+ritiene tuttavia, che l'ordine di presentazione dei casi d'uso debba essere
+approfondito. Si è posta maggiore attenzione ai casi d'uso più impellenti.
+Permangono dubbi e perplessità, principalmente di carattere generale. Siamo
+interessati a ricevere un qualunque tipo di feedback, sia sulle cose
+fatte bene, che su quelle fatte male. Anche i commenti più banali sono
+benvenuti, perché è la prima volta che ci cimentiamo in questa attività.
+Infine, non abbiamo approfondito tutti i casi d'uso che ci sono venuti in mente,
+e nemmeno alcuni di quelli che abbiamo citato anche con il proponente. Non lo
+riteniamo un problema, perché in ogni caso, ci saranno diversi casi d'uso che
+andranno rivisti e modificati.
+
 \subsection{Attori}
+
+Di seguito sono elencati gli attori individuati per il sistema e le relative
+dipeendenze:
+\begin{itemize}
+	\item \textbf{Utente esterno}: è un utente che non ha effettuato l'accesso al
+	      sistema. Può essere un utente non registrato o un utente registrato che non ha
+	      ancora effettuato l'accesso;
+
+	\item \textbf{Utente base}: l'utente base può compiere tutte le azioni
+	      dell'utente esterno. Inoltre, può effettuare l'accesso al sistema e può
+	      effettuare delle prenotazioni e ciò che ne comporta. L'utente base rappresenta
+	      il cliente del ristorante;
+
+	\item \textbf{Utente ristoratore}: l'utente ristoratore può compiere tutte le
+	      azioni dell'utente esterno. Inoltre, può gestire il proprio ristorante e le
+	      prenotazioni ad esso associate. L'utente ristoratore rappresenta il gestore del
+	      ristorante;
+
+	\item \textbf{Utente autenticato}: l'utente autenticato rappresenta un utente
+	      base oppure un utente ristoratore che ha effettuato l'accesso al sistema.
+\end{itemize}
