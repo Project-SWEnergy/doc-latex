@@ -1,29 +1,88 @@
 \usecase{Effettua accesso}
 \label{usecase:Effettua accesso}
+
 \begin{itemize}
-	\item \textbf{Attore principale:} Utente generico.
-	\item \textbf{Attori secondari:}
-	      \begin{itemize}
-		      \item Sistema;
-		      \item Sistema di autenticazione esterno.
-	      \end{itemize}
+	\item \textbf{Descrizione:} Un Utente esterno decide di effettuare l'accesso all'interno della \textit{web app}. Per effettuare tale
+	operazione gli vengono presentate due opzioni:
+	\begin{itemize}
+		\item Accesso tramite inserimento di \textit{email} e \textit{password}.
+		\item Accesso tramite un sistema di terze parti.
+	\end{itemize}
+	Nel caso in cui l'autenticazione fallisca, l'Utente esterno deve inserire nuovamente le credenziali.
+
+	\item \textbf{Attore principale:} Utente esterno.
+	\item \textbf{Attore secondario:} Sistema di autenticazione esterno.
 	\item \textbf{Precondizioni:}
-	      Un Utente esterno è connesso al Sistema.
+	      Un Utente esterno è connesso al Sistema ed è in possesso di un \textit{account}.
 	\item \textbf{Postcondizioni:}
 	      L'Utente esterno è stato identificato dal Sistema come uno solo dei seguenti:
 	      \begin{itemize}
-		      \item Utente ristoratore;
+		      \item Utente ristoratore.
 		      \item Utente base.
 	      \end{itemize}
+		  L'utente autenticato viene reindirizzato alla pagina \textit{Home} di pertinenza.
+
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
-		      \item L'Utente esterno seleziona la modalità di accesso per terze parti;
-		      \item Il Sistema reindirizza l'Utente esterno alla pagina di accesso per terze parti;
-		      \item L'Utente esterno inserisce le proprie credenziali;
-		      \item Il Sistema di autenticazione esterno verifica le credenziali;
-		      \item Il Sistema di autenticazione esterno invia al Sistema le informazioni dell'Utente esterno;
-		      \item Il Sistema verifica se l'Utente esterno è un Utente ristoratore;
-		      \item Altrimenti il Sistema identifica l'Utente esterno come Utente base;
-		      \item Il Sistema reindirizza l'Utente generale alla pagina principale.
+		      \item L'Utente esterno seleziona la tipologia di accesso: 
+
+			  \begin{itemize}
+				\item Accesso per terze parti (vedi \autoref{usecase:Accesso per terze parti})
+				\item Accesso tradizionale (vedi \autoref{usecase:Accesso tradizionale}).
+			  \end{itemize}
+
+		      \item Il Sistema verifica se l'Utente esterno è un Utente ristoratore oppure Utente base;
+		      \item L'Utente autenticato viene reindirizzato alla \textit{Home} impostata a seconda della tipologia di \textit{account};		
 	      \end{enumerate}
+		
+	\item \textbf{Scenario secondario:}
+	\begin{itemize}
+		\item \autoref{usecase:Accesso fallito} Accesso fallito:
+		\begin{enumerate}
+			\item L'autenticazione è fallita (vedi \autoref{usecase:Accesso fallito});
+			\item L'Utente esterno viene indirizzato nuovamente nella pagina di accesso; 
+		\end{enumerate}	
+	\end{itemize}
+
+		
+
+\end{itemize}
+
+\subusecase{Accesso per terze parti}
+\label{usecase:Accesso per terze parti}
+\begin{itemize}
+
+	\item \textbf{Attore principale:} Utente esterno.
+	\item \textbf{Attore secondario:} Sistema di autenticazione esterno.
+
+	\item \textbf{Precondizioni:} Un Utente esterno è connesso al Sistema ed è in possesso di un \textit{account}.
+
+	\item \textbf{Postcondizioni:} Sono state verificate \textit{email} e \textit{password} dal Sistema di autenticazione esterno.
+
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+		\item Il Sistema reindirizza l'Utente esterno alla pagina di accesso per terze parti.
+		\item Il Sistema di autenticazione esterno verifica le credenziali.
+		\item Il Sistema di autenticazione esterno invia al Sistema le informazioni dell'Utente esterno.
+		\item Il Sistema di autenticazione esterno reindirizza l'Utente esterno alla pagina di accesso. 
+	\end{enumerate}
+	
+\end{itemize}
+
+\subusecase{Accesso tradizionale}
+\label{usecase:Accesso tradizionale}
+\begin{itemize}
+
+	\item \textbf{Attore principale:} Utente esterno.
+
+	\item \textbf{Precondizioni:} Un Utente esterno è connesso al Sistema ed è in possesso di un \textit{account}.
+
+	\item \textbf{Postcondizioni:} Sono state verificate \textit{email} e \textit{password}.
+
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+		\item L'Utente esterno inserisce le credenziali del suo \textit{account}.
+		\item Il Sistema verifica le credenziali.
+	\end{enumerate}
+
 \end{itemize}

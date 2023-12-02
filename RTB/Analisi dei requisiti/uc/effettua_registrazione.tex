@@ -1,0 +1,131 @@
+\usecase{Effettua registrazione}
+\label{usecase:Effettua registrazione}
+
+\begin{itemize}
+	\item \textbf{Descrizione:} Un Utente esterno decide di effettuare la registrazione all'interno della \textit{web app}. Per effettuare tale
+	operazione gli viene chiesto la tipologia di utente tra i due disponibili: Utente base oppure Utente ristoratore. 
+    A seguito di tale decisione l'utente deve inserire una serie di dati relativi alla registrazione e legati alla tipologia di utenza.
+
+	\item \textbf{Attore principale:} Utente esterno.
+	\item \textbf{Attori secondari:} Sistema di autenticazione esterno.
+	\item \textbf{Precondizioni:}
+        \begin{itemize}
+            \item Un Utente esterno è connesso al Sistema.
+            \item L'Utente esterno non dispone di un \textit{account}.
+        \end{itemize}
+	\item \textbf{Postcondizioni:}
+	    \begin{enumerate}
+            \item L'Utente esterno ha creato un \textit{account} tra i seguenti:
+            \begin{itemize}
+                \item Utente ristoratore.
+                \item Utente base.
+            \end{itemize}
+            \item Le informazioni del nuovo \textit{account} creato vengono tutte memorizzate all'interno del Sistema.
+            \item L'utente autenticato viene reindirizzato alla pagina \textit{Home} di pertinenza.
+        \end{enumerate}
+
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente esterno seleziona la tipologia di \textit{account} che vuole creare: 
+		      \begin{itemize}
+				\item Utente base (vedi \autoref{usecase:Registrazione Utente base}).
+				\item Utente ristoratore (vedi \autoref{usecase:Registrazione Utente ristoratore}).
+			  \end{itemize} 
+              \item Il Sistema memorizza l'\textit{account} appena creato;
+		      \item L'Utente autenticato viene reindirizzato alla \textit{Home} dedicata;	
+	      \end{enumerate}
+		
+    \item \textbf{Scenario secondario:}
+          \begin{itemize}
+              \item \autoref{usecase:Registrazione fallita} Registrazione fallita:
+              \begin{enumerate}
+                  \item La registrazione è fallita perchè esiste già un account con le credenziali inserite (vedi \autoref{usecase:Errore registrazione account esistente}).
+                  \item La registrazione è fallita perchè l'Utente ristoratore ha inserito come recapito del ristorante uno già occupato (vedi \autoref{usecase:Errore registrazione recapito occupato})
+              \end{enumerate}	
+          \end{itemize}
+	
+\end{itemize}
+
+
+\subusecase{Registrazione Utente base}
+\label{usecase:Registrazione Utente base}
+\begin{itemize}
+
+	\item \textbf{Attore principale:} Utente esterno.
+	\item \textbf{Attori secondari:} Sistema di autenticazione esterno.
+
+	\item \textbf{Precondizioni:} 
+	\begin{itemize}
+        \item  Un Utente esterno è connesso al Sistema
+        \item  Un Utente esterno vuole registrarsi come Utente base.
+    \end{itemize}
+    
+
+	\item \textbf{Postcondizioni:} 
+    \begin{itemize}
+        \item  Sono state verificate tutte le informazioni inserite durante la fase di registrazione.
+        \item  L'Utente esterno ha creato un \textit{account} come Utente base.
+    \end{itemize}
+
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+
+            \item Se ha selezionato la creazione per terze parti allora il Sistema reindirizza l'utente alla pagina del Sistema esterno di terze parti (vedi \autoref{usecase:Accesso per terze parti}).
+            \item Se ha selezionato l'accesso tradizionale allora dovrà inserire:
+            \begin{itemize}
+                \item Nome;
+                \item Cognome;
+                \item \textit{Email};
+                \item \textit{Password};
+            \end{itemize}
+            \item Indipendentemente dalla modalità di creazione dell' \textit{account}, l'utente infine dovrà inserire le proprie allergie e intolleranze.
+            
+	\end{enumerate}
+	
+\end{itemize}
+
+\subusecase{Registrazione Utente ristoratore}
+\label{usecase:Registrazione Utente ristoratore}
+\begin{itemize}
+
+	\item \textbf{Attore principale:} Utente esterno.
+	\item \textbf{Attori secondari:} Sistema di autenticazione esterno. 
+
+	\item \textbf{Precondizioni:} 
+	\begin{itemize}
+        \item  Un Utente esterno è connesso al Sistema
+        \item  Un Utente esterno vuole registrarsi come Utente ristoratore.
+    \end{itemize}
+    
+
+	\item \textbf{Postcondizioni:} 
+    \begin{itemize}
+        \item  Sono state verificate tutte le informazioni inserite durante la fase di registrazione.
+        \item  L'Utente esterno ha creato un \textit{account} come Utente ristoratore.
+    \end{itemize}
+
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+
+            \item Se ha selezionato la creazione per terze parti allora il Sistema reindirizza l'utente alla pagina del Sistema esterno di terze parti (vedi \autoref{usecase:Accesso per terze parti}).
+            \item Se ha selezionato l'accesso tradizionale allora dovrà inserire:
+            \begin{itemize}
+                \item Nome;
+                \item Cognome;
+                \item \textit{Email};
+                \item \textit{Password};
+            \end{itemize}
+
+            \item Indipendentemente dalla modalità di creazione dell' \textit{account}, l'utente infine dovrà inserire le seguenti informazioni:
+                \begin{itemize}
+                    \item Nome del ristorante;
+                    \item Recapiti del risorante;
+                    \item Orari di apertura del ristorante;
+                    \item Numero dei coperti disponibili;
+                    \item Tipologia di cucina;
+                \end{itemize}
+            
+	\end{enumerate}
+	
+\end{itemize}

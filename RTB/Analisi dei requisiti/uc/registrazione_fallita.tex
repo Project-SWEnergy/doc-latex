@@ -1,0 +1,62 @@
+\usecase{Registrazione fallita}
+\label{usecase:Registrazione fallita}
+
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente esterno.
+	\item \textbf{Precondizioni:}
+    L'utente durante il processo di registrazione ha:
+    \begin{itemize}
+        \item Inserito credenziali di un \textit{account} già esistente.
+        \item Inserito le informazioni di recapito di un ristorante già esistente.
+    \end{itemize}
+	\item \textbf{Postcondizioni:} L'Utente esterno visualizza un messaggio di errore relativo alla registrazione fallita.
+
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+        \item Il Sistema verifica che le credenziali inserite dall'Utente esterno siano corrette;
+        \item Il Sistema visualizza un messaggio di errore relativo alla registrazione fallita:
+            \begin{itemize}
+                \item Messaggio relativo all'inserito di credenziali di un \textit{account} già esistente (vedi \autoref{usecase:Errore registrazione account esistente}).
+                \item Messaggio relativo all'inserimento di un recapito  di un risorante già esistente (vedi \autoref{usecase:Errore registrazione recapito occupato}).
+            \end{itemize}
+        \item Il Sistema reindirizza l'Utente base alla pagina di registrazione (vedi \autoref{usecase:Effettua registrazione})
+    \end{enumerate}
+	
+\end{itemize}
+
+
+\subusecase{Errore registrazione account esistente}
+\label{usecase:Errore registrazione account esistente}
+\begin{itemize}
+
+	\item \textbf{Attore principale:} Utente esterno.
+
+	\item \textbf{Precondizioni:} L'Utente esterno ha inserito credenziali di un \textit{account} già esistente.
+
+	\item \textbf{Postcondizioni:} L'Utente esterno visualizza un messaggio di errore relativo all'utilizzo di credenziali già in uso.
+
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+        \item Il Sistema verifica che le credenziali inserite dall'Utente esterno siano corrette;
+        \item Il Sistema visualizza un messaggio di errore relativo alla registrazione fallita a seguito di un utilizzo di credenziali già in uso;
+	\end{enumerate}
+	
+\end{itemize}
+
+\subusecase{Errore registrazione recapito occupato}
+\label{usecase:Errore registrazione recapito occupato}
+\begin{itemize}
+
+	\item \textbf{Attore principale:} Utente esterno.
+
+	\item \textbf{Precondizioni:} L'Utente esterno ha inserito il proprio recapito del risorante di uno già occupato.
+	
+	\item \textbf{Postcondizioni:} L'Utente esterno visualizza un messaggio di errore relativo al recapito del proprio risorante che risulta già occupato.
+
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+        \item Il Sistema verifica che il recapito inserito dall'Utente esterno sia corretto;
+        \item Il Sistema visualizza un messaggio di errore relativo all'inserimento di un recapito già in uso;
+	\end{enumerate}
+	
+\end{itemize}
