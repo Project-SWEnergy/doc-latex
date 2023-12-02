@@ -1,6 +1,8 @@
 \usecase{name}
 \label{usecase:name}
 \begin{itemize}
+\item \textbf{Descrizione:}
+
 \item \textbf{Attore principale:} actor
 
 \item \textbf{Precondizioni:}
@@ -11,8 +13,4 @@
 \begin{enumerate}
 \item 
 \end{enumerate}
-
-\item \textbf{Generalizzazioni:}
-\begin{itemize}
-\end{itemize}
 \end{itemize}
