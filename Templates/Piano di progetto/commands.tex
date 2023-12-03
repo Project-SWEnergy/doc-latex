@@ -47,5 +47,49 @@
 
 
 %
-% USE CASE COMMANDS
+% RISK COMMANDS
 %
+
+% Create a new counter that resets within each subsection
+\newcounter{risktech}[subsection]
+% Define the numbering format for the new command
+\renewcommand{\therisktech}{\arabic{risktech}}
+
+% Redefine the \risktech command
+\makeatletter
+\newcommand{\l@risktech}{\@dottedtocline{3}{3.8em}{3.2em}} % Formatting similar to subsubsections in TOC
+\newcommand{\risktech}[1]{%
+	\stepcounter{risktech}%
+	\phantomsection
+	\addcontentsline{toc}{risktech}{\protect\numberline{RT-\therisktech}#1}%
+	\noindent\textbf{RT-\therisktech \ #1}%
+}
+
+% Create a new counter that resets within each subsection
+\newcounter{riskcom}[subsection]
+% Define the numbering format for the new command
+\renewcommand{\theriskcom}{\arabic{riskcom}}
+
+% Redefine the \riskcom command
+\newcommand{\l@riskcom}{\@dottedtocline{3}{3.8em}{3.2em}} % Formatting similar to subsubsections in TOC
+\newcommand{\riskcom}[1]{%
+	\stepcounter{riskcom}%
+	\phantomsection
+	\addcontentsline{toc}{riskcom}{\protect\numberline{RT-\theriskcom}#1}%
+	\noindent\textbf{RC-\theriskcom \ #1}%
+}
+
+% Create a new counter that resets within each subsection
+\newcounter{riskplan}[subsection]
+% Define the numbering format for the new command
+\renewcommand{\theriskplan}{\arabic{riskplan}}
+
+% Redefine the \riskplan command
+\newcommand{\l@riskplan}{\@dottedtocline{3}{3.8em}{3.2em}} % Formatting similar to subsubsections in TOC
+\newcommand{\riskplan}[1]{%
+	\stepcounter{riskplan}%
+	\phantomsection
+	\addcontentsline{toc}{riskplan}{\protect\numberline{RT-\theriskplan}#1}%
+	\noindent\textbf{RP-\theriskplan \ #1}%
+}
+\makeatother
