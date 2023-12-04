@@ -1,0 +1,34 @@
+\documentclass[a4paper, 12pt]{article}
+
+\newcommand{\template}{../../../../Templates}
+\usepackage{\template/package}
+\graphicspath{{../../../../Assets}}
+
+\newcommand{\Titolo}{Verbale interno}
+\newcommand{\Gruppo}{SWEnergy}
+\newcommand{\Data}{03/12/2023}
+\newcommand{\Mail}{\href{mailto:project.swenergy@gmail.com}{project.swenergy@gmail.com}}
+\newcommand{\Versione}{0.1.0}
+\newcommand{\Descrizione}{Brainstorming e organizzazione del lavoro per la
+settimana 49.}
+\newcommand{\Stato}{Non approvato}
+\newcommand{\Redattori}{Carlo Rosso}
+\newcommand{\Verificatori}{Nessuno}
+\newcommand{\Approvatori}{Nessuno}
+\newcommand{\Responsabile}{Alssaandro Tigani Sava}
+
+\input{\template/verbale interno/commands.tex}
+
+\begin{document}
+
+\copertina{}
+\newpage
+
+\input{chapters/partecipanti}
+\renewcommand{\contentsname}{Ordine del giorno}
+\tableofcontents
+\newpage
+
+\input{chapters/contenuto}
+\input{chapters/incarichi}
+\end{document}
