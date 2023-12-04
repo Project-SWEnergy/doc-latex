@@ -59,11 +59,11 @@
 \makeatletter
 \newcommand{\l@risktech}{\@dottedtocline{3}{3.8em}{3.2em}} % Formatting similar to subsubsections in TOC
 \newcommand{\risktech}[1]{%
-	\stepcounter{risktech}%
-	\phantomsection
+	\refstepcounter{risktech}%
 	\addcontentsline{toc}{risktech}{\protect\numberline{RT-\therisktech}#1}%
 	\noindent\textbf{RT-\therisktech \ #1}%
 }
+\newcommand{\risktechautorefname}{RT}
 
 % Create a new counter that resets within each subsection
 \newcounter{riskcom}[subsection]
@@ -73,11 +73,11 @@
 % Redefine the \riskcom command
 \newcommand{\l@riskcom}{\@dottedtocline{3}{3.8em}{3.2em}} % Formatting similar to subsubsections in TOC
 \newcommand{\riskcom}[1]{%
-	\stepcounter{riskcom}%
-	\phantomsection
+	\refstepcounter{riskcom}%
 	\addcontentsline{toc}{riskcom}{\protect\numberline{RC-\theriskcom}#1}%
 	\noindent\textbf{RC-\theriskcom \ #1}%
 }
+\newcommand{\riskcomautorefname}{RC}
 
 % Create a new counter that resets within each subsection
 \newcounter{riskplan}[subsection]
@@ -87,9 +87,9 @@
 % Redefine the \riskplan command
 \newcommand{\l@riskplan}{\@dottedtocline{3}{3.8em}{3.2em}} % Formatting similar to subsubsections in TOC
 \newcommand{\riskplan}[1]{%
-	\stepcounter{riskplan}%
-	\phantomsection
+	\refstepcounter{riskplan}%
 	\addcontentsline{toc}{riskplan}{\protect\numberline{RP-\theriskplan}#1}%
 	\noindent\textbf{RP-\theriskplan \ #1}%
 }
+\newcommand{\riskplanautorefname}{RP}
 \makeatother
