@@ -3,43 +3,38 @@
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente base.
 
-	\item \textbf{Attori secondari:}
-	      \begin{itemize}
-		      \item Sistema;
-		      \item Utente ristoratore.
-	      \end{itemize}
+	\item \textbf{Attori secondari:} Utente ristoratore.
 
 	\item \textbf{Precondizioni:}
-	      Un Utente base ha effettuato l'accesso al Sistema e sta
-	      visualizzando il riepilogo di una prenotazione che si trova in uno
-	      degli stati: \textit{In attesa} o \textit{Confermata dal ristoratore}
-	      (vedi \autoref{usecase:Visualizzazione del riepilogo}).
-
-	\item \textbf{Postcondizioni:}
-	      Un Utente base ha ordinato le pietanze per la prenotazione effettuata.
+		\begin{itemize}
+			\item L'Utente base ha effettuato l'accesso al Sistema (vedi \autoref{usecase:Effettua accesso});
+			\item L'Utente base ha effettuato una prenotazione (bedi \autoref{usecase:Prenotazione di un tavolo});
+			\item L'Utente base sta visualizzando il riepilogo di una prenotazione che si deve trovare nello stato: \textit{Confermata dal ristoratore} (vedi \autoref{usecase:Visualizzazione del riepilogo prenotazione}).
+		\end{itemize}
+	      
+	\item \textbf{Postcondizioni:} Un Utente base ha ordinato le pietanze per la prenotazione effettuata.
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
 		      \item \label{item:riepilogo}
-		            Il Sistema mostra il riepilogo della prenotazione;
+		            Il Sistema mostra il riepilogo dell'ordinazione;
 
-		      \item L'Utente base modifica il riepilogo della prenotazione
-		            (vedi \autoref{usecase:Aggiornamento del riepilogo});
+		      \item L'Utente base crea o modifica il proprio ordine
+		            (vedi \autoref{usecase:Creazione e modifica del proprio ordine});
 
-		      \item Se l'Utente base ha modificato il riepilogo della
-		            prenotazione: torna al punto \ref{item:riepilogo};
+		      \item Se l'Utente base ha modificato il riepilogo dell'ordinazione: torna al punto \ref{item:riepilogo};
 
 		      \item L'Utente base conferma il riepilogo dell'ordinazione;
 
 		      \item Se tutti gli Utenti base che hanno accesso alla prenotazione
 		            hanno confermato il riepilogo dell'ordinazione: il Sistema
-		            notifica l'ordinazione all'Utente ristoratore.
+		            notifica l'ordinazione all'Utente ristoratore (vedi\autoref{usecase:Notifica ordine}).
 	      \end{enumerate}
 
 	\item \textbf{Scenario secondario:}
 	      \begin{itemize}
 		      \item L'Utente base annulla l'ordinazione (vedi
-		            \autoref{usecase:Annullamento della prenotazione}).
+		            \autoref{usecase:Annullamento dell'ordinazione}).
 		            \begin{enumerate}
 			            \item L'Utente base annulla l'ordinazione;
 			            \item Il Sistema aggiorna l'ordinazione.
@@ -50,36 +45,64 @@
 \end{itemize}
 
 
-\subusecase{Aggiornamento del riepilogo}
-\label{usecase:Aggiornamento del riepilogo}
+\subusecase{Creazione e modifica del proprio ordine}
+\label{usecase:Creazione e modifica del proprio ordine}
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente base.
 
-	\item \textbf{Attore secondario:} Sistema.
-
-	\item \textbf{Precondizioni:}
-	      Un Utente base ha effettuato l'accesso al Sistema, ha effettuato una
-	      prenotazione (vedi \autoref{usecase:Prenotazione di un tavolo}) e
-	      sta visualizzando il riepilogo della prenotazione
-	      (vedi \autoref{usecase:Visualizzazione del riepilogo}).
+	\item \textbf{Precondizioni:} L'Utente base sta effettuando un ordinazione collaborativa dei pasti (vedi \autoref{usecase:Ordinazione collaborativa dei pasti});
 
 	\item \textbf{Postcondizioni:}
-	      L'Utente base ha modificato il riepilogo della prenotazione e il Sistema
-	      aggiorna le informazioni inerenti alla prenotazione.
+		\begin{itemize}
+			\item L'Utente base ha creato o modificato il proprio ordine;
+			\item Il Sistema aggiorna le informazioni inerenti al suo ordine.
+		\end{itemize}
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
-		      \item L'Utente base entra nella sezione di modifica del riepilogo;
-		      \item L'Utente base modifica il riepilogo della prenotazione pietanze;
-		      \item L'Utente base conferma le modifiche;
-		      \item Il Sistema aggiorna il riepilogo della prenotazione.
+		      \item L'Utente base seleziona una pietanza (vedi \autoref{usecase:Selezione pietanza});
+		      \item L'Utente base modifica una propria pietanza (vedi \autoref{usecase:Modifica pietanza});
+		      \item L'Utente base conferma il proprio ordine;
+		      \item Il Sistema aggiorna il riepilogo dell'ordinazione.
 	      \end{enumerate}
+\end{itemize}
 
-	\item \textbf{Descrizione:} L'Utente base può modificare il riepilogo della
-	      prenotazione: modificando le quantità (numero piatti) o gli
-	      ingredienti delle pietanze già presenti; oppure aggiungendo nuove
-	      pietanze; o rimuovendo pietanze già presenti. Un Utente base può
-	      anche modificare la data e l'ora della prenotazione, nel qual caso la
-	      prenotazione torna nello stato \textit{In attesa} (vedi
-	      \autoref{usecase:Visualizzazione del riepilogo}).
+
+\subsubusecase{Selezione pietanza}
+\label{usecase:Selezione pietanza}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente base.
+
+	\item \textbf{Precondizioni:} L'Utente base si trova nella sezione Creazione e modifica del proprio ordine (vedi \autoref{usecase:Creazione e modifica del proprio ordine});
+
+	\item \textbf{Postcondizioni:} L'Utente base ha selezionato una pietanza.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente base seleziona tra le lista delle pietanze una che vuole aggiungere al proprio ordine;
+		      \item L'Utente base conferma la sua selezione;
+		      \item Il Sistema registra la sua selezione;
+	      \end{enumerate}
+\end{itemize}
+
+\subsubusecase{Modifica pietanza}
+\label{usecase:Modifica pietanza}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente base.
+
+	\item \textbf{Precondizioni:} L'Utente base si trova nella sezione Creazione e modifica del proprio ordine (vedi \autoref{usecase:Creazione e modifica del proprio ordine});
+
+	\item \textbf{Postcondizioni:} L'Utente base ha modificato una pietanza.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente base seleziona tra le pietanze del suo ordine una che vuole modificare, ovvero:
+		      \begin{itemize}
+				\item Modifica della quantità della pietanza selezionata;
+				\item Rimozione di ingredienti della pietanza selezionata;
+				\item Aggiunta di ingredienti della pietanza selezionata;
+			  \end{itemize}
+		      \item L'Utente base conferma la sua modifica;
+		      \item Il Sistema registra la sua modifica;
+	      \end{enumerate}
 \end{itemize}

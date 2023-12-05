@@ -3,13 +3,11 @@
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente base.
 
-	\item \textbf{Attore secondario:} Sistema.
-
-	\item \textbf{Precondizioni:} L'Utente base è connesso al Sistema e
-	      visualizza il riepilogo di una prenotazione
-	      (vedi \autoref{usecase:Visualizzazione del riepilogo}) che è stata
-	      condivisa con altri Utenti base
-	      (vedi \autoref{usecase:Condividi la prenotazione}).
+	\item \textbf{Precondizioni:}  
+	\begin{itemize}
+		\item L'Utente base ha concluso l'ordinazione collaborativa dei pasti (vedi \autoref{usecase:Ordinazione collaborativa dei pasti});
+		\item L'Utente base visualizza il riepilogo di una prenotazione (vedi \autoref{usecase:Visualizzazione del riepilogo prenotazione}) il quale stato risulta \textit{Terminata}; 
+	\end{itemize}
 
 	\item \textbf{Postcondizioni:} L'Utente base ha diviso il conto secondo le
 	      sue preferenze.
@@ -19,23 +17,11 @@
 		      \item L'Utente base seleziona la modalità di divisione del conto
 		            (vedi \autoref{usecase:Selezione della modalità di divisione del conto});
 
-		      \item Il Sistema mostra il riepilogo della prenotazione aggiornato
-		            (vedi \autoref{usecase:Visualizzazione del riepilogo});
-
-		      \item L'Utente base seleziona i piatti che vuole pagare oppure la
-		            quota che vuole pagare;
-
-		      \item L'Utente base aggiunge una mancia a piacere;
-
-		      \item L'Utente base conferma la selezione dei piatti;
-
-		      \item Il Sistema memorizza la selezione dei piatti;
+			 \item  L'Utente base aggiunge una mancia a piacere;
 
 		      \item Il Sistema mostra il riepilogo della prenotazione aggiornato
-		            (vedi \autoref{usecase:Visualizzazione del riepilogo});
+		            (vedi \autoref{usecase:Visualizzazione del riepilogo prenotazione});
 
-		      \item Il Sistema invia la notifica di divisione del conto
-		            all'Utente ristoratore;
 	      \end{enumerate}
 \end{itemize}
 
@@ -43,51 +29,43 @@
 \label{usecase:Selezione della modalità di divisione del conto}
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente base.
-
-	\item \textbf{Attore secondario:} Sistema.
-
-	\item \textbf{Precondizioni:}
-	      L'Utente base è connesso al sistema e visualizza il riepilogo di una
-	      prenotazione (vedi \autoref{usecase:Visualizzazione del riepilogo})
-	      che è stata condivisa con altri Utenti base (vedi
-	      \autoref{usecase:Condividi la prenotazione}).
+	
+	\item \textbf{Precondizioni:} L'Utente base si trova nella sezione di divisione del conto (vedi \autoref{usecase:Divisione del conto}).
 
 	\item \textbf{Postcondizioni:}
 	      L'Utente base ha selezionato la modalità di divisione del conto.
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
 		      \item L'Utente base seleziona la modalità di divisione del conto
-		            tra quelle disponibili;
+		            tra quelle disponibili:
+					\begin{itemize}
+						\item \textbf{Divisione equa:} il conto viene diviso in parti
+							  uguali tra tutti gli Utenti base che hanno condiviso la
+							  prenotazione. L'Utente base può scegliere di pagare più di
+							  una quota;
+		  
+						\item \textbf{Proporzionale:} l'Utente base seleziona i piatti che vuole
+							  pagare.
+					\end{itemize}
 
 		      \item L'Utente base conferma la modalità di divisione del conto.
 
 		      \item Il Sistema memorizza la modalità di divisione del conto.
 	      \end{enumerate}
 
-	\item \textbf{Descrizione:}
-	      L'Utente base può scegliere tra le seguenti modalità di divisione del conto:
-	      \begin{itemize}
-		      \item \textbf{Divisione equa:} il conto viene diviso in parti
-		            uguali tra tutti gli Utenti base che hanno condiviso la
-		            prenotazione. L'Utente base può scegliere di pagare più di
-		            una quota;
-
-		      \item \textbf{Proporzionale:} l'Utente base seleziona i piatti che vuole
-		            pagare.
-	      \end{itemize}
-
 	\item \textbf{Scenario secondario:}
-	      Scelta della modalità di divisione del conto già effettuata (vedi
-	      \autoref{usecase:Modalità di divisione del conto già effettuata}).
+		  \begin{itemize}
+			  \item \autoref{usecase:Modalità di divisione del conto già effettuata} Modalità di divisione del conto già effettuata:
+				\begin{enumerate}
+					\item L'Utente base seleziona la modalità di divisione del conto
+						tra quelle disponibili;
+	
+					\item L'Utente base conferma la modalità di divisione del conto.
+	
+					\item Il Sistema mostra un messaggio di errore e spiega che la
+						modalità di divisione del conto è già stata scelta.
+				\end{enumerate}
+		  \end{itemize}
 
-	      \begin{enumerate}
-		      \item L'Utente base seleziona la modalità di divisione del conto
-		            tra quelle disponibili;
-
-		      \item L'Utente base conferma la modalità di divisione del conto.
-
-		      \item Il Sistema mostra un messaggio di errore e spiega che la
-		            modalità di divisione del conto è già stata scelta.
-	      \end{enumerate}
 \end{itemize}
 

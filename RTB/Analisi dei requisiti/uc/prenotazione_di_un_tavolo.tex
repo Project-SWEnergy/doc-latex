@@ -2,23 +2,39 @@
 \label{usecase:Prenotazione di un tavolo}
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente base.
-	\item \textbf{Attori secondari:}
-	      \begin{itemize}
-		      \item Utente ristoratore;
-	      \end{itemize}
 	\item \textbf{Precondizioni:}
-	      Un Utente base ha effettuato l'accesso al Sistema e visualizza la
-	      pagina di dettaglio di un ristorante (vedi \autoref{usecase:Visualizzazione di un ristorante}).
+		\begin{itemize}
+			\item Un Utente base ha effettuato l'accesso al Sistema (vedi \autoref{usecase:Effettua accesso});
+			\item Un Utente base visualizza la pagina di dettaglio di un ristorante (vedi UC FUTURO ANCORA NON FATTO LATO UTENTE ESTERNO);
+		\end{itemize}
 	\item \textbf{Postcondizioni:}
-	      L'Utente base ha prenotato un tavolo.
+		\begin{itemize}
+			\item L'Utente base ha confermato una prenotazione ed è tornato alla \textit{Home}.
+		\end{itemize} 
+	      
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
-		      \item L'Utente base crea un \textit{form} di prenotazione;
+		      \item L'Utente base compila una \textit{form} di prenotazione;
 		      \item L'Utente base seleziona il giorno e l'ora;
 		      \item L'Utente base seleziona il numero di persone;
+		      \item L'Utente base inserisce eventuali necessità: particolare bisogno di seggiolini per bambini oppure se è presente un commensale con qualche disabilità o problemi di movimento;
+		      \item L'Utente base inserisce lo username degli altri commensali che partecipano alla prenotazione;
 		      \item L'Utente base conferma la prenotazione.
 		      \item Il Sistema registra la prenotazione.
-		      \item Il Sistema notifica la prenotazione all'Utente ristoratore.
+		      \item Il Sistema notifica i commensali di cui l'Utente base ha inserito lo username (vedi \textit{extend:} \autoref{usecase:Notifica ai commensali});
+		      \item Il Sistema notifica la prenotazione all'Utente ristoratore (vedi \textit{extend:} \autoref{usecase:Notifica al ristoratore}).
 	      \end{enumerate}
+
+	\item \textbf{Scenario secondario:}
+	      \begin{itemize}
+		      \item L'Utente base annulla la prenotazione (vedi
+		            \autoref{usecase:Annullamento della prenotazione}).
+		            \begin{enumerate}
+			            \item L'Utente base annulla la prenotazione;
+			            \item Il Sistema aggiorna la prenotazione.
+			            \item Il Sistema notifica l'annullamento della prenotazione
+			                  all'Utente ristoratore.
+		            \end{enumerate}
+	      \end{itemize}
 \end{itemize}
 

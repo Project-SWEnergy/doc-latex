@@ -1,34 +1,25 @@
 \usecase{Accedi alla prenotazione}
 \label{usecase:Accedi alla prenotazione}
 \begin{itemize}
-	\item \textbf{Attore principale:} Utente esterno.
+	\item \textbf{Attore principale:} Utente base.
 
-	\item \textbf{Attore secondario:} Sistema.
+	\item \textbf{Precondizione:} L'Utente base ha ricevuto la notifica di invito ad una prenotazione (vedi \autoref{usecase:Notifica ai commensali})
 
-	\item \textbf{Precondizione:} L'utente esterno ha il link di una prenotazione
-	      (vedi \autoref{usecase:Condividi la prenotazione}).
-
-	\item \textbf{Postcondizione:} L'utente esterno ha effettuato l'accesso, la
-	      prenotazione è stata aggiunta alle sue prenotazioni e viene visualizzato il
-	      riepilogo della prenotazione.
+	\item \textbf{Postcondizione:} L'Utente base è collegato ad una prenotazione.
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
-		      \item L'Utente esterno si connette al Sistema mediante il link ricevuto;
-		      \item L'Utente esterno effettua l'accesso al Sistema (vedi
-		            \autoref{usecase:Effettua accesso});
-		      \item Il Sistema identifica l'Utente esterno come Utente base;
-		      \item Il Sistema aggiunge la prenotazione alle prenotazioni dell'Utente base;
-		      \item Il Sistema mostra il riepilogo della prenotazione.
+		      \item L'Utente base ha ricevuto la notifica di invito ad una prenotazione da parte di un altro utente;
+		      \item L'Utente base accetta l'invito;
+		      \item L'Utente base è ora collegato ad una prenotazione;
 	      \end{enumerate}
 
-	\item \textbf{Scenario Secondario:}
-	      Il Sistema identifica l'Utente esterno come Utente ristoratore (vedi
-	      \autoref{usecase:Errore utente ristoratore}).
-	      \begin{enumerate}
-		      \item L'Utente esterno effettua l'accesso al Sistema (vedi
-		            \autoref{usecase:Effettua accesso});
-		      \item Il Sistema identifica l'Utente esterno come Utente ristoratore;
-		      \item Il Sistema mostra un messaggio di errore.
-	      \end{enumerate}
+	\item \textbf{Scenario secondario:}
+		  \begin{itemize}
+			  \item \autoref{usecase:Accesso prenotazione fallito} Accesso prenotazione fallito:
+			  \begin{enumerate}
+				  \item L'autenticazione è fallita (vedi \autoref{usecase:Accesso prenotazione fallito});
+				  \item L'Utente esterno viene indirizzato nuovamente nella pagina di accesso; 
+			  \end{enumerate}	
+		  \end{itemize}
 \end{itemize}

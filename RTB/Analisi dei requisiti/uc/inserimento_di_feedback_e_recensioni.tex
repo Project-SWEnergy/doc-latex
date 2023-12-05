@@ -3,23 +3,18 @@
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente base.
 
-	\item \textbf{Attori secondari:}
-	      \begin{itemize}
-		      \item Utente ristoratore;
-		      \item Sistema.
-	      \end{itemize}
+	\item \textbf{Attori secondari:} Utente ristoratore;
 
-	\item \textbf{Precondizioni:}
-	      L'Utente base è connesso al sistema e ha completato un ordine.
 
-	\item \textbf{Postcondizioni:}
-	      L'Utente base ha lasciato un \textit{feedback} o una recensione.
+	\item \textbf{Precondizioni:} L'Utente base ha completato un ordine e lo ha pagato (vedi \autoref{usecase:Pagamento del conto}).
+
+	\item \textbf{Postcondizioni:} L'Utente base ha lasciato un \textit{feedback} o una recensione.
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
 		      \item L'Utente base seleziona la prenotazione per la quale vuole
 		            lasciare un \textit{feedback} o una recensione (vedi
-		            \autoref{usecase:Visualizzazione del riepilogo});
+		            \autoref{usecase:Visualizzazione del riepilogo prenotazione});
 
 		      \item L'Utente base compila il \textit{form} del \textit{feedback} del ristorante;
 
@@ -31,6 +26,6 @@
 
 		      \item Il Sistema invia una notifica al ristoratore per avvisarlo
 		            dell'inserimento di un nuovo \textit{feedback} o di una nuova
-		            recensione.
+		            recensione (POTENZIALMENTE DA FARE UN CASO D'USO???).
 	      \end{enumerate}
 \end{itemize}
