@@ -1,6 +1,3 @@
-\usepackage{../package}
-\graphicspath{{../../Assets}}
-
 \newcommand{\copertina}{
 	\begin{titlepage}
 		\vspace*{-3.5cm}
@@ -34,17 +31,20 @@
 	\end{titlepage}
 }
 
+%
+% HEADERS AND FOOTERS
+%
+
 \fancypagestyle{plain}{
 	\fancyhf{}
 	\rhead{ \includegraphics[scale=0.05]{horizontal_logo.png}}
-	\lhead{\Titolo}
+	\lhead{\Titolo \ \Versione}
 	%\lfoot{\Titolo}
-	\rfoot{\thepage{}}
+	\rfoot{\thepage{} di \pageref{LastPage}}
 	\renewcommand{\headrulewidth}{0.2pt}
 	\renewcommand{\footrulewidth}{0.2pt}
 }
 \pagestyle{plain}
-
 
 %
 % RISK COMMANDS
@@ -55,41 +55,36 @@
 % Define the numbering format for the new command
 \renewcommand{\therisktech}{\arabic{risktech}}
 
-% Redefine the \risktech command
 \makeatletter
 \newcommand{\l@risktech}{\@dottedtocline{3}{3.8em}{3.2em}} % Formatting similar to subsubsections in TOC
+
+% Redefine the \risktech command
 \newcommand{\risktech}[1]{%
 	\refstepcounter{risktech}%
 	\addcontentsline{toc}{risktech}{\protect\numberline{RT-\therisktech}#1}%
 	\noindent\textbf{RT-\therisktech \ #1}%
 }
-\newcommand{\risktechautorefname}{RT}
+\newcommand{\risktechautorefname}{RT-\hspace{-0.33em}}
 
-% Create a new counter that resets within each subsection
+% Idem for riskcom
 \newcounter{riskcom}[subsection]
-% Define the numbering format for the new command
 \renewcommand{\theriskcom}{\arabic{riskcom}}
-
-% Redefine the \riskcom command
-\newcommand{\l@riskcom}{\@dottedtocline{3}{3.8em}{3.2em}} % Formatting similar to subsubsections in TOC
+\newcommand{\l@riskcom}{\@dottedtocline{3}{3.8em}{3.2em}}
 \newcommand{\riskcom}[1]{%
 	\refstepcounter{riskcom}%
 	\addcontentsline{toc}{riskcom}{\protect\numberline{RC-\theriskcom}#1}%
 	\noindent\textbf{RC-\theriskcom \ #1}%
 }
-\newcommand{\riskcomautorefname}{RC}
+\newcommand{\riskcomautorefname}{RC-\hspace{-0.33em}}
 
-% Create a new counter that resets within each subsection
+% Idem for riskplan
 \newcounter{riskplan}[subsection]
-% Define the numbering format for the new command
 \renewcommand{\theriskplan}{\arabic{riskplan}}
-
-% Redefine the \riskplan command
-\newcommand{\l@riskplan}{\@dottedtocline{3}{3.8em}{3.2em}} % Formatting similar to subsubsections in TOC
+\newcommand{\l@riskplan}{\@dottedtocline{3}{3.8em}{3.2em}}
 \newcommand{\riskplan}[1]{%
 	\refstepcounter{riskplan}%
 	\addcontentsline{toc}{riskplan}{\protect\numberline{RP-\theriskplan}#1}%
 	\noindent\textbf{RP-\theriskplan \ #1}%
 }
-\newcommand{\riskplanautorefname}{RP}
+\newcommand{\riskplanautorefname}{RP-\hspace{-0.33em}}
 \makeatother
