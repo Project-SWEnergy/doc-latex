@@ -1,0 +1,90 @@
+\newcommand{\copertina}{
+	\begin{titlepage}
+		\vspace*{-3.5cm}
+		\makebox[\textwidth]{\includegraphics[width=\paperwidth]{header.png}}
+		\begin{center}
+			\includegraphics[width=1\textwidth]{logo.png}	\\
+			\vspace{1cm}
+			\Mail	\\
+			\vspace{0.5cm}
+			\textbf{\begin{LARGE} \Titolo \end{LARGE}}		\\
+			\vspace{1cm}
+			\textbf{Descrizione:} \Descrizione{}			\\
+			\vspace{1cm}
+		\end{center}
+		\begin{center}
+			{
+				\renewcommand{\arraystretch}{1.5}
+				\begin{tabular}{ll}
+					\textbf{Stato}        & \Stato        \\
+					\textbf{Data}         & \Data         \\
+					\midrule
+					\textbf{Redattori}    & \Redattori    \\
+					\textbf{Verificatori} & \Verificatori \\
+					\textbf{Approvatori}  & \Approvatori  \\
+					\midrule
+					\textbf{Versione}     & \Versione     \\
+				\end{tabular}
+			}
+		\end{center}
+		\vspace{4cm}
+	\end{titlepage}
+}
+
+%
+% HEADERS AND FOOTERS
+%
+
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\rhead{ \includegraphics[scale=0.05]{horizontal_logo.png}}
+	\lhead{\Titolo \ \Versione}
+	%\lfoot{\Titolo}
+	\rfoot{\thepage{} di \pageref{LastPage}}
+	\renewcommand{\headrulewidth}{0.2pt}
+	\renewcommand{\footrulewidth}{0.2pt}
+}
+\pagestyle{plain}
+
+%
+% RISK COMMANDS
+%
+
+% Create a new counter that resets within each subsection
+\newcounter{risktech}[subsection]
+% Define the numbering format for the new command
+\renewcommand{\therisktech}{\arabic{risktech}}
+
+\makeatletter
+\newcommand{\l@risktech}{\@dottedtocline{3}{3.8em}{3.2em}} % Formatting similar to subsubsections in TOC
+
+% Redefine the \risktech command
+\newcommand{\risktech}[1]{%
+	\refstepcounter{risktech}%
+	\addcontentsline{toc}{risktech}{\protect\numberline{RT-\therisktech}#1}%
+	\noindent\textbf{RT-\therisktech \ #1}%
+}
+\newcommand{\risktechautorefname}{RT-\hspace{-0.33em}}
+
+% Idem for riskcom
+\newcounter{riskcom}[subsection]
+\renewcommand{\theriskcom}{\arabic{riskcom}}
+\newcommand{\l@riskcom}{\@dottedtocline{3}{3.8em}{3.2em}}
+\newcommand{\riskcom}[1]{%
+	\refstepcounter{riskcom}%
+	\addcontentsline{toc}{riskcom}{\protect\numberline{RC-\theriskcom}#1}%
+	\noindent\textbf{RC-\theriskcom \ #1}%
+}
+\newcommand{\riskcomautorefname}{RC-\hspace{-0.33em}}
+
+% Idem for riskplan
+\newcounter{riskplan}[subsection]
+\renewcommand{\theriskplan}{\arabic{riskplan}}
+\newcommand{\l@riskplan}{\@dottedtocline{3}{3.8em}{3.2em}}
+\newcommand{\riskplan}[1]{%
+	\refstepcounter{riskplan}%
+	\addcontentsline{toc}{riskplan}{\protect\numberline{RP-\theriskplan}#1}%
+	\noindent\textbf{RP-\theriskplan \ #1}%
+}
+\newcommand{\riskplanautorefname}{RP-\hspace{-0.33em}}
+\makeatother
