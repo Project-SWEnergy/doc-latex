@@ -1,41 +1,32 @@
 \usecase{Visualizzazione di un ristorante}
 \label{usecase:Visualizzazione di un ristorante}
 \begin{itemize}
-	\item \textbf{Attore principale:} Utente generico.
+	\item \textbf{Attore principale:} Utente Esterno, Utente Base.
+	
+	\item \textbf{Attore secondario:} Sistema.
 
-	\item \textbf{Attori secondari:}
-	      \begin{itemize}
-		      \item Sistema.
-	      \end{itemize}
+	\item \textbf{Precondizioni:} L'Utente ha trovato il ristorante tramite la homepage o la funzione di ricerca (vedi \autoref{usecase:Filtro ristoranti}).
 
-	\item \textbf{Precondizioni:}
-	      Un Utente generico è connesso al Sistema.
-
-	\item \textbf{Postcondizioni:}
-	      L'Utente generico visualizza le informazioni del ristorante.
+	\item \textbf{Postcondizioni:} L'Utente visualizza le informazioni del ristorante.
 
 	\item \textbf{Scenario principale:}
-	      \begin{enumerate}
-		      \item Il Sistema richiede il tracciamento della posizione
-		            dell'Utente generico, se non ancora effettuato;
+		\begin{enumerate}
+		    \item Il Sistema mostra i risultati della ricerca;
+		    \item L'Utente seleziona il ristorante;
+		    \item Il Sistema mostra le informazioni del ristorante.
+	    \end{enumerate}
 
-		      \item Il Sistema mostra la pagina di ricerca;
-		      \item L'Utente generico inserisce i parametri di ricerca;
-		      \item L'Utente generico conferma la ricerca.
-		      \item Il Sistema mostra i risultati della ricerca.
-		      \item L'Utente generico seleziona il ristorante;
-		      \item Il Sistema mostra le informazioni del ristorante.
-	      \end{enumerate}
-
-	\item \textbf{Descrizione:}
-	      I parametri di ricerca sono:
-	      \begin{itemize}
-		      \item \textbf{Città:} città in cui cercare il ristorante;
-		      \item \textbf{Prezzo:} fascia di prezzo del ristorante;
-		      \item \textbf{Cucina:} tipologia di alimenti serviti dal ristorante;
-		      \item \textbf{Distanza:} distanza massima del ristorante;
-		      \item \textbf{Voto:} voto minimo del ristorante;
-		      \item \textbf{Orario:} fascia oraria in cui il ristorante è aperto;
-		      \item \textbf{Ordinamento:} criterio di ordinamento dei risultati.
-	      \end{itemize}
+	\item \textbf{Descrizione:} Le informazioni visualizzate sono:
+	    \begin{itemize}
+			\item \textbf{Nome:} nome del ristorante;
+			\item \textbf{Descrizione:} descrizione del ristorante;
+		    \item \textbf{Orario:} giorni settimanali e fascia oraria in cui il ristorante è aperto;
+		    \item \textbf{Indirizzo:} indirizzo del ristorante;
+		    \item \textbf{Recapiti:} numeri di telefono, e-mail o altri modi per contattare il ristorante che non comprendano l'utilizzo della chat;
+		    \item \textbf{Prezzo:} fascia di prezzo del ristorante;
+		    \item \textbf{Voto:} voto minimo del ristorante;
+			\item \textbf{Cucina:} tipologia di alimenti serviti dal ristorante;
+		    \item \textbf{Menù:} menù del ristorante;
+		    \item \textbf{Link:} link ad eventuali social e sito web del ristorante.
+	    \end{itemize}
 \end{itemize}
