@@ -17,7 +17,6 @@
 		\end{center}
 		\begin{center}
 			{
-				\renewcommand{\arraystretch}{1.5}
 				\begin{tabular}{ll}
 					\textbf{Stato}        & \Stato        \\
 					\textbf{Data}         & \Data         \\
@@ -37,9 +36,9 @@
 \fancypagestyle{plain}{
 	\fancyhf{}
 	\rhead{ \includegraphics[scale=0.05]{horizontal_logo.png}}
-	\lhead{\Titolo}
+	\lhead{\Titolo \ \Versione}
 	%\lfoot{\Titolo}
-	\rfoot{\thepage{}}
+	\rfoot{\thepage{} di \pageref{LastPage}}
 	\renewcommand{\headrulewidth}{0.2pt}
 	\renewcommand{\footrulewidth}{0.2pt}
 }
@@ -56,13 +55,16 @@
 \newcounter{usecase}
 \renewcommand{\theusecase}{\arabic{usecase}}
 
+\makeatletter
 % Redefine usecase command to create a new hierarchy
 \titleformat{\usecase}[block]{\normalfont\Large\bfseries}{UC-\theusecase}{2em}{}
+\newcommand{\l@usecase}{\@dottedtocline{3}{3.8em}{3.2em}}
 \newcommand{\usecase}[1]{%
 	\refstepcounter{usecase}%
 	\noindent\textbf{UC-\theusecase: #1}%
-	\newline\noindent\ignorespaces%
+	\addcontentsline{toc}{usecase}{\protect\numberline{UC-\theusecase}#1}%
 }
+\makeatother
 
 % Redefine subusecase command for the second level
 \newcounter{subusecase}[usecase]
@@ -71,8 +73,7 @@
 \newcommand{\subusecase}[1]{%
 	\refstepcounter{subusecase}%
 	%
-	\noindent\textbf{\newline\newline\noindent UC-\thesubusecase: #1}%
-	\newline\noindent\ignorespaces%
+	\noindent\textbf{UC-\thesubusecase: #1}%
 }
 
 % Redefine subsubusecase command for the third level
@@ -82,11 +83,10 @@
 \newcommand{\subsubusecase}[1]{%
 	\refstepcounter{subsubusecase}%
 	%
-	\noindent\textbf{\newline\newline\noindent UC-\thesubsubusecase: #1}%
-	\newline\noindent\ignorespaces%
+	\noindent\textbf{UC-\thesubsubusecase: #1}%
 }
 
 % Hyperref settings for autoref
-\newcommand{\usecaseautorefname}{UC}
-\newcommand{\subusecaseautorefname}{UC}
-\newcommand{\subsubusecaseautorefname}{UC}
+\newcommand{\usecaseautorefname}{UC-\hspace{-0.33mm}}
+\newcommand{\subusecaseautorefname}{UC-\hspace{-0.33mm}}
+\newcommand{\subsubusecaseautorefname}{UC-\hspace{-0.33mm}}

@@ -1,0 +1,34 @@
+\documentclass[a4paper, 12pt]{article}
+
+\newcommand{\template}{../../Templates}
+\usepackage{\template/package}
+\graphicspath{{../../Assets}}
+
+\newcommand{\Titolo}{Piano di progetto}
+\newcommand{\Gruppo}{SWEnergy}
+\newcommand{\Data}{DD/MM/YYYY}
+\newcommand{\Mail}{\href{mailto:project.swenergy@gmail.com}{project.swenergy@gmail.com}}
+\newcommand{\Versione}{0.3.0}
+\newcommand{\Descrizione}{Descrizione dell'organizzazione del gruppo e della pianificazione delle attività}
+\newcommand{\Stato}{Non approvato}
+\newcommand{\Redattori}{Carlo Rosso}
+\newcommand{\Verificatori}{Nome Cognome}
+\newcommand{\Approvatori}{Nome Cognome}
+\newcommand{\Responsabile}{Alessandro Tigani Sava}
+
+\input{\template/PianoDiProgetto.tex}
+
+\begin{document}
+
+\copertina{}
+\newpage
+\input{sec/registro_modifiche.tex}
+\newpage
+\tableofcontents
+\newpage
+\input{sec/introduzione.tex}
+\input{sec/analisi_dei_rischi.tex}
+\input{sec/modello_di_sviluppo.tex}
+\input{sec/pianificazione.tex}
+\input{sec/consuntivo.tex}
+\end{document}
