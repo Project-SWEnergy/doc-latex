@@ -3,13 +3,18 @@
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente base.
 
-	\item \textbf{Precondizione:} L'Utente base ha ricevuto la notifica di invito ad una prenotazione (vedi \autoref{usecase:Notifica ai commensali})
+	\item \textbf{Precondizione:} 
+	\begin{itemize}
+		\item L'Utente base è connesso al Sistema (vedi \autoref{usecase:Effettua accesso});
+		\item L'Utente base ha ricevuto il link di invito ad una prenotazione (vedi \autoref{usecase:Condividi la prenotazione})
+	\end{itemize}
+		
 
 	\item \textbf{Postcondizione:} L'Utente base è collegato ad una prenotazione.
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
-		      \item L'Utente base ha ricevuto la notifica di invito ad una prenotazione da parte di un altro utente;
+		      \item L'Utente base ha ricevuto il link di invito ad una prenotazione da parte di un altro utente;
 		      \item L'Utente base accetta l'invito;
 		      \item L'Utente base è ora collegato ad una prenotazione;
 	      \end{enumerate}
