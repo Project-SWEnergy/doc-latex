@@ -1,0 +1,117 @@
+\usecase{Consultazione elenco ristoranti}
+\label{usecase:Consultazione elenco ristoranti}
+\begin{itemize}
+	\item \textbf{Attore principale:} 
+    \begin{itemize}
+        \item Utente esterno.
+        \item Utente base
+    \end{itemize}
+
+	\item \textbf{Precondizioni:}
+	      L'utente è connesso al Sistema.
+
+	\item \textbf{Postcondizioni:} L'utente visualizza una lista di ristoranti in base alla modalità da lui selezionata.
+    Di \textit{default}, il Sistema mostra quelli con valutazione più alta.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+              \item Il Sistema mostra di \textit{default} all'utente un elenco di ristoranti in ordine decrescente di valutazione;
+              
+		      \item L'utente ha la possibilità di consultare l'elenco dei ristoranti in tre modi:
+		      \begin{itemize}
+                \item Basato sulla sua posizione GPS: vengono mostrati i ristoranti più vicini a lui (vedi \autoref{usecase:Abilitazione GPS}).
+                \item Possibilità di ricercare il ristorante per nome o luogo(vedi \autoref{usecase:Ricerca ristorante}).
+                \item Basato sull'inserimento di filtri da parte dell'utente(vedi \autoref{usecase:Filtra ristoranti}).
+              \end{itemize}
+
+		      \item Il Sistema mostra l'elenco dei ristoranti in base alla modalità selezionata dall'utente.
+		    
+	      \end{enumerate}
+\end{itemize}
+
+\subusecase{Abilitazione GPS}
+\label{usecase:Abilitazione GPS}
+\begin{itemize}
+	\item \textbf{Attore principale:}
+    \begin{itemize}
+        \item Utente esterno.
+        \item Utente base
+    \end{itemize}
+	
+	\item \textbf{Precondizioni:} L'utente sta consultando un elenco di ristoranti (vedi \autoref{usecase:Consultazione elenco ristoranti}).
+
+	\item \textbf{Postcondizioni:}
+    \begin{itemize}
+        \item L'utente ha accettato i termini e la tracciabilità durante l'uso dell'applicazione.
+        \item Il Sistema mostra l'elenco dei ristoranti in ordine di vicinanza dall'utente.
+    \end{itemize}
+	      
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item Il Sistema richiede l'attivazione del GPS da parte dell'utente;
+
+		      \item L'utente attiva il GPS;
+
+		      \item Il Sistema mostra l'elenco dei ristoranti aggiornato;
+	      \end{enumerate}
+
+\end{itemize}
+
+\subusecase{Ricerca ristorante}
+\label{usecase:Ricerca ristorante}
+\begin{itemize}
+	\item \textbf{Attore principale:}
+    \begin{itemize}
+        \item Utente esterno.
+        \item Utente base
+    \end{itemize}
+	
+	\item \textbf{Precondizioni:} L'utente sta consultando un elenco di ristoranti (vedi \autoref{usecase:Consultazione elenco ristoranti}).
+
+	\item \textbf{Postcondizioni:} Il Sistema mostra l'elenco dei ristoranti in base ai risultati ottenuti dalla ricerca fatta dall'utente.
+ 
+	      
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'utente ricerca un ristorante in base al nome, oppure in base ad una località;
+
+		      \item Il Sistema mostra l'elenco dei ristoranti aggiornato:
+		      \begin{itemize}
+                \item Mostra tutti i ristoranti con il nome ricercato dall'utente.
+                \item Mostra tutti i ristoranti presenti nela località ricercata dall'utente.
+              \end{itemize}
+	      \end{enumerate}
+
+\end{itemize}
+
+
+\subusecase{Filtra ristoranti}
+\label{usecase:Filtra ristoranti}
+\begin{itemize}
+	\item \textbf{Attore principale:}
+    \begin{itemize}
+        \item Utente esterno.
+        \item Utente base
+    \end{itemize}
+	
+	\item \textbf{Precondizioni:} L'utente sta consultando un elenco di ristoranti (vedi \autoref{usecase:Consultazione elenco ristoranti}).
+
+	\item \textbf{Postcondizioni:} Il Sistema mostra l'elenco dei ristoranti in base ai filtri impostati dall'utente.
+ 
+	      
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'utente, per la ricerca di un ristorante, può impostare uno o più tra i seguenti filtri:
+		      \begin{itemize}
+                \item Orario;
+                \item Voto;
+                \item Cucina;
+                \item Prezzo;
+                \item Adatto a persone con ridotta mobilità;
+                \item Adatto a bambini;
+              \end{itemize}
+
+		      \item Il Sistema mostra l'elenco dei ristoranti aggiornato;
+	      \end{enumerate}
+
+\end{itemize}
