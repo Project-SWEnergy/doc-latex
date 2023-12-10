@@ -1,5 +1,3 @@
 Utente base,si tratta di un attore autenticato, rappresenta il cliente di un ristorante.
 Utente ristoratore,si tratta di un attore autenticato, rappresenta l'amministratore del ristorante.
 Utente autenticato,si tratta di un Utente base o di un Utente ristoratore
-La lista degli ingredienti disponibili è una lista che viene associata ad un ristorante, la quale può essere modificata. 
-Inoltre, può essere visualizzata dagli utenti per modificare le pietanze, inserendo quantità, quali ingredienti aggiungere e/o rimuovre da una pietanza.
