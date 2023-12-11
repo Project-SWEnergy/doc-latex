@@ -1,0 +1,54 @@
+%
+% RISK COMMANDS
+%
+
+%
+% Rischi tecnologici
+%
+
+% Create a new counter that resets within each subsection
+\newcounter{risktech}[subsection]
+% Define the numbering format for the new command
+\renewcommand{\therisktech}{\arabic{risktech}}
+
+\makeatletter
+\newcommand{\l@risktech}{\@dottedtocline{3}{3.8em}{3.2em}} % Formatting similar to subsubsections in TOC
+
+% Redefine the \risktech command
+\newcommand{\risktech}[1]{%
+	\refstepcounter{risktech}%
+	\addcontentsline{toc}{risktech}{\protect\numberline{RT-\therisktech}#1}%
+	\noindent\textbf{RT-\therisktech \ #1}%
+}
+\newcommand{\risktechautorefname}{RT-\hspace{-0.33em}}
+
+%
+% Rischi comunicativi
+%
+
+% Idem for riskcom
+\newcounter{riskcom}[subsection]
+\renewcommand{\theriskcom}{\arabic{riskcom}}
+\newcommand{\l@riskcom}{\@dottedtocline{3}{3.8em}{3.2em}}
+\newcommand{\riskcom}[1]{%
+	\refstepcounter{riskcom}%
+	\addcontentsline{toc}{riskcom}{\protect\numberline{RC-\theriskcom}#1}%
+	\noindent\textbf{RC-\theriskcom \ #1}%
+}
+\newcommand{\riskcomautorefname}{RC-\hspace{-0.33em}}
+
+%
+% Rischi organizzativi
+%
+
+% Idem for riskplan
+\newcounter{riskplan}[subsection]
+\renewcommand{\theriskplan}{\arabic{riskplan}}
+\newcommand{\l@riskplan}{\@dottedtocline{3}{3.8em}{3.2em}}
+\newcommand{\riskplan}[1]{%
+	\refstepcounter{riskplan}%
+	\addcontentsline{toc}{riskplan}{\protect\numberline{RP-\theriskplan}#1}%
+	\noindent\textbf{RP-\theriskplan \ #1}%
+}
+\newcommand{\riskplanautorefname}{RP-\hspace{-0.33em}}
+\makeatother
