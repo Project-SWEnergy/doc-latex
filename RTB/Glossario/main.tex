@@ -2,12 +2,10 @@
 
 \newcommand{\template}{../../Templates}
 \usepackage{\template/package}
-\graphicspath{{../../../../Assets}}
+\graphicspath{{../../Assets}}
 
 \newcommand{\Titolo}{Glossario}
-\newcommand{\Gruppo}{SWEnergy}
 \newcommand{\Data}{21/11/2023}
-\newcommand{\Mail}{\href{mailto:project.swenergy@gmail.com}{project.swenergy@gmail.com}}
 \newcommand{\Versione}{0.2.0}
 \newcommand{\Descrizione}{Documento esplicativo del significato di tutti i termini tecnici o poco chiari presenti nella documentazione.}
 \newcommand{\Stato}{Non approvato}
@@ -18,13 +16,14 @@
 \newcommand{\Destinatari}{}
 \newcommand{\g}{$^G$ }
 
-\input{\template/Documento generico/commands.tex}
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
 
 
 \begin{document}
 
 \copertina{}
-\newpage
 \input{sec/registro_modifiche.tex}
 \newpage
 \tableofcontents
@@ -43,6 +42,5 @@
 \include{sec/glossario/T.tex}
 \section{Acronimi}
 \include{sec/acronimi/P.tex}
-
 
 \end{document}
