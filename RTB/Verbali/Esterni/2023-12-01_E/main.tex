@@ -4,20 +4,21 @@
 \graphicspath{{../../../../Assets}}
 
 \newcommand{\Titolo}{Verbale esterno - Imola Informatica}
-\newcommand{\Gruppo}{SWEnergy}
 \newcommand{\Data}{01/12/2023}
-\newcommand{\Mail}{\href{mailto:project.swenergy@gmail.com}{project.swenergy@gmail.com}}
-\newcommand{\Versione}{0.1.1}
+\newcommand{\Versione}{1.0.0}
 \newcommand{\Descrizione}{Verbale riguardante la seconda chiamata con l'azienda
 Imola Informatica, sono stati discussi i requisiti e le tecnologie da 
 utilizzare}
-\newcommand{\Stato}{Verificato}
+\newcommand{\Stato}{Approvato}
 \newcommand{\Redattori}{Carlo Rosso}
 \newcommand{\Verificatori}{Davide Mafferi}
-\newcommand{\ApprovatoriInterni}{}
+\newcommand{\ApprovatoriInterni}{Alessandro Tigani Sava}
 \newcommand{\ApprovatoriEsterni}{Alessandro Staffolani}
 
-\input{\template/Verbale esterno/commands.tex}
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+\input{\template/firma.tex}
 
 \begin{document}
 \copertina{}
@@ -31,4 +32,5 @@ utilizzare}
 
 \newpage
 \input{sec/resoconto.tex}
+\firma{}
 \end{document}
