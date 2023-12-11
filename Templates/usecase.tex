@@ -1,0 +1,45 @@
+%
+% \usecase
+%
+
+\newcounter{usecase}
+\renewcommand{\theusecase}{\arabic{usecase}}
+
+\makeatletter
+% Redefine usecase command to create a new hierarchy
+\titleformat{\usecase}[block]{\normalfont\Large\bfseries}{UC-\theusecase}{2em}{}
+\newcommand{\l@usecase}{\@dottedtocline{3}{3.8em}{3.2em}}
+\newcommand{\usecase}[1]{%
+	\refstepcounter{usecase}%
+	\noindent\textbf{UC-\theusecase: #1}%
+	\addcontentsline{toc}{usecase}{\protect\numberline{UC-\theusecase}#1}%
+}
+\makeatother
+\newcommand{\usecaseautorefname}{UC-\hspace{-0.33mm}}
+
+%
+% \subusecase
+%
+
+\newcounter{subusecase}[usecase]
+\renewcommand{\thesubusecase}{\theusecase.\arabic{subusecase}}
+\titleformat{\subusecase}[block]{\normalfont\large\bfseries}{UC-\thesubusecase}{1.5em}{}
+\newcommand{\subusecase}[1]{%
+	\refstepcounter{subusecase}%
+	%
+	\noindent\textbf{UC-\thesubusecase: #1}%
+}
+\newcommand{\subusecaseautorefname}{UC-\hspace{-0.33mm}}
+
+%
+% \subsubusecase
+%
+\newcounter{subsubusecase}[subusecase]
+\renewcommand{\thesubsubusecase}{\thesubusecase.\arabic{subsubusecase}}
+\titleformat{\subsubusecase}[block]{\normalfont\normalsize\bfseries}{UC-\thesubsubusecase}{1em}{}
+\newcommand{\subsubusecase}[1]{%
+	\refstepcounter{subsubusecase}%
+	%
+	\noindent\textbf{UC-\thesubsubusecase: #1}%
+}
+\newcommand{\subsubusecaseautorefname}{UC-\hspace{-0.33mm}}

@@ -1,14 +1,10 @@
 \documentclass[a4paper, 12pt]{article}
 \newcommand{\template}{../../Templates}
 \usepackage{\template/package}
-\usepackage[utf8]{inputenc}
-
-\graphicspath{{../../Assets}}
+\graphicspath{{../../Assets/}}
 
 \newcommand{\Titolo}{Analisi dei requisiti}
-\newcommand{\Gruppo}{SWEnergy}
 \newcommand{\Data}{17/11/2023}
-\newcommand{\Mail}{\href{mailto:project.swenergy@gmail.com}{project.swenergy@gmail.com}}
 \newcommand{\Versione}{0.1.0}
 \newcommand{\Descrizione}{Documento che riporta un'analisi su casi d'uso e requisiti presenti nel capitolato.}
 \newcommand{\Stato}{Non approvato / Approvato}
@@ -17,18 +13,17 @@
 \newcommand{\Approvatori}{Nome 1 \\ & Nome 2}
 \newcommand{\Responsabile}{Nome 1}
 
-\input{\template/AnalisiDeiRequisiti.tex}
-
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+\input{\template/usecase.tex}
 
 \begin{document}
-% Cambio colore della prima pagina
-%\newpagecolor{gray}            
-%\afterpage{\restorepagecolor}
 
 \copertina{}
-\newpage
 \input{sec/registro_modifiche.tex}
 \newpage
+
 \tableofcontents
 
 
