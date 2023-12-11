@@ -4,9 +4,7 @@
 \graphicspath{{../../../../Assets}}
 
 \newcommand{\Titolo}{Verbale esterno - Imola Informatica}
-\newcommand{\Gruppo}{SWEnergy}
 \newcommand{\Data}{24/11/2023}
-\newcommand{\Mail}{\href{mailto:project.swenergy@gmail.com}{project.swenergy@gmail.com}}
 \newcommand{\Versione}{0.1.0}
 \newcommand{\Descrizione}{Verbale riguardante la prima chiamata con l'azienda
 Imola Informatica dopo l'acquisizione dell'appalto. Sono state poste le domande
@@ -17,12 +15,14 @@ in merito all'organizzazione del lavoro e sui casi d'uso.}
 \newcommand{\ApprovatoriInterni}{}
 \newcommand{\ApprovatoriEsterni}{Alessandro Staffolani}
 
-\input{\template/Verbale esterno/commands.tex}
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+\input{\template/firma.tex}
 
 \begin{document}
 \copertina{}
 
-\newpage
 \input{sec/partecipanti}
 
 % Vorrei inserire questa ridefinizione nel file commands.tex ma non funziona
@@ -31,4 +31,5 @@ in merito all'organizzazione del lavoro e sui casi d'uso.}
 
 \newpage
 \input{sec/resoconto.tex}
+\firma{}
 \end{document}

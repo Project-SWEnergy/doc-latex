@@ -1,0 +1,42 @@
+%
+% \usecase
+%
+
+\newcounter{usecase}
+\renewcommand{\theusecase}{\arabic{usecase}}
+\titleformat{\usecase}[block]{\normalfont\Large\bfseries}{UC-\theusecase}{2em}{}
+\newcommand{\usecase}[1]{%
+	\clearpage
+	\refstepcounter{usecase}%
+	\noindent\textbf{UC-\theusecase: #1}%
+	\newline\noindent\ignorespaces%
+}
+\newcommand{\usecaseautorefname}{UC}
+
+%
+% \subusecase
+%
+
+\newcounter{subusecase}[usecase]
+\renewcommand{\thesubusecase}{\theusecase.\arabic{subusecase}}
+\titleformat{\subusecase}[block]{\normalfont\large\bfseries}{UC-\thesubusecase}{1.5em}{}
+\newcommand{\subusecase}[1]{%
+	\refstepcounter{subusecase}%
+	\noindent\textbf{UC-\thesubusecase: #1}%
+	\newline\noindent\ignorespaces%
+}
+\newcommand{\subusecaseautorefname}{UC}
+
+%
+% \subsubusecase
+%
+
+\newcounter{subsubusecase}[subusecase]
+\renewcommand{\thesubsubusecase}{\thesubusecase.\arabic{subsubusecase}}
+\titleformat{\subsubusecase}[block]{\normalfont\normalsize\bfseries}{UC-\thesubsubusecase}{1em}{}
+\newcommand{\subsubusecase}[1]{%
+	\refstepcounter{subsubusecase}%
+	\noindent\textbf{UC-\thesubsubusecase: #1}%
+	\newline\noindent\ignorespaces%
+}
+\newcommand{\subsubusecaseautorefname}{UC}
