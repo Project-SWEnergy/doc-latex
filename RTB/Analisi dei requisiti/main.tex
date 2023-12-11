@@ -1,10 +1,10 @@
 \documentclass[a4paper, 12pt]{article}
-\input{commands.tex}
+\newcommand{\template}{../../Templates}
+\usepackage{\template/package}
+\graphicspath{{../../Assets/}}
 
-\newcommand{\Titolo}{Presentazione costi e assunzione impegni}
-\newcommand{\Gruppo}{SWEnergy}
+\newcommand{\Titolo}{Analisi dei requisiti}
 \newcommand{\Data}{DD/MM/YYYY}
-\newcommand{\Mail}{\href{mailto:project.swenergy@gmail.com}{project.swenergy@gmail.com}}
 \newcommand{\Versione}{0.1.X}
 \newcommand{\Descrizione}{XXX}
 \newcommand{\Stato}{Non approvato / Approvato}
@@ -13,16 +13,17 @@
 \newcommand{\Approvatori}{Nome 1 \\ & Nome 2}
 \newcommand{\Responsabile}{Nome 1}
 
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+\input{\template/usecase.tex}
 
 \begin{document}
-% Cambio colore della prima pagina
-%\newpagecolor{gray}            
-%\afterpage{\restorepagecolor}
 
 \copertina{}
-\newpage
 \input{sec/registro_modifiche.tex}
 \newpage
+
 \tableofcontents
 \newpage
 
