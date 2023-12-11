@@ -4,8 +4,6 @@
 \graphicspath{{../../Assets}}
 
 
-\newcommand{\Gruppo}{SWEnergy}
-\newcommand{\Mail}{\href{mailto:project.swenergy@gmail.com}{project.swenergy@gmail.com}}
 \newcommand{\Descrizione}{Documento contenente le informazioni relative al controllo qualità}
 \newcommand{\Titolo}{Piano di qualifica}
 \newcommand{\Data}{20/11/2023}
@@ -17,13 +15,16 @@
 \newcommand{\Responsabile}{Alessandro Tigani Sava}
 \newcommand{\Destinatari}{}
 
-\input{\template/PianoDiQualifica.tex}
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
 
 \begin{document}
 \copertina{}
 \include{sec/registro_modifiche}
 
 \tableofcontents
+\newpage
 
 \include{sec/introduzione}
 \include{sec/qualita_processo}
