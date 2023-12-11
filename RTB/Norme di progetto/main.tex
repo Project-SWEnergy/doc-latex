@@ -4,9 +4,7 @@
 \graphicspath{{../../assets}}
 
 \newcommand{\Titolo}{Norme di progetto}
-\newcommand{\Gruppo}{SWEnergy}
 \newcommand{\Data}{21/11/2023}
-\newcommand{\Mail}{\href{mailto:project.swenergy@gmail.com}{project.swenergy@gmail.com}}
 \newcommand{\Versione}{1.1.0}
 \newcommand{\Descrizione}{Elenco delle procedure interne e delle buone pratiche di progetto adottate dal gruppo.}
 \newcommand{\Stato}{Non approvato}
@@ -17,20 +15,19 @@
 \newcommand{\Approvatori}{Giacomo Gualato}
 \newcommand{\Responsabile}{}
 
-\include{\template/Documento generico/commands.tex}
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
 
 \begin{document}
-    \copertina{}
+\copertina{}
+\input{sec/registro_modifiche.tex}
+\newpage
 
-    \newpage
-    \input{sec/registro_modifiche.tex}
-    \newpage
-
-    \setcounter{tocdepth}{2}
-    \tableofcontents
-    \newpage
-    \input{sec/introduzione.tex}
-    \newpage
-    \input{sec/documentazione.tex}
-
+\setcounter{tocdepth}{2}
+\tableofcontents
+\newpage
+\input{sec/introduzione.tex}
+\newpage
+\input{sec/documentazione.tex}
 \end{document}
