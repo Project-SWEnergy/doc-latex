@@ -1,0 +1,48 @@
+\usecase{Consultazione lista prenotazioni}
+\label{usecase:Consultazione lista prenotazioni}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente ristoratore.
+
+	\item \textbf{Precondizioni:} L'Utente ristoratore ha effettuato l'accesso al Sistema (vedi \autoref{usecase:Effettua accesso}).
+
+	\item \textbf{Postcondizioni:} L'Utente ristoratore visualizza la lista di prenotazioni (prenotazioni che si trovano in qualsiasi stato) attraverso una vista a calendario settimanale.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item Il Sistema mostra una vista a calendario settimanale, in ogni giorno della settimana l'utente può consultare:
+		      \begin{itemize}
+				\item La lista di prenotazioni.
+				\item La lista di ingredienti con le quantità necessarie per soddisfare la richiesta giornaliera (vedi \autoref{usecase:Consultazione lista ingredienti}).
+			  \end{itemize} 
+
+		      \item Il Sistema mostra la lista prenotazioni inerente ad un giorno nei due modi seguenti:
+		      \begin{itemize}
+				\item Di \textit{default}, nella lista, le prenotazioni che vengono mostrate per prima sono quelle che si trovano nello stato "Accettato".
+				\item L'Utente ristoratore può applicare un filtro basato sullo stato della prenotazione, per facilitare la consultazione della lista a seconda dei suoi bisogni.
+			  \end{itemize}
+
+		      \item L'Utente ristoratore visualizza la lista di prenotazioni a vista settimanale;
+
+		      \item L'Utente ristoratore visualizza la lista degli ingredienti necessari per soddisfare a richiesta giornaliera (vedi \autoref{usecase:Consultazione lista ingredienti});
+	      \end{enumerate}
+\end{itemize}
+
+
+\subusecase{Consultazione lista ingredienti}
+\label{usecase:Consultazione lista ingredienti}
+\begin{itemize}
+
+	\item \textbf{Attore principale:} Utente ristoratore.
+
+	\item \textbf{Precondizioni:} L'Utente ristoratore si trova nella sezione "Consultazione lista prenotazioni" (vedi \autoref{usecase:Consultazione lista prenotazioni}).
+
+	\item \textbf{Postcondizioni:} L'Utente ristoratore visualizza la lista ingredienti aggiornata.
+
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+		\item Il Sistema mostra la lista ingredienti necessari per la giornata (relativamente alle prenotazioni nello stato "Accettata");
+		\item L'Utente ristoratore visualizza la lista ingredienti;
+		\item Il Sistema aggiorna costantemente la lista ingredienti (vedi \autoref{usecase:Aggiornamento lista ingredienti}) della giornata non appena l'Utente ristoratore accetta una nuova prenotazione per quella giornata;
+	\end{enumerate}
+
+\end{itemize}

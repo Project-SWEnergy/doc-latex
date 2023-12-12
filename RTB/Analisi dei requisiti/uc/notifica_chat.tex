@@ -1,0 +1,21 @@
+\usecase{Notifica chat}
+\label{usecase:Notifica chat}
+\begin{itemize}
+    \item \textbf{Attori principali:} 
+	\begin{itemize}
+        \item Utente esterno.
+        \item Utente base.
+        \item Utente ristoratore.
+    \end{itemize}
+	
+	\item \textbf{Precondizioni:}  Un utente (tra i tre elencati in \textbf{Attori principali}) ha inviato un messaggio in \textit{chat}.
+
+	\item \textbf{Postcondizioni:} Il Sistema invia la notifica al destinatario.
+     
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+                \item L'utente invia un messaggio.
+                \item Il Sistema vede che al suo interno è stato memorizzato un nuovo messaggio.
+                \item Il Sistema invia al destinatario la notifica di ricezione di un nuovo messaggio.
+	      \end{enumerate}
+\end{itemize}

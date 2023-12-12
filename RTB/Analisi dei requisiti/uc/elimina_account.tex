@@ -1,0 +1,29 @@
+\usecase{Elimina account}
+\label{usecase:Elimina account}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente base.
+
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+        \item L'utente deve aver effettuato l'accesso (vedi \autoref{usecase:Effettua accesso}).
+        \item L'utente deve trovarsi nella sua area personale.
+    \end{itemize}
+
+	\item \textbf{Postcondizioni:} L'Utente base elimina il suo \textit{account}.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente base si trova nella sezione "area personale";
+		      \item L'Utente base cancella il suo \textit{account};
+              \item Il Sistema cancella l'\textit{account} e tutti i dati collegato ad esso;
+              \item L'utente viene riportato alla \textit{home}.
+	      \end{enumerate}
+	\item \textbf{Scenario secondario:}
+		  \begin{itemize}
+			  \item \autoref{usecase:Errore eliminazione account} Errore eliminazione account:
+				\begin{enumerate}
+					\item L'Utente base prova ad eliminare il suo \textit{account}.
+					\item Il Sistema mostra un messaggio di errore.
+				\end{enumerate}
+		  \end{itemize}
+\end{itemize}

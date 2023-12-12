@@ -1,0 +1,35 @@
+\usecase{Chat Utente base}
+\label{usecase:Chat Utente base}
+\begin{itemize}
+	\item \textbf{Attori principali:} 
+	\begin{itemize}
+        \item Utente base.
+        \item Utente ristoratore.
+    \end{itemize}
+
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+        \item L'Utente base ha acceduto al Sistema (vedi \autoref{usecase:Effettua accesso}).
+        \item L'Utente base ha effettuato una prenotazione (vedi \autoref{usecase:Prenotazione di un tavolo}).
+        \item L'Utente ristoratore ha effettuato l'accesso (vedi \autoref{usecase:Effettua accesso}).
+    \end{itemize}
+
+	\item \textbf{Postcondizioni:} La \textit{chat} è stata avviata.
+
+	\item \textbf{Scenario principale:}
+            \begin{enumerate}
+                \item L'Utente base oppure ristoratore inizia la \textit{chat} con l'invio di un messaggio (vedi \autoref{usecase:Invio messaggio chat});
+                \item Il Sistema invia una notifica l'arrivo di un nuovo messaggio al destinatario (vedi \autoref{usecase:Notifica chat}).
+                \item L'utente destinatario riceve la notifica e può leggere la \textit{chat} (vedi \autoref{usecase:Lettura chat}).
+                \item Ora l'Utente base e l'Utente ristoratore possono comunicare tra di loro attraverso l'uso della \textit{chat}, inviando e leggendo i messaggi vicendevolmente;
+	      \end{enumerate}
+
+    \item \textbf{Scenario secondario:}
+		  \begin{itemize}
+			  \item \autoref{usecase:Errore instaurazione chat} Errore instaurazione chat:
+				\begin{enumerate}
+					\item L'Utente base oppure ristoratore invia un messaggio in chat al destinatario.
+					\item Il Sistema mostra un messaggio di errore.
+				\end{enumerate}
+		  \end{itemize}
+\end{itemize}

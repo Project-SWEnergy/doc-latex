@@ -1,0 +1,66 @@
+\usecase{Consultazione lista ordinazioni}
+\label{usecase:Consultazione lista ordinazioni}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente ristoratore.
+
+	\item \textbf{Precondizioni:} L'Utente ristoratore si trova a visualizzare le informazioni in dettaglio di una prenotazione (vedi \autoref{usecase:Dettaglio lista prenotazioni}).
+
+	\item \textbf{Postcondizioni:} L'Utente ristoratore visualizza tutte le ordinazioni presenti all'interno di una determinata prenotazione.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente ristoratore visualizza la lista delle ordinazioni di una prenotazione che si trova nello stato "Confermata" o "In corso".
+		      \item Il Sistema mostra al ristoratore tutte le ordinazioni fatte dai clienti;
+	      \end{enumerate}
+\end{itemize}
+
+
+\subusecase{Modifica ordinazione}
+\label{usecase:Modifica ordinazione}
+\begin{itemize}
+
+    \item \textbf{Descrizione:} Un cliente ha un tempo limiato in cui può modificare il suo ordine, nel momento in cui lui voglia modificarlo ma ormai non sia più possibile, tale opzione di modifica è resa disponibile 
+    attraverso la modifica dell'ordine da parte del ristoratore. L'utente può comunicare questa sua esigenza attraverso la \textit{chat} oppure di persona, e il ristoratore si prenderà cura di effettuare questa modifica.
+	
+    \item \textbf{Attore principale:} Utente ristoratore.
+
+	\item \textbf{Precondizioni:} L'Utente ristoratore sta visualizzando la lista delle ordinazioni di una prenotazione (vedi \autoref{usecase:Consultazione lista ordinazioni}).
+
+	\item \textbf{Postcondizioni:} L'Utente ristoratore modifica un ordinazione.
+
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+		\item L'Utente ristoratore viene a conoscenza della volontà del cliente di modificare il proprio ordine (vedi \textbf{Descrizione}).
+		\item L'Utente ristoratore modifica l'ordine del cliente:
+		\begin{itemize}
+            \item Modifica della quantità di una pietanza all'interno dell'ordine da modificare;
+			\item Rimozione di ingredienti di una pietanza all'interno dell'ordine da modificare;
+			\item Aggiunta di ingredienti di una pietanza all'interno dell'ordine da modificare; 
+        \end{itemize}
+        \item Il Sistema notifica il cliente dell'avvenuta modifica al suo ordine attraverso una notifica (vedi \autoref{usecase:Notifica modifica ordinazione al cliente}).
+	\end{enumerate}
+
+\end{itemize}
+
+\subusecase{Visualizza stato di pagamento}
+\label{usecase:Visualizza stato di pagamento}
+\begin{itemize}
+	
+    \item \textbf{Attore principale:} Utente ristoratore.
+
+	\item \textbf{Precondizioni:} L'Utente ristoratore sta visualizzando la lista delle ordinazioni di una prenotazione (vedi \autoref{usecase:Consultazione lista ordinazioni}).
+
+	\item \textbf{Postcondizioni:} L'Utente ristoratore visualizza lo stato del pagamento di un ordinazione.
+
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+		\item Il Sistema mostra per ogni ordinazione presente all'interno della prenotazione lo stato di pagamento, che può essere:
+        \begin{itemize}
+            \item Da pagare.
+            \item Pagato.
+            \item In corso.
+        \end{itemize}
+        \item L'Utente ristoratore visualizza per ogni ordinazione lo stato del pagamento;
+	\end{enumerate}
+
+\end{itemize}

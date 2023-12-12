@@ -1,0 +1,20 @@
+\usecase{Storico ordini}
+\label{usecase:Storico ordini}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente base.
+
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+        \item L'utente deve aver effettuato l'accesso (vedi \autoref{usecase:Effettua accesso}).
+        \item L'utente deve trovarsi nella sua area personale.
+    \end{itemize}
+
+	\item \textbf{Postcondizioni:} L'Utente base visualizza lo storico dei suoi ordini passati.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente base si trova nella sezione "area personale" e seleziona di visualizzare lo storico dei suoi ordini;
+		      \item Il Sistema mostra la lista dei suoi ordini passati in ordine dal più recente al meno recente;
+              \item L'Utente base può scegliere un ordine che gli è particolarmente piaciuto e riaprire una nuova prenotazione con il ristorante (vedi \autoref{usecase:Prenotazione di un tavolo});
+	      \end{enumerate}
+\end{itemize}

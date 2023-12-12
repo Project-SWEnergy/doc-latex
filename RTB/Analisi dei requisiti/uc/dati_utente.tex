@@ -1,0 +1,28 @@
+\usecase{Visualizza e modifica dati utente}
+\label{usecase:Visualizza e modifica dati utente}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente base.
+
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+        \item L'utente deve aver effettuato l'accesso (vedi \autoref{usecase:Effettua accesso}).
+        \item L'utente deve trovarsi nella sua area personale.
+    \end{itemize}
+
+	\item \textbf{Postcondizioni:} L'Utente base visualizza i suoi dati, ed in caso modificarli.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente base si trova nella sezione "area personale" e seleziona di visualizzare i propri dati;
+		      \item Il Sistema mostra tutti i dati dell'Utente base:
+              \begin{itemize}
+                \item Nome.
+                \item Cognome.
+                \item \textit{E-mail}.
+                \item \textit{Password}.
+                \item Allergie e intolleranze.
+              \end{itemize}
+              \item L'Utente base può scegliere di modificare uno o più di questi dati;
+              \item In caso di modifica, il Sistema memorizza ogni cambiamento;
+	      \end{enumerate}
+\end{itemize}

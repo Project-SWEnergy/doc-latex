@@ -1,0 +1,22 @@
+\usecase{Errore instaurazione chat}
+\label{usecase:Errore instaurazione chat}
+\begin{itemize}
+    \item \textbf{Attori principali:} 
+	\begin{itemize}
+        \item Utente esterno.
+        \item Utente base.
+        \item Utente ristoratore.
+    \end{itemize}
+
+	\item \textbf{Precondizioni:}
+	      Un utente (tra quelli elencati in \textbf{Attori principali}) tenta di instaurare una comunicazione via \textit{chat} (vedi \autoref{usecase:Chat Utente esterno} o vedi \autoref{usecase:Chat Utente base}).
+
+	\item \textbf{Postcondizioni:}
+	      L'utente visualizza il messaggio di errore.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'utente tenta di instaurare la chat provando ad inviare un messaggio.
+		      \item Il Sistema visualizza il messaggio di errore che spiega che l'instaurazione della chat non è andata a buon fine.
+	      \end{enumerate}
+\end{itemize}

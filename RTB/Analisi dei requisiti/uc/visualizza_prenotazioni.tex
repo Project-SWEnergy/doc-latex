@@ -1,0 +1,26 @@
+\usecase{Visualizza prenotazioni}
+\label{usecase:Visualizza prenotazioni}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente base.
+
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+        \item L'utente deve aver effettuato l'accesso (vedi \autoref{usecase:Effettua accesso}).
+        \item L'utente deve trovarsi nella sua area personale.
+    \end{itemize}
+
+	\item \textbf{Postcondizioni:} L'Utente base visualizza tutte le sue prenotazioni.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente base si trova nella sezione "area personale" e seleziona di visualizzare le proprie prenotazioni;
+		      \item Il Sistema mostra tutte le prenotazioni che si trovano nel seguente stato:
+              \begin{itemize}
+                \item In attesa.
+                \item Confermata.
+                \item In corso.
+              \end{itemize}
+              \item L'Utente base ha una visione di tutte le prenotazioni nel corrente stato;
+              \item L'Utente base può visualizzare nel dettaglio una delle prenotazioni presenti in questa lista;
+	      \end{enumerate}
+\end{itemize}

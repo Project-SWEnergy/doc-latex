@@ -1,0 +1,18 @@
+\usecase{Errore eliminazione account}
+\label{usecase:Errore eliminazione account}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente base.
+
+	\item \textbf{Precondizioni:}
+	      L'Utente base si trova all'interno della selezione di eliminazione \textit{account} (vedi \autoref{usecase:Elimina account}).
+
+	\item \textbf{Postcondizioni:}
+	      L'Utente base visualizza il messaggio di errore.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente base prova ad eliminare il suo \textit{account}.
+		      \item Il Sistema visualizza il messaggio di errore che spiega che l'eliminazione non è andata a buon fine.
+		      \item Il Sistema rimanda l'Utente base nella sezione di eliminazione \textit{account} (vedi \autoref{usecase:Elimina account}).
+	      \end{enumerate}
+\end{itemize}
