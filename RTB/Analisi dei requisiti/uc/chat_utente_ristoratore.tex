@@ -1,23 +1,26 @@
-\usecase{Chat Utente esterno}
-\label{usecase:Chat Utente esterno}
+\usecase{Chat Utente ristoratore}
+\label{usecase:Chat Utente ristoratore}
 \begin{itemize}
 	\item \textbf{Attori principali:} 
 	\begin{itemize}
         \item Utente esterno.
+        \item Utente base.
         \item Utente ristoratore.
     \end{itemize}
 
-	\item \textbf{Precondizioni:} L'Utente esterno è connesso al sistema.
-
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+        \item L'Utente ristoratore ha effettuato l'accesso (vedi \autoref{usecase:Effettua accesso}).
+    \end{itemize}
 
 	\item \textbf{Postcondizioni:} La \textit{chat} è stata avviata.
 
 	\item \textbf{Scenario principale:}
             \begin{enumerate}
-                \item L'Utente esterno inizia la \textit{chat} con l'invio di un messaggio (vedi \autoref{usecase:Invio messaggio chat});
+                \item L'Utente ristoratore può iniziare la \textit{chat} con l'invio di un messaggio (vedi \autoref{usecase:Invio messaggio chat}) ad un Utente base che ha effettuato una prenotazione (ved \autoref{usecase:Prenotazione di un tavolo});
                 \item Il Sistema invia una notifica l'arrivo di un nuovo messaggio al destinatario (vedi \autoref{usecase:Notifica chat}).
                 \item L'Utente ristoratore riceve la notifica e può leggere la \textit{chat} (vedi \autoref{usecase:Lettura chat}).
-                \item Ora l'Utente esterno e l'Utente ristoratore possono comunicare tra di loro attraverso l'uso della \textit{chat}, inviando e leggendo i messaggi vicendevolmente;
+                \item Ora l'Utente esterno/base e l'Utente ristoratore possono comunicare tra di loro attraverso l'uso della \textit{chat}, inviando e leggendo i messaggi vicendevolmente;
 	      \end{enumerate}
 
     \item \textbf{Scenario secondario:}
