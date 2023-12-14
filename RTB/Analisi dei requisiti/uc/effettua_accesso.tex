@@ -1,21 +1,21 @@
-\usecase{Effettua accesso}
+\usecasegenerico{Effettua accesso}
 \label{usecase:Effettua accesso}
 
 \begin{itemize}
-	\item \textbf{Descrizione:} Un Utente esterno decide di effettuare l'accesso all'interno della \textit{web app}. Per effettuare tale
+	\item \textbf{Descrizione:} Un Utente generico decide di effettuare l'accesso all'interno della \textit{web app}. Per effettuare tale
 	operazione gli vengono presentate due opzioni:
 	\begin{itemize}
 		\item Accesso tramite inserimento di \textit{email} e \textit{password}.
 		\item Accesso tramite un sistema di terze parti.
 	\end{itemize}
-	Nel caso in cui l'autenticazione fallisca, l'Utente esterno deve inserire nuovamente le credenziali.
+	Nel caso in cui l'autenticazione fallisca, l'Utente generico deve inserire nuovamente le credenziali.
 
-	\item \textbf{Attore principale:} Utente esterno.
+	\item \textbf{Attore principale:} Utente generico.
 	\item \textbf{Attore secondario:} Sistema di autenticazione esterno.
 	\item \textbf{Precondizioni:}
-	      Un Utente esterno è connesso al Sistema ed è in possesso di un \textit{account}.
+	      Un Utente generico è connesso al Sistema ed è in possesso di un \textit{account}.
 	\item \textbf{Postcondizioni:}
-	      L'Utente esterno è stato identificato dal Sistema come uno solo dei seguenti:
+	      L'Utente generico è stato identificato dal Sistema come uno solo dei seguenti:
 	      \begin{itemize}
 		      \item Utente ristoratore.
 		      \item Utente base.
@@ -24,14 +24,14 @@
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
-		      \item L'Utente esterno seleziona la tipologia di accesso: 
+		      \item L'Utente generico seleziona la tipologia di accesso: 
 
 			  \begin{itemize}
 				\item Accesso per terze parti (vedi \autoref{usecase:Accesso per terze parti})
 				\item Accesso tradizionale (vedi \autoref{usecase:Accesso tradizionale}).
 			  \end{itemize}
 
-		      \item Il Sistema verifica se l'Utente esterno è un Utente ristoratore oppure Utente base;
+		      \item Il Sistema verifica se l'Utente generico è un Utente ristoratore oppure Utente base;
 		      \item L'Utente autenticato viene reindirizzato alla \textit{Home} impostata a seconda della tipologia di \textit{account};		
 	      \end{enumerate}
 		
@@ -40,7 +40,7 @@
 		\item \autoref{usecase:Accesso fallito} Accesso fallito:
 		\begin{enumerate}
 			\item L'autenticazione è fallita (vedi \autoref{usecase:Accesso fallito});
-			\item L'Utente esterno viene indirizzato nuovamente nella pagina di accesso; 
+			\item L'Utente generico viene indirizzato nuovamente nella pagina di accesso; 
 		\end{enumerate}	
 	\end{itemize}
 
@@ -52,19 +52,19 @@
 \label{usecase:Accesso per terze parti}
 \begin{itemize}
 
-	\item \textbf{Attore principale:} Utente esterno.
+	\item \textbf{Attore principale:} Utente generico.
 	\item \textbf{Attore secondario:} Sistema di autenticazione esterno.
 
-	\item \textbf{Precondizioni:} Un Utente esterno è connesso al Sistema ed è in possesso di un \textit{account}.
+	\item \textbf{Precondizioni:} Un Utente generico è connesso al Sistema ed è in possesso di un \textit{account}.
 
 	\item \textbf{Postcondizioni:} Sono state verificate \textit{email} e \textit{password} dal Sistema di autenticazione esterno.
 
 	\item \textbf{Scenario principale:}
 	\begin{enumerate}
-		\item Il Sistema reindirizza l'Utente esterno alla pagina di accesso per terze parti.
+		\item Il Sistema reindirizza l'Utente generico alla pagina di accesso per terze parti.
 		\item Il Sistema di autenticazione esterno verifica le credenziali.
-		\item Il Sistema di autenticazione esterno invia al Sistema le informazioni dell'Utente esterno.
-		\item Il Sistema di autenticazione esterno reindirizza l'Utente esterno alla pagina di accesso. 
+		\item Il Sistema di autenticazione esterno invia al Sistema le informazioni dell'Utente generico.
+		\item Il Sistema di autenticazione esterno reindirizza l'Utente generico alla pagina di accesso. 
 	\end{enumerate}
 	
 \end{itemize}
@@ -73,15 +73,15 @@
 \label{usecase:Accesso tradizionale}
 \begin{itemize}
 
-	\item \textbf{Attore principale:} Utente esterno.
+	\item \textbf{Attore principale:} Utente generico.
 
-	\item \textbf{Precondizioni:} Un Utente esterno è connesso al Sistema ed è in possesso di un \textit{account}.
+	\item \textbf{Precondizioni:} Un Utente generico è connesso al Sistema ed è in possesso di un \textit{account}.
 
 	\item \textbf{Postcondizioni:} Sono state verificate \textit{email} e \textit{password}.
 
 	\item \textbf{Scenario principale:}
 	\begin{enumerate}
-		\item L'Utente esterno inserisce le credenziali del suo \textit{account}.
+		\item L'Utente generico inserisce le credenziali del suo \textit{account}.
 		\item Il Sistema verifica le credenziali.
 	\end{enumerate}
 

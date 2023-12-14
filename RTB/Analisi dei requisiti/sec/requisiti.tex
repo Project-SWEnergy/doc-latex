@@ -1,12 +1,27 @@
 \section{\textit{Requirements baseline}}
 
-Di seguito sono riportati i requisiti individuati. SWEnergy ritiene che questa
-sezione sia la meno curata del documento. Tuttavia, per completezza, si è
-deciso di riportare alcuni dei requisiti individuati. Anche per quanto riguarda
-questa sezione, siamo disponibili a fornire maggiori informazioni in caso di
-necessità e siamo felici di ricevere consigli e suggerimenti.
+In questa sezione sono presentati i requisiti individuati durante la fase di analisi, derivanti dai casi d'uso, dall'esame del capitolato d'appalto e dagli incontri 
+sia interni che esterni con il proponente. Ciascun requisito è associato a un codice univoco, seguendo un formalismo stabilito tramite simboli.
+Il significato del codice univoco verrà spiegato più avanti nel documento per ogni tipologia di requisito, ed è inoltre riportato all'interno del documento di "Norme di progetto".
+
+Sono state individuate tre principali tipologie di requisiti:
+\begin{enumerate}
+	\item Funzionali, relativi all'usabilità del prodotto finale;
+	\item Di qualità, riguardanti gli strumenti e la documentazione da fornire;
+	\item Di vincolo, concernenti le tecnologie da presentare.
+\end{enumerate}
 
 \subsection{Funzionali}
+
+Di seguito viene riportata la specifica relativa ai requisiti funzionali, che delineano le funzionalità del sistema, le azioni eseguibili 
+da parte del sistema e le informazioni che il sistema può fornire. La presenza di ogni requisito viene giustificata riportando la fonte, che può essere un UC oppure presente 
+nel testo del capitolato d'appalto. Mentre i codici univoci sottostanti indicano:
+\begin{enumerate}
+	\item RFO: Requisito Funzionale Obbligatorio;
+	\item RFF: Requisito Funzionale Facoltativo;
+	\item RFD: Requisito Funzionale Desiderabile.
+\end{enumerate}
+
 
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.5}
@@ -14,9 +29,9 @@ necessità e siamo felici di ricevere consigli e suggerimenti.
 	\begin{tabularx}{\textwidth}{l|X|c}
 		\textbf{ID} & \textbf{Descrizione}                                                                                                      & \textbf{Fonte} \\
 		\hline
-		RFO1        & L'Utente esterno deve poter accedere al sistema                                                                           & \autoref{usecase:Effettua accesso}            \\
+		RFO1        & L'Utente generico deve poter accedere al sistema                                                                           & \autoref{usecase:Effettua accesso}            \\
 		\hline
-		RFO2        & L'Utente base deve poter prenotare un tavolo                                                                              & UC2            \\
+		RFO2        & L'Utente base deve poter prenotare un tavolo                                                                              &             \\
 		\hline
 		RFO3        & L'Utente base deve poter modificare una prenotazione                                                                      & UC3            \\
 		\hline
@@ -32,13 +47,22 @@ necessità e siamo felici di ricevere consigli e suggerimenti.
 		\hline
 		RFO9        & L'Utente ristoratore deve poter visualizzare la lista degli ingredienti per arco temporale                                & UC8            \\
 		\hline
-		RFO10       & L'Utente esterno deve poter uscire dal sistema tramite un'interfaccia web                                                 & UC9            \\
+		RFO10       & L'Utente generico deve poter uscire dal sistema tramite un'interfaccia web                                                 & UC9            \\
 		\hline
-		RFO11       & L'Utente esterno deve poter visualizzare il dettaglio di un ristorante                                                    & UC10           \\
+		RFO11       & L'Utente generico deve poter visualizzare il dettaglio di un ristorante                                                    & UC10           \\
 		\hline
 		RFO12       & L'Utente base deve poter visualizzare il riepilogo delle proprie prenotazioni                                             & UC11           \\
 		\hline
 		RFO13       & L'Utente ristoratore deve poter confermare la prenotazione di un tavolo                                                   & UC12           \\
+\end{tabularx}
+\caption{Tabella dei requisiti funzionali}
+\end{table}
+
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.5}
+	\centering
+	\begin{tabularx}{\textwidth}{l|X|c}
+		\textbf{ID} & \textbf{Descrizione}                                                                                                      & \textbf{Fonte} \\
 		\hline
 		RFO14       & L'Utente ristoratore deve poter modificare lo stato di un tavolo                                                          & UC12           \\
 		\hline
@@ -56,11 +80,21 @@ necessità e siamo felici di ricevere consigli e suggerimenti.
 		\hline
 		RFO19       & L'Utente ristoratore deve poter visualizzare le statistiche relative alle prenotazioni effettuate                         & UC19           \\
 		\hline
-	\end{tabularx}
-	\caption{Tabella dei requisiti funzionali}
+\end{tabularx}
+\caption{Tabella dei requisiti funzionali}
 \end{table}
 
 \subsection{Di qualità}
+
+Di seguito viene riportata la specifica relativa ai requisiti di qualità, che delineano le caratteristiche di come un sistema 
+deve essere o comportarsi al fine di soddisfare le necessità dell'utente.
+La presenza di ogni requisito viene giustificata riportando la fonte, che può essere un UC oppure presente 
+nel testo del capitolato d'appalto. Mentre i codici univoci sottostanti indicano:
+\begin{enumerate}
+	\item RQO: Requisito di Qualità Obbligatorio;
+	\item RQF: Requisito di Qualità Facoltativo;
+	\item RQD: Requisito di Qualità Desiderabile.
+\end{enumerate}
 
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.5}
@@ -77,6 +111,15 @@ necessità e siamo felici di ricevere consigli e suggerimenti.
 \end{table}
 
 \subsection{Di vincolo}
+
+Segue la specifica relativa ai requisiti di vincolo, i quali delineano i limiti e le restrizioni che il sistema deve osservare per adempiere alle esigenze dell'utente.
+La presenza di ogni requisito viene giustificata riportando la fonte, che può essere un UC oppure presente 
+nel testo del capitolato d'appalto. Mentre i codici univoci sottostanti indicano:
+\begin{enumerate}
+	\item RVO: Requisito di Vincolo Obbligatorio;
+	\item RVF: Requisito di Vincolo Facoltativo;
+	\item RVD: Requisito di Vincolo Desiderabile.
+\end{enumerate}
 
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.5}

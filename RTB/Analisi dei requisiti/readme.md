@@ -4,7 +4,7 @@ Ho scritto i casi d'uso piuttosto velocemente, quindi vanno rivisti.
 
 ## Attori
 
-- Utente esterno: utente di cui il sistema non ha informazioni o non sa di
+- Utente generico: utente di cui il sistema non ha informazioni o non sa di
   averne.
   
 - Utente base: rappresenta il cliente di un ristorante, è riconosciuto dal 

@@ -17,6 +17,68 @@
 \makeatother
 \newcommand{\usecaseautorefname}{UC-\hspace{-0.33mm}}
 
+
+%
+% \usecase utente generico
+%
+
+\newcounter{usecasegenerico}
+\renewcommand{\theusecasegenerico}{\arabic{usecasegenerico}}
+
+\makeatletter
+% Redefine usecase command to create a new hierarchy
+\titleformat{\usecasegenerico}[block]{\normalfont\Large\bfseries}{UCG-\theusecasegenerico}{2em}{}
+\newcommand{\l@usecasegenerico}{\@dottedtocline{3}{3.8em}{3.2em}}
+\newcommand{\usecasegenerico}[1]{%
+	\refstepcounter{usecasegenerico}%
+	\noindent\textbf{UCG-\theusecasegenerico: #1}%
+	\addcontentsline{toc}{usecasegenerico}{\protect\numberline{UCG-\theusecasegenerico}#1}%
+}
+\makeatother
+\newcommand{\usecasegenericoautorefname}{UCG-\hspace{-0.33mm}}
+
+
+%
+% \usecase utente base
+%
+
+\newcounter{usecasebase}
+\renewcommand{\theusecasebase}{\arabic{usecasebase}}
+
+\makeatletter
+% Redefine usecase command to create a new hierarchy
+\titleformat{\usecasebase}[block]{\normalfont\Large\bfseries}{UCB-\theusecasebase}{2em}{}
+\newcommand{\l@usecasebase}{\@dottedtocline{3}{3.8em}{3.2em}}
+\newcommand{\usecasebase}[1]{%
+	\refstepcounter{usecasebase}%
+	\noindent\textbf{UCB-\theusecasebase: #1}%
+	\addcontentsline{toc}{usecasebase}{\protect\numberline{UCB-\theusecasebase}#1}%
+}
+\makeatother
+\newcommand{\usecasebaseautorefname}{UCB-\hspace{-0.33mm}}
+
+
+
+%
+% \usecase utente ristoratore
+%
+
+\newcounter{usecaseristoratore}
+\renewcommand{\theusecaseristoratore}{\arabic{usecaseristoratore}}
+
+\makeatletter
+% Redefine usecase command to create a new hierarchy
+\titleformat{\usecaseristoratore}[block]{\normalfont\Large\bfseries}{UCR-\theusecaseristoratore}{2em}{}
+\newcommand{\l@usecaseristoratore}{\@dottedtocline{3}{3.8em}{3.2em}}
+\newcommand{\usecaseristoratore}[1]{%
+	\refstepcounter{usecaseristoratore}%
+	\noindent\textbf{UCR-\theusecaseristoratore: #1}%
+	\addcontentsline{toc}{usecaseristoratore}{\protect\numberline{UCR-\theusecaseristoratore}#1}%
+}
+\makeatother
+\newcommand{\usecaseristoratoreautorefname}{UCR-\hspace{-0.33mm}}
+
+
 %
 % \subusecase
 %

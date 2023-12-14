@@ -1,21 +1,21 @@
-\usecase{Effettua registrazione}
+\usecasegenerico{Effettua registrazione}
 \label{usecase:Effettua registrazione}
 
 \begin{itemize}
-	\item \textbf{Descrizione:} Un Utente esterno decide di effettuare la registrazione all'interno della \textit{web app}. Per effettuare tale
+	\item \textbf{Descrizione:} Un Utente generico decide di effettuare la registrazione all'interno della \textit{web app}. Per effettuare tale
 	operazione gli viene chiesto la tipologia di utente tra i due disponibili: Utente base oppure Utente ristoratore. 
     A seguito di tale decisione l'utente deve inserire una serie di dati relativi alla registrazione e legati alla tipologia di utenza.
 
-	\item \textbf{Attore principale:} Utente esterno.
+	\item \textbf{Attore principale:} Utente generico.
 	\item \textbf{Attori secondari:} Sistema di autenticazione esterno.
 	\item \textbf{Precondizioni:}
         \begin{itemize}
-            \item Un Utente esterno è connesso al Sistema.
-            \item L'Utente esterno non dispone di un \textit{account}.
+            \item Un Utente generico è connesso al Sistema.
+            \item L'Utente generico non dispone di un \textit{account}.
         \end{itemize}
 	\item \textbf{Postcondizioni:}
 	    \begin{enumerate}
-            \item L'Utente esterno ha creato un \textit{account} tra i seguenti:
+            \item L'Utente generico ha creato un \textit{account} tra i seguenti:
             \begin{itemize}
                 \item Utente ristoratore.
                 \item Utente base.
@@ -27,7 +27,7 @@
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
-		      \item L'Utente esterno seleziona la tipologia di \textit{account} che vuole creare: 
+		      \item L'Utente generico seleziona la tipologia di \textit{account} che vuole creare: 
 		      \begin{itemize}
 				\item Utente base (vedi \autoref{usecase:Registrazione Utente base}).
 				\item Utente ristoratore (vedi \autoref{usecase:Registrazione Utente ristoratore}).
@@ -52,20 +52,20 @@
 \label{usecase:Registrazione Utente base}
 \begin{itemize}
 
-	\item \textbf{Attore principale:} Utente esterno.
+	\item \textbf{Attore principale:} Utente generico.
 	\item \textbf{Attori secondari:} Sistema di autenticazione esterno.
 
 	\item \textbf{Precondizioni:} 
 	\begin{itemize}
-        \item  Un Utente esterno è connesso al Sistema
-        \item  Un Utente esterno vuole registrarsi come Utente base.
+        \item  Un Utente generico è connesso al Sistema
+        \item  Un Utente generico vuole registrarsi come Utente base.
     \end{itemize}
     
 
 	\item \textbf{Postcondizioni:} 
     \begin{itemize}
         \item  Sono state verificate tutte le informazioni inserite durante la fase di registrazione.
-        \item  L'Utente esterno ha creato un \textit{account} come Utente base.
+        \item  L'Utente generico ha creato un \textit{account} come Utente base.
     \end{itemize}
 
 	\item \textbf{Scenario principale:}
@@ -89,20 +89,20 @@
 \label{usecase:Registrazione Utente ristoratore}
 \begin{itemize}
 
-	\item \textbf{Attore principale:} Utente esterno.
+	\item \textbf{Attore principale:} Utente generico.
 	\item \textbf{Attori secondari:} Sistema di autenticazione esterno. 
 
 	\item \textbf{Precondizioni:} 
 	\begin{itemize}
-        \item  Un Utente esterno è connesso al Sistema
-        \item  Un Utente esterno vuole registrarsi come Utente ristoratore.
+        \item  Un Utente generico è connesso al Sistema
+        \item  Un Utente generico vuole registrarsi come Utente ristoratore.
     \end{itemize}
     
 
 	\item \textbf{Postcondizioni:} 
     \begin{itemize}
         \item  Sono state verificate tutte le informazioni inserite durante la fase di registrazione.
-        \item  L'Utente esterno ha creato un \textit{account} come Utente ristoratore.
+        \item  L'Utente generico ha creato un \textit{account} come Utente ristoratore.
     \end{itemize}
 
 	\item \textbf{Scenario principale:}
