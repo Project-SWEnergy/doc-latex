@@ -1,0 +1,37 @@
+name: Documentazione
+run-name: Publishing docs
+on:
+    push:
+        branches:
+            - main
+jobs:
+    build-documentation:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                python-version: ['3.11']
+        steps:
+            - uses: actions/checkout@v4
+            - name: Update ubuntu
+              run: |
+                  sudo apt-get update
+                  sudo apt-get install
+            - name: Install pdflatex
+              run: |
+                sudo apt-get install texlive-latex-base
+                sudo apt-get install texlive-lang-italian
+                sudo apt-get install texlive-fonts-recommended
+                sudo apt-get install texlive-latex-extra
+                
+            - name: Set up Python ${{ matrix.python-version }}
+              uses: actions/setup-python@v4
+              with:
+                  python-version: ${{ matrix.python-version }}
+            - name: Build pdf
+              run: python3 build.py -o docs -s RTB
+            - name: Publish artifacts
+              uses: actions/upload-artifact@v3
+              with:
+                  name: Documentazione
+                  path: |
+                      docs
