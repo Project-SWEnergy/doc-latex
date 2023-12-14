@@ -1,9 +1,7 @@
 name: Documentazione
 run-name: Publishing docs
 on:
-    push:
-        branches:
-            - main
+    push
 jobs:
     build-documentation:
         runs-on: ubuntu-latest
