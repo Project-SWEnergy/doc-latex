@@ -114,6 +114,68 @@
 \newcommand{\subusecaseautorefname}{UC-\hspace{-0.33mm}}
 
 %
+% \subusecasegenerico
+%
+
+\newcounter{subusecasegenerico}[usecasegenerico]
+\renewcommand{\thesubusecasegenerico}{\theusecasegenerico.\arabic{subusecasegenerico}}
+\titleformat{\subusecasegenerico}[block]{\normalfont\large\bfseries}{UCG-\thesubusecasegenerico}{1.5em}{}
+\newcommand{\subusecasegenerico}[1]{%
+	\refstepcounter{subusecasegenerico}%
+	%
+	\noindent\textbf{UCG-\thesubusecasegenerico: #1}%
+}
+\newcommand{\subusecasegenericoautorefname}{UCG-\hspace{-0.33mm}}
+
+
+%
+% \subusecase base
+%
+
+\newcounter{subusecasebase}[usecasebase]
+\renewcommand{\thesubusecasebase}{\theusecasebase.\arabic{subusecasebase}}
+\titleformat{\subusecasebase}[block]{\normalfont\large\bfseries}{UCB-\thesubusecasebase}{1.5em}{}
+\newcommand{\subusecasebase}[1]{%
+	\refstepcounter{subusecasebase}%
+	%
+	\noindent\textbf{UCB-\thesubusecasebase: #1}%
+}
+\newcommand{\subusecasebaseautorefname}{UCB-\hspace{-0.33mm}}
+
+
+
+%
+% \subusecase ristoratore
+%
+
+\newcounter{subusecaseristoratore}[usecaseristoratore]
+\renewcommand{\thesubusecaseristoratore}{\theusecaseristoratore.\arabic{subusecaseristoratore}}
+\titleformat{\subusecaseristoratore}[block]{\normalfont\large\bfseries}{UCR-\thesubusecaseristoratore}{1.5em}{}
+\newcommand{\subusecaseristoratore}[1]{%
+	\refstepcounter{subusecaseristoratore}%
+	%
+	\noindent\textbf{UCR-\thesubusecaseristoratore: #1}%
+}
+\newcommand{\subusecaseristoratoreautorefname}{UCR-\hspace{-0.33mm}}
+
+
+
+%
+% \subusecase errore
+%
+
+\newcounter{subusecaseerrore}[usecaseerrore]
+\renewcommand{\thesubusecaseerrore}{\theusecaseerrore.\arabic{subusecaseerrore}}
+\titleformat{\subusecaseerrore}[block]{\normalfont\large\bfseries}{UCE-\thesubusecaseerrore}{1.5em}{}
+\newcommand{\subusecaseerrore}[1]{%
+	\refstepcounter{subusecaseerrore}%
+	%
+	\noindent\textbf{UCE-\thesubusecaseerrore: #1}%
+}
+\newcommand{\subusecaseerroreautorefname}{UCE-\hspace{-0.33mm}}
+
+
+%
 % \subsubusecase
 %
 \newcounter{subsubusecase}[subusecase]
@@ -125,3 +187,17 @@
 	\noindent\textbf{UC-\thesubsubusecase: #1}%
 }
 \newcommand{\subsubusecaseautorefname}{UC-\hspace{-0.33mm}}
+
+
+%
+% \subsubusecase base
+%
+\newcounter{subsubusecasebase}[subusecasebase]
+\renewcommand{\thesubsubusecasebase}{\thesubusecasebase.\arabic{subsubusecasebase}}
+\titleformat{\subsubusecasebase}[block]{\normalfont\normalsize\bfseries}{UCB-\thesubsubusecasebase}{1em}{}
+\newcommand{\subsubusecasebase}[1]{%
+	\refstepcounter{subsubusecasebase}%
+	%
+	\noindent\textbf{UCB-\thesubsubusecasebase: #1}%
+}
+\newcommand{\subsubusecasebaseautorefname}{UCB-\hspace{-0.33mm}}
