@@ -1,20 +1,27 @@
 \section{Introduzione}
 
 \subsection{Scopo del documento}
-Nel seguente documento si fornisce una descrizione del prodotto, analizzando i bisogni dell'utente che sono emersi in seguito all'analisi del capitolato e agli incontri effettuati con l'azienda proponente. \\
-La modellazione avviene tramite UML$^G$ individuando nel dettaglio requisiti ed attori presenti nel progetto, in tal modo sarà possibile descrivere le varie componenti del programma ed indicare come strutturare ogni attività. \\
+Nel presente documento, viene presentata una descrizione dettagliata del prodotto, basata sull'analisi dei bisogni dell'utente 
+emersi durante l'esaminazione del capitolato e attraverso gli incontri con l'azienda proponente. 
+La modellazione viene realizzata tramite UML$^G$, identificando in modo approfondito requisiti e attori presenti nel progetto. 
+Questo approccio consente di descrivere in dettaglio le varie componenti del prodotto e di indicare la struttura di ciascuna funzionalità.\\
 
 \noindent
-I casi d'uso vengono descritti seguendo i seguenti punti:
+I casi d'uso sono strutturati nel seguente modo:
 \begin{itemize}
-	\item Titolo: dotato di codice identificativo ed un nome esplicativo.
-	\item Attori: diverse tipologie di utenti che interagiscono con il sistema.
-	\item Precondizioni: stato del sistema prima dell'esecuzione di un caso d'uso.
-	\item Postcondizioni: stato del sistema al termine dello scenario principale, se non vi sono stati errori.
-	\item Scenario principale: descrizione del flusso con il quale viene svolta l'attività descritta.
-	\item Descrizione: note aggiuntive che vengono inserite quando si ritiene che sia utile amplia la spiegazione per approfondire la comprensione del caso d'uso.
-	\item Scenario secondario: scenari differenti da quello principale e che non soddisfano le postcondizioni, solitamente relativi ad errori.
-	\item Trigger: evento scatenante del caso d'uso.
+	\item Titolo: fornito di un codice identificativo e di un nome esplicativo per agevolare il tracciamento.
+	\item Attori: diverse tipologie di utenti che interagiscono con il sistema, suddivisi in:
+	\begin{itemize}
+		\item Attore primario: colui che interagisce attivamnete con il sistema dall'esterno.
+		\item Attore secondario: posso anche non essere presenti. 
+		Sono sempre esterni, ma non interagiscono attivamente con il sistema; invece, interagiscono per il raggiungimento dello scopo dell'attore primario o per aiutarlo.
+	\end{itemize}
+	\item Precondizioni: stato in cui si deve trovare il sistema affinchè una funzionalità sia disponibile ad un attore.
+	\item Postcondizioni: serie di informazioni che rappresentano lo stato del sistema dopo l'esecuzione del caso d'uso.
+	\item Scenario principale: sequenza di azioni dettagliata che descrive il \textit{workflow} della funzionalità.
+	\item Descrizione: note aggiuntive inserite quando si ritiene utile ampliare la spiegazione per approfondire la comprensione del caso d'uso.
+	\item Scenario secondario: scenario che inizialmente ha lo stesso \textit{workflow} di quello principale ma che, ad un tratto, cambia, solitamente relativo a errori.
+	\item Trigger: evento scatenante che provoca l'esecuzione automatica del caso d'uso.
 \end{itemize}
 
 \subsection{Riferimenti}
