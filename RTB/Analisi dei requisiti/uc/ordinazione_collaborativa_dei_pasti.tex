@@ -3,14 +3,11 @@
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente base.
 
-	\item \textbf{Attori secondari:} Utente ristoratore.
-
 	\item \textbf{Precondizioni:}
 		\begin{itemize}
-			\item L'Utente base ha effettuato l'accesso al Sistema (vedi \autoref{usecase:Effettua accesso});
-			\item L'Utente base ha effettuato una prenotazione (bedi \autoref{usecase:Prenotazione di un tavolo});
-			\item L'Utente base sta visualizzando il riepilogo di una prenotazione che si deve trovare nello stato: \textit{Confermata dal ristoratore} (vedi \autoref{usecase:Visualizzazione del riepilogo prenotazione}).
-			\item L'Utente ristoratore deve aver accettato la prenotazione (vedi \autoref{usecase:Accetta prenotazione});
+			\item L'Utente base ha effettuato l'accesso al Sistema (vedi \autoref{usecase:Effettua accesso}).
+			\item L'Utente base ha effettuato una prenotazione (bedi \autoref{usecase:Prenotazione di un tavolo}).
+			\item L'Utente base sta visualizzando il riepilogo di una prenotazione (vedi \autoref{usecase:Visualizzazione del riepilogo prenotazione}) che si deve trovare nello stato: \textit{Confermata}  (vedi \autoref{usecase:Accetta prenotazione}).
 		\end{itemize}
 	      
 	\item \textbf{Postcondizioni:} Un Utente base ha ordinato le pietanze per la prenotazione effettuata.
@@ -38,7 +35,7 @@
 		            \autoref{usecase:Annullamento dell'ordinazione}).
 		            \begin{enumerate}
 			            \item L'Utente base annulla l'ordinazione;
-			            \item Il Sistema aggiorna l'ordinazione.
+			            \item Il Sistema aggiorna l'ordinazione;
 			            \item Il Sistema notifica l'annullamento dell'ordinazione
 			                  all'Utente ristoratore.
 		            \end{enumerate}
@@ -55,7 +52,7 @@
 
 	\item \textbf{Postcondizioni:}
 		\begin{itemize}
-			\item L'Utente base ha creato o modificato il proprio ordine;
+			\item L'Utente base ha creato o modificato il proprio ordine.
 			\item Il Sistema aggiorna le informazioni inerenti al suo ordine.
 		\end{itemize}
 
@@ -74,7 +71,7 @@
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente base.
 
-	\item \textbf{Precondizioni:} L'Utente base si trova nella sezione Creazione e modifica del proprio ordine (vedi \autoref{usecase:Creazione e modifica del proprio ordine});
+	\item \textbf{Precondizioni:} L'Utente base si trova nella sezione Creazione e modifica del proprio ordine (vedi \autoref{usecase:Creazione e modifica del proprio ordine}).
 
 	\item \textbf{Postcondizioni:} L'Utente base ha selezionato una pietanza.
 
@@ -82,7 +79,7 @@
 	      \begin{enumerate}
 		      \item L'Utente base seleziona tra le lista delle pietanze una che vuole aggiungere al proprio ordine;
 		      \item L'Utente base conferma la sua selezione;
-		      \item Il Sistema registra la sua selezione;
+		      \item Il Sistema registra la sua selezione.
 	      \end{enumerate}
 \end{itemize}
 
@@ -91,7 +88,7 @@
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente base.
 
-	\item \textbf{Precondizioni:} L'Utente base si trova nella sezione Creazione e modifica del proprio ordine (vedi \autoref{usecase:Creazione e modifica del proprio ordine});
+	\item \textbf{Precondizioni:} L'Utente base si trova nella sezione Creazione e modifica del proprio ordine (vedi \autoref{usecase:Creazione e modifica del proprio ordine}).
 
 	\item \textbf{Postcondizioni:} L'Utente base ha modificato una pietanza.
 
@@ -99,11 +96,11 @@
 	      \begin{enumerate}
 		      \item L'Utente base seleziona tra le pietanze del suo ordine una che vuole modificare, ovvero:
 		      \begin{itemize}
-				\item Modifica della quantità della pietanza selezionata;
-				\item Rimozione di ingredienti della pietanza selezionata;
-				\item Aggiunta di ingredienti della pietanza selezionata;
+				\item Modifica della quantità della pietanza selezionata.
+				\item Rimozione di ingredienti della pietanza selezionata.
+				\item Aggiunta di ingredienti della pietanza selezionata.
 			  \end{itemize}
 		      \item L'Utente base conferma la sua modifica;
-		      \item Il Sistema registra la sua modifica;
+		      \item Il Sistema registra la sua modifica.
 	      \end{enumerate}
 \end{itemize}

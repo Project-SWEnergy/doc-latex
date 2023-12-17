@@ -1,0 +1,31 @@
+\usecase{Chat Utente generico}
+\label{usecase:Chat Utente generico}
+\begin{itemize}
+	\item \textbf{Attori principali:} 
+	\begin{itemize}
+        \item Utente generico.
+        \item Utente ristoratore.
+    \end{itemize}
+
+	\item \textbf{Precondizioni:} L'Utente generico è connesso al Sistema.
+
+
+	\item \textbf{Postcondizioni:} La \textit{chat} è stata avviata.
+
+	\item \textbf{Scenario principale:}
+            \begin{enumerate}
+                \item L'Utente generico inizia la \textit{chat} con l'invio di un messaggio (vedi \autoref{usecase:Invio messaggio chat});
+                \item Il Sistema invia una notifica di arrivo di un nuovo messaggio al destinatario (vedi \autoref{usecase:Notifica chat});
+                \item L'Utente ristoratore riceve la notifica e può leggere la \textit{chat} (vedi \autoref{usecase:Lettura chat});
+                \item Ora l'Utente generico e l'Utente ristoratore possono comunicare tra di loro attraverso l'uso della \textit{chat}, inviando e leggendo i messaggi vicendevolmente.
+	      \end{enumerate}
+
+    \item \textbf{Scenario secondario:}
+		  \begin{itemize}
+			  \item \autoref{usecase:Errore instaurazione chat} Errore instaurazione \textit{chat}:
+				\begin{enumerate}
+					\item L'Utente generico invia un messaggio in \textit{chat} all'Utente ristoratore.
+					\item Il Sistema mostra un messaggio di errore.
+				\end{enumerate}
+		  \end{itemize}
+\end{itemize}

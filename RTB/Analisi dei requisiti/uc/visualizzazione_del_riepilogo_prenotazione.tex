@@ -3,11 +3,13 @@
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente base.
 
-	\item \textbf{Attore secondario:} Sistema.
-
 	\item \textbf{Precondizioni:}
-	      Un Utente base ha effettuato l'accesso al Sistema ed è associato ad una
-	      prenotazione (vedi \autoref{usecase:Prenotazione di un tavolo})
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item L'Utente base ha effettuato l'accesso al Sistema (vedi \autoref{usecase:Effettua accesso}).
+		\item L'Utente base ha effettuato una prenotazione (bedi \autoref{usecase:Prenotazione di un tavolo}).
+	\end{itemize}
+
 
 	\item \textbf{Postcondizioni:}
 	      L'Utente base visualizza il riepilogo della prenotazione.
@@ -22,29 +24,29 @@
 	\item \textbf{Descrizione:}
 	      I campi del riepilogo sono almeno:
 	      \begin{itemize}
-		      \item \textbf{Nome ristorante:} nome del ristorante;
-		      \item \textbf{Data e ora:} data e ora della prenotazione;
+		      \item \textbf{Nome ristorante:} nome del ristorante.
+		      \item \textbf{Data e ora:} data e ora della prenotazione.
 		      \item \textbf{Numero di persone:} numero di persone per cui è
-		            stata effettuata la prenotazione;
+		            stata effettuata la prenotazione.
 		      \item \textbf{Username:} username dell'Utente base
 		            associato alla prenotazione o lista degli username degli
-		            Utenti base associati alla prenotazione;
+		            Utenti base associati alla prenotazione.
 
 		      \item \textbf{Stato:} stato della prenotazione. Una
 		            prenotazione si può trovare in uno dei seguenti stati:
 		            \begin{itemize}
 			            \item \textbf{In attesa:} la prenotazione è
-			                  in attesa di conferma da parte del ristorante;
+			                  in attesa di conferma da parte del ristorante.
 
-			            \item \textbf{Confermata dal ristoratore:} la prenotazione è
-			                  stata confermata dal ristorante;
+			            \item \textbf{Confermata:} la prenotazione è
+			                  stata confermata dal ristorante.
 
 			            \item \textbf{Rifiutata:} la prenotazione è
 			                  stata annullata dal ristorante o dall'Utente base
-			                  oppure è scaduta;
+			                  oppure è scaduta.
 
 			            \item \textbf{In corso:} la prenotazione è
-			                  in corso;
+			                  in corso.
 
 			            \item \textbf{Terminata:} la prenotazione è
 			                  terminata e il conto è stato pagato.
@@ -53,7 +55,7 @@
 		            Ogni volta che lo stato della prenotazione cambia, il Sistema
 		            invia una notifica a tutti gli Utenti autenticati associati alla
 		            prenotazione che non hanno effettuato l'azione che ha portato al
-		            cambio di stato (vedi UC-12).
+		            cambio di stato (\autoref{usecase:Notifica stato della prenotazione}).
 	      \end{itemize}
 
 \end{itemize}
