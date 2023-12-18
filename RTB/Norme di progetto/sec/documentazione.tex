@@ -2,170 +2,262 @@
 \subsection{Strumenti}
 Gli strumenti utilizzati per la creazione dei documenti sono:
 \begin{itemize}
-    \item \textbf{LaTeX}: linguaggio di \textit{markup} per la creazione di documenti \\
-        \href{https://www.latex-project.org/}{(www.latex-project.org)};
-    \item \textbf{VisualStudio Code}: GUI con integrazioni per la creazione di documenti scritti in LaTeX e per la gestione delle repository git \\
-        \href{https://code.visualstudio.com/}{(code.visualstudio.com)}
-        \begin{itemize}
-            \item \textbf{LaTeX Workshop}: estensione utilizzata in VisualStudio Code per la compilazione e la scrittura dei documenti.
-        \end{itemize}
+	\item \textbf{LaTeX}: linguaggio di \textit{markup} per la creazione di documenti \\
+	      \href{https://www.latex-project.org/}{(www.latex-project.org)};
+	\item \textbf{VisualStudio Code}: GUI con integrazioni per la creazione di documenti scritti in LaTeX e per la gestione delle repository git \\
+	      \href{https://code.visualstudio.com/}{(code.visualstudio.com)}
+	      \begin{itemize}
+		      \item \textbf{LaTeX Workshop}: estensione utilizzata in VisualStudio Code per la compilazione e la scrittura dei documenti.
+	      \end{itemize}
 \end{itemize}
 
 
 \subsection{Creazione e modifica di un documento}
-Lo strumento utilizzato per la redazione di documenti è LaTeX, quando si crea un nuovo documento è obbligatorio l'utilizzo di uno dei \textit{template} disponibili, al fine di uniformare la documentazione rilasciata.
-La versione di partenza deve sempre essere \texttt{0.1.0} e venire aggiornata ad ogni modifica (sezione \S\ref{documentazione_versionamento}).
-I \textit{template} disponibili sono quattro:
+
+A ciascun documento corrisponde un'omonima cartella che viene creata nella
+\textit{repository}
+\href{https://github.com/Project-SWEnergy/doc-latex}{\texttt{doc-latex}}
+presente su GitHub. Il nome della cartella corrisponde al nome del documento che
+deve avere la prima lettera maiuscola, sono previsti gli spazi tra le parole e
+le parole successive alla prima sono in minuscolo.
+La cartella di ciascun documento ha la seguente struttura:
+
+\dirtree{%
+	.1 / (Nome del documento).
+	.2 main.tex.
+	.2 sec.
+	.3 registro\_modifiche.tex.
+	.3 introduzione.tex.
+	.3 le\_altre\_sezioni.tex.
+}
+
+\subsection{\textit{Template} dei documenti}
+
+Di seguito sono elencati i \textit{template} che devono essere importati da
+ciascun documento:
 \begin{itemize}
-    \item \textbf{Verbale interno}: per i resoconti degli incontri interni al gruppo, prevede una struttura per i contenuti che deve essere mantenuta per ogni documento.\\
-    Visionabile all'interno della cartella \href{https://github.com/Project-SWEnergy/doc-latex/tree/main/Templates}{\texttt{Template}} della repository \texttt{doc-latex}.
-    \item \textbf{Verbale esterno}: per i resoconti degli incontri con le aziende proponenti o con soggetti esterni al gruppo, prevede una struttura per i contenuti che deve essere mantenuta per ogni documento. \\
-    Visionabile all'interno della cartella \href{https://github.com/Project-SWEnergy/doc-latex/tree/main/Templates}{\texttt{Template}} della repository \texttt{doc-latex}.
-    \item \textbf{Documento}: da utilizzare per i documenti richiesti nelle varie fasi di avanzamento, non presenta una struttura fissa per i contenuti ma solo i comandi per la definizione della copertina.\\
-    Visionabile all'interno della cartella \href{https://github.com/Project-SWEnergy/doc-latex/tree/main/Templates}{\texttt{Template}} della repository \texttt{doc-latex}.
-    \item \textbf{Presentazione}: utilizzata per le presentazioni dei diari di bordo. \\
-    Visionabile all'interno della sezione Google Presentazioni a disposizione del gruppo.
+	\item \textbf{Copertina}: il primo \textit{template} importato da ogni
+	      documento è la copertina, che formatta la prima pagina del documento;
+	      ciasun documento deve definire i comandi necessari per la costruzione
+	      della copertina.
+
+	\item \textbf{Header e footer}: ciascun documento deve importare il file
+	      \texttt{header\_footer.tex} che definisce l'header e il footer di ogni
+	      pagina del documento.
+
+	\item \textbf{Variabile}: ciascun documento deve importare il file
+	      \texttt{variable.tex} che definisce i comandi per la definizione delle
+	      variabili globali tra i documenti; per esempio il nome del gruppo o la
+	      mail del gruppo.
+
+	\item \textbf{\textit{Template ad hoc}}: qualche documento potrebbe avere
+	      dei comandi specifici per la propria creazione e stesura; per esempio,
+	      l'"Analisi dei requisiti" ha bisogno di un comando per la creazione di
+	      un caso d'uso.
 \end{itemize}
-Ogni documento creato dovrà quindi importare al suo interno i template appena descritti. \\
-Qualora sia necessaria una diversa tipologia di documento le sue caratteristiche grafiche ed organizzative dovranno essere discusse nel gruppo.\\
-Ogni documento, ad esclusione di verbali e presentazioni, prevede obbligatoriamente la presenza di un registro delle modifiche (sezione \S\ref{documentazione_registromodifiche}).
+Ogni documento creato dovrà quindi importare al suo interno i \textit{template}
+appena descritti.
+Nota bene, ogni documento include i \textit{template} sopra descritti con la
+seguente sintassi:
+\begin{lstlisting}[language=TeX]
+	\documentclass[a4paper, 12pt]{article}
+	\newcommand{\template}{../../templates}
+	\usepackage{\template/package}
+	\graphicspath{{../../assets}}
 
+	\newcommand{\Titolo}{Norme di progetto}
+	% ... altre variabili
 
+	\input{\template/variable.tex}
+	\input{\template/copertina.tex}
+	\input{\template/header_footer.tex}
+	% ... altri template
+\end{lstlisting}
 
-\subsection{Descrizione template}
-\subsubsection{Verbale interno}
-Nella prima pagina di ogni verbale è sempre presente un riassunto dei ruoli svolti dai componenti del gruppo. 
-In particolare dovrà comparire:
+In questo modo è possibile mantenere uniforme la struttura di tutti i
+documenti e semplificarne la creazione.
+
+\subsection{Variabili dei documenti}
+
+Ciascun documento deve definire alcune variabili che sono utilizzate per
+costruirne la struttura e la copertina. Di seguito sono elencate le variabili da
+definire per ciascun documento:
 \begin{itemize}
-    \item Descrizione.
-    \item Stato.
-    \item Data.
-    \item Redattori.
-    \item Verificatori.
-    \item Approvatori.
-    \item Versione.
+	\item \textbf{Verbale interno}:
+	      \begin{itemize}
+		      \item \textbf{Titolo}: "Verbale interno".
+		      \item \textbf{Data}: la data in cui ha avuto luogo la riunione.
+		      \item \textbf{Versione}: la versione del verbale.
+		      \item \textbf{Descrizione}: una breve descrizione del verbale.
+		      \item \textbf{Stato}: lo stato del verbale, ovvero se è stato
+		            approvato o meno.
+		      \item \textbf{Redattori}: i redattori del verbale (in genere è il
+		            responsabile).
+		      \item \textbf{Verificatori}: i verificatori del verbale (in genere
+		            è il verificatore).
+	      \end{itemize}
+
+	\item \textbf{Verbale esterno}:
+	      \begin{itemize}
+		      \item \textbf{Titolo}: "Verbale esterno - Imola Informatica".
+		      \item \textbf{Data}: la data in cui ha avuto luogo la riunione.
+		      \item \textbf{Versione}: la versione del verbale;
+		      \item \textbf{Descrizione}: una breve descrizione del verbale.
+		      \item \textbf{Stato}: lo stato del verbale, ovvero se è stato
+		            approvato o meno.
+		      \item \textbf{Redattori}: i redattori del verbale (in genere è il
+		            responsabile).
+		      \item \textbf{Verificatori}: i verificatori del verbale (in genere
+		            è il verificatore).
+		      \item \textbf{Approvatori esterni}: i nomi degli approvatori
+		            esterni, ovvero dei proponenti.
+	      \end{itemize}
+
+	      Nota bene, ciascun verbale esterno deve essere firmato dai proponenti,
+	      per questo motivo è necessario inserire uno spazio apposito alla fine
+	      del documento attraverso il comando \texttt{\\firma\{\}} definito nel
+	      \textit{template} \texttt{firma.tex}.
+
+	\item \textbf{Documenti generici}:
+	      \begin{itemize}
+		      \item \textbf{Titolo}: il nome del documento.
+		      \item \textbf{Data}: la data di creazione del documento.
+		      \item \textbf{Versione}: la versione del documento.
+		      \item \textbf{Descrizione}: una breve descrizione del documento.
+		      \item \textbf{Stato}: lo stato del documento, ovvero se è stato
+		            approvato o meno.
+	      \end{itemize}
+
 \end{itemize}
-L'indicazione del nominativo dei membri del gruppo segue sempre l'ordine alfabetico del nome e successivamente del cognome. \\
-Sulla porzione inferiore della copertina deve essere presente la firma del responsabile. \\
-
-\noindent
-Le sezioni del documento saranno le seguenti:
-\begin{itemize}
-    \item \textbf{Partecipanti}: Indicare ora di inizio e fine incontro, in una tabella apposita bisogna poi indicare gli assenti, i partecipanti ed il tempo totale di partecipazione per ogni persona. Per ogni persona deve essere esplicitato il ruolo ricoperto durante la fase di progetto.
-    \item \textbf{Ordine del giorno}: Elenco puntuale degli argomenti di discussione.
-    \item \textbf{Resoconto}: Descrizione estesa degli argomenti trattati durante l'incontro e delle decisioni prese.
-    \item \textbf{Assegnazione incarichi}: Tabella riportante gli incarichi assegnati durante la riunione. Deve riportare le colonne Assegnatario, Descrizione, Riferimento. Gli incarichi vanno raggruppati secondo il nome dell'assegnatario, l'elenco deve essere alfabetico.
-\end{itemize}
-
-
-\subsubsection{Verbale esterno}
-Nella prima pagina di ogni verbale è sempre presente un riassunto dei ruoli svolti dai componenti del gruppo. 
-In particolare dovrà comparire:
-\begin{itemize}
-    \item Descrizione.
-    \item Stato.
-    \item Data.
-    \item Redattori.
-    \item Verificatori.
-    \item Approvatore intero.
-    \item Approvatore esterno.
-    \item Versione.
-\end{itemize}
-L'indicazione del nominativo dei membri del gruppo segue sempre l'ordine alfabetico del nome e successivamente del cognome. \\
-Sulla porzione inferiore della copertina deve essere presente la firma del responsabile e dell'approvatore esterno. \\
-
-\noindent
-Le sezioni del documento saranno le seguenti:
-\begin{itemize}
-    \item \textbf{Partecipanti}: Indicare ora di inizio e fine incontro, in una tabella apposita bisogna poi indicare gli assenti, i partecipanti ed il tempo totale di partecipazione per ogni persona. Per ogni persona deve essere esplicitato il ruolo ricoperto durante la fase di progetto. Indicare anche il nome del referente esterno.
-    \item \textbf{Ordine del giorno}: Elenco puntuale degli argomenti di discussione.
-    \item \textbf{Resoconto}: Descrizione estesa degli argomenti trattati durante l'incontro e delle decisioni prese.
-    \item \textbf{Conclusioni}: Riassunto delle considerazioni fatte durante l'incontro e delle decisioni prese. 
-    Inserire il riferimento ad un eventuale verbale interno in cui sono state rielaborate le informazioni ottenute.
-\end{itemize}
-
-
-\subsubsection{Documento}
-Nella prima pagina di ogni documento è sempre presente un riassunto dei ruoli svolti dai componenti del gruppo, poi esteso all'interno del registro delle modifiche (sezione \S\ref{documentazione_registromodifiche}). 
-In particolare dovrà comparire:
-\begin{itemize}
-    \item Descrizione.
-    \item Stato.
-    \item Data.
-    \item Redattori.
-    \item Verificatori.
-    \item Approvatore.
-    \item Versione.
-\end{itemize}
-La posizione di redattore e verificatore può essere assunta da più membri del gruppo, ciascuno dei quali può anche ricoprire entrambi i ruoli in base al contributo dato nelle differenti versioni di ogni documento.
-L'indicazione del nominativo dei membri del gruppo segue sempre l'ordine alfabetico del nome e successivamente del cognome. \\
-Sulla porzione inferiore della copertina deve essere presente la firma del responsabile. \\
-
-\noindent
-Non si hanno vincoli sulle sezioni, che dovranno essere discusse in base a necessità e che potranno variare nel corso del progetto.
-
-
-\subsubsection{Presentazione}
-Disponibile all'interno di Google Presentation a disposizione del gruppo. \\
-Ogni \textit{slide} dovrà indicare:
-\begin{itemize}
-    \item Nome dell'evento.
-    \item Luogo dell'evento.
-    \item Data.
-    \item Nome e logo del gruppo.
-    \item Numero di pagina.
-\end{itemize} 
-Nel caso specifico della presentazione dei diari di bordo sarà necessario suddividere i contenuti in: cose da fare, dubbi, attività svolte, problemi.
-
-
-
 
 \subsection{Registro delle modifiche}
 \label{documentazione_registromodifiche}
-Ogni documento, esclusi verbali e presentazione, include subito dopo la copertina un registro delle modifiche in forma tabellare.
+Ogni documento, esclusi verbali e presentazione, include subito dopo la
+copertina un registro delle modifiche in forma tabellare, come indicato nei
+riferimenti.
 Vi sono le seguenti voci:
 \begin{itemize}
-    \item \textbf{Versione}: indica da versione del documento alla riga di modifica.
-    \item \textbf{Data}: indica la data di redazione, verifica o approvazione.
-    \item \textbf{Redattore}: nome del componente del gruppo che ha effettuato la redazione.
-    \item \textbf{Verificatore}: nome del componente del gruppo che ha effettuato la verifica.
-    \item \textbf{Approvatore}: nome del componente del gruppo che ha effettuato l'approvazione.
-    \item \textbf{Descrizione}: breve descrizione della sezione oggetto di redazione e verifica, in caso di approvazione indica l'azione svolta e la fase di avanzamento attuale.
+	\item \textbf{Versione}: indica da versione del documento alla riga di
+	      modifica.
+	\item \textbf{Data}: indica la data di redazione, verifica o approvazione.
+	\item \textbf{Redattore}: nome del componente del gruppo che ha effettuato
+	      la redazione.
+	\item \textbf{Verificatore}: nome del componente del gruppo che ha
+	      effettuato la verifica.
+	\item \textbf{Approvatore}: nome del componente del gruppo che ha effettuato
+	      l'approvazione.
+	\item \textbf{Descrizione}: breve descrizione della sezione oggetto di
+	      redazione e verifica, in caso di approvazione indica l'azione svolta e
+	      la fase di avanzamento attuale.
 \end{itemize}
 \noindent
-La tabella viene riportata in ordine decrescente di modifica, così da mantenere sempre in cima le azioni più recenti eseguite.
+La tabella viene riportata in ordine decrescente di modifica, così da mantenere
+sempre in cima le azioni più recenti eseguite.
 
 \subsection{Versionamento}
 \label{documentazione_versionamento}
-Tutto il codice sorgente della documentazione prodotta dovrà essere inserito in un \textit{repository} git presente su GitHub (\href{https://github.com/Project-SWEnergy/doc-latex/}{github.com/Project-SWEnergy/doc-latex}).\\ 
-Ogni documento rilasciato dovrà presentare anche un versionamento interno indicato con tre interi positivi nel formato \texttt{X.Y.Z}, dove:
+Ogni documento rilasciato dovrà presentare un versionamento interno indicato con
+tre interi positivi nel formato \texttt{X.Y.Z}, dove:
 \begin{itemize}
-    \item \textbf{X}: da incrementare in fase di verifica e rilascio di un documento, indica l'ultima versione ufficialmente rilasciata.
-    \item \textbf{Y}: da incrementare in caso avvenga una sostanziale modifica, creazione o eliminazione di una sezione.
-    \item \textbf{Z}: da incrementare in caso avvenga una sostanziale modifica, creazione o eliminazione di una sottosezione a partire dal secondo livello.
+	\item \textbf{X}: da incrementare in di rilascio di un
+	      documento, indica l'ultima versione ufficialmente rilasciata.
+	      L'incremento di questa cifra comporta l'azzeramento delle cifre Y e Z
+	      e avviene con modalità differenti a seconda del documento.
+
+	\item \textbf{Y}: da incrementare in caso avvenga la verifica e
+	      l'approvazione di un documento; indica il numero di verifiche
+	      effettuate sul documento. L'incremento di questa cifra comporta
+	      l'azzeramento della cifra Z.
+
+	\item \textbf{Z}: da incrementare in caso avvenga modifica, creazione o
+	      eliminazione di una qualunque porzione di testo del documento; indica
+	      il numero di modifiche effettuate sul documento.
 \end{itemize}
-Ogni documento dovrà essere creato partendo dalla versione \texttt{0.1.0}, ogni successivo incremento alla versione dovrà essere accompagnato da una nuova riga nella tabella "Registro delle modifiche" che espliciti i cambiamenti effettuati.
-Modifiche quali correzioni grammaticali o leggere variazioni nel testo non vanno riportate nel registro delle modifiche e non producono un avanzamento di versione.
-L'avanzamento di versione non deve avvenire prima che il contenuto della modifica sia stato verificato.
-L'approvazione di un documento avviene solo quando il documento deve essere rilasciato per una specifica fase di avanzamento.
+
+Ogni documento dovrà essere creato partendo dalla versione \texttt{0.0.1}, ogni
+successivo incremento alla versione dovrà essere accompagnato da una nuova riga
+nella tabella "Registro delle modifiche" che espliciti i cambiamenti effettuati.
+Modifiche quali correzioni grammaticali o leggere variazioni nel testo non vanno
+riportate nel registro delle modifiche e non producono un avanzamento di
+versione.
+La verifica di un documento comporta l'incremento della cifra Y, mentre
+L'approvazione di un documento avviene solo quando il documento deve essere
+rilasciato.
 
 \subsection{Verifica di un documento}
-Ogni documento deve essere necessariamente verificato da un Verificatore, il quale si occuperà di revisionare i seguenti aspetti:
+Ogni documento deve essere necessariamente verificato da un Verificatore, il
+quale si occuperà di revisionare i seguenti aspetti:
 \begin{itemize}
-    \item Correttezza grammaticale.
-    \item Correttezza logica.
-    \item Correttezza e completezza del contenuto in modo che risulti coerente con il documento.
-    \item Adesione al Way of Working.
+	\item Correttezza grammaticale.
+	\item Correttezza logica.
+	\item Correttezza e completezza del contenuto in modo che risulti coerente
+	      con il documento.
+	\item Adesione al \textit{Way of Working}.
 \end{itemize}
 \noindent
-In caso il verificatore dovesse riscontrare dei problemi questi vanno segnalati su GitHub tramite i commenti presenti all'interno dell'apposita sezione "Pull Request".
-Questa azione genera una notifica immediata al redattore, il quale provvederà ad apportare le modifiche necessarie. \\
-In caso invece il documento non richieda modifiche si dovrà procedere ad un avanzamento di versione come descritto in sezione \S\ref{documentazione_versionamento}.
+In caso il verificatore dovesse riscontrare dei problemi questi vanno segnalati
+su GitHub tramite i commenti presenti all'interno dell'apposita sezione
+"Pull Request".
+Questa azione genera una notifica immediata al redattore, il quale provvederà
+ad apportare le modifiche necessarie. \\
+In caso invece il documento non richieda modifiche si dovrà procedere ad un
+avanzamento di versione come descritto in sezione
+\S\ref{documentazione_versionamento}.
 
 
 \subsection{Approvazione di un documento}
-Ogni documento approvato deve subire un avanzamento di versione come descritto alla sezione \S\ref{documentazione_versionamento}, inoltre l'approvatore si occuperà di spostare il PDF finale compilato nell'apposito \textit{repository} git presente su GitHub (\href{https://github.com/Project-SWEnergy/documentazione}{github.com/Project-SWEnergy/documentazione}). \\
+L'approvazione di un documento avviene solo quando il documento deve essere
+rilasciato. A seconda del documento, l'approvazione interna è svolta in modo
+diverso:
+\begin{itemize}
+	\item \textbf{Verbali}: un verbale viene approvato quando un verificatore
+	      ritiene che il documento sia pronto per il rilascio.
 
+	\item \textbf{Altri documenti}: l'incremento di questa cifra avviene
+	      quando due verificatori ritengono che il documento sia pronto per il
+	      rilascio.
+\end{itemize}
+
+Ogni documento approvato deve subire un avanzamento di versione come descritto
+alla sezione \S\ref{documentazione_versionamento}.
 \noindent
-In caso il documento in questione sia un verbale esterno, l'approvatore dovrà occuparsi di effettuare una approvazione interna e, successivamente, inviare il documento in allegato ad una \textit{email} al fine di ottenere l'approvazione esterna del verbale. \\
-Una volta ottenuta la relativa conferma, l'approvatore potrà procedere ad effettuare l'avanzamento di versione seguendo quando indicato in sezione \S\ref{documentazione_versionamento}, indicando nella copertina del documento il nome degli approvatori esterni ed interni.
+In caso il documento in questione sia un verbale esterno, il verificatore dovrà
+occuparsi di effettuare una approvazione interna e, successivamente, inviare il
+documento in allegato ad una \textit{email} al fine di ottenere l'approvazione
+esterna del verbale. Una volta firmato il documento, il verificatore dovrà
+inserire il documento nella \textit{repository}
+\href{https://github.com/Project-SWEnergy/Project-SWEnergy.github.io}{\texttt{Project-SWEnergy.github.io}}
+nella cartella \texttt{verbali\_esterni}.
+
+\subsection{Riassunto della creazione e del rilascio di un documento}
+
+\begin{enumerate}
+	\item Creazione della cartella del documento nella \textit{repository}
+	      \href{https://github.com/Project-SWEnergy/doc-latex}{\texttt{doc-latex}}.
+	\item Creazione del documento con i \textit{template} descritti in
+	      sezione \S\ref{documentazione_versionamento}.
+	\item Creazione del registro delle modifiche.
+	\item Inserimento delle variabili del documento nel file
+	      \texttt{main.tex} che si trova nella cartella del documento.
+	\item Creazione delle sezioni del documento.
+	\item Verifica del documento con conseguenti correzioni e avanzamento di
+	      versione.
+	\item Approvazione del documento con conseguenti correzioni e avanzamento
+	      di versione.
+\end{enumerate}
+
+La pubblicazione di un documento avviene in due modi:
+\begin{itemize}
+	\item \textbf{Verbali esterni}: il verificatore dovrà inserire il documento
+	      nella \textit{repository}
+	      \begin{sloppypar}
+		      \href{https://github.com/Project-SWEnergy/Project-SWEnergy.github.io}{\texttt{Project-SWEnergy.github.io}}
+		      nel percorso \texttt{verbali\_esterni}.
+	      \end{sloppypar}
+	\item \textbf{Altri documenti}: il documento verrà pubblicato in automatico
+	      nella \textit{repository}
+	      \begin{sloppypar}
+		      \href{https://github.com/Project-SWEnergy/Project-SWEnergy.github.io}{\texttt{Project-SWEnergy.github.io}}
+		      attraverso l'azione di \textit{GitHub Actions}.
+	      \end{sloppypar}
+\end{itemize}
