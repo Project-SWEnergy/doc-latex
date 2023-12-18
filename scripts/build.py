@@ -1,18 +1,7 @@
 import os
 import subprocess
 import re
-
-
-# Define the source (target) directory where your LaTeX files are located
-source_directory = input("Enter the source directory: ")
-source_directory = os.path.abspath(source_directory)
-
-# Define the destination directory for the generated PDF files
-destination_directory = input("Enter the destination directory: ")
-destination_directory = os.path.abspath(destination_directory)
-
-print("Source directory: ", source_directory)
-print("Destination directory: ", destination_directory)
+import argparse
 
 to_delete = [
     "main.aux",
@@ -58,8 +47,6 @@ def convert_file(source_directory, destination_directory, to_delete):
                 "pdflatex",
                 latex_file,
             ],
-            stdout=subprocess.DEVNULL,  # no output in the terminal
-            stderr=subprocess.DEVNULL,  # no output in the terminal
         )
 
         subprocess.check_call(
@@ -67,8 +54,6 @@ def convert_file(source_directory, destination_directory, to_delete):
                 "pdflatex",
                 latex_file,
             ],
-            stdout=subprocess.DEVNULL,  # no output in the terminal
-            stderr=subprocess.DEVNULL,  # no output in the terminal
         )
 
         # Delete intermediate files except for the PDF file
@@ -107,6 +92,27 @@ def get_src_dir(path):
 
     # return the list of directories which contain the main.tex file
     return dirs
+
+## MAIN ##
+
+# Create an ArgumentParser object
+parser = argparse.ArgumentParser(description='Compile LaTeX files.')
+
+# Add the arguments you want to parse
+parser.add_argument('-o', '--output', help='Destination directory')
+parser.add_argument('-s', '--source', help='Source directory')
+
+# Parse the arguments
+args = parser.parse_args()
+
+# Access the values using the specified flags
+destination_directory = os.path.abspath(args.output)
+source_directory = os.path.abspath(args.source)
+
+# Check if the arguments were provided
+if destination_directory is None or source_directory is None:
+    print("Please provide both destination and source directories using -o and -s flags.")
+    exit()
 
 
 # src: folder in which is located the main.tex file
