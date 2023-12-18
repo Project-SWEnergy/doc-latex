@@ -7,10 +7,10 @@
 		\begin{itemize}
 			\item L'Utente base ha effettuato l'accesso al Sistema (vedi \autoref{usecase:Effettua accesso}).
 			\item L'Utente base ha effettuato una prenotazione (bedi \autoref{usecase:Prenotazione di un tavolo}).
-			\item L'Utente base sta visualizzando il riepilogo di una prenotazione (vedi \autoref{usecase:Visualizzazione del riepilogo prenotazione}) che si deve trovare nello stato: \textit{Confermata}  (vedi \autoref{usecase:Accetta prenotazione}).
+			\item L'Utente base sta visualizzando il riepilogo di una prenotazione (vedi \autoref{usecase:Visualizzazione del riepilogo prenotazione}) che si deve trovare nello stato: \textit{Accettata}  (vedi \autoref{usecase:Accetta prenotazione}).
 		\end{itemize}
 	      
-	\item \textbf{Postcondizioni:} Un Utente base ha ordinato le pietanze per la prenotazione effettuata.
+	\item \textbf{Postcondizione:} Un Utente base ha ordinato le pietanze per la prenotazione effettuata.
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
@@ -48,7 +48,7 @@
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente base.
 
-	\item \textbf{Precondizioni:} L'Utente base sta effettuando un ordinazione collaborativa dei pasti (vedi \autoref{usecase:Ordinazione collaborativa dei pasti});
+	\item \textbf{Precondizione:} L'Utente base sta effettuando un ordinazione collaborativa dei pasti (vedi \autoref{usecase:Ordinazione collaborativa dei pasti});
 
 	\item \textbf{Postcondizioni:}
 		\begin{itemize}
@@ -71,9 +71,9 @@
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente base.
 
-	\item \textbf{Precondizioni:} L'Utente base si trova nella sezione Creazione e modifica del proprio ordine (vedi \autoref{usecase:Creazione e modifica del proprio ordine}).
+	\item \textbf{Precondizione:} L'Utente base si trova nella sezione Creazione e modifica del proprio ordine (vedi \autoref{usecase:Creazione e modifica del proprio ordine}).
 
-	\item \textbf{Postcondizioni:} L'Utente base ha selezionato una pietanza.
+	\item \textbf{Postcondizione:} L'Utente base ha selezionato una pietanza.
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
@@ -88,9 +88,13 @@
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente base.
 
-	\item \textbf{Precondizioni:} L'Utente base si trova nella sezione Creazione e modifica del proprio ordine (vedi \autoref{usecase:Creazione e modifica del proprio ordine}).
+	\item \textbf{Precondizioni:} 
+	\begin{itemize}
+		\item L'Utente base si trova nella sezione Creazione e modifica del proprio ordine (vedi \autoref{usecase:Creazione e modifica del proprio ordine}).
+		\item L'utente base deve rispettare un limite temporale: se vuole modificare il proprio ordine deve farlo ventiquattro ore prima a partire dall'ora stabilita della prenotazione.
+	\end{itemize}
 
-	\item \textbf{Postcondizioni:} L'Utente base ha modificato una pietanza.
+	\item \textbf{Postcondizione:} L'Utente base ha modificato una pietanza.
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}

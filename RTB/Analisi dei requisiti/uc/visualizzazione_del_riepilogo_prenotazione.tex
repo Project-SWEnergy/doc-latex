@@ -4,20 +4,25 @@
 	\item \textbf{Attore principale:} Utente base.
 
 	\item \textbf{Precondizioni:}
-	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item L'Utente base ha effettuato l'accesso al Sistema (vedi \autoref{usecase:Effettua accesso}).
 		\item L'Utente base ha effettuato una prenotazione (bedi \autoref{usecase:Prenotazione di un tavolo}).
 	\end{itemize}
 
 
-	\item \textbf{Postcondizioni:}
+	\item \textbf{Postcondizione:}
 	      L'Utente base visualizza il riepilogo della prenotazione.
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
 		      \item L'Utente base accede alla sezione delle prenotazioni;
-		      \item L'Utente base seleziona una prenotazione;
+		      \item Il Sistema mostra di default le prenotazioni nel seguente stato:
+		      \begin{itemize}
+                \item In attesa.
+                \item Accettata.
+                \item In corso.
+              \end{itemize}
+		      \item L'Utente base seleziona una prenotazione da visualizzare in dettaglio;
 		      \item Il Sistema mostra il riepilogo della prenotazione.
 	      \end{enumerate}
 
@@ -28,7 +33,7 @@
 		      \item \textbf{Data e ora:} data e ora della prenotazione.
 		      \item \textbf{Numero di persone:} numero di persone per cui è
 		            stata effettuata la prenotazione.
-		      \item \textbf{Username:} username dell'Utente base
+		      \item \textbf{Username:} \textit{username} dell'Utente base
 		            associato alla prenotazione o lista degli username degli
 		            Utenti base associati alla prenotazione.
 
@@ -36,20 +41,21 @@
 		            prenotazione si può trovare in uno dei seguenti stati:
 		            \begin{itemize}
 			            \item \textbf{In attesa:} la prenotazione è
-			                  in attesa di conferma da parte del ristorante.
+			                  in attesa di accettazione da parte del ristorante.
 
-			            \item \textbf{Confermata:} la prenotazione è
-			                  stata confermata dal ristorante.
+			            \item \textbf{Accettata:} la prenotazione è
+			                  stata accettata dal ristorante.
 
 			            \item \textbf{Rifiutata:} la prenotazione è
-			                  stata annullata dal ristorante o dall'Utente base
-			                  oppure è scaduta.
+			                  stata rifiutata dal ristorante.
 
 			            \item \textbf{In corso:} la prenotazione è
 			                  in corso.
 
 			            \item \textbf{Terminata:} la prenotazione è
 			                  terminata e il conto è stato pagato.
+						\item \textbf{Annullata:} la prenotazione è stata
+			                  annullata.
 		            \end{itemize}
 
 		            Ogni volta che lo stato della prenotazione cambia, il Sistema

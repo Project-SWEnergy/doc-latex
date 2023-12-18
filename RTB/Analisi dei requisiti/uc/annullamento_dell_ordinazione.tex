@@ -3,14 +3,13 @@
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente base.
 
-	\item \textbf{Attori secondari:} Utente ristoratore.
-
 	\item \textbf{Precondizioni:}
-	      L'Utente base è connesso al sistema e si trova all'interno del caso
-	      d'uso \textit{Ordinazione collaborativa dei pasti} (vedi
-	      \autoref{usecase:Ordinazione collaborativa dei pasti}).
+	\begin{itemize}
+		\item L'Utente base ha effettuato l'accesso al Sistema (vedi \autoref{usecase:Effettua accesso}).
+		\item L'Utente base si trova nella sezione di "Ordinazione collaborativa dei pasti" (vedi \autoref{usecase:Ordinazione collaborativa dei pasti}).
+	\end{itemize}
 
-	\item \textbf{Postcondizioni:}
+	\item \textbf{Postcondizione:}
 	      L'Utente base ha annullato l'ordinazione collaborativa dei pasti.
 
 	\item \textbf{Scenario principale:}
@@ -22,9 +21,5 @@
 		            collaborativa dei pasti;
 
 		      \item Il Sistema annulla l'ordinazione collaborativa dei pasti;
-
-		      \item Il Sistema notifica l'Utente ristoratore e gli Utenti base
-		            associati alla prenotazione collaborativa dell'annullamento
-		            dell'ordinazione collaborativa dei pasti.
 	      \end{enumerate}
 \end{itemize}

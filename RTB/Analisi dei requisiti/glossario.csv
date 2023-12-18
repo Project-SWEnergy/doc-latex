@@ -20,3 +20,5 @@ Utente base,si tratta di un attore autenticato, rappresenta il cliente di un ris
 Utente generico,è un utente che non ha effettuato l’accesso al sistema. Può essere un utente non registrato o un utente registrato che non ha ancora effettuato l’accesso.
 Utente ristoratore,si tratta di un attore autenticato, rappresenta l'amministratore del ristorante.
 Webapp,è un'applicazione web caricata da un web server ed eseguita in un browser.
+
+(Possibili aggiunte: feedback, Sistema, UC)

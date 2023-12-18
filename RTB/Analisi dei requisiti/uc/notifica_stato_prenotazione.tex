@@ -1,18 +1,18 @@
-\usecaseristoratore{Notifica stato della prenotazione}
+\usecase{Notifica stato della prenotazione}
 \label{usecase:Notifica stato della prenotazione}
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente ristoratore.
 	
-	\item \textbf{Precondizioni:} L'Utente ristoratore ha cambiato lo stato della prenotazione (vedi \autoref{usecase:Accetta prenotazione},
+	\item \textbf{Precondizione:} L'Utente ristoratore ha cambiato lo stato della prenotazione (vedi \autoref{usecase:Accetta prenotazione},
      \autoref{usecase:Rifiuta prenotazione} e \autoref{usecase:Termina prenotazione}).
 
     
-	\item \textbf{Postcondizioni:} Il Sistema notifica lo stato della prenotazione al cliente che l'ha effettuata.
+	\item \textbf{Postcondizione:} Il Sistema notifica lo stato della prenotazione al cliente che l'ha effettuata.
      
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
-                \item Il Sistema rivela un cambiamento dello stato della prenotazione.
-                \item Il Sistema invia al cliente relativo a questa prenotazione una notifica relativo al cambio dello stato.
+                \item Il Sistema rivela un cambiamento dello stato della prenotazione;
+                \item Il Sistema invia al cliente relativo a questa prenotazione una notifica relativo al cambio dello stato;
                 \item Il cliente riceve la notifica dello stato della sua prenotazione:
                 \begin{itemize}
                     \item Accettata dall'Utente ristoratore.

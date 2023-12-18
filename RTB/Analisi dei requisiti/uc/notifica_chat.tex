@@ -2,16 +2,11 @@
 %se il bisogno primario dell'attore è essere notificato, sarebbe corretto anche mettere come attore secondario il DB il quale viene interrogato dal sistema per soddifare il bisogno dell'attore principale.
 \label{usecase:Notifica chat}
 \begin{itemize}
-    \item \textbf{Attori principali:} 
-	\begin{itemize}
-        \item Utente generico.
-        \item Utente base.
-        \item Utente ristoratore.
-    \end{itemize}
+    \item \textbf{Attore principale:} Utente autenticato.
 	
-	\item \textbf{Precondizioni:} Un utente (tra i tre elencati in \textbf{Attori principali}) ha inviato un messaggio in \textit{chat}.
+	\item \textbf{Precondizione:} L'utente base oppure l'Utente ristoratore ha inviato un messaggio in \textit{chat} (vedi \autoref{usecase:Invio messaggio chat}).
 
-	\item \textbf{Postcondizioni:} Il Sistema invia la notifica al destinatario.
+	\item \textbf{Postcondizione:} Il Sistema invia la notifica al destinatario.
      
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}

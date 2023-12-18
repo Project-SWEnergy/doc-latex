@@ -100,6 +100,26 @@
 
 
 %
+% \usecase autenticato
+%
+
+\newcounter{usecaseautenticato}
+\renewcommand{\theusecaseautenticato}{\arabic{usecaseautenticato}}
+
+\makeatletter
+% Redefine usecase command to create a new hierarchy
+\titleformat{\usecaseautenticato}[block]{\normalfont\Large\bfseries}{UCA-\theusecaseautenticato}{2em}{}
+\newcommand{\l@usecaseautenticato}{\@dottedtocline{3}{3.8em}{3.2em}}
+\newcommand{\usecaseautenticato}[1]{%
+	\refstepcounter{usecaseautenticato}%
+	\noindent\textbf{UCA-\theusecaseautenticato: #1}%
+	\addcontentsline{toc}{usecaseautenticato}{\protect\numberline{UCA-\theusecaseautenticato}#1}%
+}
+\makeatother
+\newcommand{\usecaseautenticatoautorefname}{UCA-\hspace{-0.33mm}}
+
+
+%
 % \subusecase
 %
 
@@ -114,7 +134,7 @@
 \newcommand{\subusecaseautorefname}{UC-\hspace{-0.33mm}}
 
 %
-% \subusecasegenerico
+% \subusecase generico
 %
 
 \newcounter{subusecasegenerico}[usecasegenerico]
@@ -173,6 +193,21 @@
 	\noindent\textbf{UCE-\thesubusecaseerrore: #1}%
 }
 \newcommand{\subusecaseerroreautorefname}{UCE-\hspace{-0.33mm}}
+
+
+%
+% \subusecase autenticato
+%
+
+\newcounter{subusecaseautenticato}[usecaseautenticato]
+\renewcommand{\thesubusecaseautenticato}{\theusecaseautenticato.\arabic{subusecaseautenticato}}
+\titleformat{\subusecaseautenticato}[block]{\normalfont\large\bfseries}{UCA-\thesubusecaseautenticato}{1.5em}{}
+\newcommand{\subusecaseautenticato}[1]{%
+	\refstepcounter{subusecaseautenticato}%
+	%
+	\noindent\textbf{UCA-\thesubusecaseautenticato: #1}%
+}
+\newcommand{\subusecaseautenticatoautorefname}{UCA-\hspace{-0.33mm}}
 
 
 %
