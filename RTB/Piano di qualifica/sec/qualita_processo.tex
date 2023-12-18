@@ -6,7 +6,7 @@ Nella presente sezione, vengono illustrati i valori accettabili e ottimali in te
 È di primaria importanza sorvegliare costantemente tali metriche al fine di assicurare che i processi corrispondano agli obiettivi di qualità prefissati e che, di conseguenza, il prodotto conclusivo risulti di elevata qualità.\\
 
 \noindent
-Questo standard categorizza i processi in tre macroaree principali:
+Lo standard \textbf{ISO/IEC 12207:1995} categorizza i processi in tre macroaree principali:
 \begin{itemize}
     \item Processi primari.
     \item Processi organizzativi.
@@ -44,7 +44,7 @@ Si utilizzano i seguenti acronimi per indicare le metriche:
         \hline
         \multicolumn{5}{c}{\textbf{Sviluppo}} \\
         \hline 
-        Requirements stability index    & RSI   & MPC07 & 100\%             & $ge$ 80\%                     \\
+        Requirements stability index    & RSI   & MPC07 & 100\%             & $\ge$ 80\%                     \\
         Satisfied obligatory requirements & SOR & MPC08 & 100\%             & 100\%                         \\
         \hline
     \end{tabularx}
@@ -53,6 +53,45 @@ Si utilizzano i seguenti acronimi per indicare le metriche:
 
 
 \subsection{Processi organizzativi}
+Consiste nella gestione organizzativa, ossia il processo con lo scopo di organizzare e controllare le prestazioni di un processo ed il suo avvio al fine di raggiungere gli obiettivi attesi.
+
 \subsubsection{Valori di riferimento}
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{p{3.5cm}|X|X|l|l}
+        \hline
+        \multicolumn{2}{l|}{\textbf{Metrica}} & \textbf{Codice}   & \textbf{Valore ottimale}  & \textbf{Valore accettabile}   \\
+        \hline
+        \multicolumn{5}{c}{\textbf{Gestione organizzativa}} \\
+        \hline
+        Non-calculated risk              & NCR    & MPC09 & 0               & $\le 5$                   \\
+        \hline
+    \end{tabularx}
+    \caption{Valori di riferimento per le metriche dei processi organizzativi}
+\end{table}
+
 \subsection{Processi di supporto}
+Si suddividono in processi di:
+\begin{itemize}
+    \item \textbf{Verifica}: determinano se i prodotti di una attività soddisfano i requisiti necessari.
+    \item \textbf{Assicurazione di qualità}: garantiscono che i prodotti siano conformi agli standard definiti.
+\end{itemize}
 \subsubsection{Valori di riferimento}
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{p{3.5cm}|X|X|l|l}
+        \hline
+        \multicolumn{2}{l|}{\textbf{Metrica}} & \textbf{Codice}   & \textbf{Valore ottimale}  & \textbf{Valore accettabile}   \\
+        \hline
+        \multicolumn{5}{c}{\textbf{Verifica}} \\
+        \hline
+        Code Coverage              & CC    & MPC10 & $100\%$               & $\ge 80\%$                   \\
+        Passed Test Cases Percentage & PTCP & MPC11& $100\%$ & $\ge 80\%$ \\
+        \hline 
+        \multicolumn{5}{c}{\textbf{Assicurazione di qualità}} \\
+        \hline
+        Quality Metrics Satisfied & QMS & MPC12 & $100\%$ & $\ge 90\%$ \\
+        \hline
+    \end{tabularx}
+    \caption{Valori di riferimento per le metriche dei processi di supporto}
+\end{table}

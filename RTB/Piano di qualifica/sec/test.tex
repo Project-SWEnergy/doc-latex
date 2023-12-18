@@ -1,0 +1,217 @@
+\section{Test}
+La verifica del prodotto necessita l'esecuzione di test mirati, questi verranno eseguiti contemporaneamente allo sviluppo per garantire la correttezza del software in ogni momento.
+Le tipologie di test previste sono:
+\begin{itemize}
+    \item \textbf{Test di unità}: utilizzati per valutare le singole componenti del sistema come classi e metodi, non considerano le dipendenze tra le classi (che sovranno esistere solo in caso gli elementi debbano essere testati insieme).
+    Sono definiti durante la progettazione.
+    \item \textbf{Test di integrazione}: verificano l'integrazione tra le componenti del sistema.
+    \item \textbf{Test di sistema}: vengono effettuati basandosi su quanto emerso durante l'analisi dei requisiti per verificarne la corretta implementazione.
+    \item \textbf{Test di accettazione}: utilizzati per verificare che il software soddisfi i requisiti presentati nel capitolato in modo da essere pronto per la consegna, svolti in presenza del committente.    
+\end{itemize}
+
+\subsection{Test di sistema}
+La nomenclatura utilizzata per identificare i test è spiegata nel documento Norme di Progetto v2.0.0.
+
+\setlist{nolistsep}
+\fontsize{10}{12}\selectfont
+\begin{longtable}{|p{0.12\linewidth}|p{0.58\linewidth}|p{0.22\linewidth}|}
+    \hline
+	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato} \\
+    \hline
+    TS.RFO1 & 
+    L'Utente base e generico deve poter consultare l'elenco dei ristoranti disponibili. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item la \textit{Home} della piattaforma sia visualizzabile senza richiedere l'accesso.
+        \item la \textit{Home} della piattaforma mostri l'elenco dei ristoranti disponibili.
+        \item il pulsante per il ritorno alla \textit{Home} sia ben riconoscibile.
+        \item sia possibile selezionare la città di interesse dalla \textit{Home}.
+    \end{itemize}&
+    Non implementato \\
+    \hline
+    TS.RFO2 & 
+    L'Utente base e generico devono poter visualizzare in dettaglio un ristorante \par 
+    Verificare che: 
+    \begin{itemize}
+        \item la \textit{Home} della piattaforma sia visualizzabile senza richiedere l'accesso.
+        \item il dettaglio di un ristorante deve essere visualizzabile senza richiedere l'accesso.
+        \item siano presenti ristoranti nell'elenco visualizzato dall'utente.
+        \item la scheda del ristorante sia selezionabile.
+    \end{itemize}&
+    Non implementato \\
+    \hline
+    TS.RFO3 & 
+    L'Utente base e generico devono poter condividere un link di un ristorante. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item la \textit{Home} della piattaforma sia visualizzabile senza richiedere l'accesso.
+        \item il dettaglio di un ristorante deve essere visualizzabile senza richiedere l'accesso.
+        \item la pagina di un ristorante deve essersi caricata correttamnte.
+        \item il pulsante di condivisione deve essere individuabile.
+    \end{itemize}&
+    Non implementato \\
+    \hline
+    TS.RFO4 & 
+    L'Utente base e generico devono poter visualizzare la pagina delle FAQ. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item il pulsante per la visualizzazione delle FAQ deve essere individuabile.
+        \item la pagina di visualizzazione delle FAQ deve essere visitabile senza richiedere l'accesso.
+    \end{itemize}&
+    Non implementato \\
+    \hline
+    TS.RFO5 & 
+    L'Utente generico e ristoratore devono poter comunicare tra loro attraverso chat \par 
+    Verificare che: 
+    \begin{itemize}
+        \item TODO
+    \end{itemize}&
+    Non implementato \\
+    \hline
+    TS.RFO6 & 
+    Il Sistema invia una notifica agli utenti collegati nella chat \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente sia registrato nel sistema.
+        \item l'utente a cui è destinata la notifica sia connesso al sistema.
+    \end{itemize}&
+    Non implementato \\
+    \hline
+    TS.RFO7 & 
+    L'Utente generico effettua l'accesso al Sistema \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente sia registrato nel sistema.
+        \item l'utente non abbia già effettuato l'acesso al sistema.
+        \item il pulsante per effettuare l'accesso sia ben visibile e chiaro.
+        \item il pulsante per effettuare l'accesso rimandi alla pagina di inserimento credenziali.
+    \end{itemize}&
+    Non implementato \\
+    \hline
+    TS.RFO8 & 
+    L'Utente generico effettua la registrazione al Sistema. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente non sia registrato nel sistema.
+        \item l'utente non abbia già effettuato l'acesso al sistema.
+        \item il pulsante per effettuare la registrazione sia ben visibile e chiaro.
+        \item il pulsante per effettuare la registrazione rimandi alla pagina di inserimento dati.
+    \end{itemize}&
+    Non implementato \\
+    \hline
+    TS.RFD10 & 
+    L'Utente base deve visualizzare e modificare i propri dati. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente deve essere correttamente autenticato.
+        \item il pulsante per accedere alla gestione dei dati sia ben visibile e chiaro.
+        \item il pulsante rimandi alla pagina di gestione dati.
+        \item i nuovi dati inseriti non contengano caratteri non permessi dal sistema.
+    \end{itemize}&
+    Non implementato \\
+    \hline
+    TS.RFD12 & 
+    L'Utente base deve visualizzare le proprie prenotazioni. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente deve essere correttamente autenticato.
+        \item il pulsante per accedere alla visualizzazione delle prenotazioni sia ben visibile e chiaro.
+        \item il pulsante rimandi correttamente alla pagina di visualizzazione delle prenotazioni.
+    \end{itemize}&
+    Non implementato \\
+    \hline
+    TS.RFD13 & 
+    L'Utente base e ristoratore devono effettuare il \textit{logout}. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente deve essere correttamente autenticato.
+        \item il pulsante per effettuare la disconnessione sia ben visibile e chiaro.
+        \item il pulsante disconnetta correttamente l'utente e lo rimandi ala \textit{Home} della piattaforma.
+    \end{itemize}&
+    Non implementato \\
+    \hline
+    TS.RFD14 & 
+    L’Utente base deve poter eliminare il suo account. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente deve essere correttamente autenticato.
+        \item il pulsante per richiedere l'eliminazione dei propri dati sia ben visibile e chiaro.
+        \item il pulsante avvii correttamente la procedura di eliminazione dati relativi allo specifico utente.
+    \end{itemize}&
+    Non implementato \\
+    \hline
+    TS.RFO16 & 
+    L’Utente base deve poter prenotare un tavolo.  \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente deve essere correttamente autenticato.
+        \item un ristorante deve essere attualmente selezionato.
+        \item i dati necessari alla prenotazione siano stati inseriti e siano corretti.
+        \item il pulsante per richiedere la prenotazione sia ben visibile e chiaro.
+        \item il pulsante invii correttamente la richiesta di prenotazione.
+    \end{itemize}&
+    Non implementato \\
+    \hline
+    TS.RFO17 & 
+    Il Sistema notifica l’Utente ristoratore dell’avvenuta prenotazione.  \par 
+    Verificare che: 
+    \begin{itemize}
+        \item il corretto utente ristoratore sia autenticato nel sistema.
+        \item il pulsante per visualizzare le prenotazioni mostri un indicatore di notifica.
+    \end{itemize}&
+    Non implementato \\
+    \hline
+    TS.RFO18 & 
+    L’Utente base deve poter condividere la prenotazione con i commensali.  \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente base è correttamente autenticato nel sistema.
+        \item l'utente base ha una prenotazione in corso che è stata accettata dal ristoratore.
+        \item il pulsante per la condivisione sia ben visibile e chiaro.
+        \item il pulsante per la condivisione salvi il riferimento alla prenotazione nelle note del dispositivo utilizzato dall'utente.
+    \end{itemize}&
+    Non implementato \\
+    \hline
+    TS.RFO19 & 
+    L’Utente base deve poter annullare la prenotazione.  \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente base sia correttamente autenticato nel sistema.
+        \item l'utente base abbia una prenotazione in corso.
+        \item il pulsante per l'annullamento sia ben visibile e chiaro.
+        \item il pulsante per l'annullamento modifichi correttamente lo stato della prenotazione.
+    \end{itemize}&
+    Non implementato \\
+    \hline
+    TS.RFO20 & 
+    L’Utente base deve poter accedere ad una prenotazione.  \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente base sia correttamente autenticato nel sistema.
+        \item il \textit{link} relativo alla condivisione di una prenotazione è corretto.
+        \item la pagina relativa alla prenotazione viene visualizzata correttamente.
+    \end{itemize}&
+    Non implementato \\
+    \hline
+    TS.RFO21 & 
+    L’Utente base deve poter fare un ordinazione collaborativa dei pasti e creare il suo ordine.  \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente base sia correttamente autenticato nel sistema.
+        \item l'utente base abbia una prenotazione in corso.
+        \item le ordinazioni degli altri utenti vengano correttamente visualizzate.
+        \item le pietanze scelte dall'utente vengano correttamente aggiunte all'ordine.
+        \item il pulsante di conferma sia ben visibile e chiaro.
+    \end{itemize}&
+    Non implementato \\
+    \hline
+    TS.RFO22 & 
+    L’Utente base deve poter annullare il proprio ordine.   \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente base sia correttamente autenticato nel sistema.
+        \item l'utente base abbia una prenotazione in corso.
+        \item le pietanze ordinate siano 
+    \end{itemize}&
+    Non implementato \\
+\end{longtable}
