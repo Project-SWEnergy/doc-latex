@@ -1,4 +1,45 @@
 \section{Documentazione}
+
+Di seguito sono descritte le norme che i membri del gruppo SWEnergy devono
+seguire per la creazione e la modifica dei documenti. La prima sotto-sezione
+riguarda l'algoritmo adottato dal gruppo per la creazione e il rilascio di un
+documento in modo sintetico. Le sezioni successive approfondiscono, descrivono
+e motivano le scelte effettuate dal gruppo per la creazione e la modifica dei
+documenti.
+
+\subsection{Riassunto della creazione e del rilascio di un documento}
+
+\begin{enumerate}
+	\item Creazione della cartella del documento nella \textit{repository}
+	      \href{https://github.com/Project-SWEnergy/doc-latex}{\texttt{doc-latex}}.
+	\item Creazione del documento con i \textit{template} descritti in
+	      sezione \S\ref{documentazione_versionamento}.
+	\item Creazione del registro delle modifiche.
+	\item Inserimento delle variabili del documento nel file
+	      \texttt{main.tex} che si trova nella cartella del documento.
+	\item Creazione delle sezioni del documento.
+	\item Verifica del documento con conseguenti correzioni e avanzamento di
+	      versione.
+	\item Approvazione del documento con conseguenti correzioni e avanzamento
+	      di versione.
+\end{enumerate}
+
+La pubblicazione di un documento avviene in due modi:
+\begin{itemize}
+	\item \textbf{Verbali esterni}: il verificatore dovrà inserire il documento
+	      nella \textit{repository}
+	      \begin{sloppypar}
+		      \href{https://github.com/Project-SWEnergy/Project-SWEnergy.github.io}{\texttt{Project-SWEnergy.github.io}}
+		      nel percorso \texttt{verbali\_esterni}.
+	      \end{sloppypar}
+	\item \textbf{Altri documenti}: il documento verrà pubblicato in automatico
+	      nella \textit{repository}
+	      \begin{sloppypar}
+		      \href{https://github.com/Project-SWEnergy/Project-SWEnergy.github.io}{\texttt{Project-SWEnergy.github.io}}
+		      attraverso l'azione di \textit{GitHub Actions}.
+	      \end{sloppypar}
+\end{itemize}
+
 \subsection{Strumenti}
 Gli strumenti utilizzati per la creazione dei documenti sono:
 \begin{itemize}
@@ -130,29 +171,6 @@ definire per ciascun documento:
 
 \end{itemize}
 
-\subsection{Registro delle modifiche}
-\label{documentazione_registromodifiche}
-Ogni documento, esclusi verbali e presentazione, include subito dopo la
-copertina un registro delle modifiche in forma tabellare, come indicato nei
-riferimenti.
-Vi sono le seguenti voci:
-\begin{itemize}
-	\item \textbf{Versione}: indica da versione del documento alla riga di
-	      modifica.
-	\item \textbf{Data}: indica la data di redazione, verifica o approvazione.
-	\item \textbf{Redattore}: nome del componente del gruppo che ha effettuato
-	      la redazione.
-	\item \textbf{Verificatore}: nome del componente del gruppo che ha
-	      effettuato la verifica.
-	\item \textbf{Approvatore}: nome del componente del gruppo che ha effettuato
-	      l'approvazione.
-	\item \textbf{Descrizione}: breve descrizione della sezione oggetto di
-	      redazione e verifica, in caso di approvazione indica l'azione svolta e
-	      la fase di avanzamento attuale.
-\end{itemize}
-\noindent
-La tabella viene riportata in ordine decrescente di modifica, così da mantenere
-sempre in cima le azioni più recenti eseguite.
 
 \subsection{Versionamento}
 \label{documentazione_versionamento}
@@ -229,35 +247,166 @@ inserire il documento nella \textit{repository}
 \href{https://github.com/Project-SWEnergy/Project-SWEnergy.github.io}{\texttt{Project-SWEnergy.github.io}}
 nella cartella \texttt{verbali\_esterni}.
 
-\subsection{Riassunto della creazione e del rilascio di un documento}
 
+\subsection{Struttura dei verbali interni}
+
+I verbali interni sono suddivisi in 4 porzioni, in ordine:
+\begin{itemize}
+	\item \textbf{Partecipanti}: in questa sezione è indicata la durata della
+	      riunione. Di seguito è presente una tabella che indica i nomi dei
+	      componenti di SWEnergy, il loro ruolo e la durata della partecipazione
+	      alla riunione.
+
+	\item \textbf{Ordine del giorno}: in questa sezione è presente una lista
+	      dei punti che sono stati discussi durante la riunione e le pagine nel
+	      quale sono trattati. Si noti che questa sezione è generata
+	      automaticamente e corrisponde alla tabella dei contenuti.
+
+	\item \textbf{Sezioni di approfondimento}: sono presenti più sezioni che
+	      spiegano ciascuno dei punti dell'ordine del giorno. La prima di queste
+	      sezioni deve essere il \textit{Brainstorming} che rappresenta il
+	      resoconto delle attività svolte nell'ultimo mini-\textit{sprint}.
+
+	\item \textbf{Assegnazione degli incarichi}: in questa sezione sono
+	      presenti gli incarichi assegnati ai vari componenti del gruppo, viene
+	      anche indicata la \textit{issue} di GitHub di riferimento se presente.
+\end{itemize}
+
+\subsection{Struttura dei verbali esterni}
+I verbali esterni hanno una struttura simile a quella dei verbali interni, ma
+sono presenti alcune differenze:
+\begin{itemize}
+	\item \textbf{Partecipanti}: in questa sezione è indicata la durata della
+	      riunione. Di seguito è presente una tabella che indica i nomi dei
+	      componenti di SWEnergy, il loro ruolo e la durata della partecipazione
+	      alla riunione. In questa tabella viene anche inserito il nome dei
+	      proponente presenti alla riunione.
+
+	\item \textbf{Ordine del giorno}: questa sezione è identica a quella dei
+	      verbali interni. Ovvero, è presente una lista dei punti che sono stati
+	      trattati durante il \textit{meeting} e le pagine nel quale sono
+	      approfonditi gli argomenti. Questa pagina è generata automaticamente
+	      e corrisponde alla tabella dei contenuti.
+
+	\item \textbf{Sezioni di approfondimento}: questa sezione è identica a
+	      quella dei verbali interni. Ovvero, sono presenti più sezioni che
+	      spiegano ciascuno dei punti dell'ordine del giorno. La prima di queste
+	      sezioni deve essere il \textit{Brainstorming} che rappresenta il
+	      resoconto delle attività svolte nell'ultimo mini-\textit{sprint}.
+
+	\item \textbf{Conclusioni}: in questa sezione sono presenti le conclusioni
+	      del \textit{meeting} e le decisioni prese. In particolare, in questa
+	      sezione sono chiariti gli impegni presi dal gruppo che dovranno essere
+	      risolti entro la prossima riunione.
+\end{itemize}
+
+\subsection{Struttura dei documenti generici}
+
+Poiché i documenti generici sono molto diversi tra loro e sono unici, non è
+trattata la descrizione della loro struttura. Piuttosto, si richiede che in ogni
+documento sia presente un'introduzione che ne descriva lo scopo e la struttura.
+Di seguito sono riportati gli elementi comuni a tutti i documenti generici che
+devono essere presenti:
+\begin{itemize}
+	\item \textbf{Registro delle modifiche}:
+	      Ogni documento, esclusi verbali e presentazione, include subito dopo
+	      la copertina un registro delle modifiche in forma tabellare, come
+	      indicato nei riferimenti. Vi sono le seguenti voci:
+	      \begin{itemize}
+		      \item \textbf{Versione}: indica da versione del documento alla
+		            riga di modifica.
+		      \item \textbf{Data}: indica la data di redazione, verifica o
+		            approvazione.
+		      \item \textbf{Redattore}: nome del componente del gruppo che ha
+		            effettuato la redazione.
+		      \item \textbf{Verificatore}: nome del componente del gruppo che ha
+		            effettuato la verifica.
+		      \item \textbf{Approvatore}: nome del componente del gruppo che ha
+		            effettuato l'approvazione.
+		      \item \textbf{Descrizione}: breve descrizione della sezione
+		            oggetto di redazione e verifica, in caso di approvazione
+		            indica l'azione svolta e la fase di avanzamento attuale.
+	      \end{itemize}
+	      \noindent
+	      La tabella viene riportata in ordine decrescente di modifica, così da
+	      mantenere sempre in cima le azioni più recenti eseguite.
+
+	\item \textbf{Indice}:
+	      Ogni documento include subito dopo il registro delle modifiche un
+	      indice che elenca le sezioni del documento. L'indice è generato
+	      automaticamente e corrisponde alla tabella dei contenuti.
+
+	\item \textbf{Introduzione}:
+	      Ogni documento include, subito dopo l'indice, un'introduzione che
+	      descrive lo scopo del documento e la struttura del documento stesso.
+	      Ciascuna introduzione deve contenere le seguenti sotto-sezioni:
+	      \begin{itemize}
+		      \item \textbf{Scopo del documento}: descrive lo scopo del
+		            documento.
+		      \item \textbf{Scopo del prodotto}: descrive lo scopo del prodotto
+		            che si andrà a realizzare.
+		      \item \textbf{Glossario}: contiene i termini che necessitano di
+		            ulteriore contestualizzazione o che necessitano di essere
+		            chiariti.
+		      \item \textbf{Riferimenti}: contiene i riferimenti utilizzati
+		            durante la stesura del documento, sia interni che esterni.
+	      \end{itemize}
+\end{itemize}
+
+\subsection{Diario di bordo}
+
+Il diario di bordo è una presentazione \textit{PowerPoint} che viene mostrata
+al committente ad intervalli regolari. I diari di bordo si trovano nella
+cartella \texttt{diario\_di\_bordo} su \textit{Google Drive}, nell'account del
+gruppo SWEnergy.
+
+\subsection{Creazione del diario di bordo}
+
+Per creare il diario di bordo è necessario seguire i seguenti passi:
 \begin{enumerate}
-	\item Creazione della cartella del documento nella \textit{repository}
-	      \href{https://github.com/Project-SWEnergy/doc-latex}{\texttt{doc-latex}}.
-	\item Creazione del documento con i \textit{template} descritti in
-	      sezione \S\ref{documentazione_versionamento}.
-	\item Creazione del registro delle modifiche.
-	\item Inserimento delle variabili del documento nel file
-	      \texttt{main.tex} che si trova nella cartella del documento.
-	\item Creazione delle sezioni del documento.
-	\item Verifica del documento con conseguenti correzioni e avanzamento di
-	      versione.
-	\item Approvazione del documento con conseguenti correzioni e avanzamento
-	      di versione.
+	\item Si visualizza un diario di bordo precedente.
+	\item Si effettua una copia del diario di bordo precedente.
+	\item Si aggiorna la prima diapositiva con le informazioni della nuova
+	      riunione.
+	\item Si aggiornano gli header con la data della nuova riunione.
+	\item Si aggiorna la seconda diapositiva con le attività svolte e i problemi
+	      riscontrati.
+	\item Si aggiorna la terza diapositiva con le attività da svolgere e i dubbi
+	      inerenti.
 \end{enumerate}
 
-La pubblicazione di un documento avviene in due modi:
+In ogni caso, il diario di bordo deve essere creato in una riunione di gruppo
+precedente alla riunione con il committente. In particolare, il diario di bordo
+deve essere creato in seguito alla retrospettiva del mini-\textit{sprint}.
+
+\subsubsection{Struttura del diario di bordo}
+
+In ciascuna diapositiva devono essere presenti
 \begin{itemize}
-	\item \textbf{Verbali esterni}: il verificatore dovrà inserire il documento
-	      nella \textit{repository}
-	      \begin{sloppypar}
-		      \href{https://github.com/Project-SWEnergy/Project-SWEnergy.github.io}{\texttt{Project-SWEnergy.github.io}}
-		      nel percorso \texttt{verbali\_esterni}.
-	      \end{sloppypar}
-	\item \textbf{Altri documenti}: il documento verrà pubblicato in automatico
-	      nella \textit{repository}
-	      \begin{sloppypar}
-		      \href{https://github.com/Project-SWEnergy/Project-SWEnergy.github.io}{\texttt{Project-SWEnergy.github.io}}
-		      attraverso l'azione di \textit{GitHub Actions}.
-	      \end{sloppypar}
+	\item \textbf{Logo}: il logo del gruppo in basso a sinistra.
+	\item \textbf{Numero diapositiva}: il numero della diapositiva in basso a
+	      destra rispetto al numero totale di diapositive.
+	\item \textbf{\textit{Header}}: ":\textbackslash{}Università
+	      degli Studi di Padova\textbackslash{}Diario di bordo\textbackslash{}"
+	      più la data della riunione nel formato "GG\_MM\_AAAA".
 \end{itemize}
+
+Ogni diario di bordo è composto da 4 diapositive, in ordine:
+\begin{enumerate}
+	\item \textbf{Introduzione}: contiene il logo del gruppo e il nome del
+	      gruppo. In aggiunta, contiene il nome del documento, la città in cui è
+	      tenuta la riunione e la data della riunione.
+
+	\item \textbf{Brainstorming}: contiene il resoconto delle attività svolte
+	      dall'ultimo diario di bordo e i problemi riscontrati duranto lo
+	      svolgimento delle attività.
+
+	\item \textbf{Pianificazione}: contiene la pianificazione delle attività
+	      da svolgere fino al prossimo diario di bordo. In particolare, sono
+	      presenti le attività da svolgere e i dubbi da chiarire prima di poter
+	      affrontare le attività.
+
+	\item \textbf{Chi siamo}: contiene una breve descrizione dei componenti
+	      del gruppo.
+\end{enumerate}
+
