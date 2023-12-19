@@ -11,7 +11,7 @@
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
-              \item Il Sistema mostra di \textit{default} all'utente un elenco di ristoranti in ordine decrescente di valutazione;
+              \item Di \textit{default}, il Sistema presenta all'utente un elenco di ristoranti disposti in ordine decrescente di valutazione media;
               
 		      \item L'utente ha la possibilità di consultare l'elenco dei ristoranti in due modi:
 		      \begin{itemize}
@@ -31,20 +31,19 @@
 	
 	\item \textbf{Precondizione:} L'utente sta consultando un elenco di ristoranti (vedi \autoref{usecase:Consultazione elenco ristoranti}).
 
-	\item \textbf{Postcondizione:} Il Sistema mostra l'elenco dei ristoranti in base ai risultati ottenuti dalla ricerca fatta dall'utente.
+	\item \textbf{Postcondizione:} Il Sistema aggiorna e presenta l'elenco dei ristoranti in base ai risultati ottenuti dalla ricerca dell'utente.
  
 	      
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
-		      \item L'utente ricerca un ristorante in base al nome, oppure in base ad una località;
+		      \item L'utente esegue una ricerca del ristorante in base al nome e/o alla località.
 
-		      \item Il Sistema mostra l'elenco dei ristoranti aggiornato:
+		      \item Il Sistema effettua una modifica sull'elenco dei ristoranti:
 		      \begin{itemize}
-                \item Mostra tutti i ristoranti con il nome ricercato dall'utente.
-                \item Mostra tutti i ristoranti presenti nella località ricercata dall'utente.
+                \item Visualizza tutti i ristoranti con il nome cercato dall'utente.
+                \item Visualizza tutti i ristoranti situati nella località ricercata dall'utente.
               \end{itemize}
 	      \end{enumerate}
-
 \end{itemize}
 
 
@@ -60,17 +59,17 @@
 	      
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
-		      \item L'utente, per la ricerca di un ristorante, può impostare uno o più tra i seguenti filtri:
+		      \item Per la ricerca di un ristorante, l'utente può configurare uno o più tra i seguenti filtri:
 		      \begin{itemize}
                 \item Orario.
                 \item Voto.
                 \item Cucina.
                 \item Prezzo.
-                \item Adatto a persone con ridotta mobilità.
+                \item Accessibilità per persone con ridotta mobilità.
                 \item Adatto a bambini.
               \end{itemize}
 
-		      \item Il Sistema mostra l'elenco dei ristoranti aggiornato.
+		      \item Il Sistema aggiorna e mostra l'elenco dei ristoranti in base ai filtri configurati dall'utente.
 	      \end{enumerate}
 
 \end{itemize}
