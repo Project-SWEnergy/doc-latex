@@ -1,16 +1,17 @@
-\usecase{Notifica avvenuto pagamento}
-\label{usecase:Notifica avvenuto pagamento}
+\usecaseristoratore{Visualizzazione notifica di avvenuto pagamento}
+\label{usecase:Visualizzazione notifica di avvenuto pagamento}
 \begin{itemize}
-	\item \textbf{Attore principale:} Utente base.
+	\item \textbf{Attore principale:} Utente ristoratore.
 	
 	\item \textbf{Precondizione:} L'Utente base ha effettuato il pagamento del suo conto (vedi \autoref{usecase:Pagamento del conto}).
 
     
-	\item \textbf{Postcondizione:} Il Sistema invia la notifica all'Utente ristoratore dell'avvenuto pagamento da parte del cliente.
+	\item \textbf{Postcondizione:} L'Utente ristoratore visualizza la notifica dell'avvenuto pagamento da parte del cliente.
      
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
                 \item Il Sistema vede che il pagamento da parte del cliente è andato a buon fine;
-                \item Il Sistema invia all'Utente ristoratore una notifica dell'avvenuto pagamento.
+                \item Il Sistema invia all'Utente ristoratore una notifica dell'avvenuto pagamento;
+                \item L'Utente ristoratore visualizza la notifica dell'avvenuto pagamento da parte del cliente.
 	      \end{enumerate}
 \end{itemize}

@@ -1,17 +1,17 @@
-\usecase{Notifica chat}  %l'ipotesi è che l'attore principale interagisce attivamente relativamente all'UC quindi in questo caso vanno bene loro 3 come attori principali, perchè è un UC generale di ricezione notifica che tutti e 3 gli attori ricevono e cui interagiscono
-%se il bisogno primario dell'attore è essere notificato, sarebbe corretto anche mettere come attore secondario il DB il quale viene interrogato dal sistema per soddifare il bisogno dell'attore principale.
-\label{usecase:Notifica chat}
+\usecaseautenticato{Visualizzazione notifica nuovo messaggio in chat}
+\label{usecase:Visualizzazione notifica nuovo messaggio in chat}
 \begin{itemize}
     \item \textbf{Attore principale:} Utente autenticato.
 	
 	\item \textbf{Precondizione:} L'utente base oppure l'Utente ristoratore ha inviato un messaggio in \textit{chat} (vedi \autoref{usecase:Invio messaggio chat}).
 
-	\item \textbf{Postcondizione:} Il Sistema invia la notifica al destinatario.
+	\item \textbf{Postcondizione:} L'Utente autenticato destinatario del messaggio visualizza la notifica della presenza di un nuovo messaggio in \textit{chat}.
      
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
                 \item L'utente invia un messaggio;
                 \item Il Sistema vede che al suo interno è stato memorizzato un nuovo messaggio;
-                \item Il Sistema invia al destinatario la notifica di ricezione di un nuovo messaggio.
+                \item Il Sistema invia al destinatario la notifica di ricezione di un nuovo messaggio;
+                \item L'Utente autenticato destinatario del messaggio visualizza la notifica della presenza di un nuovo messaggio in \textit{chat}.
 	      \end{enumerate}
 \end{itemize}

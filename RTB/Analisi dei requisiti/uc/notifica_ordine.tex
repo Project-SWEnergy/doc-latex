@@ -1,15 +1,16 @@
-\usecase{Notifica ordine} %attore principale corretto, e colui che interagisce attivamente con la notifica. sarebbe da mettere un attore secondario DB che è colui che viene inerrogato per soddisfare il bisogno dell attore primario
-\label{usecase:Notifica ordine}
+\usecaseristoratore{Visualizzaione notifica nuovo ordine} 
+\label{usecase:Visualizzaione notifica nuovo ordine}
 \begin{itemize}
-	\item \textbf{Attore principale:} Utente base.
+	\item \textbf{Attore principale:} Utente ristoratore.
 	
 	\item \textbf{Precondizione:} L'Utente base ha confermato l'ordinazione collaborativa dei pasti(vedi \autoref{usecase:Ordinazione collaborativa dei pasti}).
 
-	\item \textbf{Postcondizione:} Il Sistema invia la notifica al Utente ristoratore.
+	\item \textbf{Postcondizione:} L'Utente ristoratore visualizza la notifica relativa ad una nuova ordinazione.
      
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
                 \item Il Sistema vede che al suo interno è stata fatta una nuova ordinazione;
-                \item Il Sistema invia all'Utente ristoratore la notifica di una nuova ordinazione.
+                \item Il Sistema invia all'Utente ristoratore la notifica di una nuova ordinazione;
+                \item L'Utente ristoratore visualizza la notifica relativa ad una nuova ordinazione.
 	      \end{enumerate}
 \end{itemize}

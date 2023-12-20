@@ -1,5 +1,5 @@
-\usecaseerrore{Registrazione fallita} %potenzialmente giusto l'attore princiale, siccome visualizza l'errore. non credo che serva come attore secondario il DB in questo caso, a differenza delle notifiche.
-\label{usecase:Registrazione fallita}
+\usecaseerrore{Visualizzazione errore di registrazione}
+\label{usecase:Visualizzazione errore di registrazione}
 
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente generico.
@@ -18,7 +18,7 @@
 	\item \textbf{Scenario principale:}
 	\begin{enumerate}
             \item Il Sistema verifica la correttezza delle credenziali inserite dall'Utente generico.
-            \item Il Sistema visualizza un messaggio di errore relativo alla registrazione fallita:
+            \item L'Utente generico visualizza un messaggio di errore relativo alla registrazione fallita:
                 \begin{itemize}
                     \item Messaggio relativo all'inserito di credenziali di un \textit{account} già esistente (vedi \autoref{usecase:Errore registrazione account esistente}).
                     \item Messaggio relativo all'inserimento di un recapito di un risorante già esistente (vedi \autoref{usecase:Errore registrazione recapito occupato}).
@@ -42,7 +42,7 @@
 	\item \textbf{Scenario principale:}
 	\begin{enumerate}
         \item Il Sistema verifica che le credenziali inserite dall'Utente generico siano corrette;
-        \item Il Sistema visualizza un messaggio di errore relativo alla registrazione fallita a seguito di un utilizzo di credenziali già in uso.
+        \item L'Utente generico visualizza un messaggio di errore relativo alla registrazione fallita a seguito di un utilizzo di credenziali già in uso.
 	\end{enumerate}
 	
 \end{itemize}
@@ -60,7 +60,7 @@
 	\item \textbf{Scenario principale:}
 	\begin{enumerate}
         \item Il Sistema verifica che il recapito inserito dall'Utente generico sia corretto;
-        \item Il Sistema visualizza un messaggio di errore relativo all'inserimento di un recapito già in uso.
+        \item L'Utente generico visualizza un messaggio di errore relativo all'inserimento di un recapito già in uso.
 	\end{enumerate}
 	
 \end{itemize}
