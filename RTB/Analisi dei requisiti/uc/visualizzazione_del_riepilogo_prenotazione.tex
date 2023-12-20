@@ -5,62 +5,51 @@
 
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item L'Utente base ha effettuato l'accesso al Sistema (vedi \autoref{usecase:Effettua accesso}).
-		\item L'Utente base ha effettuato una prenotazione (bedi \autoref{usecase:Prenotazione di un tavolo}).
+		\item L'Utente ha eseguito correttamente l'accesso al Sistema come Utente base(vedi \autoref{usecase:Effettua accesso}).
+		\item L'Utente base ha precedentemente effettuato una prenotazione (bedi \autoref{usecase:Prenotazione di un tavolo}).
 	\end{itemize}
 
 
 	\item \textbf{Postcondizione:}
-	      L'Utente base visualizza il riepilogo della prenotazione.
+	      L'Utente base visualizza in dettaglio il riepilogo della sua prenotazione.
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
-		      \item L'Utente base accede alla sezione delle prenotazioni;
-		      \item Il Sistema mostra di default le prenotazioni nel seguente stato:
+		      \item L'Utente base accede alla sezione dedicata alle prenotazioni al fine di visualizzare le informazioni relative alle sue prenotazioni.
+		      \item Il Sistema mostra di default le prenotazioni categorizzate nei seguenti stati:
 		      \begin{itemize}
                 \item In attesa.
                 \item Accettata.
+                \item Rifiutata.
                 \item In corso.
+                \item Terminata.
+                \item Annullata.
               \end{itemize}
-		      \item L'Utente base seleziona una prenotazione da visualizzare in dettaglio;
+		      \item seleziona una specifica prenotazione per visualizzarne i dettagli.
 		      \item Il Sistema mostra il riepilogo della prenotazione.
 	      \end{enumerate}
 
 	\item \textbf{Descrizione:}
-	      I campi del riepilogo sono almeno:
+		Il riepilogo della prenotazione include almeno i seguenti campi:
 	      \begin{itemize}
-		      \item \textbf{Nome ristorante:} nome del ristorante.
-		      \item \textbf{Data e ora:} data e ora della prenotazione.
-		      \item \textbf{Numero di persone:} numero di persone per cui è
-		            stata effettuata la prenotazione.
-		      \item \textbf{Username:} \textit{username} dell'Utente base
-		            associato alla prenotazione o lista degli username degli
-		            Utenti base associati alla prenotazione.
+		      \item \textbf{Nome ristorante:} Denominazione del ristorante.
+		      \item \textbf{Data e ora:} Data e ora della prenotazione.
+		      \item \textbf{Numero di persone:} Numero di persone coinvolte nella prenotazione.
+		      \item \textbf{Username:} \textit{Username} dell'Utente base associato alla prenotazione o lista degli \textit{username} degli Utenti base associati.
 
-		      \item \textbf{Stato:} stato della prenotazione. Una
-		            prenotazione si può trovare in uno dei seguenti stati:
+		      \item \textbf{Stato:} Stato della prenotazione, che può essere uno tra i seguenti:
 		            \begin{itemize}
-			            \item \textbf{In attesa:} la prenotazione è
-			                  in attesa di accettazione da parte del ristorante.
-
-			            \item \textbf{Accettata:} la prenotazione è
-			                  stata accettata dal ristorante.
-
-			            \item \textbf{Rifiutata:} la prenotazione è
-			                  stata rifiutata dal ristorante.
-
-			            \item \textbf{In corso:} la prenotazione è
-			                  in corso.
-
-			            \item \textbf{Terminata:} la prenotazione è
-			                  terminata e il conto è stato pagato.
-						\item \textbf{Annullata:} la prenotazione è stata
-			                  annullata.
+			            \item \textbf{In attesa:} la prenotazione è in attesa di accettazione da parte del ristorante.
+						\item \textbf{Accettata:} la prenotazione è stata accettata dal ristorante.
+						\item \textbf{Rifiutata:} la prenotazione è stata rifiutata dal ristorante.
+						\item \textbf{In corso:} la prenotazione è attualmente in corso.
+						\item \textbf{Terminata:} la prenotazione è terminata e il conto è stato pagato.
+						\item \textbf{Annullata:} la prenotazione è stata annullata.
 		            \end{itemize}
 
 		            Ogni volta che lo stato della prenotazione cambia, il Sistema
-		            invia una notifica a tutti gli Utenti autenticati associati alla
-		            prenotazione che non hanno effettuato l'azione che ha portato al
+		            invia una notifica a tutti gli Utenti base associati alla
+		            prenotazione che non hanno effettuato un'azione che ha portato al
 		            cambio di stato (\autoref{usecase:Notifica stato della prenotazione}).
 	      \end{itemize}
 

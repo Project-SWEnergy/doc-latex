@@ -2,48 +2,50 @@
 \label{usecase:Effettua registrazione}
 
 \begin{itemize}
-	\item \textbf{Descrizione:} Un Utente generico decide di effettuare la registrazione all'interno della \textit{web app}. Per effettuare tale
-	operazione gli viene chiesto la tipologia di utente tra i due disponibili: Utente base oppure Utente ristoratore. 
-    A seguito di tale decisione l'utente deve inserire una serie di dati relativi alla registrazione e legati alla tipologia di utenza.
+	\item \textbf{Descrizione:} Un Utente Generico decide di registrarsi all'interno della \textit{web app}. 
+    Durante questa procedura, l'utente è tenuto a selezionare la tipologia di account desiderata tra le due opzioni disponibili: Utente Base o Utente Ristoratore. 
+    Successivamente, all'utente viene richiesto di inserire una serie di dati correlati alla registrazione e specifici alla tipologia di utenza scelta.
 
 	\item \textbf{Attore principale:} Utente generico.
-	\item \textbf{Attore secondario:} Sistema di autenticazione esterno.
+	\item \textbf{Attore secondario:} Sistema di autenticazione esterno$^G$.
 	\item \textbf{Precondizioni:}
         \begin{itemize}
-            \item Un Utente generico è connesso al Sistema.
+            \item L'Utente generico è connesso al Sistema.
             \item L'Utente generico non dispone di un \textit{account}.
         \end{itemize}
 	\item \textbf{Postcondizioni:}
-	    \begin{enumerate}
-            \item L'Utente generico ha creato un \textit{account} tra i seguenti:
+        \begin{itemize} 
+            \item L'Utente generico ha creato con successo un \textit{account} scegliendo tra le opzioni disponibili:
             \begin{itemize}
                 \item Utente ristoratore.
                 \item Utente base.
             \end{itemize}
-            \item Le informazioni del nuovo \textit{account} creato vengono tutte memorizzate all'interno del Sistema.
+            \item Tutte le informazioni relative al nuovo \textit{account} sono memorizzate all'interno del Sistema.
             \item L'utente autenticato viene reindirizzato alla pagina \textit{Home} di pertinenza.
-        \end{enumerate}
+        \end{itemize}
 
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
-		      \item L'Utente generico seleziona la tipologia di \textit{account} che vuole creare: 
+		      \item L'Utente generico seleziona la tipologia di \textit{account} da creare: 
 		      \begin{itemize}
 				\item Utente base (vedi \autoref{usecase:Registrazione Utente base}).
 				\item Utente ristoratore (vedi \autoref{usecase:Registrazione Utente ristoratore}).
 			  \end{itemize} 
-              \item Il Sistema memorizza l'\textit{account} appena creato;
-		      \item L'utente è stato autenticato e viene reindirizzato alla \textit{Home} dedicata.
+              \item Il Sistema memorizza con successo il nuovo \textit{account} creato.
+		      \item L'utente è autenticato e viene reindirizzato alla pagina \textit{Home} corrispondente.
 	      \end{enumerate}
 		
     \item \textbf{Scenario secondario:}
-          \begin{itemize}
-              \item \autoref{usecase:Registrazione fallita} Registrazione fallita:
-              \begin{enumerate}
-                  \item La registrazione è fallita perchè esiste già un account con le credenziali inserite (vedi \autoref{usecase:Errore registrazione account esistente}).
-                  \item La registrazione è fallita perchè l'Utente ristoratore ha inserito come recapito del ristorante uno già occupato (vedi \autoref{usecase:Errore registrazione recapito occupato}).
-              \end{enumerate}	
-          \end{itemize}
+                \begin{enumerate}
+                    \item La registrazione fallisce (vedi \autoref{usecase:Registrazione fallita}) per due ragioni:
+                    \begin{itemize}
+                        \item "La registrazione fallisce a causa dell'esistenza di un \textit{account} preesistente con le stesse credenziali inserite (vedi \autoref{usecase:Errore registrazione account esistente}).
+                        \item La registrazione non va a buon fine in quanto l'Utente Ristoratore ha inserito un recapito del ristorante già occupato (vedi \autoref{usecase:Errore registrazione recapito occupato}).
+                    \end{itemize}
+                    \item L’Utente generico viene nuovamente indirizzato alla pagina di accesso.
+                \end{enumerate}	
+          
 	
 \end{itemize}
 
@@ -53,36 +55,37 @@
 \begin{itemize}
 
 	\item \textbf{Attore principale:} Utente generico.
-	\item \textbf{Attore secondario:} Sistema di autenticazione esterno.
+	\item \textbf{Attore secondario:} Sistema di autenticazione esterno$^G$.
 
 	\item \textbf{Precondizioni:} 
 	\begin{itemize}
-        \item  Un Utente generico è connesso al Sistema.
-        \item  Un Utente generico vuole registrarsi come Utente base.
+        \item  L'Utente generico è connesso al Sistema.
+        \item  L'Utente generico desidera registrarsi come Utente base.
     \end{itemize}
     
-
 	\item \textbf{Postcondizioni:} 
     \begin{itemize}
-        \item  Sono state verificate tutte le informazioni inserite durante la fase di registrazione.
+        \item  Tutte le informazioni inserite durante la fase di registrazione sono state verificate dal Sistema.
         \item  L'Utente generico ha creato un \textit{account} come Utente base.
     \end{itemize}
 
 	\item \textbf{Scenario principale:}
 	\begin{enumerate}
 
-            \item Se ha selezionato la creazione per terze parti allora il Sistema reindirizza l'utente alla pagina del Sistema esterno di terze parti (vedi \autoref{usecase:Accesso per terze parti});
-            \item Se ha selezionato l'accesso tradizionale allora dovrà inserire:
+            \item Se l'Utente Generico ha selezionato la creazione attraverso terze parti, il Sistema reindirizza l'utente alla pagina del Sistema esterno di terze parti (vedi \autoref{usecase:Accesso per terze parti});
+            \item Se l'Utente Generico ha scelto l'accesso tradizionale, dovrà inserire:
             \begin{itemize}
                 \item Nome.
                 \item Cognome.
                 \item \textit{Email}.
                 \item \textit{Password}.
             \end{itemize}
-            \item Indipendentemente dalla modalità di creazione dell' \textit{account}, l'utente infine dovrà inserire le proprie allergie e intolleranze.
-            
+            \item Indipendentemente dalla modalità di creazione dell' \textit{account}, l'utente dovrà infine inserire le proprie informazioni relative alle:
+            \begin{itemize}
+                \item Allergie.
+                \item Intolleranze.
+            \end{itemize} 
 	\end{enumerate}
-	
 \end{itemize}
 
 \subusecasegenerico{Registrazione Utente ristoratore}
@@ -90,26 +93,26 @@
 \begin{itemize}
 
 	\item \textbf{Attore principale:} Utente generico.
-	\item \textbf{Attore secondario:} Sistema di autenticazione esterno. 
+	\item \textbf{Attore secondario:} Sistema di autenticazione esterno$^G$. 
 
 	\item \textbf{Precondizioni:} 
 	\begin{itemize}
-        \item  Un Utente generico è connesso al Sistema.
-        \item  Un Utente generico vuole registrarsi come Utente ristoratore.
+        \item  L'Utente generico è connesso al Sistema.
+        \item  L'Utente generico desidera registrarsi come Utente ristoratore.
     \end{itemize}
     
 
 	\item \textbf{Postcondizioni:} 
     \begin{itemize}
-        \item  Sono state verificate tutte le informazioni inserite durante la fase di registrazione.
+        \item  Tutte le informazioni inserite durante la fase di registrazione sono state verificate dal Sistema.
         \item  L'Utente generico ha creato un \textit{account} come Utente ristoratore.
     \end{itemize}
 
 	\item \textbf{Scenario principale:}
 	\begin{enumerate}
 
-            \item Se ha selezionato la creazione per terze parti allora il Sistema reindirizza l'utente alla pagina del Sistema esterno di terze parti (vedi \autoref{usecase:Accesso per terze parti});
-            \item Se ha selezionato l'accesso tradizionale allora dovrà inserire:
+            \item Se l'Utente generico ha selezionato la creazione attraverso terze parti, il Sistema reindirizza l'utente alla pagina del Sistema esterno di terze parti (vedi \autoref{usecase:Accesso per terze parti});
+            \item Se l'Utente generico ha scelto l'accesso tradizionale, dovrà inserire:
             \begin{itemize}
                 \item Nome.
                 \item Cognome.
@@ -117,15 +120,14 @@
                 \item \textit{Password}.
             \end{itemize}
 
-            \item Indipendentemente dalla modalità di creazione dell' \textit{account}, l'utente infine dovrà inserire le seguenti informazioni:
+            \item Indipendentemente dalla modalità di creazione dell' \textit{account}, l'utente dovrà infine inserire le seguenti informazioni relative al ristorante:
                 \begin{itemize}
-                    \item Nome del ristorante.
-                    \item Recapiti del risorante.
-                    \item Orari di apertura del ristorante.
+                    \item Denominazione.
+                    \item Recapito.
+                    \item Orari di apertura.
                     \item Numero dei coperti disponibili.
                     \item Tipologia di cucina.
                 \end{itemize}
-            
 	\end{enumerate}
 	
 \end{itemize}

@@ -10,16 +10,19 @@
 	In caso di fallimento dell'autenticazione, l'Utente generico deve reinserire le credenziali.
 
 	\item \textbf{Attore principale:} Utente generico.
-	\item \textbf{Attore secondario:} Sistema di autenticazione esterno.
+	\item \textbf{Attore secondario:} Sistema di autenticazione esterno$^G$.
 	\item \textbf{Precondizione:}
 	      Un Utente generico è connesso al Sistema ed è in possesso di un \textit{account}.
-	\item \textbf{Postcondizione:}
-	      L'Utente generico è stato identificato dal Sistema come uno solo dei seguenti utenti:
-	      \begin{itemize}
-		      \item Utente ristoratore.
-		      \item Utente base.
-	      \end{itemize}
-		  L'utente autenticato viene reindirizzato alla pagina \textit{Home} di pertinenza.
+
+	\item \textbf{Postcondizioni:}
+		\begin{itemize}      
+			\item L'Utente generico è stato identificato dal Sistema come uno solo dei seguenti utenti:
+	      		\begin{itemize}
+		      		\item Utente ristoratore.
+		      		\item Utente base.
+	      		\end{itemize}
+		  	\item L'utente autenticato viene reindirizzato alla pagina \textit{Home} di pertinenza.
+		\end{itemize}
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
@@ -31,40 +34,34 @@
 			  \end{itemize}
 
 		      \item Il Sistema verifica se l'Utente generico è un Utente ristoratore oppure Utente base;
-		      \item L'Utente autenticato viene reindirizzato alla \textit{Home} corrispondente al tipo di \textit{account}.		
+		      \item L'Utente autenticato viene reindirizzato alla \textit{Home} corrispondente al tipo di \textit{account}.
 	      \end{enumerate}
 		
 	\item \textbf{Scenario secondario:}
-	\begin{itemize}
-		\item \autoref{usecase:Accesso fallito} Accesso fallito:
 		\begin{enumerate}
-			\item L'autenticazione fallisce (vedi \autoref{usecase:Accesso fallito});
+			\item L'accesso fallisce (vedi \autoref{usecase:Accesso fallito});
 			\item L'Utente generico viene nuovamente indirizzato alla pagina di accesso.
 		\end{enumerate}	
 	\end{itemize}
-\end{itemize}
 
 \subusecasegenerico{Accesso per terze parti}
 \label{usecase:Accesso per terze parti}
 \begin{itemize}
 
 	\item \textbf{Attore principale:} Utente generico.
-	\item \textbf{Attore secondario:} Sistema di autenticazione esterno.
+	\item \textbf{Attore secondario:} Sistema di autenticazione esterno$^G$.
 
 	\item \textbf{Precondizione:} Un Utente generico è connesso al Sistema ed è in possesso di un \textit{account}.
 
-	\item \textbf{Postcondizioni:} 
-	\begin{itemize}
-		\item \textit{Email} e \textit{password} sono state verificate dal Sistema di autenticazione esterno.
-		\item L'Utente autenticato viene reindirizzato alla \textit{Home} corrispondente al tipo di \textit{account}.
-	\end{itemize}
+	\item \textbf{Postcondizione:} \textit{Email} e \textit{password} sono state verificate dal Sistema di autenticazione esterno$^G$.
+		% L'Utente autenticato viene reindirizzato alla \textit{Home} corrispondente al tipo di \textit{account}.  è stata tolta per ridondanza con postcondizione di UCG5
+
 
 	\item \textbf{Scenario principale:}
 	\begin{enumerate}
 		\item Il Sistema reindirizza l'Utente generico alla pagina di accesso per terze parti;
-		\item Il Sistema di autenticazione esterno verifica le credenziali;
-		\item Il Sistema di autenticazione esterno invia al Sistema le informazioni dell'Utente generico;
-		\item Il Sistema di autenticazione esterno reindirizza l'Utente generico alla pagina di accesso corrispondente alla tipologia di \textit{account}.		
+		\item Il Sistema di autenticazione esterno$^G$ verifica le credenziali;
+		\item Il Sistema di autenticazione esterno$^G$ invia al Sistema le informazioni dell'Utente generico;
 	\end{enumerate}
 	
 \end{itemize}
@@ -77,16 +74,13 @@
 
 	\item \textbf{Precondizione:} Un Utente generico è connesso al Sistema ed è in possesso di un \textit{account}.
 
-	\item \textbf{Postcondizioni:} 
-	\begin{itemize}
-		\item \textit{Email} e \textit{password} sono state verificate dal Sistema.
-		\item L'Utente autenticato viene reindirizzato alla \textit{Home} corrispondente al tipo di \textit{account}.
-	\end{itemize}
+	\item \textbf{Postcondizione:} \textit{Email} e \textit{password} sono state verificate dal Sistema.
+		% L'Utente autenticato viene reindirizzato alla \textit{Home} corrispondente al tipo di \textit{account}.  è stata tolta per ridondanza con postcondizione di UCG5
+
 	\item \textbf{Scenario principale:}
 	\begin{enumerate}
 		\item L'Utente generico inserisce le credenziali del suo \textit{account};
 		\item Il Sistema verifica le credenziali.
-		\item Il Sistema reindirizza l'Utente generico alla pagina di accesso corrispondente alla tipologia di \textit{account}.
 	\end{enumerate}
 
 \end{itemize}
