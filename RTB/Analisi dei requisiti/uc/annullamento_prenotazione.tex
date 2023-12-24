@@ -4,10 +4,10 @@
 	\item \textbf{Attore principale:} Utente base.
 
 	\item \textbf{Precondizioni:}
-	\begin{itemize}
-		\item L'Utente base ha effettuato l'accesso al Sistema (vedi \autoref{usecase:Effettua accesso}).
-		\item L'Utente base ha effettuato una prenotazione (vedi \autoref{usecase:Prenotazione di un tavolo}).
-	\end{itemize}  
+	      \begin{itemize}
+		      \item L'Utente base ha effettuato l'accesso al Sistema (vedi \autoref{usecase:Effettua accesso}).
+		      \item L'Utente base sta visualizzando il riepilogo di una prenotazione (vedi \autoref{usecase:Visualizzazione del riepilogo prenotazione}).
+	      \end{itemize}
 
 	\item \textbf{Postcondizione:}
 	      L'Utente base ha annullato la prenotazione di un tavolo.
@@ -18,8 +18,10 @@
 		            della prenotazione;
 
 		      \item L'Utente base conferma l'annullamento della prenotazione;
+
 		      \item Il Sistema aggiorna lo stato della prenotazione;
-		      
-		      \item Il Sistema annulla la prenotazione.
+
+		      \item Il Sistema notifica l'annullamento della prenotazione
+		            all'Utente ristoratore.
 	      \end{enumerate}
 \end{itemize}

@@ -4,23 +4,23 @@
 	\item \textbf{Attore principale:} Utente base.
 
 	\item \textbf{Precondizioni:}
-	\begin{itemize}
-        \item L'Utente ha eseguito correttamente l'accesso al Sistema come Utente base(vedi \autoref{usecase:Effettua accesso}).
-        \item L'utente deve trovarsi nella sua Area Personale$^G$.
-    \end{itemize}
+	      \begin{itemize}
+		      \item L'Utente base ha eseguito correttamente l'accesso al Sistema come Utente base (vedi \autoref{usecase:Effettua accesso}).
+		      \item L'utente base si trova nella sua Area Personale$^G$.
+	      \end{itemize}
 
 	\item \textbf{Postcondizione:} L'Utente base elimina con successo il suo \textit{account}.
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
-		      \item L'Utente base naviga nella sezione Area Personale$^G$.
 		      \item L'Utente base avvia il processo di eliminazione del suo \textit{account}.
-              \item Il Sistema procede con la cancellazopme dell'\textit{account} e dei dati correlati.
-              \item L'utente viene automaticamente reindirizzato alla \textit{Home} del sito.
+		      \item Il Sistema procede con la cancellazopme dell'\textit{account} e dei dati correlati.
+		      \item L'utente viene automaticamente reindirizzato alla \textit{Home} del sito.
 	      \end{enumerate}
 	\item \textbf{Scenario secondario:}
-			\begin{enumerate}
-				\item L'eliminazione dell'\textit{account} fallisce (vedi \autoref{usecase:Errore eliminazione account}).
-				\item Il Sistema segnala un messaggio di errore indicando un problema durante il processo di eliminazione dell'\textit{account}.
-			\end{enumerate}
+	      \begin{enumerate}
+		      \item L'eliminazione dell'\textit{account} fallisce (vedi
+		            \autoref{usecase:Visualizzazione errore eliminazione account}).
+		      \item Il Sistema segnala un messaggio di errore indicando un problema durante il processo di eliminazione dell'\textit{account}.
+	      \end{enumerate}
 \end{itemize}

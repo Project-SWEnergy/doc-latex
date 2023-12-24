@@ -1,7 +1,9 @@
 \usecasebase{Visualizzazione notifica modifica ordinazione}
 \label{usecase:Visualizzazione notifica modifica ordinazione}
 \begin{itemize}
-	\item \textbf{Attore principale:} Utente base.
+	\item \textbf{Attore principale:} Sistema.
+
+	\item \textbf{Attore secondario:} Utente base.
 
 	\item \textbf{Precondizioni:} L'Utente ristoratore ha modificato un ordinazione.(vedi \autoref{usecase:Modifica ordinazione}).
 
@@ -9,8 +11,8 @@
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
-		      \item L'Utente ristoratore modifica l'ordinazione;
-		      \item Il Sistema invia al cliente la notifica dell'avvenuta modifica al suo ordine;
+		      \item Il Sistema invia all'Utente base la notifica dell'avvenuta modifica al suo ordine;
+
 		      \item L'Utente base visualizza la notifica relativa alla modifica della sua ordinazione.
 	      \end{enumerate}
 \end{itemize}
