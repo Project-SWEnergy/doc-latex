@@ -1,53 +1,9 @@
-\newcommand{\copertina}{
-	\begin{titlepage}
-		\vspace*{-3.5cm}
-		\makebox[\textwidth]{\includegraphics[width=\paperwidth]{header.png}}
-		\begin{center}
-			\includegraphics[width=1\textwidth]{logo.png}	\\
-			\vspace{1cm}
-			\Mail	\\
-			\vspace{0.5cm}
-			\textbf{\begin{LARGE} \Titolo \end{LARGE}}		\\
-			\vspace{1cm}
-			\textbf{Descrizione:} \Descrizione{}			\\
-			\vspace{1cm}
-		\end{center}
-		\begin{center}
-			{
-				\renewcommand{\arraystretch}{1.5}
-				\begin{tabular}{ll}
-					\textbf{Stato}        & \Stato        \\
-					\textbf{Data}         & \Data         \\
-					\midrule
-					\textbf{Redattori}    & \Redattori    \\
-					\textbf{Verificatori} & \Verificatori \\
-					\textbf{Approvatori}  & \Approvatori  \\
-					\midrule
-					\textbf{Versione}     & \Versione     \\
-				\end{tabular}
-			}
-		\end{center}
-		\vspace{4cm}
-	\end{titlepage}
-}
-
-%
-% HEADERS AND FOOTERS
-%
-
-\fancypagestyle{plain}{
-	\fancyhf{}
-	\rhead{ \includegraphics[scale=0.05]{horizontal_logo.png}}
-	\lhead{\Titolo \ \Versione}
-	%\lfoot{\Titolo}
-	\rfoot{\thepage{} di \pageref{LastPage}}
-	\renewcommand{\headrulewidth}{0.2pt}
-	\renewcommand{\footrulewidth}{0.2pt}
-}
-\pagestyle{plain}
-
 %
 % RISK COMMANDS
+%
+
+%
+% Rischi tecnologici
 %
 
 % Create a new counter that resets within each subsection
@@ -66,6 +22,10 @@
 }
 \newcommand{\risktechautorefname}{RT-\hspace{-0.33em}}
 
+%
+% Rischi comunicativi
+%
+
 % Idem for riskcom
 \newcounter{riskcom}[subsection]
 \renewcommand{\theriskcom}{\arabic{riskcom}}
@@ -76,6 +36,10 @@
 	\noindent\textbf{RC-\theriskcom \ #1}%
 }
 \newcommand{\riskcomautorefname}{RC-\hspace{-0.33em}}
+
+%
+% Rischi organizzativi
+%
 
 % Idem for riskplan
 \newcounter{riskplan}[subsection]
