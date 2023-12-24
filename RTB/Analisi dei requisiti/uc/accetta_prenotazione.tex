@@ -3,7 +3,11 @@
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente ristoratore.
 
-	\item \textbf{Precondizione:} L'Utente ristoratore visualizza la prenotazione in dettaglio. (vedi \autoref{usecase:Dettaglio lista prenotazioni}).
+	\item \textbf{Precondizioni:} 
+	\begin{itemize}
+		\item L'Utente ristoratore visualizza la prenotazione in dettaglio (vedi \autoref{usecase:Visuallizza dettaglio lista prenotazioni}).
+		\item L'Utente ristoratore rifiuta la prenotazione solo nel caso in cui essa si trovi nello stato "In attesa";
+	\end{itemize}
 
 	\item \textbf{Postcondizione:} L'Utente ristoratore accetta la prenotazione.
 
@@ -11,7 +15,6 @@
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
 		      \item Il Sistema mostra i dettagli della prenotazione;
-		      \item L'Utente ristoratore accetta la prenotazione solo nel caso in cui essa si trovi nello stato "In attesa";
 		      \item Il Sistema aggiorna lo stato della prenotazione.
 
 	      \end{enumerate}

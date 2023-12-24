@@ -20,10 +20,44 @@
 
     \item \textbf{Scenario secondario:}
 		  \begin{itemize}
-			  \item \autoref{usecase:Errore instaurazione chat} Errore instaurazione chat:
+			  \item \autoref{usecase:Visualizzazione errore instaurazione chat} Errore instaurazione chat:
 				\begin{enumerate}
 					\item L'Utente base oppure ristoratore invia un messaggio in chat al destinatario;
 					\item Il Sistema mostra un messaggio di errore.
 				\end{enumerate}
 		  \end{itemize}
+\end{itemize}
+
+\subusecaseautenticato{Lettura chat}
+\label{usecase:Lettura chat}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente autenticato.
+
+	\item \textbf{Precondizione:} La \textit{chat} è stata avviata.
+	
+	\item \textbf{Postcondizione:} L'utente legge la \textit{chat} aggiornata.
+
+	\item \textbf{Scenario principale:}
+            \begin{enumerate}
+                \item Il Sistema aggiorna la \textit{chat} all'ultimo messaggio inviato;
+                \item L'utente legge l'ultimo messaggio che gli è stato inviato.
+	      \end{enumerate}
+\end{itemize}
+
+
+\subusecaseautenticato{Invio messaggio chat}
+\label{usecase:Invio messaggio chat}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente autenticato.
+
+	\item \textbf{Precondizione:} La \textit{chat} è stata avviata.
+
+
+	\item \textbf{Postcondizione:} Il messaggio scritto è stato inviato in \textit{chat}.
+
+	\item \textbf{Scenario principale:}
+            \begin{enumerate}
+                \item Un utente (tra i tre elencati in \textbf{Attori principali}) scrive ed invia un messaggio in \textit{chat};
+                \item Il Sistema memorizza il messaggio.
+	      \end{enumerate}
 \end{itemize}

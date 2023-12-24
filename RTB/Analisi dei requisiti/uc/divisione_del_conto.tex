@@ -1,39 +1,16 @@
-\usecasebase{Divisione del conto}
-\label{usecase:Divisione del conto}
-\begin{itemize}
-	\item \textbf{Attore principale:} Utente base.
-
-	\item \textbf{Precondizioni:}  
-	\begin{itemize}
-		\item L'Utente base ha concluso l'ordinazione collaborativa dei pasti (vedi \autoref{usecase:Ordinazione collaborativa dei pasti});
-		\item L'Utente base visualizza il riepilogo di una prenotazione (vedi \autoref{usecase:Visualizzazione del riepilogo prenotazione}) il quale stato risulta \textit{In Corso}; 
-	\end{itemize}
-
-	\item \textbf{Postcondizione:} L'Utente base ha diviso il conto secondo le
-	      sue preferenze.
-
-	\item \textbf{Scenario principale:}
-	      \begin{enumerate}
-		      \item L'Utente base seleziona la modalità di divisione del conto
-		            (vedi \autoref{usecase:Selezione della modalità di divisione del conto});
-
-			 \item  L'Utente base aggiunge una mancia a piacere;
-
-		      \item Il Sistema mostra il riepilogo della prenotazione aggiornato
-		            (vedi \autoref{usecase:Visualizzazione del riepilogo prenotazione}).
-
-	      \end{enumerate}
-\end{itemize}
-
-\subusecasebase{Selezione della modalità di divisione del conto}
+\usecasebase{Selezione della modalità di divisione del conto}
 \label{usecase:Selezione della modalità di divisione del conto}
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente base.
 	
-	\item \textbf{Precondizione:} L'Utente base si trova nella sezione di divisione del conto (vedi \autoref{usecase:Divisione del conto}).
+	\item \textbf{Precondizione:}
+	\begin{itemize}
+		\item L'Utente base ha concluso l'ordinazione collaborativa dei pasti (vedi \autoref{usecase:Creazione dell'ordinazione collaborativa dei pasti}).
+		\item L'Utente base visualizza il riepilogo di una prenotazione (vedi \autoref{usecase:Visualizzazione del riepilogo prenotazione}) il quale stato risulta \textit{In Corso}. 
+	\end{itemize}
 
 	\item \textbf{Postcondizione:}
-	      L'Utente base ha selezionato la modalità di divisione del conto.
+	      L'Utente base ha selezionato la modalità di divisione del conto e lo ha diviso secondo le sue preferenze.
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
 		      \item L'Utente base seleziona la modalità di divisione del conto
@@ -55,7 +32,7 @@
 
 	\item \textbf{Scenario secondario:}
 		  \begin{itemize}
-			  \item \autoref{usecase:Modalità di divisione del conto già effettuata} Modalità di divisione del conto già effettuata:
+			  \item \autoref{usecase:Visualizzazione errore divisione del conto già effettuata} Modalità di divisione del conto già effettuata:
 				\begin{enumerate}
 					\item L'Utente base seleziona la modalità di divisione del conto
 						tra quelle disponibili;
