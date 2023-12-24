@@ -85,13 +85,7 @@ def get_src_dir(path):
     # add path to each directory
     dirs = [os.path.join(path, d) for d in dirs if os.path.isdir(os.path.join(path, d))]
 
-    # recurse to each directory in the specified path
-    for d in dirs:
-        dirs.remove(d)
-        dirs.extend(get_src_dir(d))
-
-    # return the list of directories which contain the main.tex file
-    return dirs
+    return [src_dir for d in dirs for src_dir in get_src_dir(d)]
 
 ## MAIN ##
 
