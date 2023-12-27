@@ -62,7 +62,7 @@ nel testo del capitolato d'appalto. Mentre i codici univoci sottostanti indicano
 	\begin{tabularx}{\textwidth}{l|X|p{2cm}}
 		\textbf{ID} & \textbf{Descrizione}                                                                                           & \textbf{Fonte}                                                              \\
 		\hline
-		RFO13       & L'Utente base deve poter visualizzare il riepilogo della sua prenotazione.                                     & \autoref{usecase:Visualizzazione del riepilogo prenotazione}                \\
+		RFO13       & L'Utente base deve poter visualizzare la lista delle sue prenotazioni, ed in caso andare in dettaglio.          & \autoref{usecase:Visualizzazione lista prenotazioni}, \autoref{usecase:Visualizzazione del riepilogo prenotazione}                \\
 		\hline
 		RFO14       & L'Utente base deve poter visualizzare la notifica dello stato della sua prenotazione.                          & \autoref{usecase:Visualizzazione notifica stato della prenotazione}         \\
 		\hline
@@ -120,7 +120,7 @@ nel testo del capitolato d'appalto. Mentre i codici univoci sottostanti indicano
 		\hline
 		RFO36       & L'Utente autenticato deve poter visualizzare il messaggio d'errore che la chat non si è instaurata.               & \autoref{usecase:Visualizzazione errore instaurazione chat}                           \\
 		\hline
-		RFO37       & L'Utente ristoratore deve poter visualizzare la notifica relativa ad una nuova prenotazione.                      & \autoref{usecase:Visualizzazione notifica prenotazione}                               \\
+		RFO37       & L'Utente ristoratore deve poter visualizzare la notifica relativa ad una nuova prenotazione.                      & \autoref{usecase:Visualizzazione notifica nuova prenotazione}                               \\
 		\hline
 		RFD38       & L'Utente ristoratore deve poter visualizzare la notifica relativa ad un nuovo ordine.                             & \autoref{usecase:Visualizzazione notifica nuovo ordine}                               \\
 		\hline
@@ -160,9 +160,15 @@ nel testo del capitolato d'appalto. Mentre i codici univoci sottostanti indicano
 		\hline
 		RFD50       & L'Utente ristoratore deve poter modificare le informazioni del suo ristorante.                                          & \autoref{usecase:Modifica informazioni ristorante}   \\
 		\hline
-		RFO51       & L'Utente ristoratore deve poter gestire il menù, inserendo, eliminando e modificando dei piatti.                        & \autoref{usecase:Gestione menù}                      \\
+		RFO51       & L'Utente ristoratore deve poter gestire il menù, inserendo, eliminando e modificando dei piatti.                        & \autoref{usecase:Modifica menù}                      \\
 		\hline
-		RFO52       & L'Utente ristoratore deve poter gestire gli ingredienti, inserendo e eliminando degli ingredienti.                      & \autoref{usecase:Gestione lista ingredienti}         \\
+		RFO52       & L'Utente ristoratore deve poter gestire gli ingredienti, inserendo e eliminando degli ingredienti.                      & \autoref{usecase:Modifica lista ingredienti}         \\
+		\hline
+		RFO53       & L'Utente ristoratore deve poter assegnare gli ingredienti ad un piatto.                      							  & \autoref{usecase:Assegnamento ingredienti ad un piatto}         \\
+		\hline
+		RFO54       & L'Utente ristoratore deve poter visualizzare la notifica relativa all'annullamento di un ordinazione.                   & \autoref{usecase:Visualizzazione notifica annullamento ordine}         \\
+		\hline
+		RFO55       & L'Utente ristoratore deve poter visualizzare la notifica relativa all'annullamento di una prenotazione.                  & \autoref{usecase:Visualizzazione notifica annullamento prenotazione}         \\
 	\end{tabularx}
 	\caption{Tabella dei requisiti funzionali}
 \end{table}
