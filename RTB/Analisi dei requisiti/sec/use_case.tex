@@ -1,14 +1,38 @@
 \section{Casi d'uso}
 
 Il gruppo di analisi ha identificato diversi casi d'uso nel capitolato d'appalto proposto, raggruppandoli in tipologie distinte. 
-Le seguenti nomenclature vengono utilizzate per indicare i casi d'uso:
+Di seguito vengono riportate le nomenclature utilizzate per indicare i casi d'uso, la loro struttura, e gli attori che interagiscono con il Sistema.
 
+\subsection{Nomenclatura dei casi d'uso}
 \begin{itemize}
-	\item UCG : indica un caso d'uso strettamente legato all'Utente generico.
-	\item UCA : indica un caso d'uso strettamente legato all'Utente autenticato.
-	\item UCB : indica un caso d'uso strettamente legato all'Utente base.
-	\item UCR : indica un caso d'uso strettamente legato all'Utente ristoratore.
-	\item UCE : indica un caso d'uso strettamente legato ad un errore.
+	\item \textbf{UCG} : indica un caso d'uso strettamente legato all'Utente generico.
+	\item \textbf{UCA} : indica un caso d'uso strettamente legato all'Utente autenticato.
+	\item \textbf{UCB} : indica un caso d'uso strettamente legato all'Utente base.
+	\item \textbf{UCR} : indica un caso d'uso strettamente legato all'Utente ristoratore.
+	\item \textbf{UCE} : indica un caso d'uso strettamente legato ad un errore.
+\end{itemize}
+\subsection{Struttura dei casi d'uso}
+I casi d'uso sono strutturati nel seguente modo:
+\begin{itemize}
+	\item \textbf{Titolo:} fornito di un codice identificativo e di un nome esplicativo per agevolare il tracciamento.
+	\item \textbf{Attori:} diverse tipologie di utenti che interagiscono con il sistema, suddivisi in:
+	\begin{itemize}
+		\item Attore primario: colui che interagisce attivamente con il sistema dall'esterno.
+		\item Attore secondario: posso anche non essere presenti. 
+		Sono sempre esterni, ma non interagiscono attivamente con il sistema; invece, interagiscono per il raggiungimento dello scopo dell'attore primario o per aiutarlo.
+	\end{itemize}
+	\item \textbf{Precondizioni:} stato in cui si deve trovare il sistema affinchè una funzionalità sia disponibile ad un attore.
+	\item \textbf{Postcondizioni:} serie di informazioni che rappresentano lo stato del sistema dopo l'esecuzione del caso d'uso.
+	\item \textbf{Scenario principale:} sequenza di azioni dettagliata che descrive il \textit{workflow} della funzionalità.
+	\item \textbf{Descrizione:} note aggiuntive inserite quando si ritiene utile ampliare la spiegazione per approfondire la comprensione del caso d'uso.
+	\item \textbf{Scenario secondario:} scenario che inizialmente ha lo stesso \textit{workflow} di quello principale ma che, ad un tratto, cambia, solitamente relativo a errori.
+	\item \textbf{Trigger:} evento scatenante che provoca l'esecuzione automatica del caso d'uso.
+	\item \textbf{Inclusione:} è una relazione in cui un caso d'uso (il caso d'uso di base) include la funzionalità di un altro caso d'uso (il caso d'uso di inclusione). 
+		La relazione di inclusione supporta il riutilizzo della funzionalità in un modello di caso d'uso.
+	\item \textbf{Estensione:} è una relazione per specificare che un caso d'uso (estensione) estende il comportamento di un altro caso d'uso (base)
+	La relazione di estensione specifica che l'incorporazione del caso d'uso dell'estensione dipende da ciò che accade quando viene eseguito il caso d'uso di base.
+	\item \textbf{Generalizzazione:} è una relazione in cui un elemento del modello (il figlio) è basato su un altro elemento del modello (il genitore). 
+		Le relazioni di generalizzazione vengono usate per indicare che il figlio riceve tutti gli attributi, le operazioni e le relazioni definiti nel genitore.
 \end{itemize}
 
 \subsection{Attori}
