@@ -1,0 +1,138 @@
+\sprint{Sprint}
+
+\subsubsection{Diagramma di Gantt}
+
+\begin{ganttchart}[
+		x unit=0.6cm, % Adjust the width of each day
+		y unit chart=0.6cm,
+		bar/.style={fill=blue!50},
+		bar height=0.5,
+		time slot format=isodate,
+		time slot unit=day,
+		vgrid,
+		today=2023-12-04,
+		today rule/.style={draw=red, ultra thick}
+	]{2023-12-04}{2023-12-15}
+	\gantttitlecalendar{day} \\
+	\ganttbar{Analisi dei requisiti}{2023-12-04}{2023-12-15} \\
+	\ganttbar{Piano di progetto}{2023-12-04}{2023-12-15} \\
+	\ganttbar{Piano di qualifica}{2023-12-04}{2023-12-9} \\
+	\ganttbar{Database}{2023-12-04}{2023-12-9} \\
+	\ganttbar{Analisi delle tecnologie}{2023-12-11}{2023-12-15}
+\end{ganttchart}
+
+Dove:
+\begin{itemize}
+	\item \textbf{"Analisi dei requisiti"}: questa \textit{issue} è eseguita da
+	      Davide Maffei, Niccolò Carlesso e Matteo Bando. Per
+	      svolgere questa attività, il gruppo ha deciso di dedicare 30 ore;
+
+	\item \textbf{"Piano di progetto"}: questa \textit{issue} è eseguita da
+	      Carlo Rosso. Per svolgere questa attività, il gruppo ha deciso
+	      di dedicare 10 ore;
+
+	\item \textbf{"Piano di qualifica"}: questa \textit{issue} è eseguita da
+	      Alessandro Tigani Sava. Per svolgere questa attività, il gruppo ha
+	      deciso di dedicare 5 ore;
+
+	\item \textbf{"Database"}: questa \textit{issue} è eseguita da Giacomo
+	      Gualato. Per svolgere questa attività, il gruppo ha deciso di
+	      dedicare 5 ore;
+
+	\item \textbf{"Analisi delle tecnologie"}: questa \textit{issue} è eseguita
+	      da Alessandro Tigani Sava e Giacomo Gualato. Per svolgere questa
+	      attività, il gruppo ha deciso di dedicare 10 ore.
+\end{itemize}
+
+\subsubsection{Preventivo}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+		\hline
+		Alessandro            & 5           & -           & -           & 5           & -           & -           & 10              \\
+		Carlo                 & 5           & 5           & -           & -           & -           & -           & 10              \\
+		Davide                & -           & -           & 10          & -           & -           & -           & 10              \\
+		Giacomo               & -           & -           & 10          & -           & -           & -           & 10              \\
+		Matteo                & -           & -           & 10          & -           & -           & -           & 10              \\
+		Niccolò               & -           & -           & 10          & -           & -           & -           & 10              \\
+		\hline
+		\textbf{Ore totali}   & 10          & 5           & 40          & 5           & -           & -           & 60              \\
+		\textbf{Costo totale} & 300         & 100         & 1000        & 125         & -           & -           & 1525
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
+\end{table}
+
+\subsubsection{Riassunto dei \textit{commit} apportati}
+
+\begin{enumerate}
+	\item \textbf{Verbale esterno}: stesura e verifica del verbale esterno del
+	      1/12/2023;
+
+	\item \textbf{Verbale interno}: stesura e verifica del verbale interno del
+	      3/12/2023;
+
+	\item \textbf{Piano di progetto}: stesura e verifica della prima bozza del
+	      piano di progetto;
+
+	\item \textbf{Analisi dei requisiti}: stesura e verifica della prima bozza
+	      dell'analisi dei requisiti;
+
+	\item \textbf{\textit{Template}}: aggiornamento e riorganizzazione dei
+	      \textit{template} \LaTeX{} per la documentazione;
+
+	\item \textbf{\textit{Build} automatizzata della documentazione}:
+	      corretto lo script di \textit{build} della documentazione per
+	      automatizzare la compilazione dei documenti;
+
+	\item \textbf{Automatizzazione del glossario}: creato uno script per
+	      automatizzare l'individuazione delle parole del glossario nei
+	      documenti;
+
+	\item \textbf{Piano di qualifica}: stesura dell'introduzione del piano
+	      di qualifica;
+
+	\item \textbf{Analisi delle tecnologie}: PoC containerizzato in
+	      \textit{Docker} del \textit{database} \textit{PostgreSQL} e dei
+	      \textit{framework} \textit{Nest.js} e \textit{Drizzle}.
+\end{enumerate}
+
+\subsubsection{Consuntivo}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+		\hline
+		Alessandro            & 5           & -           & -           & 5           & -           & -           & 10              \\
+		Carlo                 & 5           & 5           & -           & -           & -           & -           & 10              \\
+		Davide                & -           & -           & 10          & -           & -           & -           & 10              \\
+		Giacomo               & -           & -           & -           & 10          & -           & -           & 10              \\
+		Matteo                & -           & -           & 10          & -           & -           & -           & 10              \\
+		Niccolò               & -           & -           & 10          & -           & -           & -           & 10              \\
+		\hline
+		\textbf{Ore totali}   & 10          & 5           & 30          & 15          & -           & -           & 60              \\
+		\textbf{Costo totale} & 300         & 100         & 750         & 375         & -           & -           & 1525
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
+\end{table}
+
+\subsubsection{Gestione dei ruoli}
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\pie[text=legend]{
+			17/Responsabile,
+			8/Amministratore,
+			50/Analista,
+			25/Progettista,
+			0/Programmatore,
+			0/Verificatore
+		}
+	\end{tikzpicture}
+	\caption{Grafico delle proporzioni dei ruoli ricoperti dai membri del gruppo}
+\end{figure}
