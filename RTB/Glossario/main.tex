@@ -1,0 +1,46 @@
+\documentclass[a4paper, 12pt]{article}
+
+\newcommand{\template}{../../Templates}
+\usepackage{\template/package}
+\graphicspath{{../../Assets}}
+
+\newcommand{\Titolo}{Glossario}
+\newcommand{\Data}{21/11/2023}
+\newcommand{\Versione}{0.2.0}
+\newcommand{\Descrizione}{Documento esplicativo del significato di tutti i termini tecnici o poco chiari presenti nella documentazione.}
+\newcommand{\Stato}{Non approvato}
+\newcommand{\Redattori}{Alessandro Tigani Sava}
+\newcommand{\Verificatori}{}
+\newcommand{\Approvatori}{}
+\newcommand{\Responsabile}{}
+\newcommand{\Destinatari}{}
+\newcommand{\g}{$^G$ }
+
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+
+
+\begin{document}
+
+\copertina{}
+\input{sec/registro_modifiche.tex}
+\newpage
+\tableofcontents
+
+\include{sec/introduzione.tex}
+\section{Glossario}
+\include{sec/glossario/C.tex}
+\include{sec/glossario/D.tex}
+\include{sec/glossario/G.tex}
+\include{sec/glossario/I.tex}
+\include{sec/glossario/L.tex}
+\include{sec/glossario/O.tex}
+\include{sec/glossario/P.tex}
+\include{sec/glossario/R.tex}
+\include{sec/glossario/S.tex}
+\include{sec/glossario/T.tex}
+\section{Acronimi}
+\include{sec/acronimi/P.tex}
+
+\end{document}

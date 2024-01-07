@@ -1,0 +1,79 @@
+\usecaseristoratore{Modifica menù}
+\label{usecase:Modifica menù}
+\begin{itemize}
+	\item \textbf{\gls{Attore}$^G$ principale:} \gls{Utente ristoratore}$^G$.
+
+	\item \textbf{Precondizione:} L'\gls{Utente ristoratore}$^G$ ha effettuato l'accesso al Sistema (vedi \autoref{usecase:Effettua accesso}).
+
+	\item \textbf{Postcondizione:} L'\gls{Utente ristoratore}$^G$ gestisce il menù del proprio ristorante.
+
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+
+		      \item L'\gls{Utente ristoratore}$^G$ può compiere le seguenti azioni per quanto riguarda la gestione del menù:
+		      \begin{itemize}
+                \item Inserimento di un piatto nel menù (vedi \autoref{usecase:Inserimento piatto}).
+                \item Modifica di un piatto nel menù (vedi \autoref{usecase:Modifica piatto}).
+                \item Eliminazione di un piatto nel menù (vedi \autoref{usecase:Eliminazione piatto}).
+              \end{itemize}
+		      \item Il Sistema registra le modifiche apporate al menù da parte del ristoratore.
+
+	      \end{enumerate}
+\end{itemize}
+
+\subusecaseristoratore{Inserimento piatto}
+\label{usecase:Inserimento piatto}
+\begin{itemize}
+
+	\item \textbf{\gls{Attore}$^G$ principale:} \gls{Utente ristoratore}$^G$.
+
+	\item \textbf{Precondizione:} L'\gls{Utente ristoratore}$^G$ si trova nella sezione di gestione del menù (vedi \autoref{usecase:Modifica menù}).
+
+	\item \textbf{Postcondizione:} L'\gls{Utente ristoratore}$^G$ ha inserito un piatto nel menù.
+
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+		\item L'\gls{Utente ristoratore}$^G$ inserisce un nuovo piatto nel menù;
+		\item Il Sistema aggiorna il menù con il nuovo piatto inserito dal ristoratore.
+	\end{enumerate}
+
+\end{itemize}
+
+
+\subusecaseristoratore{Modifica piatto}
+\label{usecase:Modifica piatto}
+\begin{itemize}
+
+	\item \textbf{\gls{Attore}$^G$ principale:} \gls{Utente ristoratore}$^G$.
+
+	\item \textbf{Precondizione:} L'\gls{Utente ristoratore}$^G$ si trova nella sezione di gestione del menù (vedi \autoref{usecase:Modifica menù}).
+
+	\item \textbf{Postcondizione:} L'\gls{Utente ristoratore}$^G$ ha modificato un piatto nel menù.
+
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+		\item L'\gls{Utente ristoratore}$^G$ modifica un piatto nel menù;
+		\item Il Sistema aggiorna il menù con il piatto modificato dal ristoratore.
+	\end{enumerate}
+
+\end{itemize}
+
+
+\subusecaseristoratore{Eliminazione piatto}
+\label{usecase:Eliminazione piatto}
+\begin{itemize}
+
+	\item \textbf{\gls{Attore}$^G$ principale:} \gls{Utente ristoratore}$^G$.
+
+	\item \textbf{Precondizione:} L'\gls{Utente ristoratore}$^G$ si trova nella sezione di gestione del menù (vedi \autoref{usecase:Modifica menù}).
+
+	\item \textbf{Postcondizione:} L'\gls{Utente ristoratore}$^G$ ha eliminato un piatto nel menù.
+
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+		\item L'\gls{Utente ristoratore}$^G$ eliminato un nuovo piatto nel menù;
+		\item Il Sistema aggiorna il menù con il piatto eliminato dal ristoratore.
+	\end{enumerate}
+
+\end{itemize}

@@ -1,0 +1,60 @@
+\section{Casi d'uso}
+
+Il gruppo di analisi ha identificato diversi casi d'uso nel \gls{Capitolato}$^G$ d'appalto proposto, raggruppandoli in tipologie distinte. 
+Di seguito vengono riportate le nomenclature utilizzate per indicare i casi d'uso, la loro struttura, e gli attori che interagiscono con il Sistema.
+
+\subsection{Nomenclatura dei casi d'uso}
+\begin{itemize}
+	\item \textbf{\gls{UC}$^G$G} : indica un \gls{Caso d'uso}$^G$ strettamente legato all'\gls{Utente generico}$^G$.
+	\item \textbf{\gls{\gls{UC}$^G$A}} : indica un \gls{Caso d'uso}$^G$ strettamente legato all'\gls{Utente autenticato}$^G$.
+	\item \textbf{\gls{UC}$^G$B} : indica un \gls{Caso d'uso}$^G$ strettamente legato all'\gls{Utente base}$^G$.
+	\item \textbf{\gls{\gls{UC}$^G$R}} : indica un \gls{Caso d'uso}$^G$ strettamente legato all'\gls{Utente ristoratore}$^G$.
+	\item \textbf{\gls{\gls{UC}$^G$E}} : indica un \gls{Caso d'uso}$^G$ strettamente legato ad un errore.
+\end{itemize}
+\subsection{Struttura dei casi d'uso}
+I casi d'uso sono strutturati nel seguente modo:
+\begin{itemize}
+	\item \textbf{Titolo:} fornito di un codice identificativo e di un nome esplicativo per agevolare il tracciamento.
+	\item \textbf{Attori:} diverse tipologie di utenti che interagiscono con il sistema, suddivisi in:
+	\begin{itemize}
+		\item \gls{Attore}$^G$ primario: colui che interagisce attivamente con il sistema dall'esterno.
+		\item \gls{Attore}$^G$ secondario: posso anche non essere presenti. 
+		Sono sempre esterni, ma non interagiscono attivamente con il sistema; invece, interagiscono per il raggiungimento dello scopo dell'\gls{Attore}$^G$ primario o per aiutarlo.
+	\end{itemize}
+	\item \textbf{Precondizioni:} \gls{Stato}$^G$ in cui si deve trovare il sistema affinchè una funzionalità sia disponibile ad un \gls{Attore}$^G$.
+	\item \textbf{Postcondizioni:} serie di informazioni che rappresentano lo \gls{Stato}$^G$ del sistema dopo l'esecuzione del \gls{Caso d'uso}$^G$.
+	\item \textbf{Scenario principale:} sequenza di azioni dettagliata che descrive il \textit{workflow} della funzionalità.
+	\item \textbf{Descrizione:} note aggiuntive inserite quando si ritiene utile ampliare la spiegazione per approfondire la comprensione del \gls{Caso d'uso}$^G$.
+	\item \textbf{Scenario secondario:} scenario che inizialmente ha lo stesso \textit{workflow} di quello principale ma che, ad un tratto, cambia, solitamente relativo a errori.
+	\item \textbf{Trigger:} evento scatenante che provoca l'esecuzione automatica del \gls{Caso d'uso}$^G$.
+	\item \textbf{Inclusione:} è una relazione in cui un \gls{Caso d'uso}$^G$ (il \gls{Caso d'uso}$^G$ di base) include la funzionalità di un altro \gls{Caso d'uso}$^G$ (il \gls{Caso d'uso}$^G$ di inclusione). 
+		La relazione di inclusione supporta il riutilizzo della funzionalità in un modello di \gls{Caso d'uso}$^G$.
+	\item \textbf{Estensione:} è una relazione per specificare che un \gls{Caso d'uso}$^G$ (estensione) estende il comportamento di un altro \gls{Caso d'uso}$^G$ (base)
+	La relazione di estensione specifica che l'incorporazione del \gls{Caso d'uso}$^G$ dell'estensione dipende da ciò che accade quando viene eseguito il \gls{Caso d'uso}$^G$ di base.
+	\item \textbf{Generalizzazione:} è una relazione in cui un elemento del modello (il figlio) è basato su un altro elemento del modello (il genitore). 
+		Le relazioni di generalizzazione vengono usate per indicare che il figlio riceve tutti gli attributi, le operazioni e le relazioni definiti nel genitore.
+\end{itemize}
+
+\subsection{Attori}
+
+Gli attori identificati per il sistema e le relative dipendenze sono i seguenti:
+\begin{itemize}
+	\item \textbf{\gls{Utente generico}$^G$}: è un utente che non ha effettuato l'accesso al
+	      sistema. Può essere un utente non registrato o un utente registrato che non ha
+	      ancora effettuato l'accesso;
+
+	\item \textbf{\gls{Utente autenticato}$^G$}: l'\gls{Utente autenticato}$^G$ rappresenta un utente
+	      base oppure un \gls{Utente ristoratore}$^G$ che ha effettuato l'accesso al sistema.
+
+	\item \textbf{\gls{Utente base}$^G$}: l'\gls{Utente base}$^G$ può compiere tutte le azioni
+	      dell'\gls{Utente generico}$^G$. Inoltre, può effettuare l'accesso al sistema e può
+	      effettuare delle prenotazioni e attività correlate. L'\gls{Utente base}$^G$ rappresenta
+	      il \gls{Cliente}$^G$ del ristorante;
+
+	\item \textbf{\gls{Utente ristoratore}$^G$}: l'\gls{Utente ristoratore}$^G$ può compiere tutte le
+	      azioni dell'\gls{Utente generico}$^G$. Inoltre, può gestire il proprio ristorante e le
+	      prenotazioni ad esso associate. L'\gls{Utente ristoratore}$^G$ rappresenta il gestore del
+	      ristorante;
+\end{itemize}
+
+\subsection{Casi d'uso}

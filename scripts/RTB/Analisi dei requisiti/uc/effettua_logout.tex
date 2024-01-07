@@ -1,0 +1,20 @@
+\usecaseautenticato{Effettua Logout}
+\label{usecase:Effettua Logout}
+\begin{itemize}
+	\item \textbf{\gls{Attore}$^G$ principale:} \gls{Utente autenticato}$^G$.
+
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+        \item L'Utente ha eseguito correttamente l'accesso al Sistema come \gls{Utente base}$^G$(vedi \autoref{usecase:Effettua accesso}).
+        \item L'utente deve trovarsi nella sua Area Personale$^G$.
+    \end{itemize}
+
+	\item \textbf{Postcondizione:} L'utente esegue con s\gls{UC}$^G$cesso il \textit{logout}.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'\gls{Utente autenticato}$^G$ naviga nella sezione Area Personale$^G$.
+		      \item L'\gls{Utente autenticato}$^G$ avvia la procedura di \textit{logout}.
+              \item Il Sistema disconnette l'Utente dal suo \textit{account} e lo reindirizza alla \textit{Home} del sito, identificandolo come \gls{Utente generico}$^G$.
+	      \end{enumerate}
+\end{itemize}

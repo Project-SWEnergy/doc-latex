@@ -1,0 +1,35 @@
+\documentclass[a4paper, 12pt]{article}
+\newcommand{\template}{../../../../Templates}
+\usepackage{\template/package}
+\graphicspath{{../../../../Assets}}
+
+\newcommand{\Titolo}{Verbale esterno - Imola Informatica}
+\newcommand{\Data}{24/11/2023}
+\newcommand{\Versione}{1.0.0}
+\newcommand{\Descrizione}{Verbale riguardante la prima chiamata con l'azienda
+Imola Informatica dopo l'acquisizione dell'appalto. Sono state poste le domande
+in merito all'organizzazione del lavoro e sui casi d'uso.}
+\newcommand{\\gls{Stato}$^G$}{Approvato}
+\newcommand{\Redattori}{Carlo Rosso}
+\newcommand{\Verificatori}{Davide Mafferi}
+\newcommand{\ApprovatoriInterni}{Alessandro Tigani Sava}
+\newcommand{\ApprovatoriEsterni}{Alessandro Staffolani}
+
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+\input{\template/firma.tex}
+
+\begin{document}
+\copertina{}
+
+\input{sec/\gls{Partecipanti}$^G$}
+
+% Vorrei inserire questa ridefinizione nel file commands.tex ma non funziona
+\renewcommand{\contentsname}{\gls{Ordine}$^G$ del giorno}
+\tableofcontents
+
+\newpage
+\input{sec/resoconto.tex}
+\firma{}
+\end{document}

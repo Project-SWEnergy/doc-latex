@@ -1,0 +1,19 @@
+\usecasebase{Visualizzazione della notifica di richiesta di inserimento \gls{Feedback}$^G$}
+\label{usecase:Visualizzazione della notifica di richiesta di inserimento \gls{Feedback}$^G$}
+\begin{itemize}
+	\item \textbf{\gls{Attore}$^G$ principale:} \gls{Utente base}$^G$.
+
+
+	\item \textbf{Precondizione:} L'\gls{Utente ristoratore}$^G$ ha cambiato lo \gls{Stato}$^G$ della prenotazione in "Terminata"(vedi \autoref{usecase:Termina prenotazione}).
+
+
+	\item \textbf{Postcondizione:} L'\gls{Utente base}$^G$ visualizza la notifica in cui
+	      gli viene richiesto se vuole lasciare un \textit{\gls{Feedback}$^G$} ad una prenotazione.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item Il Sistema rivela un cambiamento dello \gls{Stato}$^G$ della prenotazione;
+		      \item Il Sistema invia all'\gls{Utente base}$^G$ relativo a questa prenotazione una notifica in cui lo invita a lasciare un \textit{\gls{Feedback}$^G$};
+		      \item L'\gls{Utente base}$^G$ visualizza la notifica e dunque può lasciare un \textit{\gls{Feedback}$^G$} (vedi \autoref{usecase:Inserimento di \gls{Feedback}$^G$ e recensioni}).
+	      \end{enumerate}
+\end{itemize}

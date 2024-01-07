@@ -1,0 +1,48 @@
+\usecasebase{Selezione della modalità di divisione del conto}
+\label{usecase:Selezione della modalità di divisione del conto}
+\begin{itemize}
+	\item \textbf{\gls{Attore}$^G$ principale:} \gls{Utente base}$^G$.
+	
+	\item \textbf{Precondizione:}
+	\begin{itemize}
+		\item L'\gls{Utente base}$^G$ ha concluso l'\gls{Ordinazione}$^G$ collaborativa dei pasti (vedi \autoref{usecase:Creazione dell'\gls{Ordinazione}$^G$ collaborativa dei pasti}).
+		\item L'\gls{Utente base}$^G$ visualizza il riepilogo di una prenotazione (vedi \autoref{usecase:Visualizzazione del riepilogo prenotazione}) il quale \gls{Stato}$^G$ risulta \textit{In Corso}. 
+	\end{itemize}
+
+	\item \textbf{Postcondizione:}
+	      L'\gls{Utente base}$^G$ ha selezionato la modalità di divisione del conto e lo ha diviso secondo le sue preferenze.
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'\gls{Utente base}$^G$ seleziona la modalità di divisione del conto
+		            tra quelle disponibili:
+					\begin{itemize}
+						\item \textbf{Divisione equa:} il conto viene diviso in parti
+							  uguali tra tutti gli Utenti base che hanno condiviso la
+							  prenotazione. L'\gls{Utente base}$^G$ può scegliere di pagare più di
+							  una quota.
+		  
+						\item \textbf{Proporzionale:} l'\gls{Utente base}$^G$ seleziona i piatti che vuole
+							  pagare.
+					\end{itemize}
+
+		      \item L'\gls{Utente base}$^G$ conferma la modalità di divisione del conto;
+
+		      \item Il Sistema memorizza la modalità di divisione del conto.
+	      \end{enumerate}
+
+	\item \textbf{Scenario secondario:}
+		  \begin{itemize}
+			  \item \autoref{usecase:Visualizzazione errore divisione del conto già effettuata} Modalità di divisione del conto già effettuata:
+				\begin{enumerate}
+					\item L'\gls{Utente base}$^G$ seleziona la modalità di divisione del conto
+						tra quelle disponibili;
+	
+					\item L'\gls{Utente base}$^G$ conferma la modalità di divisione del conto;
+	
+					\item Il Sistema mostra un messaggio di errore e spiega che la
+						modalità di divisione del conto è già stata scelta.
+				\end{enumerate}
+		  \end{itemize}
+
+\end{itemize}
+
