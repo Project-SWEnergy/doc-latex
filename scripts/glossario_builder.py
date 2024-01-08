@@ -31,7 +31,7 @@ def tex_builder(glossario: list):
             prev_letter = word[0]
             tex += f'\n\\section{{{word[0]}}}\n\n'
 
-        tex += f'\\paragraph{{{word}}}{{{definition}}}\n'
+        tex += f'\\subsection{{{word}}}{definition}\n\n'
     return tex
 
 def main(src, out):
