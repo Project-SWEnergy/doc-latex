@@ -1,0 +1,48 @@
+\usecasebase{Selezione della modalità di divisione del conto}
+\label{usecase:Selezione della modalità di divisione del conto}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente base.
+	
+	\item \textbf{Precondizione:}
+	\begin{itemize}
+		\item L'Utente base ha concluso l'ordinazione collaborativa dei pasti (vedi \autoref{usecase:Creazione dell'ordinazione collaborativa dei pasti}).
+		\item L'Utente base visualizza il riepilogo di una prenotazione (vedi \autoref{usecase:Visualizzazione del riepilogo prenotazione}) il quale stato risulta \textit{In Corso}. 
+	\end{itemize}
+
+	\item \textbf{Postcondizione:}
+	      L'Utente base ha selezionato la modalità di divisione del conto e lo ha diviso secondo le sue preferenze.
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente base seleziona la modalità di divisione del conto
+		            tra quelle disponibili:
+					\begin{itemize}
+						\item \textbf{Divisione equa:} il conto viene diviso in parti
+							  uguali tra tutti gli Utenti base che hanno condiviso la
+							  prenotazione. L'Utente base può scegliere di pagare più di
+							  una quota.
+		  
+						\item \textbf{Proporzionale:} l'Utente base seleziona i piatti che vuole
+							  pagare.
+					\end{itemize}
+
+		      \item L'Utente base conferma la modalità di divisione del conto;
+
+		      \item Il Sistema memorizza la modalità di divisione del conto.
+	      \end{enumerate}
+
+	\item \textbf{Scenario secondario:}
+		  \begin{itemize}
+			  \item \autoref{usecase:Visualizzazione errore divisione del conto già effettuata} Modalità di divisione del conto già effettuata:
+				\begin{enumerate}
+					\item L'Utente base seleziona la modalità di divisione del conto
+						tra quelle disponibili;
+	
+					\item L'Utente base conferma la modalità di divisione del conto;
+	
+					\item Il Sistema mostra un messaggio di errore e spiega che la
+						modalità di divisione del conto è già stata scelta.
+				\end{enumerate}
+		  \end{itemize}
+
+\end{itemize}
+

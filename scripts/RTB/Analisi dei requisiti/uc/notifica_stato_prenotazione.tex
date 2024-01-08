@@ -1,0 +1,24 @@
+\usecasebase{Visualizzazione notifica \gls{Stato}$^G$ della prenotazione}
+\label{usecase:Visualizzazione notifica \gls{Stato}$^G$ della prenotazione}
+\begin{itemize}
+	\item \textbf{\gls{Attore}$^G$ principale:} \gls{Utente base}$^G$.
+
+	\item \textbf{Precondizione:} L'\gls{Utente ristoratore}$^G$ ha cambiato lo \gls{Stato}$^G$ della prenotazione (vedi \autoref{usecase:Accetta prenotazione},
+	      \autoref{usecase:Rifiuta prenotazione} e \autoref{usecase:Termina prenotazione}).
+
+
+	\item \textbf{Postcondizione:} L'\gls{Utente base}$^G$ visualizza la notifica del cambiamento di \gls{Stato}$^G$ della sua prenotazione.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item Il Sistema rivela un cambiamento dello \gls{Stato}$^G$ della prenotazione;
+		      \item Il Sistema invia agli Utenti base relativi a questa
+		            prenotazione una notifica sul cambio dello \gls{Stato}$^G$;
+		      \item L'\gls{Utente base}$^G$ visualizza la notifica del cambiamento di \gls{Stato}$^G$ della sua prenotazione, la quale si può trovare in:
+		            \begin{itemize}
+			            \item Accettata dall'\gls{Utente ristoratore}$^G$.
+			            \item Rifiutata dall'\gls{Utente ristoratore}$^G$ (con le motivazioni del rifiuto).
+			            \item Terminata dall'\gls{Utente ristoratore}$^G$.
+		            \end{itemize}
+	      \end{enumerate}
+\end{itemize}

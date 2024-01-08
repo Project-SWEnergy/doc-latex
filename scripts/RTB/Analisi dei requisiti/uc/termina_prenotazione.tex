@@ -1,0 +1,22 @@
+\usecaseristoratore{Termina prenotazione}
+\label{usecase:Termina prenotazione}
+\begin{itemize}
+	\item \textbf{\gls{Attore}$^G$ principale:} \gls{Utente ristoratore}$^G$.
+
+	\item \textbf{Precondizioni:}
+	      \begin{itemize}
+		      \item L'\gls{Utente ristoratore}$^G$ visualizza la prenotazione in dettaglio (vedi \autoref{usecase:Visualizza dettaglio lista prenotazioni}).
+		      \item Tutti gli \gls{Utente base}$^G$ collegati alla prenotazione devono aver pagato il loro conto (vedi \autoref{usecase:Pagamento del conto}).
+		      \item L'\gls{Utente ristoratore}$^G$ riceve la notifica dell'avvenuto pagamento (vedi \autoref{usecase:Visualizzazione notifica di avvenuto pagamento}).
+	      \end{itemize}
+
+	\item \textbf{Postcondizioni:} L'\gls{Utente ristoratore}$^G$ termina la prenotazione.
+
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'\gls{Utente ristoratore}$^G$ seleziona l'opzione di terminazione della prenotazione;
+
+		      \item Il Sistema aggiorna lo \gls{Stato}$^G$ della prenotazione;
+	      \end{enumerate}
+\end{itemize}

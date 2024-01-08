@@ -1,0 +1,29 @@
+\usecasebase{Modifica dati utente}
+\label{usecase:Modifica dati utente}
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente base.
+
+	\item \textbf{Precondizioni:}
+	      \begin{itemize}
+		      \item L'Utente ha eseguito correttamente l'accesso al Sistema come Utente base (vedi \autoref{usecase:Effettua accesso}).
+		      \item L'Utente base ha completato la visualizzazione dei propri
+		            dati personali (vedi \autoref{usecase:Visualizzazione dati utente}).
+	      \end{itemize}
+
+	\item \textbf{Postcondizione:} L'Utente base ha modificato i propri dati utente.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente base accede alla sezione Area Personale$^G$ e sceglie di modificare i suoi dati personali;
+		      \item Il Sistema presenta all'Utente base le seguenti informazioni:
+		            \begin{itemize}
+			            \item Nome.
+			            \item Cognome.
+			            \item \textit{E-mail}.
+			            \item \textit{Password}.
+			            \item Dettagli sulle allergie e intolleranze.
+		            \end{itemize}
+		      \item L'Utente base può selezionare e modificare uno o più di questi dati;
+		      \item In caso di modifiche, il Sistema memorizza ogni variazione apportata dall'Utente base, garantendo l'integrità delle informazioni.
+	      \end{enumerate}
+\end{itemize}

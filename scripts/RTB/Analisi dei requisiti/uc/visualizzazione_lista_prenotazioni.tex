@@ -1,0 +1,74 @@
+\usecaseristoratore{Visualizzazione lista prenotazioni}
+\label{usecase:Visualizzazione lista prenotazioni}
+\begin{itemize}
+	\item \textbf{\gls{Attore}$^G$ principale:} \gls{Utente ristoratore}$^G$.
+
+	\item \textbf{Precondizione:} L'\gls{Utente ristoratore}$^G$ ha effettuato l'accesso al Sistema (vedi \autoref{usecase:Effettua accesso}).
+
+	\item \textbf{Postcondizione:} L'\gls{Utente ristoratore}$^G$ visualizza la lista di prenotazioni (prenotazioni che si trovano in qualsiasi \gls{Stato}$^G$) attraverso una vista a calendario settimanale.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item Il Sistema mostra una vista a calendario settimanale, in ogni giorno della settimana l'utente può consultare:
+		            \begin{itemize}
+			            \item La lista di prenotazioni.
+			            \item La lista di ingredienti con le quantità necessarie per soddisfare la richiesta giornaliera (vedi \autoref{usecase:Consultazione lista ingredienti}).
+		            \end{itemize}
+
+		      \item Il Sistema mostra la lista prenotazioni inerente ad un giorno nei due modi seguenti:
+		            \begin{itemize}
+			            \item Di \textit{default}, nella lista, le prenotazioni che vengono mostrate per prime sono quelle che si trovano nello \gls{Stato}$^G$ "Accettata".
+
+			            \item L'\gls{Utente ristoratore}$^G$ può applicare un filtro basato sullo \gls{Stato}$^G$ della prenotazione, per facilitare la consultazione della lista a seconda dei suoi bisogni.
+		            \end{itemize}
+
+		      \item L'\gls{Utente ristoratore}$^G$ visualizza la lista di prenotazioni a vista settimanale.
+	      \end{enumerate}
+\end{itemize}
+
+
+\subusecaseristoratore{Visualizzazione lista ingredienti}
+\label{usecase:Consultazione lista ingredienti}
+\begin{itemize}
+
+	\item \textbf{\gls{Attore}$^G$ principale:} \gls{Utente ristoratore}$^G$.
+
+	\item \textbf{Precondizione:} L'\gls{Utente ristoratore}$^G$ si trova nella sezione "Consultazione lista prenotazioni" (vedi \autoref{usecase:Visualizzazione lista prenotazioni}).
+
+	\item \textbf{Postcondizione:} L'\gls{Utente ristoratore}$^G$ visualizza la lista ingredienti aggiornata.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item Il Sistema mostra la lista ingredienti necessari per la giornata (relativamente alle prenotazioni nello \gls{Stato}$^G$ "Accettata");
+		      \item L'\gls{Utente ristoratore}$^G$ visualizza la lista degli ingredienti.
+	      \end{enumerate}
+
+\end{itemize}
+
+\subusecaseristoratore{Visualizza dettaglio lista prenotazioni}
+\label{usecase:Visualizza dettaglio lista prenotazioni}
+\begin{itemize}
+	\item \textbf{\gls{Attore}$^G$ principale:} \gls{Utente ristoratore}$^G$.
+
+	\item \textbf{Precondizione:} L'\gls{Utente ristoratore}$^G$ ha consultato la lista delle prenotazioni (vedi \autoref{usecase:Visualizzazione lista prenotazioni}).
+
+	\item \textbf{Postcondizione:} L'\gls{Utente ristoratore}$^G$ visualizza le prenotazioni in dettaglio.
+
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'\gls{Utente ristoratore}$^G$ seleziona un giorno nel calendario a vista settimanale da visualizzare in dettaglio;
+		      \item Il Sistema mostra tutte le prenotazioni presenti nel giorno selezionato dall'\gls{Utente ristoratore}$^G$;
+
+		      \item L'\gls{Utente ristoratore}$^G$ seleziona una prenotazione da visualizzare in dettaglio;
+		      \item Il Sistema mostra i dettagli e le informazioni relative alla prenotazione selezionata dall'\gls{Utente ristoratore}$^G$:
+		            \begin{itemize}
+			            \item Nome collegato alla prenotazione.
+			            \item Numero di persone.
+			            \item \gls{Stato}$^G$ della prenotazione.
+			            \item Giorno e l'orario della prenotazione.
+			            \item Eventuali persone con difficoltà motoria.
+		            \end{itemize}
+
+	      \end{enumerate}
+\end{itemize}

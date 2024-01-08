@@ -4,14 +4,120 @@
 
 \newcounter{usecase}
 \renewcommand{\theusecase}{\arabic{usecase}}
+
+\makeatletter
+% Redefine usecase command to create a new hierarchy
 \titleformat{\usecase}[block]{\normalfont\Large\bfseries}{UC-\theusecase}{2em}{}
+\newcommand{\l@usecase}{\@dottedtocline{3}{3.8em}{3.2em}}
 \newcommand{\usecase}[1]{%
-	\clearpage
 	\refstepcounter{usecase}%
 	\noindent\textbf{UC-\theusecase: #1}%
-	\newline\noindent\ignorespaces%
+	\addcontentsline{toc}{usecase}{\protect\numberline{UC-\theusecase}#1}%
 }
-\newcommand{\usecaseautorefname}{UC}
+\makeatother
+\newcommand{\usecaseautorefname}{UC-\hspace{-0.33mm}}
+
+
+%
+% \usecase utente generico
+%
+
+\newcounter{usecasegenerico}
+\renewcommand{\theusecasegenerico}{\arabic{usecasegenerico}}
+
+\makeatletter
+% Redefine usecase command to create a new hierarchy
+\titleformat{\usecasegenerico}[block]{\normalfont\Large\bfseries}{UCG-\theusecasegenerico}{2em}{}
+\newcommand{\l@usecasegenerico}{\@dottedtocline{3}{3.8em}{3.2em}}
+\newcommand{\usecasegenerico}[1]{%
+	\refstepcounter{usecasegenerico}%
+	\noindent\textbf{UCG-\theusecasegenerico: #1}%
+	\addcontentsline{toc}{usecasegenerico}{\protect\numberline{UCG-\theusecasegenerico}#1}%
+}
+\makeatother
+\newcommand{\usecasegenericoautorefname}{UCG-\hspace{-0.33mm}}
+
+
+%
+% \usecase utente base
+%
+
+\newcounter{usecasebase}
+\renewcommand{\theusecasebase}{\arabic{usecasebase}}
+
+\makeatletter
+% Redefine usecase command to create a new hierarchy
+\titleformat{\usecasebase}[block]{\normalfont\Large\bfseries}{UCB-\theusecasebase}{2em}{}
+\newcommand{\l@usecasebase}{\@dottedtocline{3}{3.8em}{3.2em}}
+\newcommand{\usecasebase}[1]{%
+	\refstepcounter{usecasebase}%
+	\noindent\textbf{UCB-\theusecasebase: #1}%
+	\addcontentsline{toc}{usecasebase}{\protect\numberline{UCB-\theusecasebase}#1}%
+}
+\makeatother
+\newcommand{\usecasebaseautorefname}{UCB-\hspace{-0.33mm}}
+
+
+
+%
+% \usecase utente ristoratore
+%
+
+\newcounter{usecaseristoratore}
+\renewcommand{\theusecaseristoratore}{\arabic{usecaseristoratore}}
+
+\makeatletter
+% Redefine usecase command to create a new hierarchy
+\titleformat{\usecaseristoratore}[block]{\normalfont\Large\bfseries}{UCR-\theusecaseristoratore}{2em}{}
+\newcommand{\l@usecaseristoratore}{\@dottedtocline{3}{3.8em}{3.2em}}
+\newcommand{\usecaseristoratore}[1]{%
+	\refstepcounter{usecaseristoratore}%
+	\noindent\textbf{UCR-\theusecaseristoratore: #1}%
+	\addcontentsline{toc}{usecaseristoratore}{\protect\numberline{UCR-\theusecaseristoratore}#1}%
+}
+\makeatother
+\newcommand{\usecaseristoratoreautorefname}{UCR-\hspace{-0.33mm}}
+
+
+%
+% \usecase errore
+%
+
+\newcounter{usecaseerrore}
+\renewcommand{\theusecaseerrore}{\arabic{usecaseerrore}}
+
+\makeatletter
+% Redefine usecase command to create a new hierarchy
+\titleformat{\usecaseerrore}[block]{\normalfont\Large\bfseries}{UCE-\theusecaseerrore}{2em}{}
+\newcommand{\l@usecaseerrore}{\@dottedtocline{3}{3.8em}{3.2em}}
+\newcommand{\usecaseerrore}[1]{%
+	\refstepcounter{usecaseerrore}%
+	\noindent\textbf{UCE-\theusecaseerrore: #1}%
+	\addcontentsline{toc}{usecaseerrore}{\protect\numberline{UCE-\theusecaseerrore}#1}%
+}
+\makeatother
+\newcommand{\usecaseerroreautorefname}{UCE-\hspace{-0.33mm}}
+
+
+%
+% \usecase autenticato
+%
+
+\newcounter{usecaseautenticato}
+\renewcommand{\theusecaseautenticato}{\arabic{usecaseautenticato}}
+
+\makeatletter
+% Redefine usecase command to create a new hierarchy
+\titleformat{\usecaseautenticato}[block]{\normalfont\Large\bfseries}{UCA-\theusecaseautenticato}{2em}{}
+\newcommand{\l@usecaseautenticato}{\@dottedtocline{3}{3.8em}{3.2em}}
+\newcommand{\usecaseautenticato}[1]{%
+	\refstepcounter{usecaseautenticato}%
+	\noindent\textbf{UCA-\theusecaseautenticato: #1}%
+	\addcontentsline{toc}{usecaseautenticato}{\protect\numberline{UCA-\theusecaseautenticato}#1}%
+}
+\makeatother
+\newcommand{\usecaseautenticatoautorefname}{UCA-\hspace{-0.33mm}}
+
 
 %
 % \subusecase
@@ -22,21 +128,111 @@
 \titleformat{\subusecase}[block]{\normalfont\large\bfseries}{UC-\thesubusecase}{1.5em}{}
 \newcommand{\subusecase}[1]{%
 	\refstepcounter{subusecase}%
+	%
 	\noindent\textbf{UC-\thesubusecase: #1}%
-	\newline\noindent\ignorespaces%
 }
-\newcommand{\subusecaseautorefname}{UC}
+\newcommand{\subusecaseautorefname}{UC-\hspace{-0.33mm}}
+
+%
+% \subusecase generico
+%
+
+\newcounter{subusecasegenerico}[usecasegenerico]
+\renewcommand{\thesubusecasegenerico}{\theusecasegenerico.\arabic{subusecasegenerico}}
+\titleformat{\subusecasegenerico}[block]{\normalfont\large\bfseries}{UCG-\thesubusecasegenerico}{1.5em}{}
+\newcommand{\subusecasegenerico}[1]{%
+	\refstepcounter{subusecasegenerico}%
+	%
+	\noindent\textbf{UCG-\thesubusecasegenerico: #1}%
+}
+\newcommand{\subusecasegenericoautorefname}{UCG-\hspace{-0.33mm}}
+
+
+%
+% \subusecase base
+%
+
+\newcounter{subusecasebase}[usecasebase]
+\renewcommand{\thesubusecasebase}{\theusecasebase.\arabic{subusecasebase}}
+\titleformat{\subusecasebase}[block]{\normalfont\large\bfseries}{UCB-\thesubusecasebase}{1.5em}{}
+\newcommand{\subusecasebase}[1]{%
+	\refstepcounter{subusecasebase}%
+	%
+	\noindent\textbf{UCB-\thesubusecasebase: #1}%
+}
+\newcommand{\subusecasebaseautorefname}{UCB-\hspace{-0.33mm}}
+
+
+
+%
+% \subusecase ristoratore
+%
+
+\newcounter{subusecaseristoratore}[usecaseristoratore]
+\renewcommand{\thesubusecaseristoratore}{\theusecaseristoratore.\arabic{subusecaseristoratore}}
+\titleformat{\subusecaseristoratore}[block]{\normalfont\large\bfseries}{UCR-\thesubusecaseristoratore}{1.5em}{}
+\newcommand{\subusecaseristoratore}[1]{%
+	\refstepcounter{subusecaseristoratore}%
+	%
+	\noindent\textbf{UCR-\thesubusecaseristoratore: #1}%
+}
+\newcommand{\subusecaseristoratoreautorefname}{UCR-\hspace{-0.33mm}}
+
+
+
+%
+% \subusecase errore
+%
+
+\newcounter{subusecaseerrore}[usecaseerrore]
+\renewcommand{\thesubusecaseerrore}{\theusecaseerrore.\arabic{subusecaseerrore}}
+\titleformat{\subusecaseerrore}[block]{\normalfont\large\bfseries}{UCE-\thesubusecaseerrore}{1.5em}{}
+\newcommand{\subusecaseerrore}[1]{%
+	\refstepcounter{subusecaseerrore}%
+	%
+	\noindent\textbf{UCE-\thesubusecaseerrore: #1}%
+}
+\newcommand{\subusecaseerroreautorefname}{UCE-\hspace{-0.33mm}}
+
+
+%
+% \subusecase autenticato
+%
+
+\newcounter{subusecaseautenticato}[usecaseautenticato]
+\renewcommand{\thesubusecaseautenticato}{\theusecaseautenticato.\arabic{subusecaseautenticato}}
+\titleformat{\subusecaseautenticato}[block]{\normalfont\large\bfseries}{UCA-\thesubusecaseautenticato}{1.5em}{}
+\newcommand{\subusecaseautenticato}[1]{%
+	\refstepcounter{subusecaseautenticato}%
+	%
+	\noindent\textbf{UCA-\thesubusecaseautenticato: #1}%
+}
+\newcommand{\subusecaseautenticatoautorefname}{UCA-\hspace{-0.33mm}}
+
 
 %
 % \subsubusecase
 %
-
 \newcounter{subsubusecase}[subusecase]
 \renewcommand{\thesubsubusecase}{\thesubusecase.\arabic{subsubusecase}}
 \titleformat{\subsubusecase}[block]{\normalfont\normalsize\bfseries}{UC-\thesubsubusecase}{1em}{}
 \newcommand{\subsubusecase}[1]{%
 	\refstepcounter{subsubusecase}%
+	%
 	\noindent\textbf{UC-\thesubsubusecase: #1}%
-	\newline\noindent\ignorespaces%
 }
-\newcommand{\subsubusecaseautorefname}{UC}
+\newcommand{\subsubusecaseautorefname}{UC-\hspace{-0.33mm}}
+
+
+%
+% \subsubusecase base
+%
+\newcounter{subsubusecasebase}[subusecasebase]
+\renewcommand{\thesubsubusecasebase}{\thesubusecasebase.\arabic{subsubusecasebase}}
+\titleformat{\subsubusecasebase}[block]{\normalfont\normalsize\bfseries}{UCB-\thesubsubusecasebase}{1em}{}
+\newcommand{\subsubusecasebase}[1]{%
+	\refstepcounter{subsubusecasebase}%
+	%
+	\noindent\textbf{UCB-\thesubsubusecasebase: #1}%
+}
+\newcommand{\subsubusecasebaseautorefname}{UCB-\hspace{-0.33mm}}

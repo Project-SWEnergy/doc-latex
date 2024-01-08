@@ -1,0 +1,33 @@
+\documentclass[a4paper, 12pt]{article}
+\newcommand{\template}{../../Templates}
+\usepackage{\template/package}
+\graphicspath{{../../Assets}}
+
+\newcommand{\Titolo}{Piano di progetto}
+\newcommand{\Data}{DD/MM/YYYY}
+\newcommand{\Versione}{0.3.1}
+\newcommand{\Descrizione}{Descrizione dell'organizzazione del gruppo e della pianificazione delle attività}
+\newcommand{\\gls{Stato}$^G$}{Non approvato}
+\newcommand{\Redattori}{Carlo Rosso}
+\newcommand{\Verificatori}{Nome Cognome}
+\newcommand{\Approvatori}{Nome Cognome}
+\newcommand{\Responsabile}{Alessandro Tigani Sava}
+
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+\input{\template/rischi.tex}
+
+\begin{document}
+
+\copertina{}
+\input{sec/registro_modifiche.tex}
+\newpage
+\tableofcontents
+\newpage
+\input{sec/introduzione.tex}
+\input{sec/analisi_dei_rischi.tex}
+\input{sec/modello_di_sviluppo.tex}
+\input{sec/pianificazione.tex}
+\input{sec/consuntivo.tex}
+\end{document}

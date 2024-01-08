@@ -1,0 +1,26 @@
+\documentclass[a4paper, 12pt]{article}
+
+\newcommand{\template}{../../../../Templates}
+\usepackage{\template/package}
+\graphicspath{{../../../../Assets}}
+
+\newcommand{\Titolo}{Verbale interno}
+\newcommand{\Data}{16/11/2023}
+\newcommand{\Versione}{1.0.0}
+\newcommand{\Descrizione}{Brainstorming e organizzazione del lavoro per il
+l'incontro con il proponente del 24/11/2023.}
+\newcommand{\\gls{Stato}$^G$}{Approvato}
+\newcommand{\Redattori}{Carlo Rosso}
+\newcommand{\Verificatori}{Davide Maffei}
+\newcommand{\Responsabile}{Carlo Rosso}
+
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+
+\begin{document}
+\copertina{}
+
+\input{chapters/\gls{Partecipanti}$^G$}
+\input{chapters/contenuto}
+\end{document}
