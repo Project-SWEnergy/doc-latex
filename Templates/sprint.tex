@@ -1,0 +1,8 @@
+\newcounter{sprint}[section] % create a new counter for subsections
+
+% Define the command for subsection-like elements with independent numbering
+\newcommand{\sprint}[1]{%
+	\stepcounter{sprint}% Increment the subsection-like counter
+	\subsection*{#1~--~\arabic{sprint}}% Display subsection-like heading with custom numbering
+	\addcontentsline{toc}{subsection}{\protect\numberline{\arabic{section}.\arabic{sprint}}#1}% Add to table of contents
+}

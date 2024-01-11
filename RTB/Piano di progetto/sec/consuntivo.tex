@@ -1,5 +1,56 @@
 \section{Consuntivo di periodo}
 
+Preventivo
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+		\hline
+		Alessandro            & 5           & -           & -           & 5           & -           & -           & 10              \\
+		Carlo                 & -           & 5           & -           & 5           & -           & -           & 10              \\
+		Davide                & -           & -           & 10          & -           & -           & -           & 10              \\
+		\hline
+		\textbf{Ore totali}   & 5           & 5           & 10          & 10          & -           & -           & 30              \\
+		\textbf{Costo totale} & 150         & 100         & 250         & 250         & -           & -           & 750
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Tot: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
+\end{table}
+Consuntivo
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+		\hline
+		Alessandro            & 5           & -           & -           & 5           & -           & -           & 10              \\
+		Carlo                 & -           & 5           & -           & 5           & -           & -           & 10              \\
+		Davide                & -           & -           & 10          & -           & -           & -           & 10              \\
+		\hline
+		\textbf{Ore totali}   & 5           & 5           & 10          & 10          & -           & -           & 30              \\
+		\textbf{Costo totale} & 150         & 100         & 250         & 250         & -           & -           & 750
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
+\end{table}
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\pie[text=legend]{
+			16/Responsabile,
+			33/Amministratore,
+			18/Analista,
+			33/Progettista,
+			0/Programmatore,
+			0/Verificatore
+		}
+	\end{tikzpicture}
+	\caption{Grafico a torta}
+	\label{fig:torta}
+\end{figure}
+
+\subsubsection{Suddivisione delle ore}
+
 \subsection{Prospetto del Preventivo}
 
 \subsection{Effettivo}
