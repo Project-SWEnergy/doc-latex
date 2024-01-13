@@ -1,0 +1,97 @@
+\section{Qualità di processo}
+\subsection{Introduzione}
+La qualità del risultato finale è intrinsecamente legata all'efficienza e alla qualità dei processi coinvolti. 
+Per garantire il rispetto degli standard di qualità definiti, diventa cruciale impiegare metriche di valutazione adeguate.\\
+Nella presente sezione, vengono illustrati i valori accettabili e ottimali in termini di qualità, basati su metriche delineate nel documento "Norme di Progetto". \\
+È di primaria importanza sorvegliare costantemente tali metriche al fine di assicurare che i processi corrispondano agli obiettivi di qualità prefissati e che, di conseguenza, il prodotto conclusivo risulti di elevata qualità.\\
+
+\noindent
+Lo standard \textbf{ISO/IEC 12207:1995} categorizza i processi in tre macroaree principali:
+\begin{itemize}
+    \item Processi primari.
+    \item Processi organizzativi.
+    \item Processi di supporto.
+\end{itemize}
+
+
+\subsection{Processi primari}
+Si sudddividono in:
+\begin{itemize}
+    \item \textbf{Fornitura}: finalizzata all'identificazione di procedure e risorse atte a soddisfare i requisiti di progetto.
+    \item \textbf{Sviluppo}: inerente alle attività per la realizzazione del prodotto.
+\end{itemize}
+
+\subsubsection{Valori di riferimento}
+Si utilizzano i seguenti acronimi per indicare le metriche:
+\begin{itemize}
+    \item \textbf{BAC}: \textit{Budget at Completion}, il preventivo presentato al proponente.
+\end{itemize}
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{p{3.5cm}|X|X|l|l}
+        \hline
+        \multicolumn{2}{l|}{\textbf{Metrica}} & \textbf{Codice}   & \textbf{Valore ottimale}  & \textbf{Valore accettabile}   \\
+        \hline
+        \multicolumn{5}{c}{\textbf{Fornitura}} \\
+        \hline
+        Schedule Variance               & SV    & MPC01 & 0\%               & $\ge -10\%$                   \\
+        Budget Variance                 & BV    & MPC02 & 0\%               & $\ge -10\%$                   \\
+        Estimated at Completion         & EAC   & MPC03 & EAC = BAC         & $\text{EAC} \in (\text{BAC} \pm 5\%)$  \\
+        Budgeted Cost of Work Scheduled & BCWS  & MPC04 & $\le$ BAC         & $\ge 0$                       \\
+        Budgeted Cost of Work Performed & BCWP  & MPC05 & BCWP = BCWS       & $\le$ BCWS $+ 5\%$            \\
+        Actual Cost of Work Performed   & ACWP  & MPC06 & $\le$ BCWS   & BCWS $+ 5\%$                       \\
+        \hline
+        \multicolumn{5}{c}{\textbf{Sviluppo}} \\
+        \hline 
+        Requirements stability index    & RSI   & MPC07 & 100\%             & $\ge$ 80\%                     \\
+        Satisfied obligatory requirements & SOR & MPC08 & 100\%             & 100\%                         \\
+        \hline
+    \end{tabularx}
+    \caption{Valori di riferimento per le metriche dei processi primari}
+\end{table}
+
+
+\subsection{Processi organizzativi}
+Consiste nella gestione organizzativa, ossia il processo con lo scopo di organizzare e controllare le prestazioni di un processo ed il suo avvio al fine di raggiungere gli obiettivi attesi.
+
+\subsubsection{Valori di riferimento}
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{p{3.5cm}|X|X|l|l}
+        \hline
+        \multicolumn{2}{l|}{\textbf{Metrica}} & \textbf{Codice}   & \textbf{Valore ottimale}  & \textbf{Valore accettabile}   \\
+        \hline
+        \multicolumn{5}{c}{\textbf{Gestione organizzativa}} \\
+        \hline
+        Non-calculated risk              & NCR    & MPC09 & 0               & $\le 5$                   \\
+        \hline
+    \end{tabularx}
+    \caption{Valori di riferimento per le metriche dei processi organizzativi}
+\end{table}
+
+\subsection{Processi di supporto}
+Si suddividono in processi di:
+\begin{itemize}
+    \item \textbf{Verifica}: determinano se i prodotti di una attività soddisfano i requisiti necessari.
+    \item \textbf{Assicurazione di qualità}: garantiscono che i prodotti siano conformi agli standard definiti.
+\end{itemize}
+\subsubsection{Valori di riferimento}
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{p{3.5cm}|X|X|l|l}
+        \hline
+        \multicolumn{2}{l|}{\textbf{Metrica}} & \textbf{Codice}   & \textbf{Valore ottimale}  & \textbf{Valore accettabile}   \\
+        \hline
+        \multicolumn{5}{c}{\textbf{Verifica}} \\
+        \hline
+        Code Coverage              & CC    & MPC10 & $100\%$               & $\ge 80\%$                   \\
+        Passed Test Cases Percentage & PTCP & MPC11& $100\%$ & $\ge 80\%$ \\
+        \hline 
+        \multicolumn{5}{c}{\textbf{Assicurazione di qualità}} \\
+        \hline
+        Quality Metrics Satisfied & QMS & MPC12 & $100\%$ & $\ge 90\%$ \\
+        \hline
+    \end{tabularx}
+    \caption{Valori di riferimento per le metriche dei processi di supporto}
+\end{table}

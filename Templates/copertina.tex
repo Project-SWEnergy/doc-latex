@@ -18,66 +18,45 @@
 				% tale che un redattore oggi possa essere un verificatore
 				% domani e viceversa. Inoltre, i documenti dovrebbero essere
 				% scritti da ciascun componente del gruppo in momenti diversi
+				\midrule
 				\ifdefined\Redattori
-					\midrule
 				\textbf{Redattori}           & \Redattori          \\
-				\textbf{Verificatori}        & \Verificatori       \\
 				\fi
 
-				\ifdefined\Approvatori
-				\textbf{Approvatori}         & \Approvatori        \\
-				\fi
-
-				\ifdefined\ApprovatoriInterni
-				\textbf{Approvatori interni} & \ApprovatoriInterni \\
-				\fi
+				\textbf{Verificatore}        & \Verificatori       \\
+				\textbf{Approvatore}         & \Approvatori        \\
 
 				\ifdefined\ApprovatoriEsterni
-				\textbf{Approvatori esterni} & \ApprovatoriEsterni \\
+				\textbf{Approvatore esterno} & \ApprovatoriEsterni \\
 				\fi
 
 				\ifdefined\Destinatari
-					\midrule
 				\textbf{Destinatari}         & \Destinatari        \\
 				\fi
-
+				\midrule
 
 				\ifdefined\Versione
-					\midrule
 				\textbf{Versione}            & \Versione           \\
 				\fi
-
-
-				%\ifdefined\Verbale
-				%	\midrule
-				%\textbf{Redattori}           & \Redattori          \\
-				%\textbf{Verificatori}        & \Verificatori       \\
-				%\fi
-
-				%\ifdefined\VerbaleEsterno
-				%\textbf{Approvatori esterni} & \ApprovatoriEsterni \\
-				%\fi
-
-				%\ifndefined\Interno
-				%	\midrule
-				%\textbf{Destinatari}         & \Destinatari        \\
-				%	\midrule
-				%\fi
-				%\ifndefined\Verbale
-				%\textbf{Versione}            & \Versione           \\
-				%\fi
 			\end{tabular}
 		\end{center}
-		\vspace{2cm}
-		\ifdefined\Responsabile
-			\begin{flushright}
-				\begin{tabular}{ll}
-					Il responsabile: & \Responsabile            \\
-					                 &                          \\
-					                 & \underline{\hspace{3cm}} \\
-				\end{tabular}
-			\end{flushright}
+		\ifdefined\Redattori
+			\vspace{-1cm}
 		\fi
+		\ifdefined\ApprovatoriEsterni
+			\vspace{-1cm}
+		\fi
+		\ifdefined\Destinatari
+			\vspace{-2cm}
+		\fi
+		\vspace{4cm}
+		\begin{flushright}
+			\begin{tabular}{ll}
+				Il responsabile: & \Approvatori             \\
+				                 &                          \\
+				                 & \underline{\hspace{3cm}} \\
+			\end{tabular}
+		\end{flushright}
 	\end{titlepage}
 	\newpage
 }
