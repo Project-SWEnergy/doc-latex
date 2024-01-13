@@ -1,0 +1,58 @@
+\usecaseristoratore{Modifica lista ingredienti}
+\label{usecase:Modifica lista ingredienti}
+\begin{itemize}
+	\item \textbf{\gls{Attore}$^G$ principale:} \gls{Utente ristoratore}$^G$.
+
+	\item \textbf{Precondizione:} L'\gls{Utente ristoratore}$^G$ ha effettuato l'accesso al Sistema (vedi \autoref{usecase:Effettua accesso}).
+
+	\item \textbf{Postcondizione:} L'\gls{Utente ristoratore}$^G$ gestisce la lista degli ingredienti del proprio ristorante.
+
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+
+		      \item L'\gls{Utente ristoratore}$^G$ può compiere le seguenti azioni per quanto riguarda la gestione della lista degli ingredienti:
+		      \begin{itemize}
+                \item Inserimento di un nuovo ingrediente (vedi \autoref{usecase:Inserimento ingrediente}).
+                \item Eliminazione di un ingrediente (vedi \autoref{usecase:Eliminazione ingrediente}).
+              \end{itemize}
+		      \item Il Sistema registra le modifiche apporate alla lista ingredienti da parte del ristoratore.
+
+	      \end{enumerate}
+\end{itemize}
+
+\subusecaseristoratore{Inserimento ingrediente}
+\label{usecase:Inserimento ingrediente}
+\begin{itemize}
+
+	\item \textbf{\gls{Attore}$^G$ principale:} \gls{Utente ristoratore}$^G$.
+
+	\item \textbf{Precondizione:} L'\gls{Utente ristoratore}$^G$ si trova nella sezione di gestione della lista ingredienti (vedi \autoref{usecase:Modifica lista ingredienti}).
+
+	\item \textbf{Postcondizione:} L'\gls{Utente ristoratore}$^G$ ha inserito un ingrediente nella lista.
+
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+		\item L'\gls{Utente ristoratore}$^G$ inserisce un nuovo ingrediente nella lista;
+		\item Il Sistema aggiorna la lista con il nuovo ingrediente inserito dal ristoratore.
+	\end{enumerate}
+
+\end{itemize}
+
+\subusecaseristoratore{Eliminazione ingrediente}
+\label{usecase:Eliminazione ingrediente}
+\begin{itemize}
+
+	\item \textbf{\gls{Attore}$^G$ principale:} \gls{Utente ristoratore}$^G$.
+
+	\item \textbf{Precondizione:} L'\gls{Utente ristoratore}$^G$ si trova nella sezione di gestione della lista ingredienti (vedi \autoref{usecase:Modifica lista ingredienti}).
+
+	\item \textbf{Postcondizione:} L'\gls{Utente ristoratore}$^G$ ha eliato un ingrediente dalla lista.
+
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+		\item L'\gls{Utente ristoratore}$^G$ elimina un ingrediente dalla lista;
+		\item Il Sistema aggiorna la lista con l'ingrediente che è \gls{Stato}$^G$ eliminato dal ristoratore.
+	\end{enumerate}
+
+\end{itemize}

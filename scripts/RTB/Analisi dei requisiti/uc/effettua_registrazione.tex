@@ -1,0 +1,49 @@
+\usecasegenerico{Effettua registrazione}
+\label{usecase:Effettua registrazione}
+
+\begin{itemize}
+	\item \textbf{Descrizione:} Un \gls{Utente generico}$^G$ decide di registrarsi all'interno della \textit{web app}. 
+    Durante questa procedura, l'utente è tenuto a selezionare la tipologia di account desiderata tra le due opzioni disponibili: \gls{Utente base}$^G$ o \gls{Utente ristoratore}$^G$. 
+    S\gls{UC}$^G$cessivamente, all'utente viene richiesto di inserire una serie di dati correlati alla registrazione e specifici alla tipologia di utenza scelta.
+
+	\item \textbf{\gls{Attore}$^G$ principale:} \gls{Utente generico}$^G$.
+	\item \textbf{\gls{Attore}$^G$ secondario:} Sistema di autenticazione esterno$^G$.
+	\item \textbf{Precondizioni:}
+        \begin{itemize}
+            \item L'\gls{Utente generico}$^G$ è connesso al Sistema.
+            \item L'\gls{Utente generico}$^G$ non dispone di un \textit{account}.
+        \end{itemize}
+	\item \textbf{Postcondizioni:}
+        \begin{itemize} 
+            \item L'\gls{Utente generico}$^G$ ha creato con s\gls{UC}$^G$cesso un \textit{account} scegliendo tra le opzioni disponibili:
+            \begin{itemize}
+                \item \gls{Utente ristoratore}$^G$.
+                \item \gls{Utente base}$^G$.
+            \end{itemize}
+            \item Tutte le informazioni relative al nuovo \textit{account} sono memorizzate all'interno del Sistema.
+            \item L'\gls{Utente autenticato}$^G$ viene reindirizzato alla pagina \textit{Home} di pertinenza.
+        \end{itemize}
+
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'\gls{Utente generico}$^G$ seleziona la tipologia di \textit{account} da creare: 
+		      \begin{itemize}
+				\item \gls{Utente base}$^G$ (vedi \autoref{usecase:Effettua registrazione \gls{Utente base}$^G$}).
+				\item \gls{Utente ristoratore}$^G$ (vedi \autoref{usecase:Effettua registrazione \gls{Utente ristoratore}$^G$}).
+			  \end{itemize} 
+              \item Il Sistema memorizza con s\gls{UC}$^G$cesso il nuovo \textit{account} creato;
+		      \item L'utente è autenticato e viene reindirizzato alla pagina \textit{Home} corrispondente.
+	      \end{enumerate}
+		
+    \item \textbf{Scenario secondario:}
+                \begin{enumerate}
+                    \item La registrazione fallisce per due ragioni:
+                    \begin{itemize}
+                        \item "La registrazione fallisce a causa dell'esistenza di un \textit{account} preesistente con le stesse credenziali inserite (vedi \autoref{usecase:Errore registrazione account esistente}).
+                        \item La registrazione non va a buon fine in quanto l'\gls{Utente ristoratore}$^G$ ha inserito un recapito del ristorante già occupato (vedi \autoref{usecase:Errore registrazione recapito occupato}).
+                    \end{itemize}
+                    \item L'\gls{Utente generico}$^G$ viene nuovamente indirizzato alla pagina di accesso.
+                \end{enumerate}	
+          
+\end{itemize}

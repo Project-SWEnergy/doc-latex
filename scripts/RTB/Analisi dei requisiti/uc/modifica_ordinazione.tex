@@ -1,0 +1,27 @@
+\usecaseristoratore{Modifica \gls{Ordinazione}$^G$}
+\label{usecase:Modifica \gls{Ordinazione}$^G$}
+\begin{itemize}
+
+	\item \textbf{Descrizione:} Un \gls{Utente base}$^G$ ha un tempo limiato in cui può modificare il suo \gls{Ordine}$^G$, nel momento in cui lui voglia modificarlo ma ormai non sia più possibile, tale opzione di modifica è resa disponibile
+	      attraverso la modifica dell'\gls{Ordine}$^G$ da parte del ristoratore. L'utente può comunicare questa sua esigenza attraverso la \textit{chat} oppure di persona, e il ristoratore si prenderà cura di effettuare questa modifica.
+
+	\item \textbf{\gls{Attore}$^G$ principale:} \gls{Utente ristoratore}$^G$.
+
+	\item \textbf{Precondizione:} L'\gls{Utente ristoratore}$^G$ sta visualizzando la lista delle ordinazioni di una prenotazione (vedi \autoref{usecase:Visualizzazione lista ordinazioni}).
+
+	\item \textbf{Postcondizione:} L'\gls{Utente ristoratore}$^G$ modifica un \gls{Ordinazione}$^G$.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'\gls{Utente ristoratore}$^G$ viene a conoscenza della volontà
+		            dell'\gls{Utente base}$^G$ di modificare il proprio \gls{Ordine}$^G$ (vedi \textbf{Descrizione});
+		      \item L'\gls{Utente ristoratore}$^G$ modifica l'\gls{Ordine}$^G$ dell'\gls{Utente base}$^G$:
+		            \begin{itemize}
+			            \item Modifica della quantità di una pietanza all'interno dell'\gls{Ordine}$^G$ da modificare.
+			            \item Rimozione di ingredienti di una pietanza all'interno dell'\gls{Ordine}$^G$ da modificare.
+			            \item Aggiunta di ingredienti di una pietanza all'interno dell'\gls{Ordine}$^G$ da modificare.
+		            \end{itemize}
+		      \item Il Sistema notifica l'\gls{Utente base}$^G$ dell'avvenuta modifica al suo \gls{Ordine}$^G$ (vedi \autoref{usecase:Visualizzazione notifica modifica \gls{Ordinazione}$^G$}).
+	      \end{enumerate}
+
+\end{itemize}

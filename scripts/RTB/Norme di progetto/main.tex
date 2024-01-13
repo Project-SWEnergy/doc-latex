@@ -1,0 +1,30 @@
+\documentclass[a4paper, 12pt]{article}
+\newcommand{\template}{../../templates}
+\usepackage{\template/package}
+\graphicspath{{../../assets}}
+
+\newcommand{\Titolo}{Norme di progetto}
+\newcommand{\Data}{21/11/2023}
+\newcommand{\Versione}{1.1.0}
+\newcommand{\Descrizione}{Elenco delle procedure interne e delle buone pratiche 
+di progetto adottate dal gruppo.}
+\newcommand{\Responsabile}{Nessuno}
+\newcommand{\\gls{Stato}$^G$}{Non approvato}
+
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+
+\begin{document}
+\copertina{}
+\input{sec/registro_modifiche.tex}
+\newpage
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+\newpage
+\input{sec/introduzione.tex}
+\newpage
+\input{sec/documentazione.tex}
+\input{sec/appunti.tex}
+\end{document}

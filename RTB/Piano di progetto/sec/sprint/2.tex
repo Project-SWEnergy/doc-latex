@@ -1,0 +1,124 @@
+\sprint{Sprint}
+
+\subsubsection{Diagramma di Gantt}
+
+\begin{ganttchart}[
+		x unit=0.6cm, % Adjust the width of each day
+		y unit chart=0.6cm,
+		bar/.style={fill=blue!50},
+		bar height=0.5,
+		time slot format=isodate,
+		time slot unit=day,
+		vgrid,
+		today=2023-12-16,
+		today rule/.style={draw=red, ultra thick}
+	]{2023-12-16}{2023-12-29}
+	\gantttitlecalendar{day} \\
+	\ganttbar{Analisi dei requisiti}{2023-12-16}{2023-12-29} \\
+	\ganttbar{Piano di qualifica}{2023-12-16}{2023-12-19} \\
+	\ganttbar{Piano di progetto}{2023-12-16}{2023-12-19} \\
+	\ganttbar{PoC \textit{front-end}}{2023-12-21}{2023-12-29} \\
+	\ganttbar{PoC \textit{back-end}}{2023-12-24}{2023-12-29}
+\end{ganttchart}
+
+Dove:
+\begin{itemize}
+	\item \textbf{"Analisi dei requisiti"}: questa \textit{issue} è eseguita da
+	      Davide Maffei. Per svolgere questa attività, il gruppo ha deciso di
+	      dedicare 5 ore;
+
+	\item \textbf{"Piano di progetto"}: questa \textit{issue} è eseguita da
+	      Giacomo Gualato. Per svolgere questa attività, il gruppo ha deciso
+	      di dedicare 5 ore;
+
+	\item \textbf{"PoC \textit{front-end}"}: questa \textit{issue} è eseguita
+	      da Alessandro Tigani Sava e Giacomo Gualato. Per svolgere questa
+	      attività, il gruppo ha deciso di dedicare 20 ore.
+
+	\item \textbf{"PoC \textit{back-end}"}: questa \textit{issue} è eseguita
+	      da Carlo Rosso. Per svolgere questa attività, il gruppo ha deciso di
+	      dedicare 10 ore.
+
+	\item \textbf{Verifica dei documenti}: questo compito è eseguito da
+	      Niccolò Carlesso. Per svolgere questa attività, il gruppo ha deciso
+	      di dedicare 10 ore.
+\end{itemize}
+
+\subsubsection{Preventivo}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+		\hline
+		Alessandro            & -           & -           & -           & 10          & -           & -           & 10              \\
+		Carlo                 & -           & -           & -           & 10          & -           & -           & 10              \\
+		Davide                & -           & -           & 10          & -           & -           & -           & 10              \\
+		Giacomo               & 5           & -           & -           & -           & -           & -           & 5               \\
+		Matteo                & -           & -           & -           & -           & 10          & -           & 10              \\
+		Niccolò               & -           & -           & -           & -           & -           & 10          & 10              \\
+		\hline
+		\textbf{Ore totali}   & 5           & -           & 10          & 20          & 10          & 10          & 55              \\
+		\textbf{Costo totale} & 150         & -           & 250         & 500         & 150         & 150         & 1200
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
+\end{table}
+
+\subsubsection{Riassunto delle attività svolte}
+
+\begin{itemize}
+	\item \textbf{Verbale interno}: stesura e verifica del verbale interno del
+	      17/12/2023;
+
+	\item \textbf{Analisi dei requisiti}: ristrutturazione del documento con
+	      divisione dei casi d'uso per attore;
+
+	\item \textbf{Piano di progetto}: aggiornamento del documento;
+
+	\item \textbf{Piano di qualifica}: stesura della bozza, con individuazione
+	      dei controlli di qualità e dei test da effettuare;
+
+	\item \textbf{Fix dei \textit{template}};
+
+	\item \textbf{PoC \textit{front-end}}: realizzazione di un prototipo
+	      dell'interfaccia grafica del prodotto in \textit{Figma}.
+\end{itemize}
+
+\subsubsection{Consuntivo}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+		\hline
+		Alessandro            & -           & 5           & -           & 5           & -           & -           & 10              \\
+		Carlo                 & 5           & 5           & -           & -           & -           & -           & 10              \\
+		Davide                & -           & -           & 10          & -           & -           & -           & 10              \\
+		Giacomo               & 5           & -           & -           & -           & -           & 5           & 10              \\
+		Matteo                & -           & -           & -           & 5           & 5           & -           & 10              \\
+		Niccolò               & -           & -           & -           & -           & -           & 10          & 10              \\
+		\hline
+		\textbf{Ore totali}   & 10          & 10          & 10          & 10          & 5           & 15          & 60              \\
+		\textbf{Costo totale} & 300         & 200         & 250         & 250         & 75          & 225         & 1300
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
+\end{table}
+
+\subsection{Gestione dei ruoli}
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\pie[text=legend]{
+			19/Responsabile,
+			16/Amministratore,
+			16/Analista,
+			16/Progettista,
+			8/Programmatore,
+			25/Verificatore
+		}
+	\end{tikzpicture}
+	\caption{Grafico delle proporzioni dei ruoli ricoperti dai membri del gruppo}
+\end{figure}
