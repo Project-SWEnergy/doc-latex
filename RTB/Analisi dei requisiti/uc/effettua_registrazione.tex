@@ -1,5 +1,13 @@
+\newpage
 \usecasegenerico{Effettua registrazione}
 \label{usecase:Effettua registrazione}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.99\textwidth]{./uml/UCG9-10-11.png} 
+	\caption{Effettua registrazione}
+	\label{fig:UCG9-10-11}
+  \end{figure}
 
 \begin{itemize}
 	\item \textbf{Descrizione:} Un Utente generico decide di registrarsi all'interno della \textit{web app}. 
@@ -21,7 +29,7 @@
                 \item Utente base.
             \end{itemize}
             \item Tutte le informazioni relative al nuovo \textit{account} sono memorizzate all'interno del Sistema.
-            \item L'utente autenticato viene reindirizzato alla pagina \textit{Home} di pertinenza.
+            \item L'Utente autenticato viene reindirizzato alla pagina \textit{Home} di pertinenza.
         \end{itemize}
 
 
@@ -40,7 +48,7 @@
                 \begin{enumerate}
                     \item La registrazione fallisce per due ragioni:
                     \begin{itemize}
-                        \item "La registrazione fallisce a causa dell'esistenza di un \textit{account} preesistente con le stesse credenziali inserite (vedi \autoref{usecase:Errore registrazione account esistente}).
+                        \item La registrazione fallisce a causa dell'esistenza di un \textit{account} preesistente con le stesse credenziali inserite (vedi \autoref{usecase:Errore registrazione account esistente}).
                         \item La registrazione non va a buon fine in quanto l'Utente Ristoratore ha inserito un recapito del ristorante già occupato (vedi \autoref{usecase:Errore registrazione recapito occupato}).
                     \end{itemize}
                     \item L'Utente generico viene nuovamente indirizzato alla pagina di accesso.
