@@ -5,10 +5,10 @@ Di seguito vengono riportate le nomenclature utilizzate per indicare i casi d'us
 
 \subsection{Nomenclatura dei casi d'uso}
 \begin{itemize}
-	\item \textbf{UCG} : indica un caso d'uso strettamente legato all'Utente generico.
-	\item \textbf{UCA} : indica un caso d'uso strettamente legato all'Utente autenticato.
-	\item \textbf{UCB} : indica un caso d'uso strettamente legato all'Utente base.
-	\item \textbf{UCR} : indica un caso d'uso strettamente legato all'Utente ristoratore.
+	\item \textbf{UCG} : indica un caso d'uso$^G$ strettamente legato all'Utente generico$^G$.
+	\item \textbf{UCA} : indica un caso d'uso strettamente legato all'Utente autenticato$^G$.
+	\item \textbf{UCB} : indica un caso d'uso strettamente legato all'Utente base$^G$.
+	\item \textbf{UCR} : indica un caso d'uso strettamente legato all'Utente ristoratore$^G$.
 	\item \textbf{UCE} : indica un caso d'uso strettamente legato ad un errore.
 \end{itemize}
 \subsection{Struttura dei casi d'uso}
@@ -17,8 +17,8 @@ I casi d'uso sono strutturati nel seguente modo:
 	\item \textbf{Titolo:} fornito di un codice identificativo e di un nome esplicativo per agevolare il tracciamento.
 	\item \textbf{Attori:} diverse tipologie di utenti che interagiscono con il sistema, suddivisi in:
 	\begin{itemize}
-		\item Attore primario: colui che interagisce attivamente con il Sistema dall'esterno.
-		\item Attore secondario: posso anche non essere presenti. 
+		\item Attore$^G$ primario: colui che interagisce attivamente con il Sistema dall'esterno.
+		\item Attore secondario: possono anche non essere presenti. 
 		Sono sempre esterni, ma non interagiscono attivamente con il Sistema; invece, interagiscono per il raggiungimento dello scopo dell'attore primario o per aiutarlo.
 	\end{itemize}
 	\item \textbf{Precondizioni:} stato in cui si deve trovare il Sistema affinchè una funzionalità sia disponibile ad un attore.
@@ -55,7 +55,7 @@ Gli attori identificati per il sistema e le relative dipendenze sono i seguenti:
 
 	\item \textbf{Utente base}: l'Utente base è colui che può effettuare l'accesso al Sistema e può
 	      effettuare delle prenotazioni e attività correlate. L'Utente base rappresenta
-	      il cliente del ristorante;
+	      il cliente$^G$ del ristorante;
 
 	\item \textbf{Utente ristoratore}: l'Utente ristoratore è colui che può gestire il proprio ristorante e le
 	      prenotazioni ad esso associate. L'Utente ristoratore rappresenta il gestore del
