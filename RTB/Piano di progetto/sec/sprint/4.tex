@@ -1,0 +1,138 @@
+\sprint{Sprint}
+
+\subsubsection{Diagramma di Gantt}
+
+\begin{ganttchart}[
+		x unit=0.6cm, % Adjust the width of each day
+		y unit chart=0.6cm,
+		bar/.style={fill=blue!50},
+		bar height=0.5,
+		time slot format=isodate,
+		time slot unit=day,
+		vgrid,
+		today=2024-02-19,
+		today rule/.style={draw=red, ultra thick}
+	]{2024-02-19}{2024-03-03}
+	\gantttitlecalendar{day} \\
+	\ganttbar{Analisi dei requisiti}{2024-02-19}{2024-02-22} \\
+	\ganttbar{Piano di progetto}{2024-02-21}{2024-02-27} \\
+	\ganttbar{Piano di qualifica}{2024-02-21}{2024-02-27} \\
+	\ganttbar{Glossario}{2024-02-19}{2024-02-27} \\
+	\ganttbar{Presentazione RTB}{2024-02-22}{2024-02-29}
+\end{ganttchart}
+
+Dove:
+\begin{itemize}
+	\item \textbf{"Analisi dei requisiti"}: questa \textit{issue} è eseguita da
+	      X, Y e Z. Per
+	      svolgere questa attività, il gruppo ha deciso di dedicare TOT ore;
+
+	\item \textbf{"Piano di progetto"}: questa \textit{issue} è eseguita da
+	      X. Per svolgere questa attività, il gruppo ha deciso
+	      di dedicare TOT ore;
+
+	\item \textbf{"Piano di qualifica"}: questa \textit{issue} è eseguita da
+	      X. Per svolgere questa attività, il gruppo ha
+	      deciso di dedicare TOT ore;
+
+	\item \textbf{"Glossario"}: questa \textit{issue} è eseguita da X. 
+			Per svolgere questa attività, il gruppo ha deciso di
+	      dedicare TOT ore;
+
+	\item \textbf{"Presentazione RTB"}: questa \textit{issue} è eseguita
+	      da X e Y. Per svolgere questa
+	      attività, il gruppo ha deciso di dedicare TOT ore.
+\end{itemize}
+
+\subsubsection{Preventivo}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+	\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+	\hline
+		Alessandro & - & - & 5 & - & - & - & 5 \\
+		Carlo & - & - & 5 & - & - & - & 5 \\
+		Davide & - & - & - & - & - & 5 & 5 \\
+		Giacomo & - & - & - & - & - & 5 & 5 \\
+		Matteo & - & 5 & - & - & - & - & 5 \\
+		Niccolò & 5 & - & - & - & - & - & 5 \\
+	\hline
+	\textbf{Ore totali} & 5 & 5 & 10 & - & - & 10 & 30 \\
+	\textbf{Costo totale} & 150 & 100 & 250 & - & - & 150 & 650
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.} 
+\end{table}
+
+\subsubsection{Riassunto delle attività svolte}
+ANCORA DA REDIGERE, QUESTE SOTTO SONO SBAGLIATE
+\begin{enumerate}
+	\item \textbf{Verbale esterno}: stesura e verifica del verbale esterno del
+	      1/12/2023;
+
+	\item \textbf{Verbale interno}: stesura e verifica del verbale interno del
+	      3/12/2023;
+
+	\item \textbf{Piano di progetto}: stesura e verifica della prima bozza del
+	      piano di progetto;
+
+	\item \textbf{Analisi dei requisiti}: stesura e verifica della prima bozza
+	      dell'analisi dei requisiti;
+
+	\item \textbf{\textit{Template}}: aggiornamento e riorganizzazione dei
+	      \textit{template} LaTeX per la documentazione;
+
+	\item \textbf{\textit{Build} automatizzata della documentazione}:
+	      corretto lo script di \textit{build} della documentazione per
+	      automatizzare la compilazione dei documenti;
+
+	\item \textbf{Automatizzazione del glossario}: creato uno script per
+	      automatizzare l'individuazione delle parole del glossario nei
+	      documenti;
+
+	\item \textbf{Piano di qualifica}: stesura dell'introduzione del piano
+	      di qualifica;
+
+	\item \textbf{Analisi delle tecnologie}: PoC containerizzato in
+	      \textit{Docker} del \textit{database} \textit{PostgreSQL} e dei
+	      \textit{framework} \textit{Nest.js} e \textit{Drizzle}.
+\end{enumerate}
+
+\subsubsection{Consuntivo}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+	\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+	\hline
+	Alessandro & - & - & 5 & - & - & - & 5 \\
+	Carlo & - & - & 5 & - & - & - & 5 \\
+	Davide & - & - & - & - & - & 5 & 5 \\
+	Giacomo & - & - & - & - & - & 5 & 5 \\
+	Matteo & - & 5 & - & - & - & - & 5 \\
+	Niccolò & 5 & - & - & - & - & - & 5 \\
+	\hline
+	\textbf{Ore totali} & 5 & 5 & 10 & - & - & 10 & 30 \\
+	\textbf{Costo totale} & 150 & 100 & 250 & - & - & 150 & 650
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.} 
+\end{table}
+
+\subsubsection{Gestione dei ruoli}
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\pie[text=legend]{
+            18/Responsabile,
+            16/Amministratore,
+            33/Analista,
+            0/Progettista,
+            0/Programmatore,
+            33/Verificatore
+        }
+	\end{tikzpicture}
+    \caption{Grafico delle proporzioni dei ruoli ricoperti dai membri del gruppo}
+\end{figure}
