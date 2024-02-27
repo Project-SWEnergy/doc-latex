@@ -31,11 +31,11 @@ La nomenclatura utilizzata per identificare i test è spiegata nel documento Nor
     Non \par implementato \\
     \hline
     TS.RFO2 & 
-    L’Utente generico e l’Utente base devono poter ricercare un ristorante attraverso filtri: % ----------> TODO
+    L’Utente generico e l’Utente base devono poter ricercare un ristorante attraverso filtri: 
     \begin{itemize}
-        \item x.
-        \item y.
-        \item z.
+        \item nome;
+        \item luogo;
+        \item tipologia di cucina.
     \end{itemize}&
     Non \par implementato  \\
     \hline
@@ -70,23 +70,6 @@ La nomenclatura utilizzata per identificare i test è spiegata nel documento Nor
     \end{itemize}&
     Non \par implementato  \\
     \hline
-    TS.RFO5 & 
-    L'Utente generico e ristoratore\g devono poter comunicare tra loro attraverso chat \par 
-    Verificare che: 
-    \begin{itemize}
-        \item TODO
-    \end{itemize}&
-    Non \par implementato  \\
-    \hline
-    TS.RFD36 & 
-    Il Sistema invia una notifica agli utenti collegati nella chat \par 
-    Verificare che: 
-    \begin{itemize}
-       \item l'utente sia registrato nel sistema.
-       \item l'utente a cui è destinata la notifica sia connesso al sistema.
-    \end{itemize}&
-    Non \par implementato  \\
-    \hline
     TS.RFO6 & 
     L'Utente generico effettua l'accesso al Sistema \par 
     Verificare che: 
@@ -103,20 +86,65 @@ La nomenclatura utilizzata per identificare i test è spiegata nel documento Nor
     Verificare che: 
     \begin{itemize}
         \item l'utente non sia registrato nel sistema.
-        \item l'utente non abbia già effettuato l'acesso al sistema.
+        \item l'utente non abbia già effettuato l'accesso al sistema.
         \item il pulsante per effettuare la registrazione sia ben visibile e chiaro.
         \item il pulsante per effettuare la registrazione rimandi alla pagina di inserimento dati.
     \end{itemize}&
     Non \par implementato  \\
     \hline
-    TS.RFD10+RFD11& 
-    L'Utente base deve visualizzare e modificare i propri dati. \par 
+    TS.RFO8 & 
+    L’Utente generico deve visualizzare un messaggio d’errore se l’accesso fallisce. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente non abbia già effettuato l'accesso al sistema.
+        \item il pulsante per effettuare l'accesso sia ben visibile e chiaro.
+        \item il pulsante per effettuare l'accesso rimandi alla pagina di inserimento dati.
+        \item il sistema effettui correttamente la procedura di controllo.
+        \item il messaggio venga visualizzato correttamente.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFO9 & 
+    L’Utente generico deve visualizzare un messaggio d’errore se la registrazione fallisce. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente non sia registrato nel sistema.
+        \item l'utente non abbia già effettuato l'accesso al sistema.
+        \item il pulsante per effettuare la registrazione sia ben visibile e chiaro.
+        \item il pulsante per effettuare la registrazione rimandi alla pagina di inserimento dati.
+        \item il sistema avvii correttamente la procedura di registrazione.
+        \item il messaggio venga visualizzato correttamente.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFD10& 
+    L'Utente base deve poter visualizzare i propri dati. \par 
     Verificare che: 
     \begin{itemize}
         \item l'utente deve essere correttamente autenticato.
-        \item il pulsante per accedere alla gestione dei dati sia ben visibile e chiaro.
-        \item il pulsante rimandi alla pagina di gestione dati.
+        \item il pulsante per accedere alla visualizzazione dei dati sia ben visibile e chiaro.
+        \item il pulsante rimandi alla pagina di visualizzazione dati.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFD11& 
+    L'Utente base deve poter modificare i propri dati. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente deve essere correttamente autenticato.
+        \item il pulsante per accedere alla modifica dei dati sia ben visibile e chiaro.
+        \item il pulsante rimandi alla pagina di modifica dati.
         \item i nuovi dati inseriti non contengano caratteri non permessi dal sistema.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFD12& 
+    L’Utente base deve poter visualizzare lo storico dei suoi ordini. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente deve essere correttamente autenticato.
+        \item il pulsante per accedere allo storico degli ordini sia ben visibile e chiaro.
+        \item il pulsante rimandi alla pagina di visualizzazione dello storico ordini.
     \end{itemize}&
     Non \par implementato  \\
     \hline
@@ -130,13 +158,34 @@ La nomenclatura utilizzata per identificare i test è spiegata nel documento Nor
     \end{itemize}&
     Non \par implementato  \\
     \hline
-    TS.RFD34 & 
-    L'Utente autenticato deve effettuare il \textit{logout}. \par
+    TS.RFO13 & 
+    L’Utente base deve poter visualizzare il dettaglio della prenotazione.   \par 
     Verificare che: 
     \begin{itemize}
-        \item l'utente deve essere correttamente autenticato.
-        \item il pulsante per effettuare la disconnessione sia ben visibile e chiaro.
-        \item il pulsante disconnetta correttamente l'utente e lo rimandi ala \textit{Home} della piattaforma.
+        \item l'utente base sia correttamente autenticato nel sistema.
+        \item l'utente base abbia una prenotazione in corso.
+        \item il pulsante per la visualizzazione del dettaglio sia ben visibile e chiaro.
+        \item le pietanze ordinate siano correttamente visualizzate.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFO14 & 
+    Il Sistema deve notificare il cliente sullo stato della sua prenotazione.  \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente base sia correttamente autenticato.
+        \item la prenotazione faccia riferimento al corretto utente.
+        \item la prenotazione sia visualizzata correttamente.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFO14 & 
+    Il Sistema notifica il cliente che il suo ordine è stato modificato. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente base sia correttamente autenticato.
+        \item la prenotazione sia stata accettata dal ristoratore.
+        \item la prenotazione faccia riferimento al giusto utente.
     \end{itemize}&
     Non \par implementato  \\
     \hline
@@ -159,15 +208,6 @@ La nomenclatura utilizzata per identificare i test è spiegata nel documento Nor
         \item i dati necessari alla prenotazione siano stati inseriti e siano corretti.
         \item il pulsante per richiedere la prenotazione sia ben visibile e chiaro.
         \item il pulsante invii correttamente la richiesta di prenotazione.
-    \end{itemize}&
-    Non \par implementato  \\
-    \hline
-    TS.RFO37 &
-    Il Sistema notifica l’Utente ristoratore dell’avvenuta prenotazione.  \par 
-    Verificare che: 
-    \begin{itemize}
-        \item il corretto utente ristoratore sia autenticato nel sistema.
-        \item il pulsante per visualizzare le prenotazioni mostri un indicatore di notifica.
     \end{itemize}&
     Non \par implementato  \\
     \hline
@@ -203,8 +243,19 @@ La nomenclatura utilizzata per identificare i test è spiegata nel documento Nor
     \end{itemize}&
     Non \par implementato  \\
     \hline
+    TS.RFO20 & 
+    L’Utente base deve poter annullare il proprio ordine\g.\par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente base sia correttamente autenticato nel sistema.
+        \item l'utente base abbia una prenotazione in corso con un ordine associato.
+        \item il pulsante per l'annullamento dell'ordine sia ben visibile e chiaro.
+        \item il pulsante per l'annullamento dell'ordine elimini correttamente l'ordine associato alla prenotazione.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
     TS.RFO21 & 
-    L’Utente base deve poter fare un ordinazione\g collaborativa dei pasti e creare il suo ordine\g.  \par 
+    L’Utente base deve poter fare un'ordinazione\g collaborativa dei pasti e creare il suo ordine.  \par 
     Verificare che: 
     \begin{itemize}
         \item l'utente base sia correttamente autenticato nel sistema.
@@ -226,24 +277,6 @@ La nomenclatura utilizzata per identificare i test è spiegata nel documento Nor
     \end{itemize}&
     Non \par implementato  \\
     \hline
-    TS.RFO13 & 
-    L’Utente base deve poter visualizzare il dettaglio della prenotazione.   \par 
-    Verificare che: 
-    \begin{itemize}
-        \item l'utente base sia correttamente autenticato nel sistema.
-        \item l'utente base abbia una prenotazione in corso.
-        \item le pietanze ordinate siano correttamente visualizzate.
-    \end{itemize}&
-    Non \par implementato  \\
-    \hline
-    TS.RFO38 & 
-    Il Sistema notifica il ristoratore che è avvenuto un ordine.   \par 
-    Verificare che: 
-    \begin{itemize}
-        \item la notifica sia recapitata al ristoratore corretto.
-    \end{itemize}&
-    Non \par implementato  \\
-    \hline
     TS.RFO23 & 
     L’Utente base deve poter dividere il conto come preferisce.   \par 
     Verificare che: 
@@ -252,6 +285,19 @@ La nomenclatura utilizzata per identificare i test è spiegata nel documento Nor
         \item l'utente base possieda il permesso di visualizzare la prenotazione.
         \item lo stato della prenotazione sia relativo alla sua conclusione.
         \item il pulsante per la scelta della divisione del conto sia chiaro e ben visibile.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFO24 & 
+    L’Utente base deve poter visualizzare il messaggio d’errore che la divisione del conto è stata già effettuata.   \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente base sia correttamente autenticato.
+        \item l'utente base possieda il permesso di visualizzare la prenotazione.
+        \item lo stato della prenotazione sia relativo alla sua conclusione.
+        \item il pulsante per la scelta della divisione del conto sia chiaro e ben visibile.
+        \item il sistema abbia correttamente memorizzato l'avvenuta divisione del conto.
+        \item il sistema notifichi correttamente che la divisione del conto sia già stata effettuata.
     \end{itemize}&
     Non \par implementato  \\
     \hline
@@ -266,14 +312,15 @@ La nomenclatura utilizzata per identificare i test è spiegata nel documento Nor
     \end{itemize}&
     Non \par implementato  \\
     \hline
-    TS.RFO39 & 
-    Il Sistema notifica il ristoratore dell’avvenuto pagamento.   \par
+    TS.RFO26 & 
+    L’Utente base deve poter visualizzare l’errore relativo al pagamento fallito.   \par 
     Verificare che: 
     \begin{itemize}
-        \item la notifica sia recapitata al ristoratore corretto.
-        \item il codice identificativo della prenotazione sia corretto.
-        \item la prenotazione sia in uno stato che ne indichi la conclusione.
-        \item il nuovo stato della prenotazione ne indichi il pagamento avvenuto con successo.
+        \item l'utente base sia correttamente autenticato.
+        \item l'utente base possieda il permesso di visualizzare la prenotazione.
+        \item lo stato della prenotazione sia relativo alla sua conclusione.
+        \item l'utente abbia effettuato un tentativo di pagamento.
+        \item la notifica relativa all'errore venga recapitata all'utente corretto.
     \end{itemize}&
     Non \par implementato  \\
     \hline
@@ -289,17 +336,8 @@ La nomenclatura utilizzata per identificare i test è spiegata nel documento Nor
     \end{itemize}&
     Non \par implementato  \\
     \hline
-    TS.RFD40 & 
-    Il Sistema notifica il ristoratore che è stato inserito un \textit{feedback}\g   \par
-    Verificare che: 
-    \begin{itemize}
-        \item il ristoratore a cui è destinata la notifica sia quello corretto.
-        \item la prenotazione sia stata conclusa con successo.
-    \end{itemize}&
-    Non \par implementato  \\
-    \hline
-    TS.RFF28 & 
-    Il Sistema notifica l’Utente base se vuole lasciare \textit{feedback}.\par 
+    TS.RFO28 & 
+    Il Sistema notifica l’Utente base se vuole lasciare un \textit{feedback}.\par 
     Verificare che: 
     \begin{itemize}
         \item l'utente sia correttamente autenticato.
@@ -308,13 +346,134 @@ La nomenclatura utilizzata per identificare i test è spiegata nel documento Nor
     \end{itemize}&
     Non \par implementato  \\
     \hline
-    TS.RFO35 & 
-    L'utente autenitcato deve poter comunicare attraverso la \textit{chat}.\par 
+    TS.RFO29 & 
+    L’Utente base deve poter visualizzare la notifica relativa alla modifica della sua ordinazione.\par 
     Verificare che: 
     \begin{itemize}
         \item l'utente sia correttamente autenticato.
-        \item il pulsante per l'avvio della chat sia ben visibile e chiaro.
-        \item i messaggi vengano recapitati agli utenti corretti.
+        \item l'utente abbia effettuato con successo una prenotazione.
+        \item la notifica venga inviata solo in caso la prenotazione abbia subito una modifica.
+        \item la notifica venga recapitata all'utente corretto.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFD30 & 
+    Il Sistema notifica il cliente che il suo \textit{feedback} ha ricevuto una risposta. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente base sia correttamente autenticato.
+        \item si faccia riferimento al corretto utente.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFD31 & 
+    L’Utente base deve poter inserire le proprie allergie. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente sia correttamente autenticato.
+        \item il pulsante per l'inserimento di una allergia sia ben visibile e chiaro.
+        \item i dati vengano correttamente inseriti.
+        \item i dati vengano inseriti in riferimento all'utente corretto.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFD31 & 
+    L’Utente base deve poter modificare le proprie allergie. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente sia correttamente autenticato.
+        \item l'utente abbia precedentemente inserito almeno una allergia.
+        \item il pulsante per la modifica di una allergia sia ben visibile e chiaro.
+        \item i dati vengano correttamente modificati.
+        \item i dati vengano modificati in riferimento all'utente corretto.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFD32 & 
+    L’Utente base deve poter visualizzare un messaggio se seleziona un piatto di cui è allergico. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente sia correttamente autenticato.
+        \item l'utente abbia precedentemente inserito almeno una allergia.
+        \item l'utente abbia selezionato un piatto contenente un allergene.
+        \item l'allergene presente nel piatto corrisponda ad uno presente nell'elenco delle allergie dell'utente.
+        \item il messaggio venga visualizzato correttamente.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFO33 & 
+    L’Utente base deve poter visualizzare il menù di un ristorante. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente sia correttamente autenticato.
+        \item l'utente abbia selezionato un ristorante.
+        \item il sistema mostri il menù relativo al ristorante corretto.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFD34 & 
+    L'Utente autenticato deve effettuare il \textit{logout}. \par
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente deve essere correttamente autenticato.
+        \item il pulsante per effettuare la disconnessione sia ben visibile e chiaro.
+        \item il pulsante disconnetta correttamente l'utente e lo rimandi ala \textit{Home} della piattaforma.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFO35 & 
+    L'Utente generico e ristoratore\g devono poter comunicare tra loro attraverso chat \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente generico sia autenticato nel sistema.
+        \item il pulsante per accederea alla chat sia ben visibile e chiaro.
+        \item il messaggio venga inviato al corretto destinatario.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFD36 & 
+    Il Sistema invia una notifica agli utenti collegati nella chat \par 
+    Verificare che: 
+    \begin{itemize}
+       \item l'utente sia registrato nel sistema.
+       \item l'utente a cui è destinata la notifica sia connesso al sistema.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFO37 &
+    Il Sistema notifica l’Utente ristoratore dell’avvenuta prenotazione.  \par 
+    Verificare che: 
+    \begin{itemize}
+        \item il corretto utente ristoratore sia autenticato nel sistema.
+        \item il pulsante per visualizzare le prenotazioni mostri un indicatore di notifica.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFO38 & 
+    Il Sistema notifica il ristoratore che è avvenuto un ordine.   \par 
+    Verificare che: 
+    \begin{itemize}
+        \item la notifica sia recapitata al ristoratore corretto.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFO39 & 
+    Il Sistema notifica il ristoratore dell’avvenuto pagamento.   \par
+    Verificare che: 
+    \begin{itemize}
+        \item la notifica sia recapitata al ristoratore corretto.
+        \item il codice identificativo della prenotazione sia corretto.
+        \item la prenotazione sia in uno stato che ne indichi la conclusione.
+        \item il nuovo stato della prenotazione ne indichi il pagamento avvenuto con successo.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFD40 & 
+    Il Sistema notifica il ristoratore che è stato inserito un \textit{feedback}\g   \par
+    Verificare che: 
+    \begin{itemize}
+        \item il ristoratore a cui è destinata la notifica sia quello corretto.
+        \item la prenotazione sia stata conclusa con successo.
     \end{itemize}&
     Non \par implementato  \\
     \hline
@@ -329,8 +488,8 @@ La nomenclatura utilizzata per identificare i test è spiegata nel documento Nor
     \end{itemize}&
     Non \par implementato  \\
     \hline
-    TS.RFO42+RFO43+RFO44 & 
-    L’Utente ristoratore deve poter accettare, rifiutare o terminare una prenotazione. \par 
+    TS.RFO42 & 
+    L’Utente ristoratore deve poter accettare una prenotazione. \par 
     Verificare che: 
     \begin{itemize}
         \item l'utente ristoratore sia correttamente autenticato.
@@ -340,36 +499,60 @@ La nomenclatura utilizzata per identificare i test è spiegata nel documento Nor
     \end{itemize}&
     Non \par implementato  \\
     \hline
-    TS.RFO14 & 
-    Il Sistema deve notificare il cliente sullo stato della sua prenotazione.  \par 
+
+    TS.RFO43 & 
+    L’Utente ristoratore deve poter rifiutare una prenotazione. \par 
     Verificare che: 
     \begin{itemize}
-        \item l'utente base sia correttamente autenticato.
-        \item la prenotazione faccia riferimento al corretto utente.
-        \item la prenotazione sia visualizzata correttamente.
+        \item l'utente ristoratore sia correttamente autenticato.
+        \item la richiesta di prenotazione sia correttamente visualizzata.
+        \item il polsante per la modifica dello stato sia ben visibile e chiaro.
+        \item il pulsante modifichi correttamente lo stato della prenotazione.
     \end{itemize}&
     Non \par implementato  \\
     \hline
-    TS.RFO45+RF046+RF047 & 
-    L’Utente ristoratore deve poter consultare la lista delle ordinazioni. Le può modificare e controllare lo stato del pagamento  \par 
+    TS.RFO44 & 
+    L’Utente ristoratore deve poter terminare una prenotazione. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente ristoratore sia correttamente autenticato.
+        \item la richiesta di prenotazione sia correttamente visualizzata.
+        \item il polsante per la modifica dello stato sia ben visibile e chiaro.
+        \item il pulsante modifichi correttamente lo stato della prenotazione.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFO45 & 
+    L’Utente ristoratore deve poter consultare la lista delle ordinazioni. \par 
     Verificare che: 
     \begin{itemize}
         \item l'utente ristoratore sia correttamente autenticato.
         \item la prenotazione sia stata accettata dal ristoratore.
         \item la prenotazione sia visualizzata correttamente.
         \item le ordinazioni siano visualizzate correttamente.
-        \item il pulsante per la modifica, rimozione dei piatti sia ben visibile e chiaro.
-        \item lo stato della prenotazione sia ben visibile e chiaro.
     \end{itemize}&
     Non \par implementato  \\
     \hline
-    TS.RFO14 & 
-    Il Sistema notifica il cliente che il suo ordine è stato modificato. \par 
+    TS.RFO46 & 
+    L’Utente ristoratore deve poter modificare una ordinazione. \par 
     Verificare che: 
     \begin{itemize}
-        \item l'utente base sia correttamente autenticato.
+        \item l'utente ristoratore sia correttamente autenticato.
         \item la prenotazione sia stata accettata dal ristoratore.
-        \item la prenotazione faccia riferimento al giusto utente.
+        \item la prenotazione sia visualizzata correttamente.
+        \item le ordinazioni siano visualizzate correttamente.
+        \item il pulsante per la modifica dei piatti sia ben visibile e chiaro.
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RF047 & 
+    L’Utente ristoratore deve poter controllare lo stato del pagamento  \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente ristoratore sia correttamente autenticato.
+        \item la prenotazione sia stata accettata dal ristoratore.
+        \item la prenotazione sia visualizzata correttamente.
+        \item lo stato del pagamento della prenotazione sia ben visibile e chiaro.
     \end{itemize}&
     Non \par implementato  \\
     \hline
@@ -383,23 +566,24 @@ La nomenclatura utilizzata per identificare i test è spiegata nel documento Nor
     \end{itemize}&
     Non \par implementato  \\
     \hline
-    TS.RFO49+RF050 & 
-    L’Utente ristoratore deve poter rispondere o segnalare un \textit{feedback}. \par 
+    TS.RFO49 & 
+    L’Utente ristoratore deve poter rispondere ad un \textit{feedback}. \par 
     Verificare che: 
     \begin{itemize}
         \item l'utente ristoratore sia correttamente autenticato.
         \item il pulsante di risposta sia ben visibile e chiaro.
-        \item il pulsante di segnalazione sia ben visibile e chiaro.
         \item la risposta non includa caratteri non accettati.
+        \item la risposta venga assegnata al \textit{feedback} corretto.
     \end{itemize}&
     Non \par implementato  \\
     \hline
-    TS.RFD30 & 
-    Il Sistema notifica il cliente che il suo \textit{feedback} ha ricevuto una risposta. \par 
+    TS.RF050 & 
+    L’Utente ristoratore deve poter segnalare un \textit{feedback}. \par 
     Verificare che: 
     \begin{itemize}
-        \item l'utente base sia correttamente autenticato.
-        \item si faccia riferimento al corretto utente.
+        \item l'utente ristoratore sia correttamente autenticato.
+        \item il pulsante di segnalazione sia ben visibile e chiaro.
+        \item la segnalazione avvenga relativamente al \textit{feedback} corretto.
     \end{itemize}&
     Non \par implementato  \\
     \hline
@@ -413,13 +597,58 @@ La nomenclatura utilizzata per identificare i test è spiegata nel documento Nor
     \end{itemize}&
     Non \par implementato  \\
     \hline
-    TS.RFO52+RFO53 & 
-    L’Utente ristoratore deve poter gestire il menù e la lista ingredienti. \par 
+    TS.RFO52 & 
+    L’Utente ristoratore deve poter gestire il menù. \par 
     Verificare che: 
     \begin{itemize}
         \item l'utente ristoratore sia correttamente autenticato.
         \item il pulsante per la visualizzazione del menù sia ben visibile e chiaro.
         \item il pulsante per la modifica dei dati sia ben visibile e chiaro.
+        \item il sistema apporti le modifiche correttamente. 
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFO53 & 
+    L’Utente ristoratore deve poter gestire la lista ingredienti. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente ristoratore sia correttamente autenticato.
+        \item l'utente ristoratore abbia selezionato un piatto da modificare.
+        \item il pulsante per la modifica dei dati sia ben visibile e chiaro.
+        \item il sistema apporti le modifiche correttamente. 
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFO54 & 
+    L’Utente ristoratore deve poter assegnare gli ingredienti ad un piatto. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente ristoratore sia correttamente autenticato.
+        \item l'utente ristoratore abbia selezionato un piatto da modificare.
+        \item il pulsante per la modifica dei dati sia ben visibile e chiaro.
+        \item il sistema apporti le modifiche correttamente. 
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFO55 & 
+    L’Utente ristoratore deve poter visualizzare la notifica relativa all’annullamento di un ordinazione. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente ristoratore sia correttamente autenticato.
+        \item l'utente ristoratore abbia ricevuto una ordinazione.
+        \item la notifica venga recapitata al ristoratore corretto.
+        \item la notifica venga inviata correttamente al seguito dell'annullamento di una ordinazione. 
+    \end{itemize}&
+    Non \par implementato  \\
+    \hline
+    TS.RFO56 & 
+    L’Utente ristoratore deve poter visualizzare la notifica relativa all’annullamento di una prenotazione. \par 
+    Verificare che: 
+    \begin{itemize}
+        \item l'utente ristoratore sia correttamente autenticato.
+        \item l'utente ristoratore abbia ricevuto una prenotazione.
+        \item la notifica venga recapitata al ristoratore corretto.
+        \item la notifica venga inviata correttamente al seguito dell'annullamento di una prenotazione. 
     \end{itemize}&
     Non \par implementato  \\
     \hline
