@@ -4,8 +4,11 @@ Nella seguente sezione sono riportati i dati in forma tabellare
 delle ore totali preventivate per la fase RTB rispetto alle ore effettive 
 utilizzate dal gruppo SWEnergy.
 
+\subsection{Analisi RTB}
 
-\subsection{Riepilogo preventivo per la fase RTB}
+
+
+\subsubsection{Riepilogo preventivo per la fase RTB}
 
 \begin{table}[H]
 	\centering
@@ -26,7 +29,10 @@ utilizzate dal gruppo SWEnergy.
 		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
 \end{table}
 
-\subsection{Riepilogo consuntivo per la fase RTB}
+
+
+
+\subsubsection{Riepilogo consuntivo per la fase RTB}
 
 \begin{table}[H]
 	\centering
@@ -48,7 +54,11 @@ utilizzate dal gruppo SWEnergy.
 \end{table}
 
 
-\subsection{Periodo RTB}
+
+
+
+
+\subsubsection{Riepilogo finale RTB}
 
 Di seguito vengono indicate le spese effettive nelle fase RTB del progetto.
 
@@ -76,7 +86,11 @@ Di seguito vengono indicate le spese effettive nelle fase RTB del progetto.
 \end{table}
 
 
-\subsection{Riepilogo ripartizione percentuale oraria}
+
+
+
+
+\subsubsection{Riepilogo ripartizione percentuale oraria}
 
 \begin{figure}[h]
 	\centering
@@ -93,43 +107,156 @@ Di seguito vengono indicate le spese effettive nelle fase RTB del progetto.
 	\caption{Riepilogo ripartizione percentuale oraria}
 \end{figure}
 
-\subsection{Suddivisione ruoli per persona}
 
-\begin{figure}[h]
+
+\subsubsection{Suddivisione ruoli per persona}
+
+\begin{flushleft}
+    \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                ybar stacked,
+                bar width=0.6cm,
+                xlabel={}, % Rimuovo l'etichetta dell'asse x
+                ylabel={Ore totali},
+                symbolic x coords={Alessandro, Carlo, Davide, Giacomo, Matteo, Niccolò},
+                xtick=data,
+                x tick label style={rotate=45,anchor=east}, % Nomi obliqui di 45 gradi
+                ytick={0,5,...,50}, % Suddivisione asse y ogni 5 da 0 a 50
+                nodes near coords={},
+                nodes near coords align={vertical},
+                legend style={at={(0.5,-0.3)},anchor=north,legend columns=-1,draw=none}, % Maggiore distanza verticale
+                every node near coord/.append style={font=\tiny}, % Dimensione del font delle etichette (vuoto per rimuoverle)
+                every axis plot/.append style={draw=none}, % Rimuovo i bordi delle barre
+                ymax=50, % Estendo l'asse y fino al valore 50
+            ]
+            
+            % Dati per l'asse delle x
+            \addplot[fill=colore1] coordinates {(Alessandro, 5) (Carlo, 10) (Davide, 5) (Giacomo, 5) (Matteo, 0) (Niccolò, 5)};
+            \addplot[fill=colore2] coordinates {(Alessandro, 5) (Carlo, 10) (Davide, 0) (Giacomo, 5) (Matteo, 5) (Niccolò, 0)};
+            \addplot[fill=colore3] coordinates {(Alessandro, 5) (Carlo, 10) (Davide, 20) (Giacomo, 5) (Matteo, 10) (Niccolò, 10)};
+            \addplot[fill=colore4] coordinates {(Alessandro, 10) (Carlo, 0) (Davide, 0) (Giacomo, 10) (Matteo, 5) (Niccolò, 10)};
+            \addplot[fill=colore5] coordinates {(Alessandro, 10) (Carlo, 5) (Davide, 5) (Giacomo, 0) (Matteo, 10) (Niccolò, 0)};
+			\addplot[fill=colore6] coordinates {(Alessandro, 0) (Carlo, 0) (Davide, 5) (Giacomo, 10) (Matteo, 5) (Niccolò, 10)};
+            
+            \legend{Responsabile, Amministratore, Analista, Progettista, Programmatore, Verificatore}
+            
+            \end{axis}
+        \end{tikzpicture}
+        \caption*{Rappresentazione ore assegnate ad una persona che ha eseguito un determinato ruolo}
+    \end{figure}
+\end{flushleft}
+
+
+
+
+
+\subsection{Considerazioni}
+Prima di iniziare con le considerazioni riporto la tabella delle assegnazione 
+delle ore che il gruppo SWEnergy si impegna a rispettare.
+
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.5}
 	\centering
-\begin{tikzpicture}
-\begin{axis}[
-    ybar stacked,
-    bar width=0.6cm,
-    xlabel={Membri del gruppo},
-    ylabel={Ore totali},
-    symbolic x coords={Alessandro, Carlo, Davide, Giacomo, Matteo, Niccolò},
-    xtick=data,
-    legend style={at={(0.5,-0.15)},
-    anchor=north,legend columns=-1},
-    nodes near coords,
-    nodes near coords align={vertical},
-]
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Membro} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt}
+		& \textbf{Pr} & \textbf{Ve} & \textbf{Tot} \\
+		\hline
+		Alessandro Tigani Sava 	&	16 &  7 & 12 & 15 &  27 &  17 &  94 \\
+		Carlo Rosso 			&	16 &  7 & 13 & 15 &  26 &  17 &  94 \\
+		Davide Maffei			&	16 &  7 & 13 & 14 &  27 &  17 &  94 \\
+		Giacomo Gualato 		&	16 &  8 & 12 & 15 &  26 &  17 &  94 \\
+		Matteo Bando 			&	15 &  8 & 13 & 15 &  27 &  16 &  94	\\
+		Niccolò Carlesso 		&	16 &  8 & 12 & 15 &  27 &  16 &  94 \\
+		\hline
+		\textbf{Totale} 		&	95 & 45 & 75 & 89 & 160 & 100 & 564 \\
+	\end{tabular}
 
-% Dati per Alessandro
-\addplot[fill=purple] coordinates {(Alessandro, 5) (Carlo, 10) (Davide, 5) (Giacomo, 5) (Matteo, 0) (Niccolò, 5)};
-\addplot[fill=blue] coordinates {(Alessandro, 5) (Carlo, 10) (Davide, 0) (Giacomo, 5) (Matteo, 5) (Niccolò, 0)};
-\addplot[fill=green] coordinates {(Alessandro, 5) (Carlo, 10) (Davide, 20) (Giacomo, 5) (Matteo, 10) (Niccolò, 10)};
-\addplot[fill=yellow] coordinates {(Alessandro, 10) (Carlo, 0) (Davide, 0) (Giacomo, 10) (Matteo, 5) (Niccolò, 10)};
-\addplot[fill=orange] coordinates {(Alessandro, 10) (Carlo, 5) (Davide, 5) (Giacomo, 0) (Matteo, 10) (Niccolò, 0)};
-\addplot[fill=red] coordinates {(Alessandro, 0) (Carlo, 0) (Davide, 5) (Giacomo, 10) (Matteo, 5) (Niccolò, 10)};
+	\caption{Assegnamento delle ore per persona; valori espressi in ore.
+		Re: Responsabile, Am: Amministratore, An: Analista, Pt:
+	Progettista, Pr: Programmatore, Ve: Verificatore, Tot: Totale ore per 
+	membro; valori espressi in ore.}
+\end{table}
 
-\legend{Responsabile, Amministratore, Analista, Progettista, Programmatore, Verificatore}
-
-\end{axis}
-\end{tikzpicture}
-
-\end{figure}
+Da come si può notare, il gruppo SWEnergy ha deciso di utilizzare sulle circa 
+94 ore a testa. Da come si può notare dalla sezione sopra, ciascuna persona dopo 
+questi 5 \textit{sprint} è arrivata a 35 ore, quindi una rimanenza di 59 ore per la fase PB e CA.
 
 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|c}
+		\textbf{Ruolo}         & \textbf{Ore utilizzate} \\
+		\hline
+		Responsabile            & 30            \\
+		Amministratore          & 25            \\
+		Analista                & 60            \\
+		Progettista             & 35            \\
+		Programmatore           & 30            \\
+		Verificatore            & 30            \\
+		\hline
+	\end{tabular}
+	\caption{Ore utilizzate per ruolo; valori espressi in ore.}  
+\end{table}
+
+Da come si può notare, il gruppo SWEnergy ha utilizzato 210 ore, quindi una rimanenza di 354 ore per la fase PB e CA.
+Inoltre, rispetto a quanto preventivato si è sottostima, anche se di poco le ore del Responsabile dando meno importanza 
+all'amministratore, mentre per gli altri ruoli, la suddivisione oraria pensata e preventivata all'inizio sono state ben 
+ragionate e si adotteranno.
+Quindi si andranno ad utilizzare circa sulle 13 ore a testa per il ruolo di Responsabile e sulle 10 ore a testa per il ruolo di Amministratore.
+Inoltre, avevamo soprastimato di poco il ruolo di analista, ma lasciamo qualche ora residua per eventuali modifiche o aggiunte ai requisiti, anche se 
+andiamo a ridurre quelle residue per aumentare il numero delle ore di altri ruolo più carenti.
+
+Ecco una tabella con la nuova ripartizione oraria per la prossima fase PB:
+
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.5}
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Membro} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt}
+		& \textbf{Pr} & \textbf{Ve} & \textbf{Tot} \\
+		\hline
+		Alessandro Tigani Sava 	&	8 	&  5 	& 4 	& 8 	&  17 	&  17 	&  59 \\
+		Carlo Rosso 			&	5 	&  0 	& 3 	& 15 	&  21 	&  15 	&  59 \\
+		Davide Maffei			&	8 	&  11 	& 0 	& 12 	&  18 	&  10 	&  59 \\
+		Giacomo Gualato 		&	8 	&  7 	& 2 	& 9 	&  26 	&  7 	&  59 \\
+		Matteo Bando 			&	13 	&  5 	& 3 	& 10 	&  17 	&  11 	&  59	\\
+		Niccolò Carlesso 		&	8 	&  10 	& 2 	& 5 	&  27 	&  7 	&  59 \\
+		\hline
+		\textbf{Totale} 		&	95 & 45 & 75 & 89 & 160 & 100 & 564 \\
+	\end{tabular}
+
+	\caption{Preventivo e assegnazione ore per la fase PB; valori espressi in ore.
+		Re: Responsabile, Am: Amministratore, An: Analista, Pt:
+	Progettista, Pr: Programmatore, Ve: Verificatore, Tot: Totale ore per 
+	membro; valori espressi in ore.}
+\end{table}
 
 
 
-\subsection{Considerazioni finali}
-BLA BLA BLA
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|c|c}
+		\textbf{Ruolo}         & \textbf{Ore utilizzate} 	& \textbf{Costo}\\
+		\hline
+		Responsabile            & 50                 & 1500     \\
+		Amministratore          & 38                 & 760    \\
+		Analista                & 14                 & 350     \\
+		Progettista             & 59                 & 1475      \\
+		Programmatore           & 126                & 1890      \\
+		Verificatore            & 66                 & 990     \\
+		\hline
+		Costo totale			&                	 & 6965     \\
+	\end{tabular}
+	\caption{Suddivisione oraria per ruolo per la fase PB}  
+\end{table}
+
+Quindi se si somma il costo totale della fase RTB (4675 \euro) con il costo totale preventivato della fase PB (6965 \euro) si ottiene 
+un costo totale di 11160 euro, perfettamente in linea con il budget preventivato all'inizio di 11750 \euro.
+
+
+Il conclusione il gruppo SWEnergy conferma nuovamente il budget iniziale stimato e anche la data di consegna prevista al 10/05/2024
+
+
 
