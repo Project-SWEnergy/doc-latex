@@ -56,6 +56,12 @@ def convert_file(source_directory, destination_directory, to_delete):
             ],
         )
 
+        subprocess.check_call(
+            [
+                "pdflatex",
+                latex_file,
+            ],
+        )
         # Delete intermediate files except for the PDF file
         intermediate_files = [file for file in os.listdir("./") if file in to_delete]
         for intermediate_file in intermediate_files:
