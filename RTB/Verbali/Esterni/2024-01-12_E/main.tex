@@ -1,0 +1,34 @@
+\documentclass[a4paper, 12pt]{article}
+\newcommand{\template}{../../../../Templates}
+\usepackage{\template/package}
+\graphicspath{{../../../../Assets}}
+
+\newcommand{\Titolo}{Verbale esterno - Imola Informatica}
+\newcommand{\Data}{12/01/2024}
+\newcommand{\Versione}{1.0.0}
+\newcommand{\Descrizione}{Presentazione \textit{Proof of Concept}.}
+\newcommand{\Stato}{Approvato}
+\newcommand{\Redattori}{Alessandro Tigani Sava}
+\newcommand{\Verificatori}{Matteo Bando}
+\newcommand{\ApprovatoriInterni}{Davide Maffei}
+\newcommand{\ApprovatoriEsterni}{Nessuno}
+
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+\input{\template/firma.tex}
+
+\begin{document}
+\copertina{}
+
+\newpage
+\input{sec/partecipanti}
+
+% Vorrei inserire questa ridefinizione nel file commands.tex ma non funziona
+\renewcommand{\contentsname}{Ordine del giorno}
+\tableofcontents
+
+\newpage
+\input{sec/resoconto.tex}
+\firma{}
+\end{document}
