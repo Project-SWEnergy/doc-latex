@@ -1,144 +1,133 @@
 \section{Modello di sviluppo}
 
-\subsection{Modello incrementale}
-SWEnergy ha deciso di adottare il modello di sviluppo incrementale, che prevede
-la suddivisione del progetto in incrementi. Al completamento di ciascun
-incremento viene rilasciata una nuova versione del prodotto, che è mostrata al
-proponente durante le riunioni di revisione.\\
-Poiché il \textit{team} non ha mai
-lavorato in ambito professionale, il modello di sviluppo è ispirato al
-\textit{framework} Scrum con \textit{sprint} di due settimane, con qualche
-modifica per adattarlo alle esigenze del progetto. In particolare,
-SWEnergy introduce una retrospettiva \textit{in media res} per valutare il
-lavoro svolto e apportare eventuali modifiche al processo di sviluppo.
-In aggiunta, non sono previsti i \textit{daily stand-up meeting}, in quanto il
-gruppo ritiene che la cadenza dei suddetti sia troppo elevata considerando
-che il progetto è svolto da studenti universitari e non da lavoratori a tempo
-pieno.
+\subsection{Modello agile}
+SWEnergy ha adottato un modello di sviluppo agile, con alcune personalizzazioni atte 
+a massimizzare l'efficacia del processo. 
+Uno dei potenziali svantaggi del modello agile è rappresentato dal rischio di cadere 
+in un'iterazione continua, ovvero un ritorno all'indietro nella direzione opposta all'avanzamento del progetto, per correzioni o
+rifacimenti, il che potrebbe rivelarsi un processo distruttivo. 
+Per mitigare questo rischio, abbiamo scelto di stabilire un rapporto collaborativo 
+con il proponente, garantendo un \textit{feedback} costante al fine di evitare la 
+necessità di ritornare su decisioni già prese e ridurre i costi delle iterazioni. 
+Ogni progresso nel progetto viene presentato al proponente durante le sessioni di revisione. \\
+
+Poiché il \textit{team} ha una limitata esperienza professionale, il modello di sviluppo 
+trae ispirazione dal \textit{framework} Scrum, utilizzando \textit{sprint} di due settimane 
+con alcune personalizzazioni per adattarlo alle specifiche del progetto. 
+In particolare, SWEnergy ha introdotto una retrospettiva \textit{in media res} per valutare 
+il lavoro svolto e apportare modifiche al processo di sviluppo. 
+Allo stesso tempo, abbiamo scelto di non includere i \textit{daily stand-up meeting}, poiché 
+il gruppo ritiene che la loro frequenza sia eccessiva, considerando il contesto degli 
+studenti universitari coinvolti a tempo parziale nel progetto.
 
 \subsection{Iterazioni}
 
 \subsubsection{\textit{Sprint}}
-Uno \textit{sprint} ha una durata di due settimane. Durante questo periodo, il
-gruppo si impegna a sviluppare l'incremento del prodotto concordato con il
-proponente.
-
-La durata di uno \textit{sprint}
-consente di ricevere \textit{feedback} frequenti dal proponente e di apportare
-modifiche al prodotto in modo tempestivo;
-permette al \textit{team} di effettuare un mini-\textit{sprint} di una
-settimana;
-in aggiunta, permette al \textit{team} di risolvere eventuali problemi o dubbi
-con il proponente in modo dinamico, flessibile e tempestivo.
+Uno \textit{sprint}, della durata di due settimane, impegna il gruppo nello 
+sviluppo del prodotto concordato con il proponente. 
+Durante questo periodo, il \textit{team} segue una strategia interna per raggiungere 
+gli obiettivi di avanzamento stabiliti. 
+La durata dello \textit{sprint} facilita il ricevimento di \textit{feedback} 
+regolari dal proponente e consente al \textit{team} di apportare modifiche tempestive 
+al prodotto. 
+Inoltre, offre la possibilità di risolvere dinamicamente eventuali problemi 
+o dubbi con il proponente.
 
 \subsubsection{Mini-\textit{sprint}}
-Questa iterazione emula il \textit{framework} Scrum, con una cadenza
-settimanale. Si tratta di uno \textit{sprint}
-interno al gruppo: il proponente non viene coinvolto. Al termine di un
-mini-\textit{sprint} potrebbe corrispondere un cambio dei ruoli, in base alle
-esigenze del progetto e del gruppo.
-I mini-\textit{sprint} aumentano la frequenza delle retrospettive; permettono
-di valutare lo svolgimento delle attività durante lo \textit{sprint} e di
-apportare modifiche al processo di sviluppo, adattando il lavoro alle esigenze
-del progetto in modo dinamico.
-Infine, mantengono il gruppo focalizzato sul lavoro da svolgere.
+Questa iterazione, basata sul \textit{framework} Scrum, si svolge settimanalmente 
+come uno \textit{sprint} interno al gruppo, ma senza coinvolgere il proponente. 
+Al termine di un mini-\textit{sprint}, potrebbe verificarsi un cambio dei ruoli 
+in base alle esigenze del progetto e del gruppo. 
+I mini-\textit{sprint} aumentano la frequenza delle retrospettive, consentendo 
+di valutare il progresso delle attività e apportare modifiche dinamiche al processo 
+di sviluppo, adattando il lavoro alle esigenze del progetto. 
+È importante notare che un mini-\textit{sprint} si verifica all'interno di uno 
+\textit{sprint} principale.
 
 \subsection{Eventi}
 
-\subsubsection{SAL}
-Lo "Stato di Avanzamento del Lavoro" (SAL) è un incontro con il proponente che
-avviene ogni due settimane di venerdì. Queste riunioni sono utili per
-condividere i \textit{feedback} in entrambe le direzioni: il proponente può
-valutare il lavoro svolto dal gruppo e SWEnergy può esprimere le proprie
-opinioni sul prodotto. Di seguito sono riportate le attività principali che
-avvengono durante un SAL:
+\subsubsection{SAL\g}
+Lo \SAL{} è un incontro con il proponente che
+avviene ogni due settimane di venerdì, ed , è fondamentale per condividere i 
+\textit{feedback} in entrambe le direzioni. 
+Durante il SAL, avvengono attività cruciali:
 
 \begin{itemize}
-	\item \textbf{\textit{Sprint review}}: Il gruppo presenta il lavoro svolto
-	      durante lo
-	      \textit{sprint} e il proponente fornisce dei \textit{feedback} sul
-	      prodotto. In aggiunta, il gruppo può porre domande per chiarire
-	      eventuali dubbi in merito ai requisiti e alle funzionalità richieste,
-	      oppure in merito all'implementazione di queste ultime;
+	\item \textbf{\textit{Sprint review}}: Il gruppo presenta il lavoro svolto 
+			durante lo \textit{sprint}, ricevendo \textit{feedback} dal proponente. 
+			Vengono affrontati eventuali dubbi sui requisiti o sulle funzionalità implementate;
+	
+	\item \textbf{\textit{Sprint retrospective}}: Si discute sulle modalità di lavoro, 
+			valutando l'efficacia del processo di sviluppo e identificando possibili miglioramenti. 
+			Si richiedono consigli al proponente sull'organizzazione del lavoro, si segnalano 
+			problemi riscontrati durante lo \textit{sprint} e si propongono soluzioni;
 
-	\item \textbf{\textit{Sprint retrospective}}: Il gruppo discute sulle modalità
-	      di lavoro. In particolare, valuta se il processo di sviluppo
-	      è stato efficace ed efficiente ed in quale modo sia migliorabile.
-	      Sono chiesti consigli al proponente in merito all'organizzazione del
-	      lavoro; sono riportati eventuali problemi riscontrati durante lo
-	      \textit{sprint} e sono proposte soluzioni per risolverli;
-
-	\item \textbf{\textit{Sprint planning}}: Il gruppo e il proponente concordano
-	      l'incremento del prodotto da sviluppare durante lo \textit{sprint}
-	      successivo, ovvero che cosa inserire nello \textit{sprint backlog}.
+	\item \textbf{\textit{Sprint planning}}: Il gruppo e il proponente concordano lo stato 
+			di avanzamento del prodotto da raggiungere durante lo \textit{sprint} successivo, 
+			determinando cosa includere nello \textit{sprint backlog}.
 \end{itemize}
 
 \subsubsection{\textit{Stand-up}}
 Il nome \textit{stand-up} è ispirato ai \textit{daily stand-up meeting} del
-\textit{framework} Scrum. Si noti che l'incontro con il proponente avviene un
-venerdì su due; mentre le \textit{stand-up}, gli incontri all'inizio
-e al termine di un mini-\textit{sprint}, hanno luogo ogni domenica,
-per dare modo al responsabile di considerare i \textit{feedback} del proponente
-e di pianificare l'iterazione successiva. L'organizzazione viene poi discussa
-durante la \textit{stand-up}. Di seguito sono riportate le attività principali
-che avvengono durante una \textit{stand-up}:
+\textit{framework} Scrum. 
+L'incontro con il proponente si svolge ogni due settimane di venerdì, 
+mentre le \textit{stand-up}, sono incontri posti all'inizio e alla fine 
+di un mini-\textit{sprint}, hanno luogo ogni domenica, per considerare 
+i \textit{feedback} del proponente e di pianificare l'iterazione successiva.
+Durante la \textit{stand-up} avvengono le seguenti attività:
 
 \begin{itemize}
-	\item \textbf{\textit{Brainstorming}}: Il responsabile riassume il lavoro
-	      svolto durante la settimana e ciascun membro del gruppo può arricchire
-	      la spiegazione con le proprie esperienze, per esempio, descrivendo le
-	      difficoltà incontrate e le soluzioni adottate.
+	\item \textbf{\textit{Brainstorming}}: il responsabile riassume il lavoro 
+			svolto durante la settimana e ogni membro del gruppo arricchisce 
+			la discussione con le proprie esperienze, con particolare attenzione 
+			alle difficoltà incontrate e alle soluzioni adottate;
 
-	\item \textbf{Retrospettiva}: Il gruppo discute sulle modalità di
-	      lavoro. In particolare, valuta se il processo di sviluppo è stato
-	      efficace ed efficiente ed in quale modo sia migliorabile. Sono
-	      riportati eventuali problemi riscontrati durante il
-	      mini-\textit{sprint} e sono proposte soluzioni per risolverli.
-	      Eventualmente si prende nota dei problemi per discuterne con il
-	      proponente durante il SAL; oppure per domandare consigli al
-	      committente.
+	\item \textbf{Retrospettiva}: il gruppo discute sulle modalità di lavoro, 
+			valutando l'efficacia del processo di sviluppo e proponendo miglioramenti. 
+			Si affrontano eventuali problemi riscontrati durante il mini-\textit{sprint} 
+			e si propongono soluzioni. 
+			I problemi possono essere successivamente discussi con il proponente 
+			durante il SAL o con il committente per ottenere consigli.
 
-	\item \textbf{Pianificazione}: Il responsabile mostra la pianificazione del
-	      mini-\textit{sprint} successivo. I membri del gruppo possono
-	      intervenire per proporre miglioramenti o per chiarire eventuali dubbi.
-	      Infine, il responsabile assegna i compiti ai membri del gruppo,
-	      secondo le loro disponibilità, capacità e preferenze.
+	\item \textbf{Pianificazione}: il responsabile presenta la pianificazione del 
+			mini-\textit{sprint} successivo. I membri del gruppo intervengono per proporre 
+			miglioramenti o una migliore ripartizione del lavoro. 
+			Infine, il responsabile assegna i compiti ai membri del gruppo, 
+			considerando le loro disponibilità, capacità e preferenze.
 \end{itemize}
 
 \subsection{Motivazioni}
-
-SWEnergy ha deciso di organizzarsi come descritto in precedenza più per
-necessità che per scelta: durante i corsi di Ingegneria del Software e di Metodi
-e Tecnologie per lo Sviluppo Software, i membri del gruppo hanno appreso i
-concetti fondamentali del \textit{framework} Scrum. Dunque, il \textit{team} ha
-deciso di metterli in pratica. Come già accennato, il gruppo non ha mai lavorato
-in un ambito professionale e non ha esperienza con i metodi di lavoro ed
-organizzativi. In aggiunta, il proponente ha richiesto una pianificazione di
-almeno due settimane.
-Con la seguente organizzazione, SWEnergy riesce a soddisfare le
-esigenze del proponente mitigando i rischi individuati durante l'analisi dei
-rischi. Il \textit{framework} Scrum fornisce i seguenti vantaggi:
+La scelta di SWEnergy di adottare questo approccio è guidata principalmente 
+dalla necessità. 
+I membri del gruppo hanno acquisito competenze fondamentali del 
+\textit{framework} Scrum durante i corsi di Ingegneria del Software e di Metodi 
+e Tecnologie per lo Sviluppo Software. 
+Dato che il \textit{team} non ha esperienza professionale, questa scelta 
+fornisce un quadro organizzativo solido. 
+Inoltre, la richiesta del proponente di una pianificazione di almeno due settimane 
+si adatta bene a questa organizzazione. 
+Questo approccio consente a SWEnergy di soddisfare le esigenze del proponente, 
+mitigando i rischi individuati durante l'analisi dei rischi e consentendo a 
+ogni membro del gruppo di comprendere appieno il ruolo assegnato durante 
+ogni ciclo di due settimane. 
+Il \textit{framework} Scrum offre diversi vantaggi, tra cui:
 
 \begin{enumerate}
-	\item \textbf{Flessibilità}: Il gruppo può adattare il processo di sviluppo
-	      alle esigenze del progetto; in particolare, può modificare la
-	      pianificazione in base alle esigenze del proponente e ai danni
-	      riscontrati;
+	\item \textbf{Flessibilità}: il gruppo può adattare il processo di sviluppo 
+			alle esigenze del progetto, modificando la pianificazione in base alle 
+			richieste del proponente e alle sfide riscontrate.
 
-	\item \textbf{Comunicazione trasparente}: Il gruppo rilascia incrementi del
-	      prodotto in modo tempestivo; in aggiunta, il proponente valuta il
-	      lavoro svolto dal gruppo e fornisce \textit{feedback} in itinere,
-	      rimanendo aggiornato in merito allo \textit{status quo} del
-	      progetto;
+	\item \textbf{Comunicazione trasparente}: il gruppo rilascia regolarmente 
+			\textit{feedback} sul prodotto, mantenendo il proponente aggiornato sullo 
+			\textit{status quo} del progetto. 
 
-	\item \textbf{Miglioramento continuo}: Le retrospettive permettono al
-	      gruppo di valutare il processo di sviluppo e di apportare
-	      modifiche per migliorarlo. In aggiunta, il gruppo può
-	      discutere con il proponente o con il committente per ricevere consigli
-	      e suggerimenti per migliorare l'organizzazione e il metodo di lavoro;
+	\item \textbf{Miglioramento continuo}: le retrospettive consentono al gruppo 
+			di valutare costantemente il processo di sviluppo e di apportare modifiche 
+			per migliorare l'efficienza. 
+			Il confronto con il proponente e il committente fornisce ulteriori consigli 
+			e suggerimenti per ottimizzare l'organizzazione e il metodo di lavoro.
 
-	\item \textbf{Monitoraggio costante}: La pianificazione basata sugli
-	      \textit{sprint} permette di identificare e affrontare rischi in modo
-	      tempestivo, riducendo la possibilità di ritardi gravi e un rincaro del
-	      progetto.
+	\item \textbf{Monitoraggio costante}: la pianificazione basata sugli \textit{sprint} 
+			permette al gruppo di identificare e affrontare tempestivamente i rischi, 
+			riducendo la possibilità di gravi ritardi e di aumenti di costo nel progetto.
 \end{enumerate}
