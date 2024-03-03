@@ -1,50 +1,75 @@
 \section{Introduzione}
-\subsection{Scopo del documento}
 
-Questo documento ha solo scopo di contenere le procedure e le \textit{best
-	practice (so far)} che SWEnergy ha deciso di adottare per sviluppare il
-progetto "\textit{Easy Meal}".
-Dunque, serve per aiutare gli elementi di SWEnergy ad affrontare il cambio
-dei ruoli, in modo da rendere il passaggio più semplice e meno dispendioso in
-termini di tempo.\\
-Non si considera che questo documento sia esaustivo, ma che sia sufficiente per
-aiutare i membri di SWEnergy a svolgere i compiti assegnati. Infatti, per
-agevolare lo svolgimento dei compiti assegnati, oltre alla consultazione delle
-"Norme di progetto", è necessario chiedere chiarimenti all'ultima persona che ha
-svolto il ruolo ora assegnato al lettore.
+\subsection{Scopo del Documento}
+Questo documento, redatto dal \textit{team} SWEnergy, definisce le norme e le
+metodologie adottate per lo sviluppo del progetto "Easy Meal". L'obiettivo è
+fornire una guida chiara e strutturata che faciliti la collaborazione all'interno
+del \textit{team} e garantisca la coerenza e la qualità del lavoro svolto. Le
+norme qui presentate si ispirano agli \textit{standard} ISO 12207-1995, adattati alle
+specificità del progetto universitario in questione.
 
+\subsection{Struttura del Documento}
+Le sezioni \cref{sec:processi_primari}, \cref{sec:processi_supporto} e \cref{sec:processi_organizzativi} del documento riflettono i diversi aspetti e fasi del ciclo di vita del software, suddivisi in processi primari, di supporto e organizzativi, rispettivamente, come delineato dagli \textit{standard} ISO 12207-1995:
 
-\subsection{Struttura del documento}
-
-Il documento è diviso in sezioni, una per ciascun ruolo. Oggi sotto-sezione
-rappresenta un compito che il ruolo deve svolgere. La struttura dei compiti è la
-seguente:
 \begin{itemize}
-	\item \textbf{Titolo};
-
-	\item \textbf{Descrizione}: riguarda la descrizione del compito, viene usata
-	      come introduzione al compito. In aggiunta, sono contenute le
-	      informazioni necessarie per lo svolgimento di qualche attività, per
-	      rendere le medesime più chiare e comprensibili;
-
-	\item \textbf{\textit{Trigger}}: spiega quando il compito deve essere
-	      svolto. Quindi sono elencate le condizioni che devono essere
-	      verificate per attivare il compito;
-
-	\item \textbf{Scopo}: descrizione dello stato che si vuole raggiungere, in
-	      seguito al completamento del compito;
-
-	\item \textbf{Svolgimento}: contiene l'elenco delle attività che il ruolo è
-	      tenuto a svolgere per completare il compito. Le attività possono
-	      essere tra loro dipendenti, oppure indipendenti. Si ritiene che il
-	      linguaggio usato sia sufficiente per rendere le attività chiare e
-	      comprensibili;
-
-	\item \textbf{Attività}: per ogni attività viene fornita una breve
-	      descrizione. Se necessario, viene fornita una serie di passi da
-	      seguire per completare l'attività. I passi da seguire sono elencati in
-	      ordine e sono dipendenti tra loro.
+	\item \textbf{Processi Primari:} Questa sezione descrive i processi
+	      fondamentali nello sviluppo del software, includendo le fasi di
+	      acquisizione, fornitura, sviluppo del prodotto software;
+	\item \textbf{Processi di Supporto:} In questa parte vengono trattati i
+	      processi che supportano lo sviluppo del software, come la gestione
+	      della configurazione, la verifica, l'approvazione, la qualità e la
+	      risoluzione dei problemi;
+	\item \textbf{Processi Organizzativi:} Questa sezione copre i processi
+	      trasversali che aiutano a migliorare e mantenere l'efficienza dell'
+	      ambiente di sviluppo, inclusi la gestione dei processi, delle
+	      infrastrutture, il miglioramento dei processi e la formazione del
+	      personale.
 \end{itemize}
 
-Nel caso in cui un componente di SWEnergy abbia qualche dubbio in merito a
-qualche compito, è tenuto a chiedere chiarimenti.
+Ciascun processo è descritto dalle seguenti sezioni:
+\begin{enumerate}
+	\item \textbf{Descrizione:} Fornisce una panoramica generale del processo,
+	      fornendo informazioni aggiuntive rispetto al titolo del processo;
+	\item \textbf{Scopo:} Specifica gli obiettivi e le finalità del processo;
+	\item \textbf{Attività:} Elenca le attività principali che compongono il
+	      processo;
+	\item \textbf{Strumenti:} Specifica gli strumenti utilizzati per
+	      l'attuazione del processo.
+\end{enumerate}
+
+Dopo le sezioni dedicate ai processi, il documento include una sezione per
+ciascun ruolo. Oggi sotto-sezione rappresenta un'attività che il ruolo deve
+svolgere.  La struttura delle attività è la seguente:
+\begin{itemize}
+	\item \textbf{Descrizione}: riguarda l'introduzione all'attività.
+	      In aggiunta, sono contenute le informazioni necessarie per lo
+	      svolgimento di qualche attività, per rendere la medesima più chiara e
+	      comprensibile;
+
+	\item \textbf{\textit{Trigger}}: spiega quando l'attività deve essere
+	      svolta. Quindi sono elencate le condizioni che devono essere
+	      verificate per attivare l'attività;
+
+	\item \textbf{Scopo}: descrizione dello stato che si vuole raggiungere, in
+	      seguito al completamento dell'attività;
+
+	\item \textbf{Svolgimento}: contiene l'elenco dei \textit{task} che il
+	      ruolo è tenuto a svolgere per completare l'attività. La dipendenza tra
+	      i \textit{task} è specificata, se presente;
+
+	\item \textbf{\textit{Task}}: per ogni \textit{task} viene fornita una
+	      breve descrizione. Se necessario, viene fornita una serie di passi da
+	      seguire per completare il \textit{task}. I passi da seguire sono
+	      elencati in ordine e sono dipendenti tra loro.
+\end{itemize}
+
+\subsection{Riferimenti}
+\subsubsection{Normativi}
+\begin{itemize}
+	\item \href{https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf}{ISO/IEC 12207:1995}.
+\end{itemize}
+
+\subsubsection{Informativi}
+\begin{itemize}
+	\item \href{https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T4.pdf}{Gestione di progetto}.
+\end{itemize}
