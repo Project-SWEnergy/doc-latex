@@ -14,16 +14,9 @@
 			\begin{tabular}{ll}
 				\textbf{Stato}               & \Stato              \\
 				\textbf{Data}                & \Data               \\
-				% forse è il caso di rimuovere redattori e verificatori, in modo
-				% tale che un redattore oggi possa essere un verificatore
-				% domani e viceversa. Inoltre, i documenti dovrebbero essere
-				% scritti da ciascun componente del gruppo in momenti diversi
 				\midrule
-				\ifdefined\Redattori
 				\textbf{Redattori}           & \Redattori          \\
-				\fi
-
-				\textbf{Verificatore}        & \Verificatori       \\
+				\textbf{Verificatori}        & \Verificatori       \\
 				\textbf{Approvatore}         & \Approvatori        \\
 
 				\ifdefined\ApprovatoriEsterni
@@ -35,9 +28,7 @@
 				\fi
 				\midrule
 
-				\ifdefined\Versione
 				\textbf{Versione}            & \Versione           \\
-				\fi
 			\end{tabular}
 		\end{center}
 		\ifdefined\Redattori
