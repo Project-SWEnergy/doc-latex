@@ -1,8 +1,15 @@
 \documentclass[a4paper, 12pt]{article}
 
 \newcommand{\template}{../../Templates}
+\usepackage{tocloft}
 \usepackage{\template/package}
 \graphicspath{{../../Assets}}
+
+\newcommand{\subsec}[1]{%
+    \phantomsection
+    \section*{#1}%
+    \addcontentsline{toc}{section}{#1}%
+}
 
 \newcommand{\Titolo}{Glossario}
 \newcommand{\Data}{26/02/2024}
