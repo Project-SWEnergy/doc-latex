@@ -20,7 +20,10 @@ Ogni rischio è delineato secondo la seguente struttura:
 		l'insorgenza di eventuali danni o problemi collegati al rischio;
 
 	\item \textbf{Mitigazione}: Le strategie e le azioni preventive adottate dal 
-		\textit{team} per evitare o ridurre al minimo i danni causati dal rischio;
+		\textit{team} per evitare o ridurre al minimo i danni causati dal rischio. Per ogni rischio, 
+		viene associato un grado di successo della mitigazione (GSM) che varia da 1 a 5, dove 1 indica un successo minimo e 5 un successo massimo.
+		Inoltre in ogni \textit{sprint}, nel caso compaia un rischio, viene data una spiegazione 
+		dell'applicazione delle misure di mitigazione previste e il relativo esito sul loro grado di successo.
 \end{itemize}
 
 Al termine della descrizione di tutti i rischi, sarà presentata una tabella riassuntiva 
@@ -31,6 +34,25 @@ frequenti durante la fase di gestione del progetto.
 
 
 \subsection{Rischi legati alle tecnologie}
+\begin{table}[H]
+	\centering
+
+	\begin{tabular}{l|l|r|r|r}
+		\hline
+		\textbf{Codice}                                                          & \textbf{Tipo} & \textbf{Gravità} & \textbf{Freq.} & \textbf{GSM} \\
+		\hline
+		\autoref{risk:conoscenza tecnologie carente} 							& Conoscenza delle tecnologie carente     & 5                & 4      &5                                  \\
+		\autoref{risk:strumenti software inadeguati} 							& Strumenti \textit{software} inadeguati           & 1                & 2       &4                                   \\
+		\autoref{risk:codice incomprensibile} 									& Codice incomprensibile                         & 2                & 2         &3                                 \\
+		\autoref{risk:incompatibilità delle versioni del software} 				& Incompatibilità delle versioni del \textit{software}		& 3                & 1       &3                                   \\
+		\autoref{risk:scarsa documentazione delle tecnologie utilizzate} 		& Scarsa documentazione delle tecnologie utilizzate	   	 & 2                & 2          &4                                \\
+		\autoref{risk:problemi di sicurezza delle tecnologie utilizzate} 		& Problemi di sicurezza delle tecnologie utilizzate	   	 & 5                & 2          &4                               \\
+		\hline
+		\multicolumn{5}{l}{}                                                                                                                                    \\
+	\end{tabular}
+	\caption{Freq: Frequenza del rischio, GSM: Grado di Successo della Mitigazione.}
+\end{table}
+
 \input{sec/rischi/conoscenza_delle_tecnologie.tex}
 \input{sec/rischi/strumenti_software_inadeguati.tex}
 \input{sec/rischi/codice_incomprensibile.tex}
@@ -39,6 +61,22 @@ frequenti durante la fase di gestione del progetto.
 \input{sec/rischi/sicurezza_tecnologie.tex}
 
 \subsection{Rischi legati alla comunicazione}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|l|r|r|r}
+		\hline
+		\textbf{Codice}                                                          & \textbf{Tipo} & \textbf{Gravità} & \textbf{Freq.} & \textbf{GSM} \\
+		\hline
+		\autoref{risk:comunicazione interna carente} 			&Comunicazione interna carente           & 3                & 3                  & 5                        \\
+		\autoref{risk:conflitti decisionali} 					&Conflitti decisionali                           & 1                & 2                  & 4                        \\
+		\autoref{risk:comunicazione esterna carente} 			&Comunicazine esterna carente            & 2                & 2                  & 5                        \\
+		\autoref{risk:mancanza di chiarezza nei ruoli e responsabilità} &Mancanza di chiarezza nei ruoli e responsabilità									 & 4                & 3                  & 3                        \\
+		\autoref{risk:comunicazione asincrona inefficace} &Comunicazione asincrona inefficace		& 2                & 3                  & 3                        \\
+		\hline
+		\multicolumn{5}{l}{}                                                                                                                                    \\
+	\end{tabular}
+	\caption{Freq: Frequenza del rischio, GSM: Grado di Successo della Mitigazione.}
+\end{table}
 \input{sec/rischi/comunicazione_interna_carente.tex}
 \input{sec/rischi/conflitti_decisionali.tex}
 \input{sec/rischi/comunicazione_esterna_carente.tex}
@@ -46,6 +84,7 @@ frequenti durante la fase di gestione del progetto.
 \input{sec/rischi/comunizazione_asincrona_inefficace.tex}
 
 \subsection{Rischi legati alla pianificazione}
+
 I membri del gruppo non hanno mai assunto un ruolo manageriale in
 precedenza e non hanno mai lavorato in un gruppo di lavoro così
 numeroso. Questo porta a problemi di gestione del tempo e delle
@@ -53,6 +92,23 @@ risorse. D'altro canto, SWEnergy si rende conto che lo scopo del
 progetto è proprio quello di acquisire esperienza, anche in questi
 termini. Per cui, il gruppo ha deciso di individuare alcuni
 rischi legati alla pianificazione, per poterli prevenire o mitigare.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|l|r|r|r}
+		\hline
+		\textbf{Codice}                                                          & \textbf{Tipo} & \textbf{Gravità} & \textbf{Freq.} & \textbf{GSM} \\
+		\hline
+		\autoref{risk:organizzazione carente} 					&Organizzazione carente                         & 3                & 4                  & 5                      \\
+		\autoref{risk:comprensione dei requisiti carente} 		&Comprensione dei requisiti carente & 2                & 3                  & 4                        \\
+		\autoref{risk:interfacce incoerenti} 					&Interfacce incoerenti                           & 4                & 2                  & 3                        \\
+		\autoref{risk:costi e tempi imprevisti} 				&Costi e tempi imprevisti                     & 5                & 3                  & 4                      \\
+		\autoref{risk:cambiamenti nei requisiti} 				&Cambiamenti nei requisiti                   & 5                & 1                  & 4                       \\
+		\hline
+		\multicolumn{5}{l}{}                                                                                                                                    \\
+	\end{tabular}
+	\caption{Freq: Frequenza del rischio, GSM: Grado di Successo della Mitigazione.}
+\end{table}
 
 \input{sec/rischi/organizzazione_carente.tex}
 \input{sec/rischi/comprensione_dei_requisiti_carente.tex}
