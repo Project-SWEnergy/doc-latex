@@ -1,0 +1,33 @@
+\usecaseristoratore{Rifiuta prenotazione}
+\label{usecase:Rifiuta prenotazione}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{./uml/UCR9.png} 
+	\caption{Rifiuta prenotazione}
+	\label{fig:UCR9}
+  \end{figure}
+
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente ristoratore.
+
+	\item \textbf{Precondizioni:}
+	      \begin{itemize}
+		      \item L'Utente ristoratore visualizza la prenotazione in dettaglio (vedi \autoref{usecase:Visualizza dettaglio lista prenotazioni}).
+		      \item La prenotazione è nello stato "In attesa".
+	      \end{itemize}
+
+	\item \textbf{Postcondizione:} L'Utente ristoratore rifiuta la prenotazione.
+
+
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente ristoratore seleziona l'opzione di rifiuto della prenotazione;
+
+		      \item L'Utente ristoratore inserisce le motivazioni del rifiuto della prenotazione;
+
+		      \item Il Sistema aggiorna lo stato della prenotazione.
+
+	      \end{enumerate}
+\end{itemize}

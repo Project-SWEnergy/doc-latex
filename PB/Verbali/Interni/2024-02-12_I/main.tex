@@ -1,0 +1,31 @@
+\documentclass[a4paper, 12pt]{article}
+
+\newcommand{\template}{../../../../Templates}
+\usepackage{\template/package}
+\graphicspath{{../../../../Assets}}
+
+\newcommand{\Titolo}{Verbale interno}
+\newcommand{\Data}{12/02/2024}
+\newcommand{\Versione}{1.0.0}
+\newcommand{\Descrizione}{Discussione riguardante problematiche riscontrate durante il lavoro nelle fasi precedenti e organizzazione del lavoro futuro.}
+\newcommand{\Stato}{Approvato}
+\newcommand{\Redattori}{Davide Maffei}
+\newcommand{\Verificatori}{Matteo Bando}
+\newcommand{\Approvatori}{Giacomo Gualato}
+\newcommand{\Responsabile}{}
+
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+
+\begin{document}
+\copertina{}
+
+\input{chapters/partecipanti}
+\renewcommand{\contentsname}{Ordine del giorno}
+\tableofcontents
+\newpage
+
+\input{chapters/contenuto}
+\input{chapters/incarichi}
+\end{document}

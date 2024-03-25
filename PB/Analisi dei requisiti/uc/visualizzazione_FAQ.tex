@@ -1,0 +1,34 @@
+% Definizione dell'acronimo
+\newpage
+\acrodef{FAQ}{\textit{Frequently Asked Questions}}
+
+\usecasegenerico{Visualizzazione \textit{FAQ}} %modifica attore principale in solo generico.
+\label{usecase:Visualizzazione FAQ}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{./uml/UCG5.png} 
+	\caption{Visualizzazione \textit{FAQ}}
+	\label{fig:UCG5}
+  \end{figure}
+
+\begin{itemize}
+	\item \textbf{Attori principali:} 
+	\begin{itemize}
+		\item Utente generico.
+		\item Utente base.
+	\end{itemize}
+
+
+	\item \textbf{Precondizione:}
+	      L'utente è connesso al Sistema.
+
+	\item \textbf{Postcondizione:} L'Attore principale visualizza la pagina delle \textit{\ac{FAQ}$^G$}.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+              \item Il Sistema presenta la pagina delle \textit{\ac{FAQ}$^G$}.
+              \item L'Attore principale naviga nella pagina alla ricerca di risposte alle sue domande.
+		    
+	      \end{enumerate}
+\end{itemize}
