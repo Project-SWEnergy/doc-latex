@@ -1,0 +1,24 @@
+\usecaseristoratore{Visualizzazione notifica annullamento ordine}
+\label{usecase:Visualizzazione notifica annullamento ordine}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{./uml/UCR4.png} 
+	\caption{Visualizzazione notifica annullamento ordine}
+	\label{fig:UCR4}
+  \end{figure}
+
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente ristoratore.
+
+	\item \textbf{Precondizione:} L'Utente base ha annullato la propria ordinazione (vedi \autoref{usecase:Annullamento dell'ordinazione}).
+
+	\item \textbf{Postcondizione:} L'Utente ristoratore visualizza la notifica relativa all'annullamento di un ordinazione.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item Il Sistema vede che al suo interno è stata annullata un'ordinazione;
+		      \item Il Sistema invia all'Utente ristoratore la notifica dell'annullamento di un ordinazione;
+		      \item L'Utente ristoratore visualizza la notifica relativa all'annullamento dell'ordinazione.
+	      \end{enumerate}
+\end{itemize}

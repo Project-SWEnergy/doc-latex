@@ -1,0 +1,56 @@
+\documentclass[a4paper, 12pt]{article}
+\newcommand{\template}{../../Templates}
+\usepackage{\template/package}
+\graphicspath{{../../Assets}}
+
+\newcommand{\Titolo}{Norme di progetto}
+\newcommand{\Data}{21/11/2023}
+\newcommand{\Versione}{1.3.0}
+\newcommand{\Descrizione}{Elenco delle procedure interne e delle buone pratiche 
+di progetto adottate dal gruppo.}
+\newcommand{\Verificatori}{Niccolò Carlesso}
+\newcommand{\Stato}{Non approvato}
+
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+
+\begin{document}
+\copertina{}
+\input{sec/registro_modifiche.tex}
+\newpage
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+\newpage
+\input{sec/introduzione.tex}
+\newpage
+
+\section{Tutti}
+\input{sec/lavoro-progetto.tex}
+
+\section{Responsabile}
+\input{sec/organizzare-meeting-interno.tex}
+\input{sec/organizzare-meeting-esterno.tex}
+\input{sec/pianificazione-attivita.tex}
+\input{sec/aggiornare-pdp.tex}
+\input{sec/approvare-documento.tex}
+
+\section{Amministratore}
+\input{sec/aggiornare-ndp.tex}
+\input{sec/aggiornare-pdq.tex}
+
+\section{Verificatore}
+\input{sec/verifica-documento.tex}
+\input{sec/revisione-codice.tex}
+
+\section{Analista}
+\input{sec/redazione-documento.tex}
+
+\section{Progettista}
+\input{sec/organizzare-workshop.tex}
+
+\section{Programmatore}
+\input{sec/codifica.tex}
+
+\end{document}
