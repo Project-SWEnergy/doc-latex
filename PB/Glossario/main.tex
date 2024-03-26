@@ -1,0 +1,44 @@
+\documentclass[a4paper, 12pt]{article}
+
+\newcommand{\template}{../../Templates}
+\usepackage{\template/package}
+\graphicspath{{../../Assets}}
+
+\newcommand{\Titolo}{Glossario}
+\newcommand{\Data}{21/11/2023}
+\newcommand{\Versione}{0.2.0}
+\newcommand{\Descrizione}{Documento esplicativo del significato di tutti i termini tecnici o poco chiari presenti nella documentazione.}
+\newcommand{\Stato}{Non approvato}
+\newcommand{\Verificatori}{Nessuno}
+\newcommand{\Destinatari}{Prof. Tullio Vardanega \\ & Prof. Riccardo Cardin}
+
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+
+
+\begin{document}
+
+\copertina{}
+\input{sec/registro_modifiche.tex}
+\newpage
+\tableofcontents
+
+\include{sec/introduzione.tex}
+\section{Glossario}
+\input{sec/glossario/A.tex}
+\input{sec/glossario/C.tex}
+\input{sec/glossario/D.tex}
+\input{sec/glossario/F.tex}
+\input{sec/glossario/G.tex}
+\input{sec/glossario/I.tex}
+\input{sec/glossario/L.tex}
+\input{sec/glossario/O.tex}
+\input{sec/glossario/P.tex}
+\input{sec/glossario/R.tex}
+\input{sec/glossario/S.tex}
+\input{sec/glossario/T.tex}
+\input{sec/glossario/U.tex}
+\input{sec/glossario/W.tex}
+
+\end{document}

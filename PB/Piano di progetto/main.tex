@@ -1,0 +1,52 @@
+\documentclass[a4paper, 12pt]{article}
+\newcommand{\template}{../../Templates}
+\usepackage{\template/package}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+
+\definecolor{colore1}{RGB}{70,188,198}
+\definecolor{colore2}{RGB}{66,134,245}
+\definecolor{colore3}{RGB}{234,66,53}
+\definecolor{colore4}{RGB}{250,189,3}
+\definecolor{colore5}{RGB}{147, 112, 219}
+\definecolor{colore6}{RGB}{0,128,0}
+\graphicspath{{../../Assets}}
+
+\newcommand{\Titolo}{Piano di progetto}
+\newcommand{\Data}{27/02/2024}
+\newcommand{\Versione}{1.0.0}
+\newcommand{\Descrizione}{Descrizione dell'organizzazione del gruppo e della pianificazione delle attività}
+\newcommand{\Stato}{Approvato}
+\newcommand{\Verificatori}{Alessandro Tigani Sava \\ 
+& Niccolò Carlesso, Matteo Bando \\
+& Giacomo Gualato, Davide Maffei}
+\newcommand{\Destinatari}{prof. Tullio Vardanega \\ & prof. Riccardo Cardin}
+\newcommand{\Redattori}{
+    Carlo Rosso, Giacomo Gualato \\
+    & Davide Maffei, Niccolò Carlesso}
+\newcommand{\Approvatori}{Davide Maffei}
+% Definizione dell'abbreviazione SAL
+\newcommand{\SAL}{Stato di Avanzamento del Lavoro}
+
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+\input{\template/rischi.tex}
+\input{\template/sprint.tex}
+
+\begin{document}
+
+\copertina{}
+\input{sec/registro_modifiche.tex}
+\newpage
+\tableofcontents
+\newpage
+\input{sec/introduzione.tex}
+\input{sec/analisi_dei_rischi.tex}
+\input{sec/modello_di_sviluppo.tex}
+\input{sec/pianificazione.tex}
+\input{sec/consuntivo_a_finire.tex}
+%\input{sec/chiusura.tex}
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass[a4paper, 12pt]{article}
+
+\newcommand{\template}{../../../../Templates}
+\usepackage{\template/package}
+\graphicspath{{../../../../Assets}}
+
+\newcommand{\Titolo}{Verbale interno}
+\newcommand{\Data}{14/01/2024}
+\newcommand{\Versione}{1.0.0}
+\newcommand{\Descrizione}{Discussione a seguito dell'incontro con il proponente.}
+\newcommand{\Stato}{Approvato}
+\newcommand{\Redattori}{Alessandro Tigani Sava}
+\newcommand{\Verificatori}{Carlo Rosso}
+\newcommand{\Approvatori}{Matteo Bando}
+\newcommand{\Responsabile}{}
+
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+
+\begin{document}
+\copertina{}
+
+\input{chapters/partecipanti}
+\renewcommand{\contentsname}{Ordine del giorno}
+\tableofcontents
+\newpage
+
+\input{chapters/contenuto}
+\input{chapters/incarichi}
+\end{document}
