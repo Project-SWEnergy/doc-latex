@@ -1,0 +1,161 @@
+\subsection{Sprint - 5}
+\textbf{Inizio}: 11-03-2024 \\
+\textbf{Fine}: 24-03-2024
+
+\subsubsection{Gestione dei rischi}
+\textbf{Rischi attesi verificati}:
+
+\begin{itemize}
+	\item RC-3 Comunicazione esterna carente
+	      \begin{itemize}
+		      \item \textbf{Esito mitigazione}: La comunicazione esterna è
+		            risultata carente, infatti non è stato organizzato il SAL
+		            con il proponente prima della fine dello sprint.
+
+		      \item \textbf{Impatto}: Il ritardo accumulato potrebbe portare
+		            ad una lesione del rapporto con il proponente.
+	      \end{itemize}
+
+	\item RC-4 Mancanza di chiarezza nei ruoli e responsabilità
+	      \begin{itemize}
+		      \item \textbf{Esito mitigazione}: La mancanza di chiarezza nei
+		            ruoli e responsabilità ha portato ad un ritardo nel cambio
+		            dei ruoli, rallentando a cascata il lavoro di tutto il
+		            gruppo.
+
+		      \item \textbf{Impatto}: Non è stata organizzata il SAL con il
+		            proponente e il cambio dei ruoli è stato effettuato in
+		            ritardo.
+	      \end{itemize}
+\end{itemize}
+
+\subsubsection{Diagramma di Gantt}
+
+\begin{ganttchart}[
+		x unit=0.6cm, % Adjust the width of each day
+		y unit chart=0.6cm,
+		bar/.style={fill=blue!50},
+		bar height=0.5,
+		time slot format=isodate,
+		time slot unit=day,
+		vgrid,
+		today=2024-03-12,
+		today rule/.style={draw=red, ultra thick}
+	]{2024-03-11}{2024-03-24}
+	\gantttitlecalendar{day} \\
+	\ganttbar{Studio Tecnologie}{2024-03-11}{2024-03-17} \\
+	\ganttbar{Documentazione}{2024-03-18}{2024-03-24} \\
+	\ganttbar{Pianificazione}{2024-03-18}{2024-02-24} \\
+	\ganttbar{Database}{2024-03-18}{2024-03-24} \\
+\end{ganttchart}
+
+Dove:
+\begin{itemize}
+	\item \textbf{"Studio tecnologie"}: questa \textit{issue} è eseguita da
+	      ciascun componente di SWEnergy;
+
+	\item \textbf{"Documentazione"}: questa \textit{issue} è eseguita da
+	      Davide Maffei e Niccolò Carlesso. Per svolgere questa attività, il
+	      gruppo ha deciso di dedicare 10 ore;
+
+	\item \textbf{"Pianificazione"}: questa \textit{issue} è eseguita da
+	      Alessandro Tigani Sava e Carlo Rosso. Per svolgere questa attività,
+	      il gruppo ha deciso di dedicare 10 ore;
+
+	\item \textbf{"Database"}: questa \textit{issue} è eseguita da
+	      Giacomo Gualato e Matteo Bando. Per svolgere questa attività, il
+	      gruppo ha deciso di dedicare 10 ore;
+\end{itemize}
+
+\subsubsection{Preventivo}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+		\hline
+		Alessandro            & -           & -           & -           & 5           & -           & 5           & 10              \\
+		Carlo                 & -           & -           & -           & 5           & -           & 5           & 10              \\
+		Davide                & -           & -           & -           & 10          & -           & -           & 10              \\
+		Giacomo               & -           & -           & -           & -           & 5           & -           & 5               \\
+		Matteo                & 5           & -           & -           & -           & 5           & -           & 10              \\
+		Niccolò               & -           & -           & -           & 5           & -           & -           & 5               \\
+		\hline
+		\textbf{Ore totali}   & 5           & -           & -           & 25          & 10          & 10          & 50              \\
+		\textbf{Costo totale} & 150         & -           & -           & 625         & 150         & 150         & 1075
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
+\end{table}
+
+\subsubsection{Riassunto delle attività svolte}
+\begin{enumerate}
+	\item \textbf{Studio tecnologie}: Alessandro Tigani Sava e Carlo Rosso hanno
+	      tenuto due presentazioni per spiegare le tecnologie utilizzate nei PoC
+	      agli altri componenti di SWEnergy;
+
+	\item \textbf{Correzione della documentazione}: sono stati corretti i
+	      documenti rispetto all'esito RTB, per quanto riguarda gli errori
+	      commessi e compresi;
+
+	\item \textbf{Approfondimento della correzione}: è stata stilata una lista
+	      di argomenti e domande da porre ai committenti per chiarire i dubbi
+	      inerenti all'esito della revisione RTB;
+
+	\item \textbf{Pianificazione della documentazione}: sono stati indagati i
+	      documenti da consegnare per la revisione PB. Inoltre, è stato
+	      approfondito in quale modo deve evolvere il contenuto di tutti i
+	      documenti;
+
+	\item \textbf{Database}: è stato ristrutturato il database, in modo da
+	      renderlo adatto a soddisfare tutti i requisiti;
+\end{enumerate}
+
+\subsubsection{Consuntivo}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+		\hline
+		Alessandro            & -           & -           & -           & 5           & 5           & -           & 10              \\
+		Carlo                 & -           & -           & -           & 5           & -           & 5           & 10              \\
+		Davide                & -           & -           & -           & 10          & -           & -           & 10              \\
+		Giacomo               & -           & -           & -           & -           & 5           & -           & 5               \\
+		Matteo                & 5           & -           & -           & -           & 5           & -           & 10              \\
+		Niccolò               & -           & -           & -           & 5           & -           & -           & 5               \\
+		\hline
+		\textbf{Ore totali}   & 5           & -           & -           & 25          & 15          & 5           & 50              \\
+		\textbf{Costo totale} & 150         & -           & -           & 625         & 225         & 75          & 1075
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
+\end{table}
+
+\newpage
+\subsubsection{Gestione dei ruoli}
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\pie[text=legend]{
+			10/Responsabile,
+			0/Amministratore,
+			0/Analista,
+			50/Progettista,
+			30/Programmatore,
+			10/Verificatore
+		}
+	\end{tikzpicture}
+	\caption{Grafico delle proporzioni dei ruoli ricoperti dai membri del gruppo}
+\end{figure}
+
+\subsubsection{Analisi retrospettiva}
+
+\textbf{Obiettivi raggiunti}:
+
+\textbf{Obiettivi mancati}:
+
+\textbf{Problematiche riscontrate}:
+
+\textbf{Soluzioni attuate}:

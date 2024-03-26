@@ -1,0 +1,55 @@
+\subsection{Sprint - 6}
+\textbf{Inizio}: 25-03-2024 \\
+\textbf{Fine}: 7-04-2024
+
+\subsubsection{Gestione dei rischi}
+
+\subsubsection{Diagramma di Gantt}
+
+\begin{ganttchart}[
+		x unit=0.6cm, % Adjust the width of each day
+		y unit chart=0.6cm,
+		bar/.style={fill=blue!50},
+		bar height=0.5,
+		time slot format=isodate,
+		time slot unit=day,
+		vgrid,
+		today=2024-03-26,
+		today rule/.style={draw=red, ultra thick}
+	]{2024-03-25}{2024-04-07}
+	\gantttitlecalendar{day} \\
+	\ganttbar{Documentazione}{2024-03-25}{2024-03-31} \\
+	\ganttbar{Frontend}{2024-03-25}{2024-03-07} \\
+\end{ganttchart}
+
+Dove:
+\begin{itemize}
+	\item \textbf{"Documentazione"}: questa \textit{issue} è eseguita da
+	      Carlo Rosso. Per svolgere questa attività, il gruppo ha deciso di
+	      dedicare 10 ore.
+
+	\item \textbf{"Frontend"}: questa \textit{issue} è eseguita da Davide Maffei
+	      e Giacomo Gualato. Per svolgere questa attività, il gruppo ha deciso
+	      di dedicare 20 ore.
+\end{itemize}
+
+\subsubsection{Preventivo}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+		\hline
+		Alessandro            & -           & -           & -           & -           & 5           & 5           & 10              \\
+		Carlo                 & -           & -           & -           & 5           & -           & 5           & 10              \\
+		Davide                & -           & -           & -           & 5           & 5           & -           & 10              \\
+		Giacomo               & 5           & -           & -           & -           & 5           & -           & 10              \\
+		Matteo                & -           & -           & -           & 5           & 5           & -           & 10              \\
+		Niccolò               & -           & -           & 5           & -           & 5           & -           & 10              \\
+		\hline
+		\textbf{Ore totali}   & 5           & -           & 5           & 15          & 25          & 10          & 60              \\
+		\textbf{Costo totale} & 150         & -           & 125         & 375         & 375         & 150         & 1175
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
+\end{table}
