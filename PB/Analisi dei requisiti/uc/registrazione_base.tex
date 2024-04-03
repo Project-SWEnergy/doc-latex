@@ -1,0 +1,37 @@
+\usecasegenerico{Effettua registrazione Utente base}
+\label{usecase:Effettua registrazione Utente base}
+\begin{itemize}
+
+	\item \textbf{Attore principale:} Utente generico.
+	\item \textbf{Attore secondario:} Sistema di autenticazione esterno.
+
+	\item \textbf{Precondizioni:} 
+	\begin{itemize}
+        \item  L'Utente generico è connesso al Sistema.
+        \item  L'Utente generico desidera registrarsi come Utente base.
+    \end{itemize}
+    
+	\item \textbf{Postcondizioni:} 
+    \begin{itemize}
+        \item  Tutte le informazioni inserite durante la fase di registrazione sono state verificate dal Sistema.
+        \item  L'Utente generico ha creato un \textit{account} come Utente base.
+    \end{itemize}
+
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+
+            \item Se l'Utente Generico ha selezionato la creazione attraverso terze parti, il Sistema reindirizza l'utente alla pagina del Sistema esterno di terze parti (vedi \autoref{usecase:Effettua accesso per terze parti});
+            \item Se l'Utente Generico ha scelto l'accesso tradizionale, dovrà inserire:
+            \begin{itemize}
+                \item Nome.
+                \item Cognome.
+                \item \textit{Email}.
+                \item \textit{Password}.
+            \end{itemize}
+            \item Indipendentemente dalla modalità di creazione dell' \textit{account}, l'utente dovrà infine inserire le proprie informazioni relative alle:
+            \begin{itemize}
+                \item Allergie.
+                \item Intolleranze.
+            \end{itemize} 
+	\end{enumerate}
+\end{itemize}

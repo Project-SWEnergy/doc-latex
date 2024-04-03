@@ -1,0 +1,130 @@
+\documentclass[a4paper, 12pt]{article}
+\newcommand{\template}{../../Templates}
+\usepackage{\template/package}
+\usepackage{acronym}
+\usepackage{longtable}
+\usepackage{graphicx}
+\graphicspath{{../../Assets/}}
+
+\newcommand{\Titolo}{Analisi dei requisiti}
+\newcommand{\Data}{12/02/2024}
+\newcommand{\Versione}{2.0.0}
+\newcommand{\Descrizione}{Questo documento fornisce un'analisi dettagliata dei casi d'uso e dei requisiti delineati nel capitolato.}
+\newcommand{\Stato}{Approvato}
+\newcommand{\Redattori}{
+    Alessandro Tigani Sava, Matteo Bando,  \\
+    & Giacomo Gualato, Davide Maffei,    \\
+    & Niccolò Carlesso, Carlo Rosso     
+    }
+\newcommand{\Verificatori}{
+    Alessandro Tigani Sava, Matteo Bando,  \\
+    & Giacomo Gualato, Davide Maffei,    \\
+    & Niccolò Carlesso, Carlo Rosso     
+    }
+\newcommand{\Destinatari}{
+    Prof. Tullio Vardanega \\ 
+    & Prof. Riccardo Cardin
+    }
+\newcommand{\Approvatori}{ Davide Maffei}
+
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+\input{\template/usecase.tex}
+
+\begin{document}
+
+\copertina{}
+\input{sec/registro_modifiche.tex}
+\newpage
+
+\tableofcontents
+
+
+\include{sec/introduzione.tex}
+\include{sec/descrizione_prodotto.tex}
+\input{sec/use_case.tex}
+
+%% UC DELL'UTENTE GENERICO
+
+\input{uc/visualizzazione_elenco_ristoranti.tex}
+\input{uc/ricerca_ristoranti.tex}
+\input{uc/visualizzazione_di_un_ristorante.tex}
+\input{uc/condivisione_link_ristorante.tex}
+\input{uc/visualizzazione_FAQ.tex}
+\input{uc/effettua_accesso.tex}
+\input{uc/accesso_tradizionale.tex}
+\input{uc/accesso_per_terze_parti.tex}
+\input{uc/effettua_registrazione.tex}
+\input{uc/registrazione_base.tex}
+\input{uc/registrazione_ristoratore.tex}
+\input{uc/visualizzazione_errore_accesso.tex}
+\input{uc/visualizzazione_errore_registrazione_account_esistente.tex}
+\input{uc/visualizzazione_errore_registrazione_recapito_occupato.tex}
+
+
+%%UC DELL'UTENTE BASE
+
+\input{uc/visualizza_dati_utente.tex}
+\input{uc/modifica_dati_utente.tex}
+\input{uc/storico_ordini.tex}
+\input{uc/visualizzazione_lista_prenotazioni_cliente.tex}
+\input{uc/visualizzazione_del_riepilogo_prenotazione.tex}
+\input{uc/notifica_stato_prenotazione.tex}
+\input{uc/eliminazione_account.tex}
+\input{uc/prenotazione_di_un_tavolo.tex}
+\input{uc/condivisione_della_prenotazione.tex}
+\input{uc/annullamento_prenotazione.tex}
+\input{uc/accesso_alla_prenotazione.tex}
+
+\input{uc/ordinazione_collaborativa_dei_pasti.tex}
+\input{uc/annullamento_dell_ordinazione.tex}
+\input{uc/modifica_ordinazione_collaborativa_dei_pasti.tex}
+
+\input{uc/divisione_del_conto.tex}
+\input{uc/visualizzazione_errore_divisione_già_effettuata.tex}
+\input{uc/pagamento_conto.tex}
+\input{uc/visualizzazione_errore_pagamento.tex}
+\input{uc/inserimento_di_feedback_e_recensioni.tex}
+\input{uc/notifica_di_inserimento_di_feedback.tex}
+\input{uc/notifica_modifica_al_cliente.tex}
+\input{uc/notifica_risposta_feedback.tex}
+\input{uc/visualizzazione_piatto_con_allergene.tex}
+\input{uc/visualizzazione_menu.tex}
+
+%% UC UTENTE AUTENTICATO
+\input{uc/effettua_logout.tex}
+\input{uc/comunicazione_attraverso_chat.tex}
+\input{uc/notifica_chat.tex}
+
+%% UC UTENTE RISTORATORE
+\input{uc/notifica_prenotazione.tex}
+\input{uc/notifica_ordine.tex}
+\input{uc/notifica_annullamento_prenotazione.tex}
+\input{uc/notifica_annullamento_ordine.tex}
+\input{uc/notifica_avvenuto_pagamento.tex}
+\input{uc/notifica_inserimento_feedback.tex}
+
+\input{uc/visualizzazione_lista_prenotazioni.tex}
+\input{uc/accetta_prenotazione.tex}
+\input{uc/rifiuta_prenotazione.tex}
+\input{uc/termina_prenotazione.tex}
+\input{uc/visualizzazione_lista_ordinazioni.tex}
+\input{uc/modifica_ordinazione.tex}
+\input{uc/visualizzazione_stato_pagamento.tex}
+\input{uc/visualizzazione_lista_feedback.tex}
+\input{uc/segnalazione_feedback.tex}
+\input{uc/risposta_a_feedback.tex}
+\input{uc/modifica_informazioni_ristorante.tex}
+\input{uc/gestione_menu.tex}
+\input{uc/gestione_lista_ingredienti.tex}
+\input{uc/assegnamento_ingredienti_piatto.tex}
+
+
+
+%\input{sec/technology_baseline.tex} % diapositiva 11 di T5
+% https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T5.pdf
+
+\input{sec/requisiti.tex}
+
+\end{document}

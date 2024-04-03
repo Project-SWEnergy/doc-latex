@@ -1,0 +1,32 @@
+\documentclass[a4paper, 12pt]{article}
+
+\newcommand{\template}{../../../../Templates}
+\usepackage{\template/package}
+\graphicspath{{../../../../Assets}}
+
+\newcommand{\Titolo}{Verbale interno}
+\newcommand{\Data}{17/12/2023}
+\newcommand{\Versione}{1.0.0}
+\newcommand{\Descrizione}{Brainstorming e organizzazione del lavoro in previsione di un successivo
+incontro con professor Cardin e delle prossime festività natalizie.}
+\newcommand{\Stato}{Verificato}
+\newcommand{\Redattori}{Giacomo Gualato}
+\newcommand{\Verificatori}{Niccolò Carlesso}
+\newcommand{\Responsabile}{Giacomo Gualato}
+\newcommand{\Approvatori}{Giacomo Gualato}
+
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+
+\begin{document}
+\copertina{}
+
+\input{chapters/partecipanti}
+\renewcommand{\contentsname}{Ordine del giorno}
+\tableofcontents
+\newpage
+
+\input{chapters/contenuto}
+\input{chapters/incarichi}
+\end{document}

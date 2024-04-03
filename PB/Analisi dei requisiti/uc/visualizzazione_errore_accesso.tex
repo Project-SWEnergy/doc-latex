@@ -1,0 +1,17 @@
+\usecaseerrore{Visualizzazione errore d'accesso}  
+\label{usecase:Visualizzazione errore d'accesso}
+
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente generico.
+	\item \textbf{Precondizione:}
+    L'utente ha inserito una combinazione non valida di \textit{email} e \textit{password} durante il processo di accesso.
+	\item \textbf{Postcondizione:} L'Utente generico visualizza un messaggio di errore relativo all'accesso fallito.
+
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+        \item Il Sistema verifica la correttezza delle credenziali inserite dall'Utente generico.
+        \item L'Utente generico visualizza un messaggio di errore relativo all'autenticazione fallita.
+        \item Il Sistema reindirizza l'Utente generico alla pagina di accesso (vedi \autoref{usecase:Effettua accesso}).
+    \end{enumerate}
+	
+\end{itemize}
