@@ -3,3 +3,38 @@
 \subsection{\textit{Frontend}}
 
 \subsection{\textit{Backend}}
+
+Per quanto riguarda il \textit{deployment} del \textit{backend}, il team
+SWEnergy ha optato per un'architettura monolitica. Questa scelta è stata
+determinata dalle dimensioni contenute del sistema e dalla mancanza di esigenze
+di scalabilità e manutenibilità che richiederebbero l'adozione di
+un'architettura a microservizi. Nonostante l'architettura monolitica possa
+aumentare le dipendenze del \textit{backend} e rendere più complessa
+l'individuazione dei problemi, l'uso della \textit{dependency injection} fornita
+da Nest.js consente di mantenere il codice ben strutturato e modulare,
+facilitando l'individuazione di eventuali dipendenze indesiderate attraverso
+l'uso di \textit{software} di analisi statica.
+
+Per garantire una maggiore manutenibilità e scalabilità, il team ha deciso di
+sviluppare una libreria interna contenente i moduli condivisi tra i vari
+componenti del \textit{backend}, mentre ogni funzionalità del sistema è
+sviluppata in moduli separati. Questo approccio permette di mantenere il codice
+più organizzato e facilita eventuali future estensioni o modifiche.
+
+L'architettura monolitica è stata preferita poiché il sistema richiede
+principalmente l'implementazione di API REST per l'interazione col database.
+Questo pone il database come componente fondamentale del sistema, evidenziando
+la dipendenza tra il database e il \textit{backend}. Inoltre, l'interfaccia
+fornita dal \textit{backend} semplifica l'implementazione del \textit{frontend},
+fornendo le operazioni di interazione con il database e i dati necessari al
+\textit{frontend} senza esporre la struttura del database o le operazioni di
+implementazione.
+
+L'architettura scelta contribuisce a ridurre i tempi e i costi di
+sviluppo, poiché riduce il numero di interfacce da implementare e testare,
+riducendo così la complessità complessiva del sistema.
+
+Infine, SWEnergy utilizza Docker per il \textit{deployment} del
+\textit{backend}, in questo modo è possibile garantire la portabilità del
+sistema, ma soprattutto la scalabilità orizzontale, in quanto è possibile creare
+più istanze del \textit{backend} e bilanciare il carico tra di esse.
