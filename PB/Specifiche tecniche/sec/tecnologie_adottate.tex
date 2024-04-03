@@ -2,8 +2,180 @@
 
 \subsection{Tecnologie per la codifica}
 
+\subsubsection{TypeScript}
+
+I membri del team SWEnergy, prima di iniziare il progetto, possedevano una
+solida conoscenza di C++. Alcuni di loro avevano esperienza anche con Java,
+Python e JavaScript. Il committente ha illustrato che Imola Informatica fa un
+ampio uso di TypeScript e Java per lo sviluppo software, sottolineando inoltre
+che per creare un'applicazione web, specialmente per quanto riguarda il
+frontend, è necessario utilizzare JavaScript o TypeScript. Partendo da queste
+considerazioni, SWEnergy ha optato per l'uso di JavaScript come linguaggio
+principale per lo sviluppo del progetto, poiché consente di scrivere codice sia
+per il frontend che per il backend. Infine, è stata scelta TypeScript, un
+superset di JavaScript, per la sua capacità di aggiungere tipi statici al
+linguaggio, migliorando la robustezza, la manutenibilità e la leggibilità del
+codice. Attraverso l'analisi statica del codice, è possibile individuare errori
+di programmazione direttamente durante la fase di sviluppo, evitando che si
+manifestino durante l'esecuzione, il che migliora la qualità del software e
+riduce il tempo di sviluppo.
+
+\subsubsection{Angular}
+
+Per lo sviluppo del frontend, SWEnergy ha scelto di adottare Angular, un
+framework open-source per la creazione di applicazioni web. Questa decisione è
+stata guidata dalla familiarità di due membri del team con questo framework.
+SWEnergy ha inteso capitalizzare sulle competenze pregresse di questi due membri
+per ridurre il tempo di apprendimento, organizzando workshop dedicati per il
+resto del team al fine di uniformare le conoscenze.
+
+Per il frontend, abbiamo optato per l'utilizzo della versione 17.3.3 di Angular,
+la più recente disponibile al momento. Abbiamo scelto questa versione
+ritenendola la più adatta per il nostro apprendimento, considerando anche
+possibili implementazioni future di Angular. È importante notare che questa
+versione è scarsamente supportata da ChatGPT e dispone di risorse online meno
+dettagliate rispetto alle versioni precedenti.
+
+Consideriamo questo aspetto come un punto positivo: ci consente di sfruttare le
+intelligenze artificiali per comprendere i metodi di soluzione più appropriati,
+mentre richiede che il codice venga sempre adattato alle nostre specifiche
+esigenze, promuovendo così una migliore comprensione del framework. Inoltre, la
+documentazione fornita da Angular è chiara e completa, agevolando il nostro
+processo di apprendimento del framework.
+
+\subsubsection{Axios}
+
+Per gestire le chiamate HTTP dal frontend al backend, SWEnergy ha adottato
+Axios, un client HTTP basato su promise. La decisione di utilizzare Axios è
+stata influenzata dalla raccomandazione del proponente, che ha sottolineato la
+facilità e la velocità con cui è possibile effettuare test di carico sulle API
+utilizzando questo strumento.
+
+\subsubsection{Tailwind CSS}
+
+Vista l'ampia necessità di utilizzo di CSS nello sviluppo del frontend, il team
+ha scelto di adottare Tailwind, un framework che introduce un nuovo approccio
+nel linguaggio CSS. L'obiettivo è rendere il codice CSS più riusabile e
+manutenibile, semplificando così il processo di sviluppo e migliorando
+l'efficienza del team.
+
+\subsubsection{Node.js}
+
+Per la realizzazione del backend, SWEnergy ha optato per Node.js, un runtime
+JavaScript open-source che si basa sul motore JavaScript V8 di Google Chrome. La
+scelta di Node.js è stata essenzialmente dettata dalla necessità di un runtime
+JavaScript per eseguire il codice del backend, considerando che abbiamo scelto
+TypeScript come linguaggio principale. Node.js rappresenta la scelta più diffusa
+e supportata per questo tipo di scenario.
+
+\subsubsection{Nest.js}
+
+Per la gestione delle API, SWEnergy ha optato per l'utilizzo di Nest.js, un
+framework basato su Node.js progettato per la creazione di applicazioni
+server-side efficienti, scalabili e facili da mantenere. La decisione di
+adottare Nest.js è stata guidata dalla raccomandazione del proponente, che ha
+evidenziato la sua similitudine con Angular nella dinamica di utilizzo della
+dependency injection. Questo approccio consente la creazione di un'applicazione
+modulare, dove i componenti possono essere facilmente sostituiti e testati.
+
+\subsubsection{Drizzle}
+
+Per la gestione del database, SWEnergy ha scelto Drizzle, un ORM (Object
+Relational Mapping) progettato per TypeScript. Drizzle consente di definire il
+database, le relazioni tra le tabelle e le query direttamente in TypeScript,
+fornendo quindi anche le classi necessarie per interagire con il database. La
+decisione di adottare Drizzle è stata motivata dalla sua somiglianza con SQL, in
+quanto tutti i membri del team sono molto familiari con questo linguaggio.
+Inoltre, la similitudine con SQL rende le query estremamente efficienti, poiché
+la traduzione è diretta e non richiede una complessa analisi.
+
+\subsubsection{PostgreSQL}
+
+SWEnergy ha optato per l'adozione di PostgreSQL come database per il progetto,
+poiché tutti i membri del team possiedono una discreta esperienza con questo
+DBMS. La decisione è stata motivata dalla consapevolezza che ci sono già
+numerose nuove tecnologie da apprendere nel contesto del progetto; pertanto, per
+quanto riguarda il database, è stata preferita una soluzione con cui tutti i
+membri del team si sentono già a proprio agio.
+
+\subsubsection{Docker}
+
+L'adozione di Docker per containerizzare l'intero progetto offre numerosi
+vantaggi fondamentali. In primo luogo, Docker consente di rendere il prodotto
+eseguibile su qualunque hardware, garantendo una maggiore portabilità e facilità
+di distribuzione. Grazie alla standardizzazione dell'ambiente di esecuzione
+tramite i container Docker, è possibile eliminare i problemi legati alla
+differenza di configurazioni hardware e software tra i vari ambienti di
+sviluppo, test e produzione.
+
+Inoltre, l'utilizzo di Docker permette di semplificare il processo di gestione
+delle dipendenze e delle librerie necessarie per il progetto, fornendo un
+ambiente isolato e riproducibile in cui eseguire l'applicazione senza
+interferenze esterne. Ciò contribuisce a ridurre i conflitti e i problemi di
+compatibilità tra le diverse componenti del sistema, migliorando la coerenza e
+l'affidabilità del software.
+
+Infine, Docker offre la possibilità di scalare orizzontalmente il prodotto
+utilizzando tecnologie come Kubernetes. Questo significa che è possibile gestire
+facilmente un carico di lavoro in crescita distribuendo automaticamente i
+container su più nodi, garantendo così una maggiore disponibilità e prestazioni
+dell'applicazione anche in presenza di un elevato numero di richieste. In
+sintesi, l'adozione di Docker per containerizzare il vostro progetto offre un
+modo efficiente e affidabile per gestire l'intero ciclo di vita
+dell'applicazione, garantendo flessibilità, portabilità e scalabilità.
+
 \subsection{Tecnologie per l'analisi statica del codice}
+
+\subsubsection{Language Server Protocol}
+
+L'adozione di un Language Server Protocol (LSP) nel nostro processo di sviluppo
+rappresenta un passo significativo verso un ambiente di sviluppo più efficiente
+e produttivo. Grazie all'utilizzo di un LSP, siamo in grado di integrare
+funzionalità avanzate di analisi statica e segnalazione degli errori
+direttamente nel nostro editor di codice, garantendo una rapida identificazione
+e risoluzione di potenziali problemi di programmazione.
 
 \subsection{Tecnologie per l'analisi dinamica del codice}
 
-% qui sono ci mettiamo la tabella riassuntiva
+\subsubsection{Insomnia}
+
+Per verificare il funzionamento delle API e del backend, SWEnergy ha optato per
+l'utilizzo di Insomnia, un'applicazione open-source progettata per testare le
+API REST. In effetti, il team ha sviluppato un insieme di test per assicurarsi
+che le API rispondano correttamente alle richieste e restituiscano i dati
+previsti, garantendo così il corretto funzionamento del sistema.
+
+
+\subsubsection{Angular}
+
+\subsubsection{Nest.js}
+
+\begin{table}[H]
+	\centering
+	\begin{tabularx}{\textwidth}{lXl}
+		\hline
+		\textbf{Nome} & \textbf{Descrizione}                                                  & \textbf{Versione} \\
+		\hline
+		Typescript    & Linguaggio di programmazione                                          & 5.4               \\
+		\hline
+		Angular       & Framework per lo sviluppo di applicazioni web                         & 17.3.3            \\
+		\hline
+		Axios         & Libreria per effettuare richieste HTTP                                & 1.6.8             \\
+		\hline
+		Tailwind CSS  & Framework per la gestione di file CSS                                 & 3.4.3             \\
+		\hline
+		Node.js       & Runtime JavaScript                                                    & 20.12.0           \\
+		\hline
+		NestJS        & Framework per lo sviluppo di applicazioni server-side                 & 10.3.6            \\
+		\hline
+		Drizzle       & Object Relational Mapping                                             & 0.30.6            \\
+		\hline
+		PostgreSQL    & Sistema di gestione di basi di dati                                   & 16.2              \\
+		\hline
+		Docker        & Piattaforma per lo sviluppo, il deploy e l'esecuzione di applicazioni & /                 \\
+		\hline
+		Insomnia      & Crezione di un batch di test collaborativo                            & 8.6.1             \\
+		\hline
+	\end{tabularx}
+	\caption{Tabella delle tecnologie adottate}
+\end{table}
