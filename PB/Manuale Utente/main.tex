@@ -1,0 +1,37 @@
+\documentclass[a4paper, 12pt]{article}
+\newcommand{\template}{../../Templates}
+\usepackage{\template/package}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\graphicspath{{../../Assets}}
+
+\newcommand{\Titolo}{Manuale Utente}
+\newcommand{\Data}{04/04/2024}
+\newcommand{\Versione}{0.1.0}
+\newcommand{\Descrizione}{Questo documento contiene le informazioni necessarie per l'utilizzo della \textit{web app} EasyMeal.}
+\newcommand{\Verificatori}{}
+\newcommand{\Redattori}{}
+\newcommand{\Approvatori}{}
+\newcommand{\Stato}{Non approvato}
+
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+
+\begin{document}
+\copertina{}
+\input{sec/registro_modifiche.tex}
+\newpage
+
+\setcounter{tocdepth}{3}
+\tableofcontents
+\newpage
+\input{sec/introduzione.tex}
+\newpage
+
+\input{sec/requisiti.tex}
+\input{sec/installazione.tex}
+\input{sec/istruzioni_uso.tex}
+\input{sec/supporto_tecnico.tex}
+
+\end{document}
