@@ -4,7 +4,7 @@
 
 \subsection{\textit{Backend}}
 
-Per quanto riguarda il \textit{deployment} del \textit{backend}, il team
+Per quanto riguarda il \textit{deployment} del \textit{backend}, il \textit{team}
 SWEnergy ha optato per un'architettura monolitica. Questa scelta è stata
 determinata dalle dimensioni contenute del sistema e dalla mancanza di esigenze
 di scalabilità e manutenibilità che richiederebbero l'adozione di
@@ -15,19 +15,19 @@ da Nest.js consente di mantenere il codice ben strutturato e modulare,
 facilitando l'individuazione di eventuali dipendenze indesiderate attraverso
 l'uso di \textit{software} di analisi statica.
 
-Per garantire una maggiore manutenibilità e scalabilità, il team ha deciso di
+Per garantire una maggiore manutenibilità e scalabilità, il \textit{team} ha deciso di
 sviluppare una libreria interna contenente i moduli condivisi tra i vari
 componenti del \textit{backend}, mentre ogni funzionalità del sistema è
 sviluppata in moduli separati. Questo approccio permette di mantenere il codice
 più organizzato e facilita eventuali future estensioni o modifiche.
 
 L'architettura monolitica è stata preferita poiché il sistema richiede
-principalmente l'implementazione di API REST per l'interazione col database.
-Questo pone il database come componente fondamentale del sistema, evidenziando
-la dipendenza tra il database e il \textit{backend}. Inoltre, l'interfaccia
+principalmente l'implementazione di API REST per l'interazione col \textit{database}.
+Questo pone il \textit{database} come componente fondamentale del sistema, evidenziando
+la dipendenza tra il \textit{database} e il \textit{backend}. Inoltre, l'interfaccia
 fornita dal \textit{backend} semplifica l'implementazione del \textit{frontend},
-fornendo le operazioni di interazione con il database e i dati necessari al
-\textit{frontend} senza esporre la struttura del database o le operazioni di
+fornendo le operazioni di interazione con il \textit{database} e i dati necessari al
+\textit{frontend} senza esporre la struttura del \textit{database} o le operazioni di
 implementazione.
 
 L'architettura scelta contribuisce a ridurre i tempi e i costi di
