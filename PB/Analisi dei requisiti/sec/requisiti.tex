@@ -74,7 +74,7 @@ nel testo del capitolato d'appalto. Mentre i codici univoci sottostanti indicano
 		\hline
 		RFO18       & L'Utente base deve poter annullare la prenotazione.                                                            & \autoref{usecase:Annullamento della prenotazione}                                                                  \\
 		\hline
-		RFO19       & L'Utente base deve poter accedere ad una prenotazione mediante \textit{link} di condivisione                   & \autoref{usecase:Accesso alla prenotazione}                                                                        \\
+		RFO19       & L'Utente base deve poter accedere ad una prenotazione a lui condivisa											 & \autoref{usecase:Accesso alla prenotazione}                                                                        \\
 		\hline
 		RFO20       & L'Utente base deve poter annullare il proprio ordine.                                                          & \autoref{usecase:Annullamento dell'ordinazione}                                                                    \\
 		\hline
@@ -86,9 +86,11 @@ nel testo del capitolato d'appalto. Mentre i codici univoci sottostanti indicano
 		\hline
 		RFO24       & L'Utente base deve poter visualizzare il messaggio d'errore che la divisione del conto è stata già effettuata. & \autoref{usecase:Visualizzazione errore divisione del conto già effettuata}                                        \\
 		\hline
-		RFO25       & L'Utente base deve poter pagare il conto.                                                                      & \autoref{usecase:Pagamento del conto}                                                                              \\
+		RFF25       & L'Utente base deve poter pagare il conto.                                                                      & \autoref{usecase:Pagamento del conto}                                                                              \\
 		\hline
-		RFO26       & L'Utente base deve poter visualizzare l'errore relativo al pagamento fallito.                                  & \autoref{usecase:Visualizzazione errore pagamento}                                                                 \\
+		RFF26       & L'Utente base deve poter visualizzare l'errore relativo al pagamento fallito.                                  & \autoref{usecase:Visualizzazione errore pagamento}                                                                 \\
+		% dal momento che il pagamento non è obbligatorio, anche questo
+		% requisito diventa desiderabile
 	\end{tabularx}
 	\caption{Tabella dei requisiti funzionali}
 \end{table}
@@ -100,19 +102,19 @@ nel testo del capitolato d'appalto. Mentre i codici univoci sottostanti indicano
 	\begin{tabularx}{\textwidth}{l|X|p{2cm}}
 		\textbf{ID} & \textbf{Descrizione}                                                                                                 & \textbf{Fonte}                                                                                \\
 		\hline
-		RFO27       & L'Utente base deve poter inserire \textit{feedback}.                                                                 & \autoref{usecase:Inserimento di feedback}                                                     \\
+		RFD27       & L'Utente base deve poter inserire \textit{feedback}.                                                                 & \autoref{usecase:Inserimento di feedback}                                                     \\
 		\hline
-		RFO28       & L'Utente base deve poter visualizzare la notifica di richiesta di inserimento \textit{feedback}.                     & \autoref{usecase:Visualizzazione della notifica di richiesta di inserimento feedback}         \\
+		RFD28       & L'Utente base deve poter visualizzare la notifica di richiesta di inserimento \textit{feedback}.                     & \autoref{usecase:Visualizzazione della notifica di richiesta di inserimento feedback}         \\
 		\hline
 		RFO29       & L'Utente base deve poter visualizzare la notifica relativa alla modifica della sua ordinazione.                      & \autoref{usecase:Visualizzazione notifica modifica ordinazione}                               \\
 		\hline
-		RFD30       & L'Utente base deve poter visualizzare la notifica relativa al suo \textit{feedback} che ha ricevuto una risposta.    & \autoref{usecase:Visualizzazione notifica risposta feedback}                                  \\
+		RFF30       & L'Utente base deve poter visualizzare la notifica relativa al suo \textit{feedback} che ha ricevuto una risposta.    & \autoref{usecase:Visualizzazione notifica risposta feedback}                                  \\
 		\hline
 		RFD31       & L'Utente base deve poter inserire e modificare le proprie allergie.                                                  & \autoref{usecase:Effettua registrazione Utente base} e \autoref{usecase:Modifica dati utente} \\
 		\hline
 		RFD32       & L'Utente base deve poter visualizzare un messaggio se seleziona un piatto di cui è allergico.                        & \autoref{usecase:Visualizzazione messaggio di selezione di una pietanza con allergene}        \\
 		\hline
-		RFO33       & L'Utente base deve poter visualizzare il menù di un ristorante.                                                      & \autoref{usecase:Visualizzazione menù}                                                        \\
+		RFD33       & L'Utente base deve poter visualizzare il menù di un ristorante.                                                      & \autoref{usecase:Visualizzazione menù}                                                        \\
 		\hline
 		RFD34       & L'Utente autenticato deve poter effettuare il \textit{logout}.                                                       & \autoref{usecase:Effettua Logout}                                                             \\
 		\hline
@@ -138,7 +140,7 @@ nel testo del capitolato d'appalto. Mentre i codici univoci sottostanti indicano
 	\begin{tabularx}{\textwidth}{l|X|c}
 		\textbf{ID} & \textbf{Descrizione}                                                                                                    & \textbf{Fonte}                                                       \\
 		\hline
-		RFO41       & L'Utente ristoratore deve poter visualizzare la lista delle prenotazioni in dettaglio e con la lista degli ingredienti. & \autoref{usecase:Visualizzazione lista prenotazioni}                 \\
+		RFO41       & L'Utente ristoratore deve poter visualizzare la lista delle prenotazioni												  & \autoref{usecase:Visualizzazione lista prenotazioni}                 \\
 		\hline
 		RFO42       & L'Utente ristoratore deve poter accettare una prenotazione.                                                             & \autoref{usecase:Accetta prenotazione}                               \\
 		\hline
@@ -150,7 +152,7 @@ nel testo del capitolato d'appalto. Mentre i codici univoci sottostanti indicano
 		\hline
 		RFD46       & L'Utente ristoratore deve poter modificare un ordinazione.                                                              & \autoref{usecase:Modifica ordinazione}                               \\
 		\hline
-		RFO47       & L'Utente ristoratore deve poter visualizzare lo stato di pagamento di una prenotazione.                                 & \autoref{usecase:Visualizzazione stato di pagamento}                 \\
+		RFD47       & L'Utente ristoratore deve poter visualizzare lo stato di pagamento di una prenotazione.                                 & \autoref{usecase:Visualizzazione stato di pagamento}                 \\
 		\hline
 		RFO48       & L'Utente ristoratore deve poter visualizzare la lista dei \textit{feedback}.                                            & \autoref{usecase:Visualizzazione lista feedback}                     \\
 		\hline
@@ -243,13 +245,13 @@ La seguente tabella è relativa al tracciamento "Fonti - Requisito", in cui è p
 	\hline
 	\autoref{usecase:Visualizzazione errore divisione del conto già effettuata}                                                                                  & RFO24                  \\
 	\hline
-	\autoref{usecase:Pagamento del conto}                                                                                                                        & RFO25                  \\
+	\autoref{usecase:Pagamento del conto}                                                                                                                        & RFD25                  \\
 	\hline
-	\autoref{usecase:Visualizzazione errore pagamento}                                                                                                           & RFO26                  \\
+	\autoref{usecase:Visualizzazione errore pagamento}                                                                                                           & RFD26                  \\
 	\hline
-	\autoref{usecase:Inserimento di feedback}                                                                                                                    & RFO27                  \\
+	\autoref{usecase:Inserimento di feedback}                                                                                                                    & RFD27                  \\
 	\hline
-	\autoref{usecase:Visualizzazione della notifica di richiesta di inserimento feedback}                                                                        & RFO28                  \\
+	\autoref{usecase:Visualizzazione della notifica di richiesta di inserimento feedback}                                                                        & RFD28                  \\
 	\hline
 	\autoref{usecase:Visualizzazione notifica modifica ordinazione}                                                                                              & RFO29                  \\
 	\hline
@@ -259,7 +261,7 @@ La seguente tabella è relativa al tracciamento "Fonti - Requisito", in cui è p
 	\hline
 	\autoref{usecase:Visualizzazione messaggio di selezione di una pietanza con allergene}                                                                       & RFD32                  \\
 	\hline
-	\autoref{usecase:Visualizzazione menù}                                                                                                                       & RFO33                  \\
+	\autoref{usecase:Visualizzazione menù}                                                                                                                       & RFD33                  \\
 	\hline
 	\autoref{usecase:Effettua Logout}                                                                                                                            & RFD34                  \\
 	\hline
@@ -287,7 +289,7 @@ La seguente tabella è relativa al tracciamento "Fonti - Requisito", in cui è p
 	\hline
 	\autoref{usecase:Modifica ordinazione}                                                                                                                       & RFD46                  \\
 	\hline
-	\autoref{usecase:Visualizzazione stato di pagamento}                                                                                                         & RFO47                  \\
+	\autoref{usecase:Visualizzazione stato di pagamento}                                                                                                         & RFD47                  \\
 	\hline
 	\autoref{usecase:Visualizzazione lista feedback}                                                                                                             & RFO48                  \\
 	\hline
