@@ -14,3 +14,23 @@
 	% filecolor=magenta,        % color of file links
 	urlcolor=[RGB]{156,1,198}   % color of external links
 }
+
+% Define the subsubsubsection command
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand{\thesubsubsubsection}{\thesubsubsection.\arabic{subsubsubsection}}
+\newcommand{\subsubsubsection}[1]{\refstepcounter{subsubsubsection}\subsubsection*{\thesubsubsubsection\quad#1}}
+
+% Define the subsubsubsubsection command
+\newcounter{subsubsubsubsection}[subsubsubsection]
+\renewcommand{\thesubsubsubsubsection}{\thesubsubsubsection.\arabic{subsubsubsubsection}}
+\newcommand{\subsubsubsubsection}[1]{\refstepcounter{subsubsubsubsection}\subsubsection*{\thesubsubsubsubsection\quad#1}}
+
+
+% Define cref references
+\crefname{section}{Sezione \S}{Sezioni}
+\crefname{subsection}{Sottosezione \S}{Sottosezioni}
+\crefname{subsubsection}{Sottosezione \S}{Sottosezioni}
+\crefname{subsubsubsection}{Sottosezione \S}{Sottosezioni}
+\crefname{subsubsubsubsection}{Sottosezione \S}{Sottosezioni}
+
+\setcounter{secnumdepth}{5} % Set the section numbering depth
