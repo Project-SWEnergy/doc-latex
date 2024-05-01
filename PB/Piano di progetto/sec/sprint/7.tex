@@ -1,0 +1,135 @@
+\subsection{Sprint - 7 PB}
+\textbf{Inizio}: 8-04-2024 \\
+\textbf{Fine}: 21-04-2024
+
+\subsubsection{Gestione dei rischi}
+\textbf{Rischi attesi verificati}:
+
+\begin{itemize}
+	\item Nessuno.
+\end{itemize}
+
+\subsubsection{Diagramma di Gantt}
+
+\begin{ganttchart}[
+		x unit=0.6cm, % Adjust the width of each day
+		y unit chart=0.6cm,
+		bar/.style={fill=blue!50},
+		bar height=0.5,
+		time slot format=isodate,
+		time slot unit=day,
+		vgrid,
+		today=2024-04-08,
+		today rule/.style={draw=red, ultra thick}
+	]{2024-04-08}{2024-04-21}
+	\gantttitlecalendar{day} \\
+	\ganttbar{Documentazione}{2024-04-08}{2024-04-14} \\
+	\ganttbar{Implementazione frontend}{2024-04-08}{2024-04-21} \\
+	\ganttbar{Implementazione backend}{2024-04-08}{2024-04-21} \\
+\end{ganttchart}
+
+Dove:
+\begin{itemize}
+	\item \textbf{"Documentazione"}: questa \textit{issue} è eseguita da
+	      Alessandro Tigani Sava e Giacomo Gualato. Per svolgere questa attività, il gruppo ha deciso di
+	      dedicare 20 ore.
+	\item \textbf{"Implementazione frontend"}: questa \textit{issue} è eseguita
+	      da Davide Maffei e Carlo Rosso. Per svolgere questa attività, il
+	      gruppo ha deciso di dedicare 20 ore.
+	\item \textbf{"Implementazione backend"}: questa \textit{issue} è eseguita da Matteo Bando e Niccolò Carlesso. Per svolgere questa attività, il
+	      gruppo ha deciso di dedicare 20 ore.
+\end{itemize}
+
+\subsubsection{Preventivo}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+		\hline
+		Alessandro            & 5           & -           & -           & -           & 5           & -           & 10              \\
+		Carlo                 & -           & -           & -           & 5           & -           & 5           & 10              \\
+		Davide                & -           & -           & -           & -           & 5           & 5           & 10              \\
+		Giacomo               & -           & -           & -           & 5           & 5          	& -           & 10              \\
+		Matteo                & -           & 5           & -           & -           & 5           & -           & 10              \\
+		Niccolò               & -           & -           & -           & 5           & 5           & -           & 10              \\
+		\hline
+		\textbf{Ore totali}   & 5           & 5           & -           & 15          & 25          & 10          & 60              \\
+		\textbf{Costo totale} & 150         & 100         & -           & 375         & 375         & 150         & 1150
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
+\end{table}
+
+\subsubsection{Riassunto delle attività svolte}
+
+\begin{enumerate}
+	\item \textbf{Stesura documentazione}: In questo \textit{sprint} si è continuata la stesura dei documenti richiesti per la revisione PB: "Manuale Utente", "Specifica Tecnica", "Piano di qualifica", "Piano di progetto". Sono state aggiornate le Norme di Progetto.
+
+	\item \textbf{Frontend}: Durante questa fase sono state svolte le attività relative alla registrazione, all'autenticazione, alla visualizzazione della homepage e dei ristoranti per un utente generico$^G$, nonché alla gestione dei piatti per tutte le categorie di utenti previste.
+
+	\item \textbf{Backend}: Il lavoro del \textit{backend} si è concentrato sulla realizzazione di tutte le API di base per la gestione delle tabelle in \textit{database}, in particolare la gestione dei piatti presenti nel menu e la registrazione completa dei ristoratori.
+\end{enumerate}
+
+\subsubsection{Consuntivo}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+		\hline
+		Alessandro            & 5           & -           & -           & -           & 5           & -           & 10              \\
+		Carlo                 & -           & -           & -           & 5           & -           & 5           & 10              \\
+		Davide                & -           & -           & -           & -           & 5           & 5           & 10              \\
+		Giacomo               & -           & -           & -           & 5           & 5          	& -           & 10              \\
+		Matteo                & -           & 5           & -           & -           & 5           & -           & 10              \\
+		Niccolò               & -           & -           & -           & 5           & 5           & -           & 10              \\
+		\hline
+		\textbf{Ore totali}   & 5           & 5           & -           & 10          & 30          & 10          & 60              \\
+		\textbf{Costo totale} & 150         & 100         & -           & 350         & 400         & 150         & 1150
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
+\end{table}
+
+\subsubsection{Gestione dei ruoli}
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\pie[text=legend]{
+            10/Responsabile,
+            10/Amministratore,
+            0/Analista,
+            15/Progettista,
+            50/Programmatore,
+            15/Verificatore
+        }
+	\end{tikzpicture}
+	\caption{Grafico delle proporzioni dei ruoli ricoperti dai membri del gruppo}
+\end{figure}
+
+Per quanto riguarda il ruolo del Programmatore il gruppo ha mantenuto un numero di ori pari al 50\% di quelle disponibili, come da \textit{sprint} precedente.
+Si è scelto di assegnare lo stesso numero di ore alle attività di progettazione, ripetendo le stesse procedure introdotte nel precedente sprint.
+Inoltre, è stata mantenuta una distribuzione equilibrata del tempo tra il Responsabile e il Verificatore (entrambi al 10\% e 15\% in relazione allo \textit{sprint} passato), il che suggerisce che la gestione del progetto e il controllo di qualità sono rimasti focali e importanti anche durante questo \textit{sprint}.
+La mancanza di ore assegnate al ruolo di Analista durante questo \textit{sprint} è dovuto al fatto che non c'erano attività specifiche richieste per tale ruolo.
+
+
+\subsubsection{Analisi retrospettiva}
+Esaminando le ore impiegate in questo \textit{sprint}, il periodo appena concluso presenta un bilancio complessivamente positivo.
+Il distacco tra il gruppo assegnato allo sviluppo del \textit{backend} e quello assegnato al \textit{frontend} è stato colmato, tuttavia è stato registrato un generico rallentamento dei lavori rispetto alle previsioni siccome sono state rilevate problematiche non individuate durante la fase di creazione del PoC che hanno richiesto una revisione di porzioni di codice.\\
+La documentazione è in una buona posizione, con la stesura dei documenti in corso e in linea con la pianificazione. Sia il "Manuale Utente" che la "Specifica Tecnica" 
+sono stati iniziati e sono in fase di completamento.
+
+\textbf{Obiettivi raggiunti}:
+\begin{itemize}
+	\item Completamento delle pagine di login e registrazione.
+	\item Visualizzazione di \textit{homepage} ed elenco ristoranti per un utente generico$^G$.
+	\item Gestione dei piatti presenti in menu.
+	\item Stesura del "Manuale Utente".
+	\item Stesura della "Specifica Tecnica".
+\end{itemize}
+
+\textbf{Obiettivi mancati}: Nessuno.
+
+\textbf{Problematiche riscontrate}: Nessuno.
+
+\textbf{Soluzioni attuate}: Nessuno.
