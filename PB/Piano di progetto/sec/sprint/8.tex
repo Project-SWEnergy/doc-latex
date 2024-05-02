@@ -19,25 +19,20 @@
 		time slot format=isodate,
 		time slot unit=day,
 		vgrid,
-		today=2024-04-08,
+		today=2024-04-22,
 		today rule/.style={draw=red, ultra thick}
-	]{2024-04-08}{2024-04-21}
+	]{2024-04-22}{2024-05-05}
 	\gantttitlecalendar{day} \\
-	\ganttbar{Documentazione}{2024-04-08}{2024-04-14} \\
-	\ganttbar{Implementazione frontend}{2024-04-08}{2024-04-21} \\
-	\ganttbar{Implementazione backend}{2024-04-08}{2024-04-21} \\
+	\ganttbar{Documentazione}{2024-05-01}{2024-05-05} \\
+	\ganttbar{Implementazione frontend}{2024-04-22}{2024-05-05} \\
+	\ganttbar{Implementazione backend}{2024-04-22}{2024-05-05} \\
 \end{ganttchart}
 
 Dove:
 \begin{itemize}
-	\item \textbf{"Documentazione"}: questa \textit{issue} è eseguita da
-	      Alessandro Tigani Sava e Giacomo Gualato. Per svolgere questa attività, il gruppo ha deciso di
-	      dedicare 20 ore.
-	\item \textbf{"Implementazione frontend"}: questa \textit{issue} è eseguita
-	      da Davide Maffei e Carlo Rosso. Per svolgere questa attività, il
-	      gruppo ha deciso di dedicare 20 ore.
-	\item \textbf{"Implementazione backend"}: questa \textit{issue} è eseguita da Matteo Bando e Niccolò Carlesso. Per svolgere questa attività, il
-	      gruppo ha deciso di dedicare 20 ore.
+	\item \textbf{"Documentazione"}: questa \textit{issue} è eseguita da Niccolò Carlesso e Davide Maffei. Per svolgere questa attività, il gruppo ha deciso di dedicare 20 ore.
+	\item \textbf{"Implementazione frontend"}: questa \textit{issue} è eseguita da Giacomo Gualato e Carlo Rosso. Per svolgere questa attività, il gruppo ha deciso di dedicare 20 ore.
+	\item \textbf{"Implementazione backend"}: questa \textit{issue} è eseguita da Matteo Bando e Alessandro Tigani Sava. Per svolgere questa attività, il gruppo ha deciso di dedicare 20 ore.
 \end{itemize}
 
 \subsubsection{Preventivo}
@@ -47,12 +42,12 @@ Dove:
 	\begin{tabular}{l|r|r|r|r|r|r|r}
 		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
 		\hline
-		Alessandro            & 5           & -           & -           & -           & 5           & -           & 10              \\
-		Carlo                 & -           & -           & -           & 5           & -           & 5           & 10              \\
-		Davide                & -           & -           & -           & -           & 5           & 5           & 10              \\
-		Giacomo               & -           & -           & -           & 5           & 5          	& -           & 10              \\
-		Matteo                & -           & 5           & -           & -           & 5           & -           & 10              \\
-		Niccolò               & -           & -           & -           & 5           & 5           & -           & 10              \\
+		Alessandro            & -           & -           & -           & 5           & 5           & -           & 10              \\
+		Carlo                 & -           & -           & -           & 5           & 5           & -           & 10              \\
+		Davide                & -           & 5           & -           & -           & 5           & -           & 10              \\
+		Giacomo               & -           & -           & -           & -           & 5          	& 5           & 10              \\
+		Matteo                & -           & -           & -           & -           & 5           & 5           & 10              \\
+		Niccolò               & 5           & -           & -           & 5           & -           & -           & 10              \\
 		\hline
 		\textbf{Ore totali}   & 5           & 5           & -           & 15          & 25          & 10          & 60              \\
 		\textbf{Costo totale} & 150         & 100         & -           & 375         & 375         & 150         & 1150
@@ -64,11 +59,9 @@ Dove:
 \subsubsection{Riassunto delle attività svolte}
 
 \begin{enumerate}
-	\item \textbf{Stesura documentazione}: In questo \textit{sprint} si è continuata la stesura dei documenti richiesti per la revisione PB: "Manuale Utente", "Specifica Tecnica", "Piano di qualifica", "Piano di progetto". Sono state aggiornate le Norme di Progetto.
+	\item \textbf{Stesura documentazione}: In questo \textit{sprint} si è continuata la stesura dei documenti richiesti per la revisione PB: "Manuale Utente", "Specifica Tecnica", "Piano di qualifica", "Piano di progetto".
 
-	\item \textbf{Frontend}: Durante questa fase sono state svolte le attività relative alla registrazione, all'autenticazione, alla visualizzazione della homepage e dei ristoranti per un utente generico$^G$, nonché alla gestione dei piatti per tutte le categorie di utenti previste.
-
-	\item \textbf{Backend}: Il lavoro del \textit{backend} si è concentrato sulla realizzazione di tutte le API di base per la gestione delle tabelle in \textit{database}, in particolare la gestione dei piatti presenti nel menu e la registrazione completa dei ristoratori.
+	\item \textbf{Codifica}: È stata implementata la gestione delle prenotazioni, la gestione dell'ordinazione collaborativa dei pasti, il caricamento delle immagini da parte del ristoratore e la gestione degli ingredienti e dei piatti lato ristoratore.
 \end{enumerate}
 
 \subsubsection{Consuntivo}
@@ -77,15 +70,15 @@ Dove:
 	\begin{tabular}{l|r|r|r|r|r|r|r}
 		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
 		\hline
-		Alessandro            & 5           & -           & -           & -           & 5           & -           & 10              \\
-		Carlo                 & -           & -           & -           & 5           & -           & 5           & 10              \\
-		Davide                & -           & -           & -           & -           & 5           & 5           & 10              \\
-		Giacomo               & -           & -           & -           & 5           & 5          	& -           & 10              \\
-		Matteo                & -           & 5           & -           & -           & 5           & -           & 10              \\
-		Niccolò               & -           & -           & -           & 5           & 5           & -           & 10              \\
+		Alessandro            & -           & -           & -           & 5           & 5           & -           & 10              \\
+		Carlo                 & -           & -           & -           & 5           & 5           & -           & 10              \\
+		Davide                & -           & 5           & -           & -           & 5           & -           & 10              \\
+		Giacomo               & -           & -           & -           & -           & 5          	& 5           & 10              \\
+		Matteo                & -           & -           & -           & -           & 5           & 5           & 10              \\
+		Niccolò               & 5           & -           & -           & 5           & -           & -           & 10              \\
 		\hline
-		\textbf{Ore totali}   & 5           & 5           & -           & 10          & 30          & 10          & 60              \\
-		\textbf{Costo totale} & 150         & 100         & -           & 350         & 400         & 150         & 1150
+		\textbf{Ore totali}   & 5           & 5           & -           & 15          & 25          & 10          & 60              \\
+		\textbf{Costo totale} & 150         & 100         & -           & 375         & 375         & 150         & 1150
 	\end{tabular}
 	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
 		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
@@ -99,37 +92,43 @@ Dove:
             10/Responsabile,
             10/Amministratore,
             0/Analista,
-            15/Progettista,
-            50/Programmatore,
+            30/Progettista,
+            45/Programmatore,
             15/Verificatore
         }
 	\end{tikzpicture}
 	\caption{Grafico delle proporzioni dei ruoli ricoperti dai membri del gruppo}
 \end{figure}
 
-Per quanto riguarda il ruolo del Programmatore il gruppo ha mantenuto un numero di ori pari al 50\% di quelle disponibili, come da \textit{sprint} precedente.
-Si è scelto di assegnare lo stesso numero di ore alle attività di progettazione, ripetendo le stesse procedure introdotte nel precedente sprint.
+Per quanto riguarda il ruolo del Programmatore il gruppo ha utilizzato un numero di ore pari al 45\% di quelle disponibili, in linea con lo \textit{sprint} precedente.
+Siccome in questo \textit{sprint} sono state seguite le stesse procedure adottate in quello precedente, si è scelto di non variare il numero di ore assegnate alle attività di progettazione.
 Inoltre, è stata mantenuta una distribuzione equilibrata del tempo tra il Responsabile e il Verificatore (entrambi al 10\% e 15\% in relazione allo \textit{sprint} passato), il che suggerisce che la gestione del progetto e il controllo di qualità sono rimasti focali e importanti anche durante questo \textit{sprint}.
-La mancanza di ore assegnate al ruolo di Analista durante questo \textit{sprint} è dovuto al fatto che non c'erano attività specifiche richieste per tale ruolo.
+Anche in questa fase si ha una mancanza di ore assegnate al ruolo di Analista, dovuto al fatto che non c'erano attività specifiche richieste per tale ruolo.
 
 
 \subsubsection{Analisi retrospettiva}
-Esaminando le ore impiegate in questo \textit{sprint}, il periodo appena concluso presenta un bilancio complessivamente positivo.
-Il distacco tra il gruppo assegnato allo sviluppo del \textit{backend} e quello assegnato al \textit{frontend} è stato colmato, tuttavia è stato registrato un generico rallentamento dei lavori rispetto alle previsioni siccome sono state rilevate problematiche non individuate durante la fase di creazione del PoC che hanno richiesto una revisione di porzioni di codice.\\
+Esaminando le ore impiegate in questo \textit{sprint}, il periodo appena concluso presenta un bilancio complessivamente positivo, anche considerando il lieve ritardo nello sviluppo.
+Le componenti chiave del progetto stanno venendo correttamente implementate, nonostante alcune incomprensioni con il proponente riguardo al metodo di impementazione di alcune caratteristiche inerenti le prenotazioni condivise.
+A tal proposito la soluzione presentata dal gruppo è stata valutata accettabile e quindi mantenuta.\\
+Il gruppo ha compreso che l'implementazione di alcune funzionalità, tra cui la \textit{chat}, richiederebbero di ritardare la data di consegna del progetto.
+Non essendo possibile prolungare l'attività di sviluppo, il gruppo ha presentato la problematica al proponente, che ha accettato di ridurre il numero dei requisiti obbligatori. \\
 La documentazione è in una buona posizione, con la stesura dei documenti in corso e in linea con la pianificazione. Sia il "Manuale Utente" che la "Specifica Tecnica" 
 sono stati iniziati e sono in fase di completamento.
 
 \textbf{Obiettivi raggiunti}:
 \begin{itemize}
-	\item Completamento delle pagine di login e registrazione.
-	\item Visualizzazione di \textit{homepage} ed elenco ristoranti per un utente generico$^G$.
-	\item Gestione dei piatti presenti in menu.
+	\item Completamento gestione delle prenotazioni.
+	\item Completamento gestione dell'ordinazione collaborativa dei pasti.
+	\item Caricamento delle immagini da parte del ristoratore.
+	\item Gestione degli ingredienti.
+	\item Gestione dei piatti lato ristoratore.
 	\item Stesura del "Manuale Utente".
 	\item Stesura della "Specifica Tecnica".
 \end{itemize}
 
+
 \textbf{Obiettivi mancati}: Nessuno.
 
-\textbf{Problematiche riscontrate}: Nessuno.
+\textbf{Problematiche riscontrate}: Il tempo rimanente non permette lo sviluppo di tutti i requisiti obbligatori del progetto.
 
-\textbf{Soluzioni attuate}: Nessuno.
+\textbf{Soluzioni attuate}: Dialogo con il proponente per valutare una riduzione dei requisiti obbligatori.
