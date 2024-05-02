@@ -1,0 +1,74 @@
+\section{Qualità di prodotto}
+La qualità di prodotto viene garantita dall'adozione dello standard \textbf{ISO/IEC 9126} che propone caratteristiche di qualità misurabili attraverso metriche ben definite.
+
+\subsection{Obiettivi}
+Si effettua una suddivisione in:
+\begin{itemize}
+    \item \textbf{Qualità interna}: fa riferimento alla qualità della documentazione interna prodotta.
+    \item \textbf{Qualità esterna}: fa riferimento alla qualità del software rilasciato.
+\end{itemize}
+
+\subsubsection{Qualità interna}
+Volge al raggiungimento dei seguenti obiettivi:
+\begin{itemize}
+    \item \textbf{Usabilità}: comprensibilità e leggibilità della documentazione prodotta.
+\end{itemize}
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{p{3.5cm}|X|l|l}
+        \hline
+        \textbf{Metrica} & \textbf{Codice}   & \textbf{Valore ottimale}  & \textbf{Valore accettabile}   \\
+        \hline
+        \multicolumn{4}{c}{\textbf{Usabilità}} \\
+        \hline
+        Indice di Gulpease & MPD1 &  $\ge 70\%$ & $\ge 60\%$    \\
+        \hline
+    \end{tabularx}
+    \caption{Valori di riferimento per le metriche di qualità interna}
+\end{table}
+
+\subsubsection{Qualità esterna}
+Volge al raggiungimento dei seguenti obiettivi:
+\begin{itemize}
+    \item \textbf{Funzionalità}: il prodotto deve soddisfare i requisiti stabiliti in fase di analisi.
+    \item \textbf{Affidabilità}: sotto determinate condizioni il prodotto deve mantenere un determinato livello di prestazioni per un periodo di tempo prestabilito.
+    \item \textbf{Efficienza}: il prodotto deve raggiungere l'obiettivo minimizzando l'utilizzo delle risorse .
+    \item \textbf{Usabilità}: l'utente deve essere in grado di utilizzare il prodotto e comprenderne le sue funzioni.
+    \item \textbf{Manutenibilità}: il prodotto deve poter essere modificato nel tempo senza che gli aggiornamenti ne compromettano le funzionalità.
+    \item \textbf{Portabilità}: il prodotto deve essere fruibile in ambienti diversi
+\end{itemize}
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{p{5.5cm}|X|l|l}
+        \hline
+        \textbf{Metrica} & \textbf{Codice}   & \textbf{Valore ottimale}  & \textbf{Valore accettabile}   \\
+        \hline
+        \multicolumn{4}{c}{\textbf{Funzionalità}} \\
+        \hline
+        Copertura dei requisiti & MPD2 &  $100\%$ & $80\%$    \\
+        \hline
+        \multicolumn{4}{c}{\textbf{Affidabilità}} \\
+        \hline
+        Densità di failure & MPD3 & $\le 10\%$ & $\le 20\% $ \\
+        \hline
+        \multicolumn{4}{c}{\textbf{Efficienza}} \\
+        \hline
+        Tempo medio di risposta & MPD4 & 2 secondi & 3 secondi \\
+        \hline
+        \multicolumn{4}{c}{\textbf{Usabilità}} \\
+        \hline
+        Average cyclomatic complexity & MPD5 & 10 & 20 \\
+        Facilità di utilizzo & MPD6 & 5 click & $\le 10$ click \\
+        Facilità di apprendimento delle funzionalità & MPD7 & $\le 5$ minuti & $\le 15$ minuti \\
+        \hline
+        \multicolumn{4}{c}{\textbf{Manutenibilità}} \\
+        \hline
+        Comprensibilità del codice & MPD8 & $\ge 80\%$ & $\ge 70\%$ \\
+        \hline
+        \multicolumn{4}{c}{\textbf{Portabilità}} \\
+        \hline
+        Browser supportati & MPD9 & $100\%$ & $\ge 80\%$ \\
+        \hline
+    \end{tabularx}
+    \caption{Valori di riferimento per le metriche di qualità esterna}
+\end{table}
