@@ -62,7 +62,7 @@ nel testo del capitolato d'appalto. Mentre i codici univoci sottostanti indicano
 	\begin{tabularx}{\textwidth}{l|X|p{2cm}}
 		\textbf{ID} & \textbf{Descrizione}                                                                                           & \textbf{Fonte}                                                                                                     \\
 		\hline
-		RFO13       & L'Utente base deve poter visualizzare la lista delle sue prenotazioni, ed in caso andare in dettaglio.         & \autoref{usecase:Visualizzazione lista prenotazioni}, \autoref{usecase:Visualizzazione del riepilogo prenotazione} \\
+		RFO13       & L'Utente base deve poter visualizzare la lista delle sue prenotazioni, ed in caso andare in dettaglio.         & \autoref{usecase:Visualizzazione del riepilogo prenotazione} \\
 		\hline
 		RFO14       & L'Utente base deve poter visualizzare la notifica dello stato della sua prenotazione.                          & \autoref{usecase:Visualizzazione notifica stato della prenotazione}                                                \\
 		\hline
@@ -187,8 +187,10 @@ nel testo del capitolato d'appalto. Mentre i codici univoci sottostanti indicano
 		\hline
 		RFO58	   & L'Utente ristoratore deve poter visualizzare la lista degli ingredienti necessari per soddisfare gli ordini di una giornata. & \autoref{usecase:Consultazione lista ingredienti} \\ 
 		\hline
-		RFO59	   & L'Utente base deve poter togliere qualche ingrediente da un piatto ordinato. & \autoref{usecase:Modifica della propria ordinazione} \\
-		\end{tabularx}
+		RFO59	   & L'Utente base deve poter modificare la propria ordinazione.  & \autoref{usecase:Modifica della propria ordinazione} \\
+		\hline
+		RFO60	   & L'Utente base deve poter togliere qualche ingrediente da un piatto ordinato. & \autoref{usecase:Modifica pietanza} \\	
+	\end{tabularx}
 	\caption{Tabella dei requisiti funzionali}
 \end{table}
 
@@ -317,7 +319,9 @@ La seguente tabella è relativa al tracciamento "Fonti - Requisito", in cui è p
 	\hline
 	\autoref{usecase:Consultazione lista ingredienti} 																											&RFO58                  \\
 	\hline
-	\autoref{usecase:Modifica della propria ordinazione}																										&RFO59                  \\
+	\autoref{usecase:Modifica della propria ordinazione}																										&RFO59					\\
+	\hline
+	\autoref{usecase:Modifica pietanza}																															&RFO60                  \\
 	\caption{Tabella "Fonti - Requisito"}
 \end{longtable}
 
