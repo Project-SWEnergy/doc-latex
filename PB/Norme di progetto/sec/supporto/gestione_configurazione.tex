@@ -1,35 +1,99 @@
 \subsection{Gestione della Configurazione}
-
 La gestione della configurazione è un processo di supporto che assicura il
 controllo delle versioni e la tracciabilità dei componenti \textit{software}
 durante tutto il ciclo di vita del progetto.
 Questo processo si occupa di mantenere la coerenza delle prestazioni, dei dati
 funzionali e delle informazioni fisiche di un sistema e dei suoi componenti.
 Si focalizza sulla gestione di modifiche e configurazioni per prevenire
-disordine e confusione.
-
-\subsubsection{Scopo}
+disordine e confusione. \\
 Questo processo ha lo scopo di assicurare che tutti i componenti del
 \textit{software} siano identificati, versionati e tracciati nel corso del
 tempo, facilitando così la gestione delle modifiche e migliorando la qualità
 del prodotto \textit{software}.
 
-\subsubsection{Attività}
-\subsubsubsection{Identificazione della configurazione} 
+
+
+
+\subsubsection{Identificazione della configurazione} 
 Definire e documentare le caratteristiche funzionali e fisiche dei componenti
   \textit{software}.
 
-\subsubsubsection{Controllo della configurazione} 
+
+
+
+\subsubsection{Controllo della configurazione} 
 Gestire le modifiche attraverso un processo formale di valutazione, approvazione 
 e implementazione.
 
-\input{sec/tutti/lavoro-progetto.tex}
 
-\subsubsubsection{Verifica} 
-Assicurare che i componenti \textit{software} siano conformi ai requisiti e che 
-le modifiche siano implementate correttamente.
 
-\subsubsection{Strumenti}
+\subsubsection{Lavoro sul progetto}
+\label{lavoro-sul-progetto}
+La presente sezione delinea i procedimenti che ogni componente del \textit{team} è tenuto ad adottare al fine di eseguire il compito che gli è stato affidato dal responsabile di progetto.
+Il termine "compito" si intende qui come un'incarico preciso, destinato alla realizzazione individuale da parte di un membro del gruppo, il cui completamento è essenziale per il progresso del progetto nel suo complesso.
+
+\subsubsection*{Trigger}
+\begin{itemize}
+	\item Il responsabile di progetto assegna un compito ad un membro del
+	      gruppo.
+\end{itemize}
+
+\subsubsection*{Scopo}
+\begin{itemize}
+	\item Svolgere il compito assegnato;
+	\item Risulta conclusa un'\textit{issue\g} nella \textit{repository\g}
+	      corrispondente;
+	\item Il compito è stato verificato e convalidato da una persona diversa
+	      da chi lo ha svolto.
+\end{itemize}
+
+\subsubsection*{Svolgimento}
+In questo caso viene descritto il flusso di lavoro da seguire per completare
+un compito assegnato:
+
+\begin{enumerate}
+	\item \textbf{Analisi}: si crea una \textit{issue\g} nella
+	      \textit{repository\g} nella quale verrà svolto il compito. La
+	      \textit{issue\g} sarà assegnata a se stessi o ai membri del gruppo che
+	      vi parteciperanno. La \textit{issue\g} deve contenere le seguenti
+	      informazioni:
+	      \begin{itemize}
+		      \item Titolo: deve essere chiaro e conciso, in modo da
+		            identificare il compito;
+		      \item Descrizione: deve contenere una spiegazione dettagliata
+		            del compito da svolgere, in più deve essere indicato il
+		            tempo stimato per il completamento del compito;
+		      \item \textit{Label}: deve essere assegnata una \textit{label}
+		            che identifichi il tipo di compito da svolgere. In
+		            particolare, se il compito è relativo alla documentazione,
+		            la \textit{label} deve essere il nome del documento; se il
+		            compito è relativo allo sviluppo del \textit{software},
+		            la \textit{label} deve essere il nome del modulo
+		            interessato (per esempio: \textit{database},
+		            \textit{service}, \textit{controller}, ecc.);
+		      \item \textit{Milestone}: deve essere assegnata una
+		            \textit{milestone};
+		      \item \textit{Project}: deve essere assegnato il progetto
+		            corrispondente alla fase corrente;
+		      \item \textit{Esecutori}: devono essere assegnati i membri
+		            del gruppo che svolgeranno il compito.
+	      \end{itemize}
+	\item \textbf{Creazione appunti}: si inseriscono i file degli
+	      appunti nel proprio \textit{branch} personale all'interno
+	      della \textit{repository\g} \texttt{appunti-swe}.
+	      Nella \textit{repository\g}, deve essere presente un \texttt{README.md}
+	      contenente l'organizzazione della cartella per permettere agli altri
+	      membri di orientarsi;
+	\item \textbf{Svolgimento}: si svolge il compito assegnato, al meglio
+	      delle proprie capacità e cercando di rispettare le scadenze;
+	\item \textbf{Integrazione appunti}: si modificano i file degli
+	      appunti precedentemente generati;
+	\item \textbf{Verifica}: si chiede ad un membro del gruppo,
+	      tendenzialmente al verificatore, di controllare la conformità del
+	      lavoro svolto.
+\end{enumerate}
+
+\subsubsection*{Strumenti}
 \begin{itemize}
 	\item \textbf{Git}: Sistema di controllo versione distribuito utilizzato per
 	      il tracciamento delle modifiche al codice sorgente;
@@ -39,3 +103,13 @@ le modifiche siano implementate correttamente.
 	\item \textbf{GitHub Actions}: Strumento di automazione per l'esecuzione di
 	      \textit{workflow} personalizzati.
 \end{itemize}
+
+
+
+\subsubsection{Verifica} 
+Assicurare che i componenti \textit{software} siano conformi ai requisiti e che 
+le modifiche siano implementate correttamente.
+
+
+
+

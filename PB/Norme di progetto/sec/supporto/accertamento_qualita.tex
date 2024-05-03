@@ -1,36 +1,110 @@
 \subsection{Accertamento della Qualità}
-
 L'accertamento della qualità è un processo di supporto fondamentale che
 garantisce che il \textit{software} soddisfi i requisiti di qualità stabiliti e
 le aspettative degli \textit{stakeholder}.
 Questo processo include la definizione, implementazione, valutazione e
 manutenzione delle procedure e delle politiche di qualità per assicurare che
-il \textit{software} prodotto sia di alta qualità.
-
-\subsubsection{Scopo}
-Assicurare che il \textit{software} e le pratiche di sviluppo rispettino gli
+il \textit{software} prodotto sia di alta qualità. \\
+Lo scopo è assicurare che il \textit{software} e le pratiche di sviluppo rispettino gli
 \textit{standard} di qualità prefissati, migliorando così la soddisfazione del cliente e
 l'affidabilità del prodotto.
 
-\subsubsection{Attività}
-\subsubsubsection{Definizione delle Politiche di Qualità} 
+\subsubsection{Definizione delle Politiche di Qualità} 
 Stabilire gli
 	  \textit{standard} e le metriche di qualità in base ai requisiti del progetto e
 	  alle aspettative degli \textit{stakeholder}.
 
-\subsubsubsection{Implementazione delle Procedure di Qualità} 
+\subsubsection{Implementazione delle Procedure di Qualità} 
 Applicare le
 	  politiche attraverso metodi concreti e pratiche di sviluppo, come
 	  revisioni del codice e test.
 
-\subsubsubsection{Valutazione della Conformità} 
+\subsubsection{Valutazione della Conformità} 
 Verificare periodicamente che
 	  il \textit{software} e i processi di sviluppo rispettino le politiche
 	  di qualità stabilite.
 
-\input{sec/amministratore/aggiornare-pdq.tex}
 
-\subsubsection{Strumenti}
+
+
+
+\subsubsection{Aggiornamento del "Piano di qualifica"}
+\label{aggiornare-pdq}
+
+\subsubsection*{Trigger}
+\begin{itemize}
+	\item Termina uno \textit{sprint};
+\end{itemize}
+
+\subsubsection*{Scopo}
+\begin{itemize}
+	\item Mantenere sotto controllo la qualità del prodotto;
+	\item Mantenere sotto controllo l'andamento del progetto;
+	\item Documentare quanto qui sopra, per poterlo mostrare al committente
+	      durante le revisioni e per evidenziarne l'evoluzione nel tempo.
+\end{itemize}
+
+\subsubsection*{Svolgimento}
+\begin{itemize}
+	\item \textbf{Identificazione di una metrica}: in quale modo
+	      l'amministratore ed il gruppo possono individuare le metriche utili a
+	      controllare e valutare la qualità del prodotto. Di seguito sono
+	      descritti i passi da seguire:
+	      \begin{enumerate}
+		      \item \textbf{Nuova metrica}: durante gli incontri, uno dei
+		            componenti di SWEnergy propone una nuova metrica da adottare
+		            per valutare la qualità del prodotto;
+		      \item \textbf{Discussione}: i componenti del gruppo discutono in
+		            merito alla metrica proposta: se è utile, se è applicabile
+		            ed in quale modo verificare i risultati ottenuti e
+		            formalizzarli;
+		      \item \textbf{Formalizzazione}: l'amministratore inserisce la
+		            metrica di qualità nel documento "Piano di qualifica".
+		            \textit{Nota: viene modificato un documento, quindi si rimanda alla
+			            sottosezione che illustra come redigere un documento
+			            (vedi \cref{redazione-documento})}.
+	      \end{enumerate}
+	\item \textbf{Aggiornamento di una metrica}: in seguito ad una discussione
+	      organica a SWEnergy, l'amministratore modifica qualche caratteristica
+	      di una metrica nel documento "Piano di qualifica". \textit{Nota:
+		      viene modificato un documento, quindi si rimanda alla
+		      sottosezione che illustra come redigere un documento
+		      (vedi \cref{redazione-documento})}.
+	\item \textbf{Misurazione}: l'amministratore misura i risultati ottenuti
+	      applicando le metriche di qualità. Di seguito sono descritti i passi
+	      di aggiornamento del documento "Piano di qualifica":
+	      \begin{enumerate}
+		      \item \textbf{Nuovi risultati}: alla fine di ogni \textit{sprint},
+		            l'amministratore e il gruppo valutano i risultati di qualità
+		            ottenuti applicando le metriche concordate;
+		      \item \textbf{Discussione}: i risultati sono discussi durante la
+		            retrospettiva e, se ritenuto opportuno, sono modificati
+		            gli obiettivi di qualità adottati da SWEnergy;
+		      \item \textbf{Inserimento dei risultati}: l'amministratore
+		            inserisce i risultati ottenuti nel documento "Piano di
+		            qualifica".
+		            \textit{Nota: viene modificato un documento, quindi si rimanda
+			            alla sottosezione che illustra come redigere un documento
+			            (vedi \cref{redazione-documento}).}
+	      \end{enumerate}
+\end{itemize}
+
+Il calcolo relativo alle metriche avviene nel seguente modo:
+\begin{itemize}
+	\item \textbf{MPC02 - \textit{Budget Variance}}: sia BP il \textit{Budget} Pianificato e BE il \textit{Budget} Effettivo, definiamo \textit{Budget Variance} il valore $BV = BP - BE$.
+	    Tale valore deve essere espresso in percentuale tramite la formula $BV = (BV / BP) * 100$;
+	\item \textbf{MPC04 - \textit{Budgeted Cost of Work Scheduled}}: indicato come BCWS, viene calcolato sommando i costi pianificati delle attività fino alla data di riferimento;
+	\item \textbf{MPC06 - \textit{Actual Cost of Work Performed}}: indicato come ACWP, viene calcolato effettuando la somma dei costi effettivi delle attività completate fino alla data di riferimento;
+	\item \textbf{MPC07 - \textit{Requirements stability index}}: indica la stabilità dei requisiti nel corso del tempo, viene calcolato come rapporto tra il numero di requisiti modificati ed il numero totale di requisiti, espresso come valore percentuale;
+	\item \textbf{MPC08 - \textit{Satisfied obligatory requirements}}: indica la percentuale dei requisiti obbligatori soddisfatti;
+	\item \textbf{MPC10 - \textit{Code Coverage}}: calcolato in automatico dal framework utilizzato;
+	\item \textbf{MPC11 - \textit{Passed Test Cases Percentage}}: calcolato come rapporto tra il numero di test superati ed il numero di test previsti;
+	\item \textbf{MPD1 - Indice di Gulpease}: viene calcolato utilizzando uno \textit{script} presente all'interno della cartella del "Piano di qualifica".
+	      Il risultato relativo ad ogni documento viene utilizzato per realizzare una media inerente alla fase di progetto in atto;
+	\item \textbf{MPD2 - \textit{Copertura dei requisiti}}: rapporto tra il numero di requisiti soddisfatti ed il numero di requisiti totali.
+\end{itemize}
+
+\subsubsection*{Strumenti}
 Gli strumenti utilizzati nel processo di accertamento della qualità possono
 includere \textit{software} autoprodotti di automazione dei test e di raccolta
 dei dati.
