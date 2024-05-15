@@ -1,6 +1,6 @@
 \subsection{Sprint - 6 PB}
 \textbf{Inizio}: 25-03-2024 \\
-\textbf{Fine}: 7-04-2024
+\textbf{Fine}: 07-04-2024
 
 \subsubsection{Gestione dei rischi}
 \textbf{Rischi attesi verificati}:
@@ -42,7 +42,7 @@
 Dove:
 \begin{itemize}
 	\item \textbf{"Documentazione"}: questa \textit{issue} è eseguita da
-	      Carlo e Matteo Bando. Per svolgere questa attività, il gruppo ha deciso di
+	      Carlo Rosso e Matteo Bando. Per svolgere questa attività, il gruppo ha deciso di
 	      dedicare 20 ore.
 
 	\item \textbf{"Sperimentazione frontend"}: questa \textit{issue} è eseguita
@@ -97,15 +97,15 @@ Dove:
 	\begin{tabular}{l|r|r|r|r|r|r|r}
 		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
 		\hline
-		Alessandro            & -           & -           & -           & -           & 5           & 5           & 10              \\
-		Carlo                 & -           & -           & -           & 5           & -           & 5           & 10              \\
-		Davide                & 5           & -           & -           & -           & 5           & -           & 10              \\
-		Giacomo               & -           & -           & -           & 5           & 5           & -           & 10              \\
-		Matteo                & -           & 5           & -           & -           & 5           & -           & 10              \\
-		Niccolò               & -           & -           & -           & -           & 10           & -           & 10              \\
+		Alessandro            & -           & -           & -           & -           & 10           & 5           & 15              \\
+		Carlo                 & -           & -           & -           & 5           & 5           & 5           & 15              \\
+		Davide                & 5           & -           & -           & -           & 10           & -           & 15              \\
+		Giacomo               & -           & -           & -           & 5           & 10           & -           & 15              \\
+		Matteo                & -           & 5           & -           & -           & 10           & -           & 15              \\
+		Niccolò               & -           & -           & -           & 5           & -           & 5           & 10              \\
 		\hline
-		\textbf{Ore totali}   & 5           & 5           & -           & 10          & 30          & 10          & 60              \\
-		\textbf{Costo totale} & 150         & 100         & -           & 350         & 400         & 150         & 1150
+		\textbf{Ore totali}   & 5           & 5           & -           & 15          & 45          & 15          & 85              \\
+		\textbf{Costo totale} & 150         & 100         & -           & 375         & 675         & 225         & 1525
 	\end{tabular}
 	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
 		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
@@ -116,34 +116,32 @@ Dove:
 	\centering
 	\begin{tikzpicture}
 		\pie[text=legend]{
-            10/Responsabile,
-            10/Amministratore,
+            8/Responsabile,
+            8/Amministratore,
             0/Analista,
-            15/Progettista,
-            50/Programmatore,
-            15/Verificatore
+            25/Progettista,
+            42/Programmatore,
+            17/Verificatore
         }
 	\end{tikzpicture}
 	\caption{Grafico delle proporzioni dei ruoli ricoperti dai membri del gruppo}
 \end{figure}
 
-Per quanto riguarda il ruolo del Programmatore il gruppo ha visto un aumento del tempo dedicato alla programmazione, che rappresenta ora il 50\% del totale delle ore, 
-rispetto al 30\% dello sprint precedente. Questo è dovuto ad una maggiore enfasi sull'implementazione pratica del lavoro, con il \textit{team} che si è concentrato maggiormente sulla scrittura del codice.
-D'altra parte, c'è stato un leggero aumento nel tempo dedicato alla progettazione (15\% rispetto al 10\% dello \textit{sprint} precedente), il che 
-è dovuto a degli aggiornamenti all'architettura o al design del sistema. Inoltre, abbiamo mantenuto una distribuzione equilibrata del tempo tra il Responsabile e il Verificatore
-(entrambi al 15\% e 10\% in relazione allo \textit{sprint} passato), il che suggerisce che la gestione del progetto e il controllo di qualità sono rimasti focali e importanti anche durante questo \textit{sprint}.
-La mancanza di ore assegnate al ruolo di Analista durante questo \textit{sprint} è dovuto al fatto che non c'erano attività specifiche richieste per tale ruolo.
+Per quanto riguarda il ruolo del Programmatore il gruppo ha visto un aumento del tempo dedicato alla codifica, che rappresenta ora il 42\% del totale delle ore, 
+rispetto al 25\% dello \textit{sprint} precedente. Questo incremento è il risultato di un maggior impegno nell'attuare concretamente il lavoro, con il \textit{team} che ha focalizzato la sua attenzione sulla scrittura del codice.
+D'altra parte, si è registrata una diminuzione nel tempo dedicato alla fase di progettazione (ora pari al 25\%, rispetto al 42\% dello \textit{sprint} precedente). Questa diminuzione è il risultato del fatto che le attività di progettazione si sono concentrate esclusivamente sugli eventuali aggiornamenti all'architettura o al design del sistema, i quali hanno richiesto meno tempo da parte del gruppo. \\
+Abbiamo mantenuto una distribuzione equilibrata del tempo del Responsabile, fissandolo all'8\% sia in questo \textit{sprint} che in quello precedente, mantenendo così costante il livello di gestione del progetto.
+In questo \textit{sprint} abbiamo invece introdotto alcune ore per l'Amministratore, poiché questa fase ha richiesto una maggiore quantità di codifica rispetto agli \textit{sprint} precedenti, rendendo necessario l'inserimento di questo ruolo.\\
+Infine, il ruolo del Verificatore è rimasto costante intorno al 20\% (17\% in questo \textit{sprint} e 25\% nel precedente), per garantire un livello costante di qualità.
+La mancanza di ore assegnate al ruolo di Analista durante questo \textit{sprint} è dovuta al fatto che non sono state richieste attività specifiche per tale ruolo.
 
 \subsubsection{Analisi retrospettiva}
-Esaminando le ore impiegate in questo \textit{sprint}, il periodo appena concluso presenta un bilancio complessivamente positivo anche se il gruppo del \textit{frontend} 
-ha impiegato più tempo del previsto per la realizzazione delle pagine, trovandosi indietro rispetto al gruppo del \textit{backend}, questo è dovuto dal fatto che
-la fase di stesura del codice ha subito uno slittamento temporale siccome prima di iniziare a programmare è stato necessario approfondire e impratichirsi con le tecnologie da utilizzare.
-La documentazione è in una buona posizione, con la stesura dei documenti in corso e in linea con la pianificazione. Sia il "Manuale Utente" che la "Specifica Tecnica" 
-sono stati iniziati e sono in fase di completamento.
+Esaminando le ore impiegate in questo \textit{sprint}, il periodo appena concluso evidenzia un bilancio complessivamente positivo. Tuttavia, il team del frontend ha impiegato più tempo del previsto per la realizzazione delle pagine, risultando in un leggero ritardo rispetto al team del backend. Questa situazione è stata determinata dal fatto che la fase di sviluppo del codice ha subito uno slittamento temporale: prima di avviare l'effettiva codifica, è stato necessario dedicare del tempo all'approfondimento e alla pratica delle tecnologie da utilizzare. In generale comunque erano state sottostimate in fase di preventivo dello sprint le ore dedicate alla programmazione, che invece sono raddoppiate quasi per tutti i membri interessati, senza però determinare un eccessivo aumento dei costi dello \textit{sprint}.\\
+Per quanto riguarda la documentazione, siamo in una buona posizione, con la stesura dei documenti in corso e in linea con la pianificazione. Entrambi il "Manuale Utente" e la "Specifica Tecnica" sono stati avviati e si trovano in fase di completamento.
 
 \textbf{Obiettivi raggiunti}:
 \begin{itemize}
-	\item Implementazione delle pagine di login e registrazione.
+	\item Implementazione delle pagine di \textit{login} e registrazione.
 	\item Implementazione dei servizi per la comunicazione con il \textit{backend}.
 	\item Stesura del "Manuale Utente".
 	\item Stesura della "Specifica Tecnica".
