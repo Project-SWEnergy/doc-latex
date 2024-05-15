@@ -1,22 +1,36 @@
 \documentclass[a4paper, 12pt]{article}
-\newcommand{\template}{../../Templates}
-\usepackage{\template/package}
+\usepackage{../../Templates/package}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{framed}
 \graphicspath{{../../Assets}}
 
 \newcommand{\Titolo}{Manuale Utente}
-\newcommand{\Data}{04/04/2024}
-\newcommand{\Versione}{0.1.0}
-\newcommand{\Descrizione}{Questo documento contiene le informazioni necessarie per l'utilizzo della \textit{web app} EasyMeal.}
-\newcommand{\Verificatori}{}
-\newcommand{\Redattori}{}
-\newcommand{\Approvatori}{}
-\newcommand{\Stato}{Non approvato}
+\newcommand{\Data}{10/05/2024}
+\newcommand{\Versione}{1.0.0}
+\newcommand{\Descrizione}{Questo documento fornisce istruzioni dettagliate sull'utilizzo della \textit{web app} EasyMeal.}
+\newcommand{\Verificatori}{
+    Alessandro Tigani Sava, Matteo Bando, \\
+    & Giacomo Gualato, Davide Maffei, \\
+    & Niccolò Carlesso, Carlo Rosso     
+}
+\newcommand{\Redattori}{ 
+    Alessandro Tigani Sava, Matteo Bando, \\
+    & Giacomo Gualato, Davide Maffei, \\
+    & Niccolò Carlesso, Carlo Rosso     
+}
+\newcommand{\Approvatori}{Giacomo Gualato}
+\newcommand{\Destinatari}{
+    Prof.\ Tullio Vardanega \\ 
+    & Prof.\ Riccardo Cardin \\ 
+    & Alessandro Staffolani
+}
+\newcommand{\Stato}{Approvato}
 
-\input{\template/variable.tex}
-\input{\template/copertina.tex}
-\input{\template/header_footer.tex}
+\input{../../Templates/variable.tex}
+\input{../../Templates/copertina.tex}
+\input{../../Templates/header_footer.tex}
 
 \begin{document}
 \copertina{}
@@ -30,7 +44,6 @@
 \newpage
 
 \input{sec/requisiti.tex}
-\input{sec/installazione.tex}
 \input{sec/istruzioni_uso.tex}
 \input{sec/supporto_tecnico.tex}
 
