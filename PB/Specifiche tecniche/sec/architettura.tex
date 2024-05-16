@@ -76,6 +76,25 @@ ridondante, nel senso che il pattern \textit{dependency injection} è applicato
 allo stesso modo per tutti i componenti, si è deciso di selezionare alcuni
 esempi significativi.
 
+\subsubsection{GenericService}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{PB/specifiche-tecniche/auth-service.png}
+	\caption{Diagramma delle classi per AuthService}
+\end{figure}
+
+In questo caso, viene mostrato come viene iniettato un servizio all'interno di
+un componente. Lo \textit{specimen} scelto è il servizio AuthService,
+che è responsabile della gestione dell'autenticazione dell'utente. Iniettando
+AuthService all'interno del componente HeaderComponent, i metodi pubblici
+definiti in AuthService possono essere utilizzati per gestire l'autenticazione
+dell'utente. In particolare, HeaderComponent utilizza AuthService per gestire i
+link del menu di navigazione in base allo stato di autenticazione e al ruolo 
+dell'utente. In questo modo viene favorita la separazione delle responsabilità
+e la modularità del codice, rendendo il componente HeaderComponent più
+manutenibile e permettendo di riutilizzare AuthService in altri componenti.
+
 \subsubsection{MessageService}
 
 \begin{figure}[H]
@@ -108,4 +127,6 @@ messaggi.
 Quando i messaggi vengono aggiornati nel MessageService, la vista associata a 
 MessageComponent si aggiorna automaticamente per riflettere i nuovi dati.
 Questo è facilitato dall'utilizzo di Subject o BehaviorSubject in 
-MessageService, che emettono nuovi valori quando i messaggi cambiano.
+MessageService, che emettono nuovi valori quando i messaggi cambiano.\\
+In sostanza, in questo modo si utilizza un servizio per condividere dati tra
+componenti che non hanno una relazione gerarchica.
