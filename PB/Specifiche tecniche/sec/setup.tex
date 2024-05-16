@@ -1,0 +1,183 @@
+\section{Setup}
+
+In questa sezione viene approfondito il metodo per eseguire l'applicativo
+sviluppato. In particolare, si descrive come configurare l'ambiente di
+esecuzione e come eseguire il programma; si illustra come eseguire i test e come
+configurare l'ambiente di sviluppo.
+
+\subsection{Installazione}
+
+\subsubsection{Pre-requisiti}
+
+Per eseguire l'applicativo è necessario avere installato docker nel proprio
+sistema. Per installare docker, si può fare riferimento alla documentazione
+ufficiale di docker:
+\url{https://www.docker.com/products/docker-desktop/}[16/05/2024].
+Infine, è necessario avere installato git per clonare il repository.
+
+\subsubsection{Prima esecuzione}
+
+Di seguito sono riportati i passi da seguire per avviare Easy-Meal:
+\begin{enumerate}
+	\item Clonare il repository: \\
+		\texttt{git clone https://github.com/Project-SWEnergy/Easy-Meal.git}
+
+	\item Entrare nella cartella del progetto: \\
+		\texttt{cd Easy-Meal}
+
+	\item Avviare il daemon di docker;
+
+	\item Eseguire la build del progetto e avviare i container: \\
+		\texttt{docker-compose up}
+
+	\item Aprire il seguente indirizzo nel browser: \\
+		\texttt{http://localhost:8000}
+
+	\item Eseguire il login con le seguenti credenziali:
+		\begin{itemize}
+			\item \textbf{System}: PostgreSQL
+			\item \textbf{Server}: db
+			\item \textbf{Username}: postgres
+			\item \textbf{Password}: postgres
+			\item \textbf{Database}: easymeal
+		\end{itemize}
+
+	\item Selezionare la voce di menù \texttt{Import};
+
+	\item Cliccare sul pulsante \texttt{Choose file} e selezionare il file
+		\texttt{backend/drizzle/0000\_gorgeous\_natasha\_romanoff.sql} presente 
+		nella cartella del progetto;
+
+	\item Cliccare sul pulsante \texttt{Execute} per eseguire la query di
+		crezione delle tabelle, viene visualizzato un messaggio di successo;
+
+	\item Cliccare sul pulsante \texttt{Choose file} e selezionare il file
+		\texttt{backend/dump/populate.sql} presente nella cartella del 
+		progetto;
+
+	\item Cliccare sul pulsante \texttt{Execute} per popolare le tabelle, viene
+		visualizzato un messaggio di successo;
+
+	\item Aprire il seguente indirizzo nel browser: \\ 
+		\texttt{http://localhost:4200}
+\end{enumerate}
+
+Dopo aver seguito i passi sopra descritti, l'applicativo Easy-Meal è pronto per
+essere utilizzato. In effetti, l'ultimo passo apre il sito web dell'applicativo.
+
+\subsection{Esecuzione}
+
+Se l'applicativo è già stato avviato in precedenza, è possibile riavviarlo
+seguendo i seguenti passi:
+
+\begin{enumerate}
+	\item Avviare il daemon di docker;
+
+	\item Eseguire la build del progetto e avviare i container: \\
+		\texttt{docker-compose up}
+
+	\item Aprire il seguente indirizzo nel browser: \\
+		\texttt{http://localhost:4200}
+\end{enumerate}
+
+\subsection{Stop}
+
+Per arrestare l'applicativo, è sufficiente eseguire il comando
+\texttt{docker-compose down} nella cartella del progetto.
+
+\subsection{Test}
+
+Sono configurati due sistemi di test indipendenti: i test del \textit{backend} e
+i test del \textit{frontend}.
+
+\subsubsection{\textit{Backend}}
+
+!TODO
+
+\subsubsection{\textit{Frontend}} 
+
+Per eseguire i test del \textit{frontend} è necessario avere installato Node.js 
+e quindi anche npm. Per installare Node.js, si può fare riferimento alla
+documentazione ufficiale di Node.js:
+\url{https://nodejs.org/en/download/package-manager}[16/05/2024]. 
+Di seguito sono riportati i passi da seguire per avviare i test:
+
+\begin{enumerate}
+	\item Entrare nella cartella del progetto: \\
+		\texttt{cd Easy-Meal\textbackslash frontend} (su Windows) \\
+		\texttt{cd Easy-Meal/frontend} (su Unix)
+
+	\item Eseguire il comando: \\
+		\texttt{npm install}
+
+	\item Eseguire il comando: \\
+		\texttt{ng test}
+
+	\item Aprire il seguente indirizzo nel browser: \\
+		\texttt{http://localhost:9876}
+
+	\item Cliccare sul pulsante \texttt{DEBUG} per eseguire i test.
+\end{enumerate}
+
+Non solo, Angular mette a disposizione un servizio per visualizzare la copertura
+dei test, il codice e la qualità del codice. Per avviare il servizio di
+visualizzazione della copertura dei test, si seguano i seguenti passi:
+\begin{enumerate}
+	\item Entrare nella cartella del progetto: \\
+		\texttt{cd Easy-Meal\textbackslash frontend} (su Windows) \\
+		\texttt{cd Easy-Meal/frontend} (su Unix)
+
+	\item Eseguire il comando: \\
+		\texttt{npm install}
+
+	\item Eseguire il comando: \\
+		\texttt{ng test ----code-coverage=true}
+
+	\item Aprire il seguente indirizzo nel browser: \\
+		\texttt{http://localhost:9876}
+
+	\item Cliccare sul pulsante \texttt{DEBUG} per eseguire i test;\\
+
+	\item Aprire il seguente file con il browser: \\
+		\texttt{coverage/po-c-frontend/index.html}
+\end{enumerate}
+
+\subsection{Configurazione dell'ambiente di sviluppo}
+
+
+\subsubsection{Backend}
+
+!TODO
+
+\subsubsection{Frontend}
+
+Come per i test, anche in questo caso è necessario avere installato Node.js e
+npm.
+Di seguito sono riportati i passi da seguire per configurare l'ambiente di
+sviluppo del \textit{frontend}:
+
+\begin{enumerate}
+	\item Entrare nella cartella del progetto: \\
+		\texttt{cd Easy-Meal}
+
+	\item Avviare i container: \\
+		\texttt{docker-compose up}
+
+	\item Aprire la \textit{dashboard} di docker e bloccare il container
+		\texttt{easymeal-frontend-<N>}.
+
+	\item Installare le dipendenze: \\
+		\texttt{npm install}
+
+	\item Avviare il server di sviluppo: \\
+		\texttt{npm run start}
+
+	\item Aprire il seguente indirizzo nel browser: \\
+		\texttt{http://localhost:4200}
+\end{enumerate}
+
+In questo modo è possibile sviluppare il \textit{frontend} senza dover eseguire
+la \textit{build} del container del \textit{frontend} ad ogni modifica, invece
+Angular ricompila automaticamente il \textit{frontend} ad ogni modifica.
+Infatti, ogni modifica di qualche file del \textit{frontend} causa un 
+aggiornamento della pagina web.
