@@ -11,13 +11,15 @@
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente base.
 
-	\item \textbf{Precondizione:} L'Utente base ha concluso la divisione del conto (vedi \autoref{usecase:Selezione della modalità di divisione del conto}).
+	\item \textbf{Precondizione:} L'Utente base ha creato una prenotazione (vedi \autoref{usecase:Prenotazione di un tavolo}), ha 
+	scelto come dividere il conto (vedi \autoref{usecase:Selezione della modalità di divisione del conto}) ed inoltre la prenotaziose si deve trovare nello stato "Pagamento".
 
 	\item \textbf{Postcondizione:} L'Utente base ha pagato la sua quota.
 
 	\item \textbf{Scenario principale:}
             \begin{enumerate}
-                \item Il Sistema mostra la quota che l'Utente base deve pagare;
+				\item Il Sistema mostra la modalità di divisione del conto scelta per questa prenotazione;
+                \item In base alla alla modalità di divisione del conto scelta il Sistema mostra la quota che l'Utente base deve pagare;
                 \item L'Utene base seleziona la modalità con cui vuole pagare:
                 \begin{itemize}
                     \item Pagare in contanti al banco.
@@ -31,7 +33,7 @@
 		  \begin{itemize}
 			  \item \autoref{usecase:Visualizzazione errore pagamento} Errore pagamento:
 				\begin{enumerate}
-					\item L'Utente base paga la sua quota attraverso il pagamento in \textit{app};
+					\item L'Utente base paga la sua quota;
 					\item  Il Sistema mostra un messaggio di errore.
 				\end{enumerate}
 		  \end{itemize}
