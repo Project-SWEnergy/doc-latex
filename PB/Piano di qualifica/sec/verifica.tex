@@ -6,9 +6,16 @@ Si analizzano qui le metriche:
     \item \hyperref[s:mpc06]{\textbf{MPC06}}\textbf{}: \textit{Actual Cost of Work Performed}.
     \item \hyperref[s:mpc07]{\textbf{MPC07}}\textbf{}: \textit{Requirements stability index}.
     \item \hyperref[s:mpc08]{\textbf{MPC08}}\textbf{}: \textit{Satisfied obligatory requirements}.
+    \item \hyperref[s:mpc09]{\textbf{MPC09}}\textbf{}: \textit{Non-calculated risk}.
+    \item \hyperref[s:mpc10]{\textbf{MPC10}}\textbf{}: \textit{Code Coverage}.
+    \item \hyperref[s:mpc11]{\textbf{MPC11}}\textbf{}: \textit{Passed Test Cases Percentage}.
     \item \hyperref[s:mpd1]{\textbf{MPD1}}\textbf{}: Indice di Gulpease.
-    \item \hyperref[s:mpd1]{\textbf{MPD2}}\textbf{}: Copertura dei requisiti.
+    \item \hyperref[s:mpd2]{\textbf{MPD2}}\textbf{}: Copertura dei requisiti.
+    \item \hyperref[s:mpd9]{\textbf{MPD9}}\textbf{}: Browser supportati.
+
 \end{itemize}
+\newpage
+
 
 \subsection{MPC02 - Budget Variance}
 \label{s:mpc02}
@@ -19,17 +26,17 @@ Il gruppo ritiene che, nella prima fase RTB, lo sforamento del \textit{budget} s
 Nella seconda fase il gruppo ha individuato delle problematiche che non erano note nella fase precedente, questo grazie all'esperienza maturata durante lo sviluppo.
 Tali problematiche hanno aumentato le attività da svolgere per mettere in atto operazioni di correzione, questo ha portato ad uno sforamento del \textit{budget}.
 In particolare durante il sesto \textit{sprint}, il gruppo si è reso conto di aver sottostimato le ore necessarie per svolgere le attività di programmazione.
-La pianificazione del lavoro negli \textit{sprint} successivi è stata quindi rivista adeguando le ore necessarie alla programmazione con quandto sperimentato nello \textit{sprint} numero 6.
+La pianificazione delle attività negli \textit{sprint} successivi è stata quindi rivista adeguando le ore necessarie alla programmazione con quandto sperimentato nello \textit{sprint} numero 6.
 
-\begin{figure}[htbp]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{img/MPC02.png}
     \caption{MPC02 - Budget Variance}
     \label{fig:mpc02}
 \end{figure}
 
-
 \newpage
+
 
 \subsection{MPC04 - Budgeted Cost of Work Scheduled}
 \label{s:mpc04}
@@ -43,15 +50,14 @@ A partire dalla fase PB, relativa allo \textit{sprint} numero 5, si ha una cresc
     \item \textbf{Stabilità del processo}: indica che il processo utilizzato per completare il lavoro è stabile e prevedibile.
     \item \textbf{Controllo del progetto}: indica che il progetto è ben gestito e che ci sono processi di controllo efficaci per monitorare il progresso e intervenire tempestivamente in caso di deviazioni dalla pianificazione.
 \end{itemize}
+\vspace{1.5em}
 Le problematiche riscontrate durante lo sviluppo sono quindi state correttamente gestite per consentire un progresso lineare e, quindi, più facilmente gestibile.
-
-\begin{figure}[htbp]
+\begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\textwidth]{img/MPC04.png}
+    \includegraphics[width=0.8\textwidth]{img/MPC04.png}
     \caption{MPC04 - Budgeted Cost of Work Scheduled}
     \label{fig:mpc04}
 \end{figure}
-
 
 
 \subsection{MPC06 - Actual Cost of Work Performed}
@@ -80,7 +86,8 @@ Le modifiche apportate ai requisiti rientrano comunque all'interno del margine d
         \hline
         \textbf{Metrica}             & \textbf{Codice} & \textbf{Valore ottimale} & \textbf{Valore accettabile} & \textbf{Valore attuale} \\
         \hline
-        Requirements stability index & MPC07           & 0\%                      & 10\%                        & 8\%                  \\
+        Requirements stability index & MPC07           & 0\%                      & 10\%                        & 8\%                     \\
+        \hline
     \end{tabularx}
 \end{table}
 
@@ -97,40 +104,86 @@ Al termine del nono \textit{sprint} sono stati soddisfatti tutti i requisiti obb
         \textbf{Metrica}                  & \textbf{Codice} & \textbf{Valore ottimale} & \textbf{Valore accettabile} & \textbf{Valore attuale} \\
         \hline
         Satisfied obligatory requirements & MPC08           & 100\%                    & 100\%                       & 100\%                   \\
+        \hline
     \end{tabularx}
 \end{table}
 
 
 \subsection{MPC09 - Non-calculated risk}
 \label{s:mpc09}
+Questa metrica si riferisce ai rischi che non sono stati attentamente valutati o considerati durante lo sviluppo del software.
+Durante lo sviluppo del progetto i rischi sono stati valutati correttamente e sono state previste procedure per la mitigazione.
+Le informazioni inerenti i rischi individuati dal gruppo sono visibili nel documento "Piano di Progetto v2.0.0".
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{X|l|l|l|l}
+        \hline
+        \textbf{Metrica}    & \textbf{Codice} & \textbf{Valore ottimale} & \textbf{Valore accettabile} & \textbf{Valore attuale} \\
+        \hline
+        Non-calculated risk & MPC09           & 0                        & 5                           & 0                       \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 
 \subsection{MPC10 - Code Coverage}
 \label{s:mpc10}
+Sono state valutate quattro misure inerenti la copertura del codice tramite test di unità.
+Vengono qui riportate divise tra il gruppo dedicatosi al \textit{frontend} e quello dedicatosi al \textit{backend}.
+Insieme alla metrica MPC11 fornisce una panoramica della qualità del codice.
 \begin{table}[H]
     \centering
-    \begin{tabularx}{\textwidth}{p{5.5cm}|X|l|l|l}
+    \begin{tabularx}{\textwidth}{X|l|l|l|l}
         \hline
-        \textbf{Metrica} & \textbf{Codice} & \textbf{Valore ottimale} & \textbf{Valore accettabile} & \textbf{Valore attuale} \\
+        \textbf{Metrica}    & \textbf{Codice} & \textbf{Valore ottimale} & \textbf{Valore accettabile} & \textbf{Valore attuale} \\
         \hline
-        Code Coverage    & MPC10           & $100\%$                  & $\ge 80\%$                  &                         \\
+        \textit{Statements} & MPC10           & $100\%$                  & $\ge 80\%$                  & $ 92\%$                 \\
+        \hline
+        \textit{Branches}   & MPC10           & $100\%$                  & $\ge 80\%$                  & $ 86\%$                 \\
+        \hline
+        \textit{Functions}  & MPC10           & $100\%$                  & $\ge 80\%$                  & $ 93\%$                 \\
+        \hline
+        \textit{Lines}      & MPC10           & $100\%$                  & $\ge 80\%$                  & $ 92\%$                 \\
+        \hline
     \end{tabularx}
+    \caption{\textit{Code coverage Frontend}}
+\end{table}
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{X|l|l|l|l}
+        \hline
+        \textbf{Metrica}    & \textbf{Codice} & \textbf{Valore ottimale} & \textbf{Valore accettabile} & \textbf{Valore attuale} \\
+        \hline
+        \textit{Statements} & MPC10           & $100\%$                  & $\ge 80\%$                  & $ 90\%$                 \\
+        \hline
+        \textit{Branches}   & MPC10           & $100\%$                  & $\ge 80\%$                  & $ 87\%$                 \\
+        \hline
+        \textit{Functions}  & MPC10           & $100\%$                  & $\ge 80\%$                  & $ 93\%$                 \\
+        \hline
+        \textit{Lines}      & MPC10           & $100\%$                  & $\ge 80\%$                  & $ 89\%$                 \\
+        \hline
+    \end{tabularx}
+    \caption{\textit{Code coverage Backend}}
 \end{table}
 
 
 \subsection{MPC11 - Passed Test Cases Percentage}
+Questo valore indica quanto sia riuscito il processo di testing rispetto al numero totale di casi di test eseguiti.
+Insieme alla metrica MPC10 fornisce una panoramica della qualità del codice.
+
 \label{s:mpc11}
 \begin{table}[H]
     \centering
-    \begin{tabularx}{\textwidth}{p{5.5cm}|X|l|l|l}
+    \begin{tabularx}{\textwidth}{X|l|l|l|l}
         \hline
-        \textbf{Metrica}             & \textbf{Codice} & \textbf{Valore ottimale} & \textbf{Valore accettabile} & \textbf{Valore attuale} \\
+        \textbf{Metrica}     & \textbf{Codice} & \textbf{Valore ottimale} & \textbf{Valore accettabile} & \textbf{Valore attuale} \\
         \hline
-        Passed Test Cases Percentage & MPC11           & $100\%$                  & $\ge 100\%$                 &                         \\
+        Passed Test Frontend & MPC11           & $100\%$                  & $ 100\%$                    & $ 100\%$ (414)          \\
+        \hline
+        Passed Test Backend  & MPC11           & $100\%$                  & $ 100\%$                    & $ 100\%$ (458)          \\
+        \hline
     \end{tabularx}
 \end{table}
-
-
 
 
 \subsection{MPD1 - Indice di Gulpease}
@@ -147,8 +200,11 @@ Il valore medio dell'indice di Gulpease ha così superato, per la fase RTB, la s
 \end{figure}
 
 
-
 \subsection{MPD2 - Copertura dei requisiti}
+Non è stato possibile raggiungere il valore ottimale di copertura dei requisiti.\\
+Durante la fase PB il gruppo si è reso conto, approfondendo la conoscenza delle tecnologie utilizzate, di aver sottostimato il tempo necessario per l'implementazione delle funzionalità previste all'inizio del progetto.
+Questo ha portato ad una ristrutturazione del documento Analisi dei requisiti, riducendo il numero di requisiti obbligatori presenti.
+Siccome le ore di lavoro disponibili sono rapidamente state consumate per le attività di codifica, il gruppo ha scelto di non soddisfare parte dei requisiti non obbligatori, preferendo non ritardare la data di consegna del progetto.
 \label{s:mpd2}
 \begin{table}[H]
     \centering
@@ -156,11 +212,31 @@ Il valore medio dell'indice di Gulpease ha così superato, per la fase RTB, la s
         \hline
         \textbf{Metrica}        & \textbf{Codice} & \textbf{Valore ottimale} & \textbf{Valore accettabile} & \textbf{Valore attuale} \\
         \hline
-        Copertura dei requisiti & MPD2            & $100\%$                  & $80\%$                      & $71,2\%$                \\
+        Copertura dei requisiti & MPD2            & $100\%$                  & $80\%$                      & $71\%$                \\
         \hline
     \end{tabularx}
 \end{table}
-Non è stato possibile raggiungere il valore ottimale di copertura dei requisiti.\\
-Durante la fase PB il gruppo si è reso conto, approfondendo la conoscenza delle tecnologie utilizzate, di aver sottostimato il tempo necessario per l'implementazione delle funzionalità previste all'inizio del progetto.
-Questo ha portato ad una ristrutturazione del documento Analisi dei requisiti, riducendo il numero di requisiti obbligatori presenti.
-Siccome le ore di lavoro disponibili sono rapidamente state consumate per le attività di codifica, il gruppo ha scelto di non soddisfare parte dei requisiti non obbligatori, preferendo non ritardare la data di consegna del progetto.
+
+
+\subsection{MPD9 - Browser supportati}
+\label{s:mpd9}
+Sono stati eseguiti test per verificare il corretto funzionamento dell'applicativo sui seguenti \textit{browser}:
+\begin{itemize}
+    \item Google Chrome
+    \item Arc
+    \item Opera GX
+    \item Firefox
+    \item Safari
+    \item Microsfot Edge
+\end{itemize}
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{X|X|l|l|l}
+        \hline
+        \textbf{Metrica}   & \textbf{Codice} & \textbf{Valore ottimale} & \textbf{Valore accettabile} & \textbf{Valore attuale} \\
+        \hline
+        Browser supportati & MPD9            & $100\%$                  & $80\%$                      & $100\%$ (6)               \\
+        \hline
+    \end{tabularx}
+\end{table}
