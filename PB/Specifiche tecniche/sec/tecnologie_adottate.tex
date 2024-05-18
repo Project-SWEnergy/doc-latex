@@ -3,7 +3,6 @@
 \subsection{Tecnologie per la codifica}
 
 \subsubsection{TypeScript}
-
 I membri del \textit{team} SWEnergy, prima di iniziare il progetto, possedevano una
 solida conoscenza di C++. Alcuni di loro avevano esperienza anche con Java,
 Python e JavaScript. Il committente ha illustrato che Imola Informatica fa un
@@ -20,8 +19,8 @@ individuare errori di programmazione direttamente durante la fase di sviluppo,
 evitando che si manifestino durante l'esecuzione, il che migliora la qualità del
 \textit{software} e riduce il tempo di sviluppo.
 
-\subsubsection{Angular}
 
+\subsubsection{Angular}
 Per lo sviluppo del \textit{frontend}, SWEnergy ha scelto di adottare Angular,
 un \textit{framework} \textit{open-source} per la creazione di applicazioni \textit{web}. Questa
 decisione è stata guidata dalla familiarità di due membri del \textit{team} con questo
@@ -44,34 +43,34 @@ esigenze, promuovendo così una migliore comprensione del \textit{framework}.
 Inoltre, la documentazione fornita da Angular è chiara e completa, agevolando il
 nostro processo di apprendimento del \textit{framework}.
 
-\subsubsection{Axios}
 
+\subsubsection{Axios}
 Per gestire le chiamate HTTP dal \textit{frontend} al \textit{backend}, SWEnergy
 ha adottato Axios, un client HTTP basato su promise. La decisione di utilizzare
 Axios è stata influenzata dalla raccomandazione del proponente, che ha
 sottolineato la facilità e la velocità con cui è possibile effettuare \textit{test} di
 carico sulle API utilizzando questo strumento.
 
-\subsubsection{Tailwind CSS}
 
+\subsubsection{Tailwind CSS}
 Vista l'ampia necessità di utilizzo di CSS nello sviluppo del \textit{frontend},
 il \textit{team} ha scelto di adottare Tailwind, un \textit{framework} che introduce un
 nuovo approccio nel linguaggio CSS. L'obiettivo è rendere il codice CSS più
 riusabile e manutenibile, semplificando così il processo di sviluppo e
 migliorando l'efficienza del \textit{team}.
 
-\subsubsection{Node.js}
 
+\subsubsection{Node.js}
 Per la realizzazione del \textit{backend}, SWEnergy ha optato per Node.js, un
 \textit{runtime} JavaScript \textit{open-source} che si basa sul motore JavaScript V8 di
 Google Chrome. La scelta di Node.js è stata essenzialmente dettata dalla
 necessità di un \textit{runtime} JavaScript per eseguire il codice del
-\textit{backend}, considerando che abbiamo scelto TypeScript come linguaggio
+\textit{backend}, considerando la scelta di TypeScript come linguaggio
 principale. Node.js rappresenta la scelta più diffusa e supportata per questo
 tipo di scenario.
 
-\subsubsection{Nest.js}
 
+\subsubsection{Nest.js}
 Per la gestione delle API, SWEnergy ha optato per l'utilizzo di Nest.js, un
 \textit{framework} basato su Node.js progettato per la creazione di applicazioni
 \textit{server-side} efficienti, scalabili e facili da mantenere. La decisione di
@@ -81,8 +80,8 @@ evidenziato la sua similitudine con Angular nella dinamica di utilizzo della
 un'applicazione modulare, dove i componenti possono essere facilmente sostituiti
 e testati.
 
-\subsubsection{Drizzle}
 
+\subsubsection{Drizzle}
 Per la gestione del \textit{database}, SWEnergy ha scelto Drizzle, un ORM (\textit{Object
 	Relational Mapping}) progettato per TypeScript. Drizzle consente di definire
 il \textit{database}, le relazioni tra le tabelle e le \textit{query} direttamente in
@@ -93,8 +92,8 @@ con questo linguaggio. Inoltre, la similitudine con SQL rende le
 \textit{query} estremamente efficienti, poiché la traduzione è diretta e non
 richiede una complessa analisi.
 
-\subsubsection{PostgreSQL}
 
+\subsubsection{PostgreSQL}
 SWEnergy ha optato per l'adozione di PostgreSQL come \textit{database} per il progetto,
 poiché tutti i membri del \textit{team} possiedono una discreta esperienza con questo
 DBMS. La decisione è stata motivata dalla consapevolezza che ci sono già
@@ -102,15 +101,11 @@ numerose nuove tecnologie da apprendere nel contesto del progetto; pertanto, per
 quanto riguarda il \textit{database}, è stata preferita una soluzione con cui tutti i
 membri del \textit{team} si sentono già a proprio agio.
 
-\subsubsection{Docker}
 
-L'adozione di Docker per containerizzare l'intero progetto offre numerosi
-vantaggi fondamentali. In primo luogo, Docker consente di rendere il prodotto
-eseguibile su qualunque \textit{hardware}, garantendo una maggiore portabilità e
-facilità di distribuzione. Grazie alla standardizzazione dell'ambiente di
-esecuzione tramite i \textit{container} Docker, è possibile eliminare i problemi legati
-alla differenza di configurazioni \textit{hardware} e \textit{software} tra i
-vari ambienti di sviluppo, \textit{test} e produzione.
+\subsubsection{Docker}
+L'adozione di Docker per la creazione di \textit{container} offre numerosi vantaggi fondamentali.
+In primo luogo, Docker consente di rendere il prodotto eseguibile su qualunque \textit{hardware}, garantendo una maggiore portabilità e facilità di distribuzione.
+Grazie alla standardizzazione dell'ambiente di esecuzione tramite i \textit{container} Docker, è possibile eliminare i problemi legati alla differenza di configurazioni \textit{hardware} e \textit{software} tra i vari ambienti di sviluppo, \textit{test} e produzione.
 
 Inoltre, l'utilizzo di Docker permette di semplificare il processo di gestione
 delle dipendenze e delle librerie necessarie per il progetto, fornendo un
@@ -124,9 +119,7 @@ utilizzando tecnologie come Kubernetes. Questo significa che è possibile gestir
 facilmente un carico di lavoro in crescita distribuendo automaticamente i
 \textit{container} su più nodi, garantendo così una maggiore disponibilità e prestazioni
 dell'applicazione anche in presenza di un elevato numero di richieste. In
-sintesi, l'adozione di Docker per containerizzare il nostro progetto offre un
-modo efficiente e affidabile per gestire l'intero ciclo di vita
-dell'applicazione, garantendo flessibilità, portabilità e scalabilità.
+sintesi, l'adozione di Docker offre un modo efficiente e affidabile per gestire l'intero ciclo di vita dell'applicazione, garantendo flessibilità, portabilità e scalabilità.
 
 \subsection{Tecnologie per l'analisi statica del codice}
 
@@ -142,36 +135,43 @@ identificazione e risoluzione di potenziali problemi di programmazione.
 \subsection{Tecnologie per l'analisi dinamica del codice}
 
 \subsubsection{Insomnia}
-
-Per verificare il funzionamento delle API e del \textit{backend}, SWEnergy ha
-optato per l'utilizzo di Insomnia, un'applicazione \textit{open-source} progettata per
-testare le API REST. In effetti, il \textit{team} ha sviluppato un insieme di test per
-assicurarsi che le API rispondano correttamente alle richieste e restituiscano i
-dati previsti, garantendo così il corretto funzionamento del sistema.
+Per verificare il funzionamento delle API e del \textit{backend}, SWEnergy ha scelto di utilizzare Insomnia, un'applicazione \textit{open-source} progettata per il testing delle API REST. 
+Il \textit{team} ha creato un ambiente condiviso all'interno di Insomnia, consentendo l'esecuzione di tutte le API disponibili e l'osservazione dei risultati. 
+Questo ambiente memorizza le diverse tipologie di chiamate e vari \textit{set} di dati di esempio.
+Insomnia facilita l'esecuzione di test manuali, permettendo di modificare agevolmente i dati inviati al \textit{backend} e di visualizzare i risultati restituiti. 
+Questo consente una rapida verifica della corrispondenza tra i risultati ottenuti e quelli attesi, migliorando l'efficienza e l'accuratezza dei test.
 
 
 \subsubsection{Angular}
-
-Angular fornisce nativamente il comando \texttt{ng test}, che è uno strumento 
+Angular fornisce nativamente il comando \texttt{ng test}, che è uno strumento
 potente per eseguire test unitari e di integrazione.
 
-I test unitari sono progettati per verificare l'accuratezza delle singole 
-unità di codice, come componenti e servizi. Con Angular, \texttt{ng test} 
-sfrutta il framework Jasmine per definire i test e Karma come test runner per 
-eseguire i test in un ambiente di browser. Questo permette di simulare il 
-comportamento dell'applicazione in un contesto realistico, garantendo che ogni 
+I test unitari sono progettati per verificare l'accuratezza delle singole
+unità di codice, come componenti e servizi. Con Angular, \texttt{ng test}
+sfrutta il framework Jasmine per definire i test e Karma come test runner per
+eseguire i test in un ambiente di browser. Questo permette di simulare il
+comportamento dell'applicazione in un contesto realistico, garantendo che ogni
 unità funzioni come previsto.
 
-Oltre ai test unitari, \texttt{ng test} supporta anche i test di integrazione, 
-che verificano l'interazione tra più unità di codice. Questi test sono cruciali 
-per assicurare che i vari componenti dell'applicazione funzionino 
-correttamente insieme e che l'integrazione tra loro non introduca bug o 
+Oltre ai test unitari, \texttt{ng test} supporta anche i test di integrazione,
+che verificano l'interazione tra più unità di codice. Questi test sono cruciali
+per assicurare che i vari componenti dell'applicazione funzionino
+correttamente insieme e che l'integrazione tra loro non introduca bug o
 comportamenti inattesi. Anche in questo caso, Jasmine offre la possibilità di
 definire i \textit{mock} e le \textit{stub} necessari per simulare le dipendenze
 esterne e garantire che i test siano eseguiti in modo isolato.
 
-\subsubsection{Nest.js}
 
+\subsubsection{Nest.js}
+Nest.js fornisce una integrazione di \textit{default} con Jest, un \textit{framework} di testing JavaScript ampiamente utilizzato e noto per la sua velocità e semplicità. 
+Si tratta della scelta ideale per eseguire test siccome offre un'ottima integrazione con NestJS, permettendo di sfruttare appieno le caratteristiche del \textit{framework} come i moduli, i servizi e i controller. 
+Inoltre, Jest supporta il \textit{mocking} e la simulazione delle dipendenze, facilitando l'isolamento delle unità di codice da testare. 
+Le sue capacità di test asincroni e il supporto integrato per TypeScript, che è comunemente utilizzato con NestJS, garantiscono una scrittura di test più fluida e meno soggetta a errori. 
+Infine, Jest fornisce un'interfaccia utente intuitiva e \textit{report} di copertura del codice dettagliati, rendendo più semplice identificare e correggere i \textit{bug} e migliorare la qualità complessiva del \textit{software}.
+
+
+\subsection{Riepilogo}
+La seguente tabella fornisce un riepilogo dettagliato delle tecnologie adottate dal gruppo per lo sviluppo dell'applicazione Easy Meal.
 \begin{table}[H]
 	\centering
 	\begin{tabularx}{\textwidth}{lXl}
@@ -188,7 +188,7 @@ esterne e garantire che i test siano eseguiti in modo isolato.
 		\hline
 		Node.js       & \textit{Runtime} JavaScript                                                    & 20.12.0           \\
 		\hline
-		NestJS        & \textit{Framework} per lo sviluppo di applicazioni \textit{server-side}                 & 10.3.6            \\
+		NestJS        & \textit{Framework} per lo sviluppo di applicazioni \textit{server-side}        & 10.3.6            \\
 		\hline
 		Drizzle       & \textit{Object Relational Mapping}                                             & 0.30.6            \\
 		\hline
@@ -196,7 +196,7 @@ esterne e garantire che i test siano eseguiti in modo isolato.
 		\hline
 		Docker        & Piattaforma per lo sviluppo, il \textit{deploy} e l'esecuzione di applicazioni & /                 \\
 		\hline
-		Insomnia      & Crezione di un \textit{batch} di \textit{test} collaborativo                            & 8.6.1             \\
+		Insomnia      & Crezione di un \textit{batch} di \textit{test} collaborativo                   & 8.6.1             \\
 		\hline
 	\end{tabularx}
 	\caption{Tabella delle tecnologie adottate}
