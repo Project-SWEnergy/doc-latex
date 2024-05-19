@@ -27,7 +27,7 @@ jobs:
               with:
                   python-version: ${{ matrix.python-version }}
             - name: Build pdf
-              run: python3 scripts/build.py -o docs -s RTB
+              run: python3 scripts/build.py -o docs -s PB
             - name: Publish artifacts
               uses: actions/upload-artifact@v3
               with:
