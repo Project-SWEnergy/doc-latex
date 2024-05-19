@@ -192,7 +192,7 @@ I vantaggi dell'utilizzo del \textit{Module Pattern} includono:
 	\item \textbf{Organizzazione del Codice}: aiuta a mantenere il codice ben organizzato, rendendo più facile trovare e gestire le parti dell'applicazione.
 	\item \textbf{Manutenibilità}: ogni modulo può essere sviluppato e manutenuto indipendentemente dagli altri.
 	\item \textbf{Riusabilità}: possono essere riutilizzati in altre applicazioni o parti della stessa applicazione.
-	\item \textbf{Scalabilità}: facilitando la gestione delle dipendenze e la composizione dei moduli, il \textbf{Module Pattern} supporta la scalabilità dell'applicazione.
+	\item \textbf{Scalabilità}: facilitando la gestione delle dipendenze e la composizione dei moduli, il Module Pattern supporta la scalabilità dell'applicazione.
 \end{itemize}
 
 
@@ -205,7 +205,7 @@ I servizi contengono la logica di \textit{business} dell'applicazione.
 Sono responsabili dell'interazione con il \textit{database}, la gestione dei dati e l'implementazione delle regole di \textit{business}.
 Forniscono metodi che possono essere chiamati dai \textit{controller} o da altri servizi.
 Contengono operazioni CRUD, manipolazione dei dati e comunicazione con altre parti dell'applicazione.\\
-Questo \textit{pattern} promuove una chiara separazione delle preoccupazioni.
+Questo \textit{pattern} promuove una chiara separazione delle responabilità.
 \begin{lstlisting}
 	import { Controller, Get } from '@nestjs/common';
 	import { UsersService } from './users.service';
