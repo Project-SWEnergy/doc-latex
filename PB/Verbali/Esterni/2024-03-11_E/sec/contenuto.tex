@@ -1,0 +1,50 @@
+\section{\textit{Brainstorming}}
+
+Dopo aver completato l'RTB, il 7 marzo, SWEnergy e Imola Informatica si sono
+incotrati per discutere il proseguimento del progetto. In particolare, SWEnergy
+ha spiegato come si è svolta la revisione RTB con i committenti e quali sono
+stati i \textit{feedback} ricevuti. In questo periodo, SWEnergy non ha
+implementato nuove \textit{feature}.
+
+\section{Prossimi passi}
+
+SWEnergy ha discusso l'organizzazione del tempo e delle risorse per lo sprint
+futuro. In particolare, è stato deciso di dedicare la settimana dall'11 marzo al
+17 merzo allo studio delle tecnologie: i due sottogruppi di SWEnergy si
+scambiamo le responsabilità rispetto al \textit{backend} e al \textit{frontend}.
+Mentre la settimana successiva dal 18 marzo al 24 marzo sarà dedicata alla
+progettazione, in particolare la progettazione si definisce in progettazione dei
+documenti da consegnare in seguito alla revisione PB e alla progettazione del
+database, il cuore dell'applicazione. L'obiettivo dello sprint a venire è quello
+di aver restrutturato il PoC in modo che possa essere lo scheletro 
+dell'applicazione finale.
+
+\section{JWT}
+
+In una riunione precedente, Staffolani aveva consigliato l'adozione di JWT
+(\textit{JSON Web Token}) per la gestione delle sessioni e quindi
+dell'autenticazione. Dunque, SWEnergy ha esposto i propri dubbi rispetto a
+questa tecnolgia. In particolare, è stato chiesto di spiegare come funzionassero
+e di che cosa si tratta. Se sono in grado di recepire l'utente che sta eseguendo
+le richieste e se sono sicuri. Staffolani ha fornito una spiegazione dettagliata
+sull'argomento e ha chiarito i dubbi di SWEnergy. In aggiunta, ha fornito delle
+fonti per approfondire l'argomento e per avere degli esempi di implementazione
+della tecnologia.
+
+\section{Chat}
+
+SWEnergy ha chiesto a Imola Informatica qualche tecnologia per implementare la
+chat e un'introduzione di base all'argomento. Staffolani ha consigliato l'uso di
+socket.io e ha spiegato che si utilizzano i JWT per autenticare gli utenti. Ha 
+spiegato che la
+chat deve essere gestita mediante dei socket, ovvero dei canali di comunicazione
+bidirezionali tra il client e il server. Inoltre, ha fornito delle fonti per 
+approfondire l'argomento.
+
+\section{Test}
+
+SWEnergy ha chiesto a Imola Informatica come svolgere i test. In particolare, è
+stato chiesto consiglio in merito all'automatizzazione dei test e dei test in
+\textit{batch}. Imola Informatica ha spiegato che sia Angular che NestJS
+di default forniscono dei \textit{framework} per i test e ha consigliato di
+usare questi strumenti, senza adottare altri \textit{framework} di terze parti.
