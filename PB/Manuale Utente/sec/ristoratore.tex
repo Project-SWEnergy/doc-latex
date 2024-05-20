@@ -4,7 +4,7 @@
 
 \begin{figure}[htbp]
     \centering
-	\includegraphics[width=0.8\textwidth]{PB/manuale-utente/header-ristoratore.png}
+	\includegraphics[width=1\textwidth]{PB/manuale-utente/header-ristoratore.png}
     \caption{Barra di Navigazione per il ristoratore}
 \end{figure}
 
@@ -72,7 +72,7 @@ salvare cliccando sul pulsante \texttt{Salva}.
 
 \begin{figure}[htbp]
     \centering
-	\includegraphics[width=0.8\textwidth]{PB/manuale-utente/piatti-ristoratore.png}
+	\includegraphics[width=1\textwidth]{PB/manuale-utente/piatti-ristoratore.png}
     \caption{Pagina di visualizzazione dei piatti per il ristoratore}
 \end{figure}
 
@@ -103,7 +103,7 @@ Questa pagina è composta da un \textit{form} che richiede:
 Dopo aver compilato il \textit{form}, puoi salvare il piatto cliccando sul pulsante
 \texttt{Crea piatto}. Se l'operazione va a buon fine, vieni reindirizzato alla
 pagina di dettaglio del piatto e viene visualizzato un messaggio di conferma di
-avvenuta creazione del piatto; altrimenti viene visualizzato un messaggio di
+avvenuta creazione del piatto, altrimenti viene visualizzato un messaggio di
 errore.
 
 \subsection{Dettaglio piatto}
@@ -118,23 +118,23 @@ Si accede a questa pagina cliccando su un piatto nella lista dei piatti. Qui
 puoi visualizzare i dettagli del piatto e i suoi ingredienti. In questa pagina
 sono disponibili le seguenti funzionalità:
 \begin{itemize}
-	\item \textbf{Modifica piatto}: cliccando sul piatto, esso si trasforma in
+	\item \textbf{Modifica piatto}: cliccando sul piatto, esso si trasforma
 		nel \textit{form} di creazione con i campi già compilati. Puoi modificare i
 		campi e salvare le modifiche cliccando sul pulsante \texttt{Modifica
 		piatto}. Se l'operazione va a buon fine, vieni reindirizzato alla
 		pagina di visualizzazione dei piatti e viene visualizzato un messaggio
-		di conferma di avvenuta modifica del piatto; altrimenti viene
+		di conferma di avvenuta modifica del piatto, altrimenti viene
 		visualizzato un messaggio di errore;
 
 	\item \textbf{Elimina piatto}: cliccando sul piatto, esso si trasforma nel
 		\textit{form} di creazione con i campi già compilati. In fondo al \textit{form} è presente
 		un bottone \texttt{Elimina piatto}. Cliccando su questo bottone, il
 		piatto viene eliminato. Viene visualizzato un messaggio di conferma e
-		vieni reindirizzato alla pagina di visualizzazione dei piatti; oppure 
+		vieni reindirizzato alla pagina di visualizzazione dei piatti; altrimenti 
 		viene visualizzato un messaggio di errore dell'operazione;
 
-	\item \textbf{Aggiungi ingrediente}: sotto ad un piatto è presente un
-		pulsante \texttt{Aggiungi un ingrediente al piatto!}. Cliccando su
+	\item \textbf{Aggiungi ingrediente}: sotto ad ogni piatto è presente un
+		pulsante \texttt{Aggiungi un ingrediente al piatto}. Cliccando su
 		questo pulsante si apre un \textit{form} che ti permette di aggiungere un
 		ingrediente al piatto. Il \textit{form} richiede:
 		\begin{itemize}
@@ -144,11 +144,10 @@ sono disponibili le seguenti funzionalità:
 
 			\item Quantità: la quantità dell'ingrediente da aggiungere al piatto.
 		\end{itemize}
-
 		Dopo aver compilato il \textit{form}, puoi salvare l'ingrediente cliccando sul
 		pulsante \texttt{Aggiungi ingrediente}. Se l'operazione va a buon fine,
 		viene visualizzato un messaggio di conferma di avvenuta aggiunta
-		dell'ingrediente al piatto; altrimenti viene visualizzato un messaggio
+		dell'ingrediente al piatto, altrimenti viene visualizzato un messaggio
 		di errore;
 
 	\item \textbf{Modifica di un ingregrediente del piatto}: sotto al pulsante
@@ -158,7 +157,7 @@ sono disponibili le seguenti funzionalità:
 		modificato la quantità
 		dell'ingrediente, puoi salvare le modifiche cliccando sul pulsante
 		\texttt{Modifica ingrediente}. Se l'operazione va a buon fine, viene visualizzato un
-		messaggio di conferma di avvenuta modifica dell'ingrediente; altrimenti
+		messaggio di conferma di avvenuta modifica dell'ingrediente, altrimenti
 		viene visualizzato un messaggio di errore;
 
 	\item \textbf{Elimina ingrediente}: sotto al pulsante di aggiunta di un
@@ -168,7 +167,7 @@ sono disponibili le seguenti funzionalità:
 		bottone \texttt{Elimina ingrediente}. Cliccando su questo bottone,
 		l'ingrediente viene eliminato dal piatto. Viene visualizzato un messaggio
 		di conferma e viene visualizzato un messaggio di conferma di avvenuta
-		eliminazione dell'ingrediente dal piatto; altrimenti viene visualizzato
+		eliminazione dell'ingrediente dal piatto, altrimenti viene visualizzato
 		un messaggio di errore dell'operazione.
 \end{itemize}
 
@@ -176,60 +175,26 @@ sono disponibili le seguenti funzionalità:
 
 \begin{figure}[htbp]
     \centering
-	\includegraphics[width=0.8\textwidth]{PB/manuale-utente/prenotazioni-ristoratore.png}
+	\includegraphics[width=1\textwidth]{PB/manuale-utente/prenotazioni-ristoratore.png}
 	\caption{Pagina di visualizzazione delle prenotazioni per il ristoratore}
 \end{figure}
 
 Si accede a questa pagina cliccando su \texttt{Prenotazioni} nella barra di
 navigazione. La pagina delle prenotazioni è divisa in tre sezioni:
 \begin{itemize}
-	\item \textbf{calendario}: questa sezione occupa la porzione sinistra della
-		pagina. In questa sezione è possibile selezionare un giorno e
-		visualizzare il colore dei giorni e i giorni cliccabili. Infatti, i
-		quelli colorati di rosso indicano che c'è almeno una prenotazione nello
-		stato "In attesa", ovvero c'è almeno una prenotazione, per la quale tu
-		devi ancora confermare la disponibilità; i giorni colorati di giallo
-		indicano che non ci sono prenotazioni "In attesa", ma c'è almeno una
-		prenotazione in uno degli stati "Approvata", "In corso" oppure
-		"Pagamento"; i giorni colorati di verde indicano che non ci sono
-		prenotazioni appartenenti alle categorie precedenti, ma c'è almeno una
-		prenotazione nello stato "Conclusa". I giorni cliccabili, ma non
-		colorati hanno solo prenotazioni nello stato "Rifiutata" oppure
-		"Annullata". Selezionando un giorno del calendario si aggiorna la lista
-		delle prenotazioni in base al giorno selezionato;
-
-	\item \textbf{lista delle prenotazioni}: questa è la centrale della pagina.
-		In questa sezione sono elencate tutte le prenotazioni relative al giorno
-		selezionato nel calendario. Cliccando su una prenotazione sei
-		reindirizzato alla pagina di dettaglio della prenotazione. In cima alla
-		lista delle prenotazioni sono presenti tre pulsanti per riordinare le
-		prenotazioni rispettivamente: \texttt{Orario}, \texttt{Stato} e
-		\texttt{Numero prenotazione}. Cliccando su uno di questi pulsanti si
-		riordinano le prenotazioni in base al campo selezionato;
-
-	\item \textbf{lista degli ingredienti}: questa sezione occupa la porzione
-		destra della pagina. In questa sezione sono elencati tutti gli
-		ingredienti necessari per soddisfare le prenotazioni del giorno
-		selezionato. Si noti che le prenotazioni "Annullata" e "Rifiutata" non
-		sono considerate, mentre le prenotazioni "In attesa" sono considerate.
+	\item \textbf{Calendario}: questa sezione occupa la parte sinistra della pagina. Qui è possibile selezionare un giorno e visualizzare i colori dei giorni e la loro cliccabilità. I giorni colorati in rosso indicano che c'è almeno una prenotazione nello stato "In attesa", il che significa che devi ancora confermare la disponibilità. I giorni colorati in giallo indicano che non ci sono prenotazioni "In attesa", ma almeno una è nello stato "Approvata", "In corso" o "Pagamento". I giorni colorati in verde indicano che non ci sono prenotazioni nelle categorie precedenti, ma almeno una è nello stato "Conclusa". I giorni cliccabili, ma non colorati, hanno solo prenotazioni nello stato "Rifiutata" o "Annullata". Selezionando un giorno del calendario, si aggiorna la lista delle prenotazioni in base al giorno scelto;
+	\item \textbf{Lista delle prenotazioni}: 
+	questa è la sezione centrale della pagina. Qui sono elencate tutte le prenotazioni relative al giorno selezionato nel calendario. Cliccando su una prenotazione, verrai reindirizzato alla pagina di dettaglio della prenotazione. In cima alla lista delle prenotazioni ci sono tre pulsanti per riordinare le prenotazioni in base a: \texttt{Orario}, \texttt{Stato} e \texttt{Numero prenotazione}. Cliccando su uno di questi pulsanti, le prenotazioni verranno riordinate in base al campo selezionato;
+	\item \textbf{Lista degli ingredienti}: 
+	questa sezione occupa la parte destra della pagina. Qui sono elencati tutti gli ingredienti necessari per soddisfare le prenotazioni del giorno selezionato. Si noti che le prenotazioni "Annullata" e "Rifiutata" non sono considerate, mentre le prenotazioni "In attesa" sono incluse.
 \end{itemize}
 
 \subsection{Dettaglio prenotazione}
 
 \begin{figure}[htbp]
     \centering
-	\includegraphics[width=0.8\textwidth]{PB/manuale-utente/dettaglio-prenotazione-ristoratore.png}
+	\includegraphics[width=1\textwidth]{PB/manuale-utente/dettaglio-prenotazione-ristoratore.png}
     \caption{Pagina di dettaglio di un'ordinazione per il ristoratore}
 \end{figure}
 
-Si accede a questa pagina cliccando su una prenotazione nella lista delle
-prenotazioni. Qui puoi visualizzare i dettagli della prenotazione e i piatti
-ordinati. Cliccando sui dettagli di una prenotazione si aprirà un \textit{form} che
-permette di modificare lo stato della prenotazione. Dopo aver modificato lo
-stato della prenotazione, puoi salvare le modifiche cliccando sul pulsante
-\texttt{Salva}. Se l'operazione va a buon fine, vieni reindirizzato alla pagina
-delle prenotazioni e viene visualizzato un messaggio di conferma di avvenuta
-modifica della prenotazione; altrimenti viene visualizzato un messaggio di errore.
-Sotto i dettagli della prenotazione sono elencati tutti i piatti ordinati divisi
-per cliente. Infine, a destra della prenotazione e dei piatti ordinati, è
-presente la lista degli ingredienti necessari per soddisfare la prenotazione.
+Si accede a questa pagina cliccando su una prenotazione nella lista delle prenotazioni. Qui puoi visualizzare i dettagli della prenotazione e i piatti ordinati. Cliccando sui dettagli di una prenotazione, si aprirà un \textit{form} che permette di modificare lo stato della prenotazione. Dopo aver modificato lo stato, puoi salvare le modifiche cliccando sul pulsante \texttt{Salva}. Se l'operazione va a buon fine, verrai reindirizzato alla pagina delle prenotazioni e verrà visualizzato un messaggio di conferma dell'avvenuta modifica; altrimenti, verrà mostrato un messaggio di errore. Sotto i dettagli della prenotazione, sono elencati tutti i piatti ordinati, divisi per cliente. Infine, a destra della prenotazione e dei piatti ordinati, è presente la lista degli ingredienti necessari per soddisfare la prenotazione.

@@ -1,10 +1,11 @@
+\newpage
 \section{Cliente}
 
 \subsection{Header}
 
 \begin{figure}[htbp]
     \centering
-	\includegraphics[width=0.8\textwidth]{PB/manuale-utente/header-cliente.png}
+	\includegraphics[width=1\textwidth]{PB/manuale-utente/header-cliente.png}
     \caption{Barra di Navigazione per il cliente}
 \end{figure}
 
@@ -23,7 +24,7 @@ sezioni della piattaforma:
 
 	\item \texttt{Notifiche}: cliccando su questo riferimento sei reindirizzato
 		alla pagina di visualizzazione della lista di notifiche. Nota che se ci
-		sono notifiche non lette, il riferimento sarà seguito da un badge che
+		sono notifiche non lette, il riferimento sarà seguito da un \textit{badge} che
 		indica il numero di notifiche non lette;
 
 	\item \texttt{Logout}: cliccando su questo riferimento effettuerai il \textit{logout}
@@ -48,49 +49,39 @@ solamente l'\textit{header}.
 Questa pagina è analoga a quella dell'utente non autenticato, ci sono tuttavia
 due aggiunte:
 \begin{itemize}
-	\item \texttt{Inserisci recensione}: questo bottone compare in mezzo tra le
-		gli orari di apertura di un ristorante e le sue recensioni, accanto al
-		pulsante qui sotto. Cliccando su questo bottone si viene reindirizzati
-		ad una pagina in cui è possibile inserire una recensione per il
-		ristorante. Questo bottone compare solo se si è conclusa una
-		prenotazione e quindi si ha effetuato un pagamento presso il ristorante e non si è ancora inserita una
-		recensione;
+	\item \texttt{Inserisci recensione}: questo bottone è posizionato sotto gli orari di apertura e prima delle sue recensioni. Cliccandovi si viene reindirizzati ad una pagina in cui è possibile inserire una recensione per il ristorante. Questo bottone compare solo se si è conclusa una prenotazione e quindi si ha effetuato un pagamento presso il ristorante e non si è ancora inserita una recensione;
 
-	\item \texttt{Prenota}: questo bottone si trova sotto gli orari del
-		ristorante. Cliccando su questo bottone si viene reindirizzati alla
-		pagina di prenotazione di un tavolo presso il ristorante che si sta
-		visualizzando.
+	\item \texttt{Prenota}: questo bottone si trova alla destra del precedente, sotto gli orari del ristorante e prima delle sue recensioni. Cliccandovi si viene reindirizzati alla pagina di prenotazione di un tavolo presso il ristorante che si sta visualizzando.
 \end{itemize}
 
 \subsection{Prenotazione di un tavolo}
 
 \begin{figure}[htbp]
     \centering
-	\includegraphics[width=0.4\textwidth]{PB/manuale-utente/prenotazione.png}
+	\includegraphics[width=0.5\textwidth]{PB/manuale-utente/prenotazione.png}
     \caption{Pagina di richiesta di una prenotazione per il cliente}
 \end{figure}
 
 Si accede a questa pagina cliccando sul bottone \texttt{Prenota} della pagina di
-dettaglio di un ristorante. Dopo aver compilato il \textit{form} con le informazioni
-richieste:
+dettaglio di un ristorante. Il \textit{form} richiede le seguenti informazioni:
 \begin{itemize}
-	\item Data della prenotazione: viene richiesto di inserire la data in cui si
+	\item \texttt{Data della prenotazione}: viene richiesto di inserire la data in cui si
 		vuole prenotare il tavolo nel formato \texttt{mm/gg/aaaa}. Accanto al
 		\textit{form} di inserimento è presente il bottone di un calendario che apre un
 		calendario con i giorni. Cliccando su un giorno del calendario, il \textit{form}
 		viene automaticamente compilato con la data selezionata;
 
-	\item Ora della prenotazione: viene richiesto di inserire l'orario in cui si
+	\item \texttt{Ora della prenotazione}: viene richiesto di inserire l'orario in cui si
 		vuole prenotare il tavolo nel formato \texttt{hh:mm}. Sono accettati
 		solamente orari compresi all'interno degli orari di apertura del
 		ristorante presso cui si desidera prenotare;
 
-	\item Numero partecipanti: con un numero di partecipanti maggiore di 1
+	\item \texttt{Numero partecipanti}: con un numero di partecipanti maggiore di 1
 		appaiono dei campi aggiuntivi per inserire le \textit{email} dei partecipanti
 		supplementari, in questo modo è possibile condividere la prenotazione
 		con altri utenti;
 
-	\item Metodo di pagamento: si può scegliere di pagare in modo equidiviso
+	\item \texttt{Metodo di pagamento}: si può scegliere di pagare in modo equidiviso
 		(alla "romana") oppure di pagare in modo individuale, e quindi ciascun
 		partecipante paga solo per se stesso.
 \end{itemize}
@@ -98,14 +89,14 @@ richieste:
 Dopo aver compilato il \textit{form}, cliccando sul bottone \texttt{Invia prenotazione} 
 si richiede la prenotazione del tavolo. Se la richiesta è andata a buon fine
 viene visualizzato un messaggio di successo e si è reindirizzati alla pagina di
-visualizzazione della lista di prenotazioni; altrimenti viene visualizzato un
+visualizzazione della lista di prenotazioni, altrimenti viene visualizzato un
 messaggio di errore.
 
 \newpage
 \subsection{Lista delle prenotazioni}
 \begin{figure}[htbp]
     \centering
-	\includegraphics[width=0.8\textwidth]{PB/manuale-utente/lista-prenotazioni-cliente.png}
+	\includegraphics[width=1\textwidth]{PB/manuale-utente/lista-prenotazioni-cliente.png}
     \caption{Pagina di visualizzazione delle prenotazioni per il cliente}
 \end{figure}
 
@@ -136,7 +127,7 @@ possibili diverse operazioni sulle prenotazioni:
 
 	\item \textbf{"Conclusa"} oppure \textbf{"Rifiutata"}: 
 		\begin{itemize}
-			\item \texttt{Cancella}: la prenotazione viene non sarà più visibile
+			\item \texttt{Cancella}: la prenotazione non sarà più visibile
 				nella lista delle prenotazioni del cliente.
 		\end{itemize}
 
@@ -162,23 +153,23 @@ possibili diverse operazioni sulle prenotazioni:
  \newpage
 La funzionalità di \textit{ordinazione collaborativa} permette ai clienti di effettuare ordini in modo collettivo, facilitando la gestione delle prenotazioni di gruppo. 
 Quando un cliente preme il bottone \texttt{Ordina collaborativamente} presente nella lista delle prenotazioni, viene reindirizzato alla pagina dell'ordinazione 
-collaborativa, dove viene visualizzato il menù del ristorante scelto.
+collaborativa, dove viene visualizzato il menu del ristorante scelto.
 
-All'interno del menù, per ogni piatto vengono mostrate le seguenti informazioni:
+All'interno del menu, per ogni piatto vengono mostrate le seguenti informazioni:
 \begin{itemize}
-    \item \textbf{Nome del piatto}: il nome identificativo del piatto.
-    \item \textbf{Immagine del piatto}: una rappresentazione visiva del piatto.
-    \item \textbf{Prezzo}: il costo del piatto.
+    \item \textbf{Nome del piatto}: il nome identificativo del piatto;
+    \item \textbf{Immagine del piatto}: una rappresentazione visiva del piatto;
+    \item \textbf{Prezzo}: il costo del piatto;
     \item \textbf{Ingredienti}: una lista dettagliata di tutti gli ingredienti presenti nel piatto.
 \end{itemize}
 
-Gli utenti possono interagire con ogni piatto presente nel menù utilizzando due bottoni:
+Gli utenti possono interagire con ogni piatto presente nel menu utilizzando due bottoni:
 \begin{itemize}
-    \item \texttt{Aggiungi}: aggiunge il piatto selezionato al carrello del cliente.
+    \item \texttt{Aggiungi}: aggiunge il piatto selezionato al carrello del cliente;
     \item \texttt{Rimuovi}: rimuove il piatto selezionato dal carrello del cliente.
 \end{itemize}
 
-Il carrello del cliente viene visualizzato subito sotto il menù del ristorante, permettendo al cliente di vedere in ogni momento lo stato del proprio carrello. 
+Il carrello del cliente viene visualizzato subito sotto il menu del ristorante, permettendo al cliente di vedere in ogni momento lo stato del proprio carrello. 
 Nel carrello sono elencati tutti i piatti aggiunti per l'ordinazione corrente. Per ciascun piatto nel carrello, l'utente ha la possibilità di personalizzare ulteriormente 
 l'ordine:
 \begin{itemize}
@@ -187,8 +178,8 @@ l'ordine:
 
 Quando il cliente ha terminato di comporre il suo ordine, ha a disposizione due opzioni:
 \begin{itemize}
-    \item \texttt{Invia ordine}: invia l'ordine corrente, rendendolo definitivo.
-    \item \texttt{Cancella Ordine}: cancella l'ordine del cliente soltanto se è già stato inviato, rimuovendo l'ordine dalla ordinazione collaborativa.
+    \item \texttt{Invia ordine}: invia l'ordine corrente, rendendolo definitivo;
+    \item \texttt{Cancella Ordine}: cancella l'ordine del cliente soltanto se è già stato inviato, rimuovendo l'ordine dall'ordinazione collaborativa.
 \end{itemize}
 
 Se il cliente desidera modificare la propria ordinazione, può farlo in due modi:
@@ -200,9 +191,8 @@ Se il cliente desidera modificare la propria ordinazione, può farlo in due modi
 \end{itemize}
 
 
-In fondo alla pagina dell'ordinazione collaborativa, vengono visualizzati tutti gli ordini effettuati dagli altri commensali che partecipano alla stessa prenotazione 
-del cliente, oltre all'ordine del cliente stesso. Questa funzionalità permette di monitorare gli ordini degli altri partecipanti, facilitando la gestione delle ordinazioni 
-di gruppo. Ogni ordine è accompagnato dal nome del commensale che lo ha effettuato.
+In fondo alla pagina dell'ordinazione collaborativa vengono visualizzati tutti gli ordini effettuati dagli altri commensali che partecipano alla stessa prenotazione 
+del cliente, oltre all'ordine del cliente stesso. Questa funzionalità permette di monitorare gli ordini degli altri partecipanti, facilitando la gestione delle ordinazioni di gruppo. Ogni ordine è accompagnato dal nome del commensale che lo ha effettuato.
 In fondo alla pagina è presente un bottone \texttt{Ricarica} che, se premuto, aggiorna la lista degli ordini, mostrando la lista più recente di tutti gli ordini effettuati.
 
 
@@ -225,7 +215,7 @@ mostrato un messaggio di errore in rosso in basso a destra.
 
 \begin{figure}[htbp]
     \centering
-	\includegraphics[width=0.8\textwidth]{PB/manuale-utente/pagamento-concluso.png}
+	\includegraphics[width=1\textwidth]{PB/manuale-utente/pagamento-concluso.png}
     \caption{Pagina di pagamento concluso di una prenotazione}
 \end{figure}
 
@@ -233,14 +223,14 @@ mostrato un messaggio di errore in rosso in basso a destra.
 
 \begin{figure}[htbp]
     \centering
-	\includegraphics[width=0.8\textwidth]{PB/manuale-utente/notifiche.png}
-    \caption{Pagina di pagamento concluso di una prenotazione}
+	\includegraphics[width=1\textwidth]{PB/manuale-utente/notifiche.png}
+    \caption{Pagina di visualizzazione delle otifiche}
 \end{figure}
 
 Si accede a questa pagina cliccando sul bottone \texttt{Notifiche} della barra di
 navigazione. In questa pagina sono visualizzate tutte le notifiche di un
 cliente. In cima alla lista delle notifiche sono presenti due bottoni:
-\texttt{Nuove} e \texttt{Lette}. Accedendo alla pagina, è selezionato il filtro
+\texttt{Nuove} e \texttt{Lette}. Accedendo alla pagina è selezionato il filtro
 delle notifiche nuove. Cliccando su \texttt{Lette} si visualizzano le notifiche
 già lette. Passando sopra una notifica con il \textit{mouse}, compare un bottone per
 segnare la notifica come letta.
@@ -249,14 +239,14 @@ segnare la notifica come letta.
 
 \begin{figure}[htbp]
     \centering
-	\includegraphics[width=0.8\textwidth]{PB/manuale-utente/recensione.png}
-    \caption{Pagina di pagamento concluso di una prenotazione}
+	\includegraphics[width=0.6\textwidth]{PB/manuale-utente/recensione.png}
+    \caption{Pagina di inserimento di una recensione}
 \end{figure}
 
 Si accede a questa pagina cliccando sul bottone \texttt{Inserisci recensione} della
 pagina di visualizzazione in dettaglio di un ristorante. Si può accedere a
 questa pagina solo se si è conclusa una prenotazione e dunque si ha effettuato un pagamento presso il ristorante e non
-si è ancora inserita una recensione. Dopo aver compilato il \textit{form} con le seguenti
+si è ancora inserita una recensione. Il \textit{form} richiede le seguenti
 informazioni:
 \begin{itemize}
 	\item Punteggio: da 0 a 10;
