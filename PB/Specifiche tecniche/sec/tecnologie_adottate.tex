@@ -5,10 +5,10 @@
 \subsubsection{TypeScript}
 I membri del \textit{team} SWEnergy, prima di iniziare il progetto, possedevano una
 solida conoscenza di C++. Alcuni di loro avevano esperienza anche con Java,
-Python e JavaScript. Il committente ha illustrato che Imola Informatica fa un
+Python e JavaScript. Il referente ha illustrato che Imola Informatica fa un
 ampio uso di TypeScript e Java per lo sviluppo \textit{software}, sottolineando
 inoltre che per creare un'applicazione \textit{web}, specialmente per quanto riguarda il
-\textit{frontend}, è necessario utilizzare JavaScript o TypeScript. Partendo da
+\textit{frontend}, è consigliato utilizzare JavaScript o TypeScript. Partendo da
 queste considerazioni, SWEnergy ha optato per l'uso di JavaScript come
 linguaggio principale per lo sviluppo del progetto, poiché consente di scrivere
 codice sia per il \textit{frontend} che per il \textit{backend}. Infine, è stato
@@ -33,23 +33,17 @@ Per il \textit{frontend}, abbiamo optato per l'utilizzo della versione 17.3.3 di
 Angular, la più recente disponibile al momento. Abbiamo scelto questa versione
 ritenendola la più adatta per il nostro apprendimento, considerando anche
 possibili implementazioni future di Angular. È importante notare che questa
-versione è scarsamente supportata da ChatGPT e dispone di risorse online meno
-dettagliate rispetto alle versioni precedenti.
-
-Consideriamo questo aspetto come un punto positivo: ci consente di sfruttare le
-intelligenze artificiali per comprendere i metodi di soluzione più appropriati,
-mentre richiede che il codice venga sempre adattato alle nostre specifiche
-esigenze, promuovendo così una migliore comprensione del \textit{framework}.
-Inoltre, la documentazione fornita da Angular è chiara e completa, agevolando il
+versione dispone di risorse online meno dettagliate rispetto alle versioni precedenti.
+Tuttavia, la documentazione ufficiale fornita da Angular risulta essere sufficientemente chiara e completa, agevolando il
 nostro processo di apprendimento del \textit{framework}.
 
 
 \subsubsection{Axios}
 Per gestire le chiamate HTTP dal \textit{frontend} al \textit{backend}, SWEnergy
-ha adottato Axios, un client HTTP basato su promise. La decisione di utilizzare
-Axios è stata influenzata dalla raccomandazione del proponente, che ha
+ha adottato Axios, un \textit{client} HTTP basato su \textit{promise}. La decisione di utilizzare
+Axios è stata influenzata dalla raccomandazione del referente aziendale, che ha
 sottolineato la facilità e la velocità con cui è possibile effettuare \textit{test} di
-carico sulle API utilizzando questo strumento.
+carico sulle API\g utilizzando questo strumento.
 
 
 \subsubsection{Tailwind CSS}
@@ -71,10 +65,10 @@ tipo di scenario.
 
 
 \subsubsection{Nest.js}
-Per la gestione delle API, SWEnergy ha optato per l'utilizzo di Nest.js, un
+Per la gestione delle API\g, SWEnergy ha optato per l'utilizzo di Nest.js, un
 \textit{framework} basato su Node.js progettato per la creazione di applicazioni
 \textit{server-side} efficienti, scalabili e facili da mantenere. La decisione di
-adottare Nest.js è stata guidata dalla raccomandazione del proponente, che ha
+adottare Nest.js è stata guidata dalla raccomandazione del referente aziendale, che ha
 evidenziato la sua similitudine con Angular nella dinamica di utilizzo della
 \textit{dependency injection}. Questo approccio consente la creazione di
 un'applicazione modulare, dove i componenti possono essere facilmente sostituiti
@@ -82,7 +76,7 @@ e testati.
 
 
 \subsubsection{Drizzle}
-Per la gestione del \textit{database}, SWEnergy ha scelto Drizzle, un ORM (\textit{Object
+Per la gestione del \textit{database}, SWEnergy ha scelto Drizzle, un ORM\g (\textit{Object
 	Relational Mapping}) progettato per TypeScript. Drizzle consente di definire
 il \textit{database}, le relazioni tra le tabelle e le \textit{query} direttamente in
 TypeScript, fornendo quindi anche le classi necessarie per interagire con il
@@ -105,7 +99,7 @@ membri del \textit{team} si sentono già a proprio agio.
 \subsubsection{Docker}
 L'adozione di Docker per la creazione di \textit{container} offre numerosi vantaggi fondamentali.
 In primo luogo, Docker consente di rendere il prodotto eseguibile su qualunque \textit{hardware}, garantendo una maggiore portabilità e facilità di distribuzione.
-Grazie alla standardizzazione dell'ambiente di esecuzione tramite i \textit{container} Docker, è possibile eliminare i problemi legati alla differenza di configurazioni \textit{hardware} e \textit{software} tra i vari ambienti di sviluppo, \textit{test} e produzione.
+Grazie alla standardizzazione dell'ambiente di esecuzione tramite i \textit{container} Docker, è possibile eliminare i problemi legati alla differenza di configurazioni \textit{hardware} e \textit{software} tra i vari ambienti di sviluppo, test e produzione.
 
 Inoltre, l'utilizzo di Docker permette di semplificare il processo di gestione
 delle dipendenze e delle librerie necessarie per il progetto, fornendo un
@@ -121,6 +115,9 @@ facilmente un carico di lavoro in crescita distribuendo automaticamente i
 dell'applicazione anche in presenza di un elevato numero di richieste. In
 sintesi, l'adozione di Docker offre un modo efficiente e affidabile per gestire l'intero ciclo di vita dell'applicazione, garantendo flessibilità, portabilità e scalabilità.
 
+
+
+
 \subsection{Tecnologie per l'analisi statica del codice}
 
 \subsubsection{Language Server Protocol}
@@ -135,10 +132,10 @@ identificazione e risoluzione di potenziali problemi di programmazione.
 \subsection{Tecnologie per l'analisi dinamica del codice}
 
 \subsubsection{Insomnia}
-Per verificare il funzionamento delle API e del \textit{backend}, SWEnergy ha scelto di utilizzare Insomnia, un'applicazione \textit{open-source} progettata per il testing delle API REST. 
-Il \textit{team} ha creato un ambiente condiviso all'interno di Insomnia, consentendo l'esecuzione di tutte le API disponibili e l'osservazione dei risultati. 
+Per verificare il funzionamento delle API\g e del \textit{backend}, SWEnergy ha scelto di utilizzare Insomnia, un'applicazione \textit{open-source} progettata per il \textit{testing} delle API REST.
+Il \textit{team} ha creato un ambiente condiviso all'interno di Insomnia, consentendo l'esecuzione di tutte le API disponibili e l'osservazione dei risultati.
 Questo ambiente memorizza le diverse tipologie di chiamate e vari \textit{set} di dati di esempio.
-Insomnia facilita l'esecuzione di test manuali, permettendo di modificare agevolmente i dati inviati al \textit{backend} e di visualizzare i risultati restituiti. 
+Insomnia facilita l'esecuzione di test manuali, permettendo di modificare agevolmente i dati inviati al \textit{backend} e di visualizzare i risultati restituiti.
 Questo consente una rapida verifica della corrispondenza tra i risultati ottenuti e quelli attesi, migliorando l'efficienza e l'accuratezza dei test.
 
 
@@ -148,25 +145,25 @@ potente per eseguire test unitari e di integrazione.
 
 I test unitari sono progettati per verificare l'accuratezza delle singole
 unità di codice, come componenti e servizi. Con Angular, \texttt{ng test}
-sfrutta il framework Jasmine per definire i test e Karma come test runner per
-eseguire i test in un ambiente di browser. Questo permette di simulare il
+sfrutta il framework Jasmine per definire i test e Karma come test \textit{runner} per
+eseguire i test in un ambiente di \textit{browser}. Questo permette di simulare il
 comportamento dell'applicazione in un contesto realistico, garantendo che ogni
 unità funzioni come previsto.
 
 Oltre ai test unitari, \texttt{ng test} supporta anche i test di integrazione,
 che verificano l'interazione tra più unità di codice. Questi test sono cruciali
 per assicurare che i vari componenti dell'applicazione funzionino
-correttamente insieme e che l'integrazione tra loro non introduca bug o
+correttamente insieme e che l'integrazione tra loro non introduca \textit{bug} o
 comportamenti inattesi. Anche in questo caso, Jasmine offre la possibilità di
 definire i \textit{mock} e le \textit{stub} necessari per simulare le dipendenze
 esterne e garantire che i test siano eseguiti in modo isolato.
 
 
 \subsubsection{Nest.js}
-Nest.js fornisce una integrazione di \textit{default} con Jest, un \textit{framework} di testing JavaScript ampiamente utilizzato e noto per la sua velocità e semplicità. 
-Si tratta della scelta ideale per eseguire test siccome offre un'ottima integrazione con NestJS, permettendo di sfruttare appieno le caratteristiche del \textit{framework} come i moduli, i servizi e i controller. 
-Inoltre, Jest supporta il \textit{mocking} e la simulazione delle dipendenze, facilitando l'isolamento delle unità di codice da testare. 
-Le sue capacità di test asincroni e il supporto integrato per TypeScript, che è comunemente utilizzato con NestJS, garantiscono una scrittura di test più fluida e meno soggetta a errori. 
+Nest.js fornisce una integrazione di \textit{default} con Jest, un \textit{framework} di \textit{testing} JavaScript ampiamente utilizzato e noto per la sua velocità e semplicità.
+Si tratta della scelta ideale per eseguire test siccome offre un'ottima integrazione con NestJS, permettendo di sfruttare appieno le caratteristiche del \textit{framework} come i moduli, i servizi e i \textit{controller}.
+Inoltre, Jest supporta il \textit{mocking} e la simulazione delle dipendenze, facilitando l'isolamento delle unità di codice da testare.
+Le sue capacità di test asincroni e il supporto integrato per TypeScript, che è comunemente utilizzato con NestJS, garantiscono una scrittura di test più fluida e meno soggetta a errori.
 Infine, Jest fornisce un'interfaccia utente intuitiva e \textit{report} di copertura del codice dettagliati, rendendo più semplice identificare e correggere i \textit{bug} e migliorare la qualità complessiva del \textit{software}.
 
 
@@ -180,11 +177,11 @@ La seguente tabella fornisce un riepilogo dettagliato delle tecnologie adottate 
 		\hline
 		Typescript    & Linguaggio di programmazione                                                   & 5.4               \\
 		\hline
-		Angular       & \textit{Framework} per lo sviluppo di applicazioni web                         & 17.3.3            \\
+		Angular       & \textit{Framework} per lo sviluppo di applicazioni \textit{web}                & 17.3.3            \\
 		\hline
 		Axios         & Libreria per effettuare richieste HTTP                                         & 1.6.8             \\
 		\hline
-		Tailwind CSS  & \textit{Framework} per la gestione di file CSS                                 & 3.4.3             \\
+		Tailwind CSS  & \textit{Framework} per la gestione di \textit{file} CSS                        & 3.4.3             \\
 		\hline
 		Node.js       & \textit{Runtime} JavaScript                                                    & 20.12.0           \\
 		\hline
