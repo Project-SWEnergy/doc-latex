@@ -267,12 +267,12 @@ Il conclusione il gruppo SWEnergy conferma nuovamente il \textit{budget} inizial
 		Alessandro            & 5           & -           & -           & 15          & 25          & 10          & 55                  \\
 		Carlo                 & 5           & -           & -           & 15          & 20          & 15          & 55                  \\
 		Davide                & 5           & 5           & -           & 15          & 20          & 10          & 55                  \\
-		Giacomo               & -           & 5           & -           & 10          & 40          & 5           & 60                  \\
+		Giacomo               & -           & -           & -           & 10          & 40          & 5           & 55                  \\
 		Matteo                & 5           & 10          & -           & 5           & 30          & 5           & 55                  \\
-		Niccolò               & 5           & -           & -           & 10          & 10          & 15          & 40                  \\
+		Niccolò               & 5           & 5           & -           & 10          & 10          & 10          & 40                  \\
 		\hline
-		\textbf{Ore totali}   & 25          & 20          & 0           & 70          & 145         & 60          & 320                 \\
-		\textbf{Costo totale} & 750         & 400         & 0           & 1750        & 2175        & 900         & 5975
+		\textbf{Ore totali}   & 25          & 20          & 0           & 70          & 145         & 55          & 315                 \\
+		\textbf{Costo totale} & 750         & 400         & 0           & 1750        & 2175        & 825         & 5900
 	\end{tabular}
 	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista, Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
 \end{table}
@@ -287,12 +287,12 @@ Il conclusione il gruppo SWEnergy conferma nuovamente il \textit{budget} inizial
 		Alessandro            & 5           & -           & -           & 15          & 30          & 10          & 60                  \\
 		Carlo                 & 5           & -           & -           & 15          & 30          & 10          & 60                  \\
 		Davide                & 5           & 5           & -           & 15          & 30          & 5           & 60                  \\
-		Giacomo               & -           & 5           & -           & 10          & 35          & 15          & 65                  \\
+		Giacomo               & -           & -           & -           & 10          & 35          & 15          & 60                  \\
 		Matteo                & 5           & 10          & -           & 5           & 35          & 5           & 60                  \\
-		Niccolò               & 5           & -           & -           & 10          & 5           & 25          & 45                  \\
+		Niccolò               & 5           & 5           & -           & 10          & 5           & 20          & 45                  \\
 		\hline
-		\textbf{Ore totali}   & 25          & 20          & 0           & 70          & 165         & 70          & 350                 \\
-		\textbf{Costo totale} & 750         & 400         & 0           & 1750        & 2475        & 1050        & 6425
+		\textbf{Ore totali}   & 25          & 20          & 0           & 70          & 165         & 65          & 345                 \\
+		\textbf{Costo totale} & 750         & 400         & 0           & 1750        & 2475        & 975         & 6350
 	\end{tabular}
 	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista, Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
 \end{table}
@@ -310,9 +310,9 @@ Di seguito vengono indicate le spese effettive nelle fase RTB del progetto.
 		Analista          & 0              & 0              & 0                  & 0                & 0                & 0                    \\
 		Progettista       & 70             & 70             & 0                  & 1750             & 1750             & 0                    \\
 		Programmatore     & 145            & 165            & +20                & 2175             & 2475             & +300                 \\
-		Verificatore      & 60             & 70             & +10                & 900              & 1050             & +150                 \\
+		Verificatore      & 55             & 65             & +10                & 825              & 975              & +150                 \\
 		\hline
-		Totale Consuntivo & 320            & 350            & +10                & 5975             & 6425             & +450                 \\
+		Totale Consuntivo & 315            & 345            & +30                & 5900             & 6350             & +450                 \\
 		\hline
 	\end{tabular}
 	\caption{Consuntivo periodo RTB, Ore P: Totale Ore preventivate per un singolo ruolo, Ore e: Totale Ore effettive per un singolo ruolo,
@@ -331,8 +331,8 @@ Di seguito vengono indicate le spese effettive nelle fase RTB del progetto.
 			6/Amministratore,
 			0/Analista,
 			20/Progettista,
-			47/Programmatore,
-			20/Verificatore
+			48/Programmatore,
+			19/Verificatore
 		}
 	\end{tikzpicture}
 	\caption{Riepilogo ripartizione percentuale oraria}
@@ -363,22 +363,22 @@ L'analisi dei dati relativi ai ruoli svolti nei quattro \textit{sprint} mostra u
 					symbolic x coords={Alessandro, Carlo, Davide, Giacomo, Matteo, Niccolò},
 					xtick=data,
 					x tick label style={rotate=45,anchor=east}, % Nomi obliqui di 45 gradi
-					ytick={0,5,...,50}, % Suddivisione asse y ogni 5 da 0 a 50
+					ytick={0,10,...,100}, % Suddivisione asse y ogni 5 da 0 a 50
 					nodes near coords={},
 					nodes near coords align={vertical},
 					legend style={at={(0.5,-0.3)},anchor=north,legend columns=-1,draw=none}, % Maggiore distanza verticale
 					every node near coord/.append style={font=\tiny}, % Dimensione del font delle etichette (vuoto per rimuoverle)
 					every axis plot/.append style={draw=none}, % Rimuovo i bordi delle barre
-					ymax=50, % Estendo l'asse y fino al valore 50
+					ymax=80, % Estendo l'asse y fino al valore 50
 				]
 
 				% Dati per l'asse delle x
 				\addplot[fill=colore1] coordinates {(Alessandro, 5)  (Carlo, 5)  (Davide, 5)  (Giacomo, 0)  (Matteo, 5) (Niccolò, 5)};
-				\addplot[fill=colore2] coordinates {(Alessandro, 0)  (Carlo, 0)  (Davide, 5)  (Giacomo, 5)  (Matteo, 10) (Niccolò, 0)};
+				\addplot[fill=colore2] coordinates {(Alessandro, 0)  (Carlo, 0)  (Davide, 5)  (Giacomo, 0)  (Matteo, 10) (Niccolò, 5)};
 				\addplot[fill=colore3] coordinates {(Alessandro, 0)  (Carlo, 0)  (Davide, 0)  (Giacomo, 0)  (Matteo, 0) (Niccolò, 0)};
 				\addplot[fill=colore4] coordinates {(Alessandro, 15) (Carlo, 15) (Davide, 15) (Giacomo, 10) (Matteo, 5) (Niccolò, 10)};
 				\addplot[fill=colore5] coordinates {(Alessandro, 30) (Carlo, 30) (Davide, 30) (Giacomo, 35) (Matteo, 35) (Niccolò, 5)};
-				\addplot[fill=colore6] coordinates {(Alessandro, 10) (Carlo, 10) (Davide, 5)  (Giacomo, 15) (Matteo, 5) (Niccolò, 25)};
+				\addplot[fill=colore6] coordinates {(Alessandro, 10) (Carlo, 10) (Davide, 5)  (Giacomo, 15) (Matteo, 5) (Niccolò, 20)};
 
 				\legend{Responsabile, Amministratore, Analista, Progettista, Programmatore, Verificatore}
 
@@ -391,4 +391,58 @@ L'analisi dei dati relativi ai ruoli svolti nei quattro \textit{sprint} mostra u
 
 
 
-\subsection{COnsiderazioni finali}
+\subsection{Considerazioni finali}
+Come mostrato nella Tabella \ref{t:orario}, quasi tutti i membri del gruppo hanno mantenuto un impegno orario in linea con le aspettative, passando dalle 94 ore totali previste ad inizio progetto a 95 ore complessive.
+In generale, il totale delle ore di lavoro previste è passato dalle 564 previste alle 555 effettive.
+Come emerge dalla differenza con il preventivo effettuato al termine della fase RTB, il gruppo aveva sovrastimato le ore da dedicare alle attività di Responsabile, mentre aveva sottostimato quelle da assegnare alla codifica dell'applicativo.
+
+Di seguito viene riportata la tabella che illustra gli impegni orari assunti da ogni membro del gruppo durante l'intero progetto.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Membro}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Tot} \\
+		\hline
+		Alessandro Tigani Sava  & 10          & 5           & 5           & 25          & 40          & 10          & 95           \\
+		Carlo Rosso             & 15          & 10          & 10          & 15          & 35          & 10          & 95           \\
+		Davide Maffei           & 10          & 5           & 20          & 15          & 35          & 10          & 95           \\
+		Giacomo Gualato         & 5           & 5           & 5           & 20          & 35          & 25          & 95           \\
+		Matteo Bando            & 5           & 15          & 10          & 10          & 45          & 10          & 95           \\
+		Niccolò Carlesso        & 10          & 5           & 10          & 20          & 5           & 30          & 80           \\
+		\hline
+		\textbf{Totale}         & 55          & 45          & 60          & 105         & 195         & 95          & 555          \\
+		\textbf{Differenza RTB} & -40         & 0           & -15         & +16         & +35         & -5          & -9           \\
+		\hline
+	\end{tabular}
+	\caption{Assegnamento delle ore per persona; valori espressi in ore.
+		Re: Responsabile, Am: Amministratore, An: Analista, Pt:
+		Progettista, Pr: Programmatore, Ve: Verificatore, Tot: Totale ore per
+		membro; valori espressi in ore.}
+	\label{t:orario}
+\end{table}
+
+Come mostrato in Tabella \ref{t:differenza}, gli errori effettuati durante le attività di pianificazione si sono compensati, hanno portato ad una variazione trascurabile (inferiore al 10\%) del costo preventivato per la fase PB.
+Inoltre tale variazione ha portato ad un risparmio, essendo le ore del ruolo di Responsabile più costose di quelle del ruolo Programmatore.
+Notiamo come, in generale, il gruppo ha sovrastimato le ore dedicate alle attività di analisi e gestione del progetto, mentre ha sottostimato quelle inerenti alla progettazione e codifica. \\
+Questa variazione porta il costo complessivo delle attività alla cifra di 11.025 \euro, inferiore alla cifra preventivata in fase di candidatura di 11.750 \euro, ma con una data di consegna variata al DATA\_DA\_DEFINIRE.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|c|c|c|c|c|c}
+		\textbf{Ruolo} & \textbf{Ore P} & \textbf{Ore E} & \textbf{Diff. ore} & \textbf{Costo P} & \textbf{Costo E} & \textbf{Diff. costo} \\
+		\hline
+		Responsabile   & 50             & 25             & -25                & 1500             & 750              & -750                 \\
+		Amministratore & 38             & 20             & -18                & 760              & 400              & -360                 \\
+		Analista       & 14             & 0              & -14                & 350              & 0                & -350                 \\
+		Progettista    & 59             & 70             & +11                & 1475             & 1750             & +275                 \\
+		Programmatore  & 126            & 165            & +39                & 1890             & 2475             & +585                 \\
+		Verificatore   & 66             & 65             & -1                 & 990              & 975              & -15                  \\
+		\hline
+		Totale         & 353            & 345            & -8                 & 6965             & 6350             & -615                 \\
+		\hline
+	\end{tabular}
+	\caption{Consuntivo periodo PB, Ore P: Totale Ore preventivate per un singolo ruolo, Ore e: Totale Ore effettive per un singolo ruolo,
+		Diff. ore: Differenza tra ore preventivate e ore effettive, Costo P: totale costo preventivato per un singolo ruolo,
+		Costo E: totale costo effettivo per un singolo ruolo,  Diff. costo: Differenza tra costo preventivato e costo effettivo,
+		Costo P, Costo E, Diff. costo: espressi in (\euro)}
+	\label{t:differenza}
+\end{table}
