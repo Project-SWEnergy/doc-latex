@@ -1,4 +1,3 @@
-
 \usecaseristoratore{Modifica menù}
 \label{usecase:Modifica menù}
 
@@ -57,13 +56,24 @@
 
 	\item \textbf{Attore principale:} Utente ristoratore.
 
-	\item \textbf{Precondizione:} L'Utente ristoratore si trova nella sezione di gestione del menù (vedi \autoref{usecase:Modifica menù}).
+	\item \textbf{Precondizione:} L'Utente ristoratore si trova nella sezione di 
+		gestione del menù (vedi \autoref{usecase:Modifica menù}).
 
-	\item \textbf{Postcondizione:} L'Utente ristoratore ha modificato un piatto nel menù.
+	\item \textbf{Postcondizione:} L'Utente ristoratore ha modificato un 
+		piatto nel menù.
 
 	\item \textbf{Scenario principale:}
 	\begin{enumerate}
 		\item L'Utente ristoratore modifica un piatto nel menù;
+		\item L'Utente ristoratore può modificare i seguenti campi del piatto:
+			\begin{itemize}
+				\item Nome del piatto;
+				\item Descrizione del piatto;
+				\item Prezzo del piatto;
+				\item Immagine del piatto.
+			\end{itemize}
+		\item L'Utente ristoratore può modificare gli ingredienti del piatto
+			(vedi \autoref{usecase:Assegnamento ingredienti ad un piatto});
 		\item Il Sistema aggiorna il menù con il piatto modificato dal ristoratore.
 	\end{enumerate}
 
