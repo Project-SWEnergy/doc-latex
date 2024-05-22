@@ -1,0 +1,21 @@
+\usecasegenerico{Effettua accesso per terze parti}  
+\label{usecase:Effettua accesso per terze parti}
+\begin{itemize}
+
+	\item \textbf{Attore principale:} Utente generico.
+	\item \textbf{Attore secondario:} Sistema di autenticazione esterno.
+
+	\item \textbf{Precondizione:} Un Utente generico è connesso al Sistema ed è in possesso di un \textit{account}.
+
+	\item \textbf{Postcondizione:} \textit{Email} e \textit{password} sono state verificate dal Sistema di autenticazione esterno.
+
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+		\item Il Sistema reindirizza l'Utente generico alla pagina di accesso per terze parti;
+		\item Il Sistema di autenticazione esterno verifica le credenziali;
+		\item Il Sistema di autenticazione esterno invia al Sistema le informazioni dell'Utente generico;
+		\item Il Sistema autentica l'Utente generico;
+		\item Il Sistema autorizza l'Utente generico.
+	\end{enumerate}
+	
+\end{itemize}
