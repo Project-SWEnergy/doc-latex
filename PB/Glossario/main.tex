@@ -1,18 +1,37 @@
 \documentclass[a4paper, 12pt]{article}
 
 \newcommand{\template}{../../Templates}
+\usepackage{tocloft}
 \usepackage{\template/package}
 \graphicspath{{../../Assets}}
 
+\newcommand{\subsec}[1]{%
+    \phantomsection
+    \section*{#1}%
+    \addcontentsline{toc}{section}{#1}%
+}
+
 \newcommand{\Titolo}{Glossario}
-\newcommand{\Data}{21/11/2023}
-\newcommand{\Versione}{0.2.0}
+\newcommand{\Data}{19/05/2024}
+\newcommand{\Versione}{2.0.0}
 \newcommand{\Descrizione}{Documento esplicativo del significato di tutti i termini tecnici o poco chiari presenti nella documentazione.}
-\newcommand{\Stato}{Non approvato}
-\newcommand{\Redattori}{-}
-\newcommand{\Verificatori}{-}
-\newcommand{\Approvatori}{-}
-\newcommand{\Destinatari}{Prof. Tullio Vardanega \\ & Prof. Riccardo Cardin}
+\newcommand{\Stato}{Approvato}
+\newcommand{\Verificatori}{
+    Alessandro Tigani Sava \\
+    & Giacomo Gualato \\
+    & Matteo Bando \\
+    & Niccolò Carlesso
+}
+\newcommand{\Destinatari}{
+    Prof. Tullio Vardanega \\ 
+    & Prof. Riccardo Cardin
+}
+\newcommand{\Redattori}{
+    Alessandro Tigani Sava \\
+    & Matteo Bando\\
+    & Niccolò Carlesso
+}
+\newcommand{\Approvatori}{Davide Maffei}
 
 \input{\template/variable.tex}
 \input{\template/copertina.tex}
