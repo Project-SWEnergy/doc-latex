@@ -1,0 +1,35 @@
+\documentclass[a4paper, 12pt]{article}
+\newcommand{\template}{../../../../Templates}
+\usepackage{\template/package}
+\graphicspath{{../../../../Assets}}
+
+\newcommand{\Titolo}{Verbale esterno - Imola Informatica}
+\newcommand{\Data}{Data}
+\newcommand{\Versione}{0.1.0}
+\newcommand{\Descrizione}{Ulteriore riduzione dei requisiti obbligatori}
+\newcommand{\Stato}{Approvato}
+\newcommand{\Redattori}{Carlo Rosso}
+\newcommand{\Verificatori}{Alessandro Tigani Sava}
+\newcommand{\Approvatori}{Matteo Bando}
+\newcommand{\ApprovatoriEsterni}{Alessandro Staffolani}
+
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+\input{\template/firma.tex}
+
+\begin{document}
+\copertina{}
+
+\newpage
+\input{sec/partecipanti}
+
+\renewcommand{\contentsname}{Ordine del giorno}
+\tableofcontents
+
+\newpage
+\input{sec/resoconto.tex}
+\input{sec/incarichi.tex}
+\newpage
+\firma{}
+\end{document}
