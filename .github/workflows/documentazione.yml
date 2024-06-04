@@ -13,14 +13,14 @@ jobs:
             - name: Update ubuntu
               run: |
                   sudo apt-get update
-                  sudo apt-get install
+                  sudo apt-get install -y
             - name: Install pdflatex
               run: |
-                sudo apt-get install texlive-latex-base
-                sudo apt-get install texlive-lang-italian
-                sudo apt-get install texlive-fonts-recommended
-                sudo apt-get install texlive-latex-extra
-                sudo apt-get install texlive-science
+                sudo apt-get install -y texlive-latex-base
+                sudo apt-get install -y texlive-lang-italian
+                sudo apt-get install -y texlive-fonts-recommended
+                sudo apt-get install -y texlive-latex-extra
+                sudo apt-get install -y texlive-science
                 
             - name: Set up Python ${{ matrix.python-version }}
               uses: actions/setup-python@v4
@@ -31,6 +31,7 @@ jobs:
             - name: Publish artifacts
               uses: actions/upload-artifact@v3
               with:
-                  name: Documentazione
+                  name: Documentazione-${{ github.ref_name }}
                   path: |
                       docs
+
