@@ -1,0 +1,33 @@
+\documentclass[a4paper, 12pt]{article}
+
+\newcommand{\template}{../../../../Templates}
+\usepackage{\template/package}
+\graphicspath{{../../../../Assets}}
+
+\newcommand{\Titolo}{Verbale interno}
+\newcommand{\Data}{03/12/2023}
+\newcommand{\Versione}{1.0.0}
+\newcommand{\Descrizione}{Brainstorming e organizzazione del lavoro per la
+settimana 49.}
+\newcommand{\Stato}{Non approvato}
+\newcommand{\Redattori}{Carlo Rosso}
+\newcommand{\Verificatori}{Matteo Bando}
+\newcommand{\Responsabile}{Alessandro Tigani Sava}
+
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+
+\begin{document}
+
+\copertina{}
+\newpage
+
+\input{chapters/partecipanti}
+\renewcommand{\contentsname}{Ordine del giorno}
+\tableofcontents
+\newpage
+
+\input{chapters/contenuto}
+\input{chapters/incarichi}
+\end{document}

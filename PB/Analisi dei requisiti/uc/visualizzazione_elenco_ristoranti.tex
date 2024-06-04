@@ -20,14 +20,20 @@
 	      L'utente è connesso al Sistema.
 
 	\item \textbf{Postcondizione:} L'Attore principale visualizza una lista di
-	      ristoranti. Di \textit{default} la lista viene presentata in ordine decrescente di valutazione.
+	      ristoranti.
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
 
-		      \item Il Sistema presenta all'Attore principale un elenco di ristoranti disposti in ordine decrescente di valutazione media;
-
-		      \item L'Attore principale visualizza la lista dei ristoranti secondo tale visualizzazione.
+		      \item Il Sistema presenta all'Attore principale un elenco di ristoranti;
+		      \item Il Sistema per ogni ristorante presenta:
+		            \begin{itemize}
+			            \item Nome;
+			            \item Indirizzo;
+			            \item Prezzo medio;
+			            \item Un \textit{link} per visualizzare i dettagli del ristorante.
+		            \end{itemize}
+				\item La visualizzazione dell'elenco dei ristoranti può dipendere dal metodo di ricerca utilizzato dall'utente (vedi \autoref{usecase:Ricerca di ristoranti}).
 
 	      \end{enumerate}
 \end{itemize}

@@ -1,30 +1,61 @@
 \section{Richiesta di riduzione dei requisiti obbligatori }
-L'incontro è stato aperto con la richiesta da parte del gruppo di ridurre il numero di requisiti obbligatori, in particolare quello riguardante la gestione della \textit{chat} tra il cliente ed il ristoratore.
-La motivazione è dovuta al fatto che il tempo a disposizione per lo sviluppo dell'MVP è limitato, siccome la data di consegna prevista per il 10/05/2024 è ormai prossima, ed il gruppo ritiene che la gestione della \textit{chat} possa far ritardare ulteriormente il completamento del progetto.
-Per questo motivo SWEnergy ha esposto tale problematica al proponente Alessandro Staffolani, il quale ha accettato la richiesta di togliere il requisito obbligatorio riguardante la \textit{chat}.
+
+L'incontro è stato aperto con la richiesta da parte del gruppo di ridurre il 
+numero di requisiti obbligatori, in particolare quello riguardante la gestione 
+della \textit{chat} tra il cliente ed il ristoratore.
+La motivazione è dovuta al fatto che il tempo a disposizione per lo sviluppo 
+dell'MVP è limitato, siccome la data di consegna prevista per il 10/05/2024 è 
+ormai prossima, ed il gruppo ritiene che la gestione della \textit{chat} possa 
+far ritardare ulteriormente il completamento del progetto.
+Per questo motivo SWEnergy ha esposto tale problematica al proponente Alessandro 
+Staffolani, il quale ha accettato la richiesta di togliere il requisito 
+obbligatorio riguardante la \textit{chat}.
 
 \section{Domande}
-Successivamente, il gruppo ha posto alcune domande al proponente riguardo la gestione del pagamento delle ordinazioni. 
-Il dubbio riguardava se si dovesse fare utilizzo di un servizio esterno per la gestione dei pagamenti, come ad esempio \textit{PayPal}. 
-Il proponente ha risposto che non è necessario utilizzare un servizio di terze parti, ma che il processo può essere gestito all'interno dell'applicazione in maniera tale da simulare un pagamento reale, attraverso l'impiego di "scontrini" e "\textit{transcation log}" che permettano di tenere traccia di quanto il cliente ha pagato e che quindi il conto sia effettivamente saldato.  
+Successivamente, il gruppo ha posto alcune domande al proponente riguardo la 
+gestione del pagamento delle ordinazioni. 
+Il dubbio riguardava se si dovesse fare utilizzo di un servizio esterno per la 
+gestione dei pagamenti, come ad esempio \textit{PayPal}. 
+Il proponente ha risposto che non è necessario utilizzare un servizio di terze 
+parti, ma che il processo può essere gestito all'interno dell'applicazione in 
+maniera tale da simulare un pagamento reale, attraverso l'impiego di "scontrini" 
+e "\textit{transcation log}" che permettano di tenere traccia di quanto il 
+cliente ha pagato e che quindi il conto sia effettivamente saldato.  
 
 
 \section{Presentazione del lavoro svolto}
-Il gruppo ha presentato il lavoro svolto in questa fase di progetto, sia lato \textit{back-end} che \textit{front-end}:
+Il gruppo ha presentato il lavoro svolto in questa fase di progetto, sia lato 
+\textit{back-end} che \textit{front-end}:
 \begin{itemize}
     \item È stata implementata la gestione delle prenotazioni.
-    \item È stata implementata la gestione dell'ordinazione collaborativa dei pasti.
-    \item È stata implementata la gestione del caricamento delle immagini da parte del ristoratore in maniera corretta come suggerito precedenetemente dal proponente.
-    \item È stata implementata la gestione degli ingredienti e dei piatti lato ristoratore.
+    \item È stata implementata la gestione dell'ordinazione collaborativa dei 
+		pasti.
+    \item È stata implementata la gestione del caricamento delle immagini da 
+		parte del ristoratore in maniera corretta come suggerito 
+		precedenetemente dal proponente.
+    \item È stata implementata la gestione degli ingredienti e dei piatti lato 
+		ristoratore.
 \end{itemize}
 
-Successivamente alla presentazione del lavoro svolto, il gruppo si è reso conto che c'è stata un'incomprensione riguardo la gestione dell'ordinazione collaborativa.
-La natura di tale fraintendimento non è relativa ad una scarsa comprensione dei requisiti, ma piuttosto a come tale requisito dovesse essere implementato.
-SWEnergy ha presentato la gestione dell'ordinazione collaborativa in maniera asincrona, mentre il proponente aveva in mente una gestione sincrona con l'utilizzo dei \textit{socket}.
-Consapevole del tempo che tale modifica richiederebbe, il proponente ha ritenuto accettabile il lavoro svolto dal gruppo e ha permesso di continuare con la gestione asincrona dell'ordinazione collaborativa, ritenendo l'implementazione comunque valida e funzionante ed assecondando la necessità del gruppo di non variare la data di consegna. \\
-Infine si è discusso riguardo all'implementazione delle notifiche: Staffolani è d'accordo con l'idea di sviluppo proposta dal gruppo, ovvero quella di mostrare le notifiche 
-solo quando l'utente accede all'applicazione tramite una finestra d'avviso, andando ad interrogare il database e verificando se ci sono stati aggiornamenti. Il proponente ha però 
-suggerito di implementare le notifiche con l'utilizzo di \textit{socket} così che il gruppo possa prendere familiarità con questa tecnologia, solo se il tempo a disposizione lo permette.
-SWEnergy è d'accordo con tale proposta e si impegna a implementare le notifiche con l'utilizzo dei \textit{socket} se non si verificheranno ritardi nello sviluppo.
-
-
+Successivamente alla presentazione del lavoro svolto, il gruppo si è reso conto 
+che c'è stata un'incomprensione riguardo la gestione dell'ordinazione 
+collaborativa.
+La natura di tale fraintendimento non è relativa ad una scarsa comprensione dei 
+requisiti, ma piuttosto a come tale requisito dovesse essere implementato.
+SWEnergy ha presentato la gestione dell'ordinazione collaborativa in maniera 
+asincrona, mentre il proponente aveva in mente una gestione sincrona con 
+l'utilizzo dei \textit{socket}.
+Consapevole del tempo che tale modifica richiederebbe, il proponente ha ritenuto 
+accettabile il lavoro svolto dal gruppo e ha permesso di continuare con la 
+gestione asincrona dell'ordinazione collaborativa, ritenendo l'implementazione 
+comunque valida e funzionante ed assecondando la necessità del gruppo di non 
+variare la data di consegna. \\
+Infine si è discusso riguardo all'implementazione delle notifiche: Staffolani è 
+d'accordo con l'idea di sviluppo proposta dal gruppo, ovvero quella di mostrare 
+le notifiche solo quando l'utente accede all'applicazione tramite una finestra 
+d'avviso, andando ad interrogare il database e verificando se ci sono stati 
+aggiornamenti. Il proponente ha però suggerito di implementare le notifiche con 
+l'utilizzo di \textit{socket} così che il gruppo possa prendere familiarità con 
+questa tecnologia, solo se il tempo a disposizione lo permette. SWEnergy è 
+d'accordo con tale proposta e si impegna a implementare le notifiche con 
+l'utilizzo dei \textit{socket} se non si verificheranno ritardi nello sviluppo.

@@ -7,7 +7,7 @@
 	\includegraphics[width=0.8\textwidth]{./uml/UCR14.png} 
 	\caption{Visualizzazione lista \textit{feedback}}
 	\label{fig:UCR14}
-  \end{figure}
+\end{figure}
 
 \begin{itemize}
 	\item \textbf{Attore principale:} Utente ristoratore.
@@ -19,12 +19,17 @@
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
-		      \item L'Utente ristoratore accede alla sezione dedicata alla visualizzazione dei \textit{feedback};
+		      \item L'Utente ristoratore accede alla sezione dedicata alla 
+				  visualizzazione del proprio ristorante;
 
-		      \item Il Sistema mostra la lista di \textit{feedback};
+		      \item Il Sistema mostra, tra le altre informazioni, la lista di \textit{feedback};
 
-		      \item Il Sistema mostra nome di chi ha scritto il \textit{feedback} e la data di pubblicazione;
-
-		      \item L'Utente ristoratore visualizza tutti i \textit{feedback} e le informazioni legate ad esso.
+			  \item Per ogni \textit{feedback} il Sistema mostra:
+				  \begin{itemize}
+					  \item Il nome del cliente che ha inserito il \textit{feedback};
+					  \item Il voto assegnato (da 1 a 10);
+					  \item La descrizione del \textit{feedback};
+					  \item La data di inserimento del \textit{feedback}.
+				  \end{itemize}
 	      \end{enumerate}
 \end{itemize}
