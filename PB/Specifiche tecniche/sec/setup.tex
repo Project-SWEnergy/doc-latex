@@ -1,0 +1,174 @@
+\section{Setup}
+In questa sezione viene approfondito il metodo per eseguire l'applicativo sviluppato. 
+In particolare, si descrive come configurare l'ambiente di
+esecuzione e come eseguire il programma; si illustra come eseguire i test e come
+configurare l'ambiente di sviluppo.
+
+
+\subsection{Installazione}
+
+
+\subsubsection{Pre-requisiti}
+Per eseguire l'applicativo è necessario avere installato Docker nel proprio
+sistema. Per installare Docker, si può fare riferimento alla documentazione
+ufficiale di Docker:
+\href{https://www.docker.com/products/docker-desktop/}{Docker Desktop}[19/05/2024].
+Per effettuare le operazioni di \textit{dump} e \textit{load} del \textit{database} sarà necessario disporre di una installazione PostgreSQL e dei comandi \texttt{pg\_dump}, \texttt{pg\_load}.
+Infine, è necessario avere installato git\g per clonare il \textit{repository}.
+
+
+\subsubsection{Prima esecuzione}
+Di seguito sono riportati i passi da seguire per avviare Easy-Meal:
+\begin{enumerate}
+	\item Clonare il \textit{repository}\g: \\
+		\texttt{git clone https://github.com/Project-SWEnergy/Easy-Meal.git}
+	\item Entrare nella cartella del progetto: \\
+		\texttt{cd Easy-Meal}
+	\item Avviare il \textit{daemon} di Docker;
+	\item Eseguire la \textit{build} del progetto e avviare i \textit{container}: \\
+		\texttt{docker-compose up}
+	\item Posizionarsi all'interno della cartella \texttt{backend}:\\
+		\texttt{cd backend}
+	\item Effettuare il caricamento dello schema relativo al \textit{database}:\\
+		\texttt{npm run postgres-load}
+	\item Inserire la \textit{password} relativa al \textit{database} (\textit{password}:
+		postgres).
+	\item Aprire il seguente indirizzo nel \textit{browser}: \\ 
+		\texttt{http://localhost:4200}
+\end{enumerate}
+Dopo aver seguito i passi sopra descritti, l'applicativo Easy-Meal è pronto per essere utilizzato. 
+
+
+\subsection{Esecuzione}
+Se l'applicativo è già stato avviato in precedenza, è possibile riavviarlo
+seguendo i seguenti passi:
+\begin{enumerate}
+	\item Avviare il \textit{daemon} di Docker;
+	\item Eseguire la \textit{build} del progetto e avviare i \textit{container}: \\
+		\texttt{docker-compose up}
+	\item Aprire il seguente indirizzo nel \textit{browser}: \\
+		\texttt{http://localhost:4200}
+\end{enumerate}
+
+
+\subsection{Arresto}
+Per arrestare l'applicativo, è sufficiente eseguire il comando
+\texttt{docker-compose down} nella cartella del progetto.
+
+
+\subsection{Test}
+Sono configurati due sistemi di test indipendenti: i test del \textit{backend} e
+i test del \textit{frontend}.
+
+\subsubsection{\textit{Backend}}
+Per eseguire i test del \textit{backend} è necessario avere installato Node.js e quindi anche npm, oltre che Nest. 
+Per installare Node.js, si può fare riferimento alla documentazione ufficiale di \href{https://nodejs.org/en/download/package-manager}{Node.js}[19/05/2024]. 
+Di seguito sono riportati i passi da seguire per avviare i test.
+\begin{enumerate}
+	\item Entrare nella cartella del progetto: \\
+		\texttt{cd Easy-Meal\textbackslash backend}
+	\item Eseguire il comando: \\
+		\texttt{npm install}
+	\item Eseguire uno degli \textit{script} per l'esecuzione di test, come ad esempio: \\
+		\texttt{npm run test:cov}
+	\item Aprire il seguente \textit{file} con il \textit{browser} per visualizzare i risultati: \\
+		\texttt{..\textbackslash Easy-Meal\textbackslash backend\textbackslash coverage\textbackslash lcov-report\textbackslash index.html}
+\end{enumerate}
+Vengono messi a disposizione diversi \textit{script} per l'esecuzione dei test tramite il \textit{framework} Jest:
+\begin{itemize}
+	\item \texttt{npm run test}: esecuzione completa dei test di unità.
+	\item \texttt{npm run test:cov}: esecuzione completa dei test di unità con creazione di un \textit{report} inerente la \textit{coverage}.
+	\item \texttt{npm run test:watch}: esegue automaticamente i test quando rileva modifiche nei \textit{file} di origine o nei \textit{file} di test.
+\end{itemize}
+
+\subsubsection{\textit{Frontend}} 
+Per eseguire i test del \textit{frontend} è necessario avere installato Node.js 
+e quindi anche npm. Per installare Node.js, si può fare riferimento alla
+documentazione ufficiale di \href{https://nodejs.org/en/download/package-manager}{Node.js}[19/05/2024]. 
+Di seguito sono riportati i passi da seguire per avviare i test:
+\begin{enumerate}
+	\item Entrare nella cartella del progetto: \\
+		\texttt{cd Easy-Meal\textbackslash frontend} (su Windows) \\
+		\texttt{cd Easy-Meal/frontend} (su Unix)
+	\item Eseguire il comando: \\
+		\texttt{npm install}
+	\item Eseguire il comando: \\
+		\texttt{ng test}
+	\item Aprire il seguente indirizzo nel \textit{browser}: \\
+		\texttt{http://localhost:9876}
+	\item Cliccare sul pulsante \texttt{DEBUG} per eseguire i test.
+\end{enumerate}
+
+Non solo, Angular mette a disposizione un servizio per visualizzare la copertura
+dei test, il codice e la qualità del codice. Per avviare il servizio di
+visualizzazione della copertura dei test, si seguano i seguenti passi:
+\begin{enumerate}
+	\item Entrare nella cartella del progetto: \\
+		\texttt{cd Easy-Meal\textbackslash frontend} (su Windows) \\
+		\texttt{cd Easy-Meal/frontend} (su Unix)
+	\item Eseguire il comando: \\
+		\texttt{npm install}
+	\item Eseguire il comando: \\
+		\texttt{ng test ----code-coverage=true}
+	\item Aprire il seguente indirizzo nel \textit{browser}: \\
+		\texttt{http://localhost:9876}
+	\item Cliccare sul pulsante \texttt{DEBUG} per eseguire i test;
+	\item Aprire il seguente file con il \textit{browser}: \\
+		\texttt{coverage/po-c-frontend/index.html}
+\end{enumerate}
+
+
+\subsection{Configurazione dell'ambiente di sviluppo}
+
+
+\subsubsection{Backend}
+Come per i test, anche in questo caso è necessario avere installato Node.js, npm e Nest.
+Di seguito sono riportati i passi da seguire per configurare l'ambiente di sviluppo del \textit{backend}:
+\begin{enumerate}
+	\item Entrare nella cartella del progetto relativa al \textit{backend}: \\
+		\texttt{cd Easy-Meal/backend}
+	\item Modificare il file \texttt{.env} sostituendo la stringa in DATABASE\_URL: \\
+		\texttt{"postgresql://postgres:postgres@db:5432/easymeal?schema=public"}\\
+		con la stringa: \\
+		\texttt{"postgresql://postgres:postgres@localhost:5432/easymeal?schema=public"}
+	\item Avviare il \textit{container}: \\
+		\texttt{docker-compose up}
+	\item Installare le dipendenze: \\
+		\texttt{npm install}
+	\item Avviare il \textit{server} di sviluppo: \\
+		\texttt{npm run start:dev}
+\end{enumerate}
+In questo modo, è possibile sviluppare il \textit{backend} senza dover ricostruire il \textit{container} del \textit{backend} ad ogni modifica, poiché Nest lo ricompila automaticamente ad ogni cambiamento.
+
+
+\subsubsection{Frontend}
+Come per i test, anche in questo caso è necessario avere installato Node.js e
+npm.
+Di seguito sono riportati i passi da seguire per configurare l'ambiente di
+sviluppo del \textit{frontend}:
+
+\begin{enumerate}
+	\item Entrare nella cartella del progetto: \\
+		\texttt{cd Easy-Meal}
+
+	\item Avviare i \textit{container}: \\
+		\texttt{docker-compose up}
+
+	\item Aprire la \textit{dashboard} di Docker e bloccare il \textit{container}
+		\texttt{easymeal-frontend-<N>}.
+
+	\item Installare le dipendenze: \\
+		\texttt{npm install}
+
+	\item Avviare il \textit{server} di sviluppo: \\
+		\texttt{npm run start}
+
+	\item Aprire il seguente indirizzo nel \textit{browser}: \\
+		\texttt{http://localhost:4200}
+\end{enumerate}
+
+In questo modo è possibile sviluppare il \textit{frontend} senza dover eseguire
+la \textit{build} del \textit{container} del \textit{frontend} ad ogni modifica, invece
+Angular ricompila automaticamente il \textit{frontend} ad ogni modifica.
+Infatti, ogni modifica di qualche \textit{file} del \textit{frontend} causa un 
+aggiornamento della pagina \textit{web}.

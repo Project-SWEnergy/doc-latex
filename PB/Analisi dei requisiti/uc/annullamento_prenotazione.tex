@@ -6,7 +6,7 @@
 	\item \textbf{Precondizioni:}
 	      \begin{itemize}
 		      \item L'Utente base ha effettuato l'accesso al Sistema (vedi \autoref{usecase:Effettua accesso}).
-		      \item L'Utente base sta visualizzando il riepilogo di una prenotazione (vedi \autoref{usecase:Visualizzazione del riepilogo prenotazione}).
+		      \item L'Utente base sta visualizzando la lista delle prenotazioni (vedi \autoref{usecase:Visualizzazione lista delle prenotazioni}).
 	      \end{itemize}
 
 	\item \textbf{Postcondizione:}
@@ -14,10 +14,12 @@
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
-		      \item L'Utente base seleziona l'opzione di annullamento
-		            della prenotazione;
+			  \item L'Utente base annulla una sua prenotazione oppure una prenotazione a cui è stato invitato 
+			  da parte di un altro utente; (vedi \autoref{usecase:Condivisione della prenotazione});
 
-		      \item L'Utente base conferma l'annullamento della prenotazione;
+		      \item L'Utente base rifiuta la prenotazione o l'invito premendo il bottone di rifiutazione della prenotazione;
+
+		      \item L'Utente base è non è più collegato ad una prenotazione;
 
 		      \item Il Sistema aggiorna lo stato della prenotazione;
 
