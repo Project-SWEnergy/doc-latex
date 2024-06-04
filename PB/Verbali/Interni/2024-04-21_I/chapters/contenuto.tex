@@ -1,0 +1,52 @@
+\section{\textit{Brainstorming}}
+
+All'inizio della riunione ciasun membro del gruppo ha presentato il lavoro
+svolto. In particolare, sono stati aggiornati i requisiti soddisfatti
+all'interno del documento specifiche tecniche.  
+Dunque, per quanto riguarda il frontend, è stata implementata la sezione che si
+occupa di gestire gli ingredienti per i ristoratori.
+
+\section{Implementazione dell'ordine condiviso}
+
+Si è discusso rispetto al metodo implementativo per la gestione dell'ordine
+condiviso. In particolare, sono state discusse le api da implementare lato
+backend per la gestione dell'ordine condiviso; non solo, è stata discussa anche
+la firma delle api, ovvero, quali parametri sono necessari al backend per poter
+gestire in modo corretto l'ordine condiviso e in quale forma dovrebbero essere
+passati per mantenere semplice e leggibile il codice.
+
+\section{Rimozione di ingredienti}
+
+Il database del backend non prevede la rimozione di alcuni ingredienti da parte
+dei clienti, per quanto essa sia una funzionalità obbligatoria, quindi si è
+discusso rispetto al metodo più efficace ed efficiente per implementare tale
+\textit{feature}. Si è deciso di aggiungere una tabella, che abbina a ciascun
+piatto ordinato una lista di ingredienti da rimuovere, per cui ciascun
+abbinamento tra il piatto e l'ingrediente in questa tabella rappresenta un
+ingrediente da rimuovere dal piatto. Infine, si sono discusse le implicazioni
+che questa scelta comporta rispetto alla gestione degli ingredienti da parte del
+ristoratore: infatti il ristoratore dovrebbe essere in grado di visualizzare gli
+ingredienti necessari per la preparazione di tutti i piatti in un arco
+temporale specificato.
+
+\section{Logout}
+
+Si è notata la mancanza di un'api per eseguire il logout, necessaria poiché i
+cookie non sono accessibili da javascript. Inoltre la gestione dell'indirizzo
+di un ristorante dovrebbe essere gestita insieme ai dati del ristorante
+medesimo.
+
+\section{Pianificazione}
+
+Si è discusso rispetto alla pianificazione del lavoro da svolgere. Il team del
+backend ha spiegato che lasciando da parte l'implementazione della chat, il
+completamento del lavoro inerente al backend dovrebbe concludersi in circa 3
+settimane, associando più o meno una settimana all'avanzamento della
+documentazione, una settimana per completare le \textit{feature} rimanenti e una
+settimana per il \textit{testing}. Il team del rontend ha evidenziato che le medesime
+tempistiche si applicano anche al loro lavoro. Aggiungendo la chat a queste
+stime si prevede di completare il lavoro in 5 settimane, a meno di ulteriori
+ritardi. Dunque SWEnergy ha discusso rispetto ad eventuali requisiti obbligatori
+che potrebbero essere rimossi per rispettare le tempistiche. In particolare, si
+prevede di richiedere al proponente di rimuovere la chat come requisito
+obbligatorio, in modo da poter completare il lavoro nei tempi previsti.

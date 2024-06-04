@@ -1,8 +1,24 @@
-\subsection{Sprint - 6}
+\subsection{Sprint - 6 PB}
 \textbf{Inizio}: 25-03-2024 \\
-\textbf{Fine}: 7-04-2024
+\textbf{Fine}: 07-04-2024
 
 \subsubsection{Gestione dei rischi}
+\textbf{Rischi attesi verificati}:
+
+\begin{itemize}
+	\item RT-1 Conoscenza delle tecnologie carente
+	      \begin{itemize}
+		      \item \textbf{Esito mitigazione}: La conoscenza delle tecnologie è risultata carente siccome per alcuni membri queste tecnologie risultato nuove.
+		            Per mitigare questo rischio, il gruppo ha deciso di dedicare più tempo allo studio autonomo delle tecnologie, combinato a degli \textit{workshop} interni e dividendosi in due gruppi (\textit{frontend} e \textit{backend}) così da dimuire l'\textit{hoverhead}.
+		      \item \textbf{Impatto}: L'impatto di questo rischio non è stato significativo, se non per un lieve rallentamento generale del lavoro, in quanto i membri del gruppo hanno dovuto dedicare più tempo allo studio delle tecnologie.
+		            Le mitigazioni applicate si sono rilevate efficaci ed efficienti in quanto in poco tempo il team è riuscito a colmare le lacune e a proseguire con lo sviluppo del progetto.
+	      \end{itemize}
+	\item RP-4 Costi e tempi imprevisti
+	      \begin{itemize}
+		      \item \textbf{Esito mitigazione}: La tempistica prevista per la codifica è risultata troppo ottimistica. Il gruppo ha provveduto a ridistribuire il carico di lavoro per migliorare la pianificazione degli \textit{sprint} successivi. L'esito della mitigazione sarà visibile nell'esito dei consuntivi relativi ai successivi \textit{sprint}.
+		      \item  \textbf{Impatto}: L'impatto è stato significativo ed ha provocato una allocazione non prevista di ore di lavoro nelle attività di programmazione. 
+	      \end{itemize}
+\end{itemize}
 
 \subsubsection{Diagramma di Gantt}
 
@@ -20,14 +36,14 @@
 	\gantttitlecalendar{day} \\
 	\ganttbar{Documentazione}{2024-03-25}{2024-03-31} \\
 	\ganttbar{Sperimentazione frontend}{2024-03-25}{2024-03-31} \\
-	\ganttbar{Implementazione frontend}{2024-04-01}{2024-03-07} \\
-	\ganttbar{Backend}{2024-03-25}{2024-03-07} \\
+	\ganttbar{Implementazione frontend}{2024-04-01}{2024-04-07} \\
+	\ganttbar{Backend}{2024-03-25}{2024-04-07} \\
 \end{ganttchart}
 
 Dove:
 \begin{itemize}
 	\item \textbf{"Documentazione"}: questa \textit{issue} è eseguita da
-	      Carlo e Matteo Bando. Per svolgere questa attività, il gruppo ha deciso di
+	      Carlo Rosso e Matteo Bando. Per svolgere questa attività, il gruppo ha deciso di
 	      dedicare 20 ore.
 
 	\item \textbf{"Sperimentazione frontend"}: questa \textit{issue} è eseguita
@@ -63,3 +79,87 @@ Dove:
 	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
 		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
 \end{table}
+
+\subsubsection{Riassunto delle attività svolte}
+
+\begin{enumerate}
+	\item \textbf{Stesura documentazione}: In questo \textit{sprint} si sono concluse le correzioni dei documenti rispetto all'esito RTB,
+	      ed è stata iniziata la stesura dei documenti nuovi richiesti per la revisione PB: "Manuale Utente" e "Specifica Tecnica".
+
+	\item \textbf{Frontend}: Le tecnologie per il \textit{frontend} sono state sperimentate e studiante nella prima settimana e implementate durante la seconda settimana
+	      dello \textit{sprint}. Durante questa fase sono state realizzate le pagine di login e di registrazione, e sono stati implementati i primi servizi per la comunicazione con il \textit{backend}.
+
+	\item \textbf{Backend}: Il lavoro del \textit{backend} si è concentrato sulla realizzazione dei servizi per la comunicazione con il \textit{frontend} attraverso le API.
+\end{enumerate}
+
+\subsubsection{Consuntivo}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+		\hline
+		Alessandro            & -           & -           & -           & -           & 10          & 5           & 15              \\
+		Carlo                 & -           & -           & -           & 5           & 5           & 5           & 15              \\
+		Davide                & 5           & -           & -           & -           & 10          & -           & 15              \\
+		Giacomo               & -           & -           & -           & 5           & 10          & -           & 15              \\
+		Matteo                & -           & 5           & -           & -           & 10          & -           & 15              \\
+		Niccolò               & -           & -           & -           & 5           & -           & 5           & 10              \\
+		\hline
+		\textbf{Ore totali}   & 5           & 5           & -           & 15          & 45          & 15          & 85              \\
+		\textbf{Costo totale} & 150         & 100         & -           & 375         & 675         & 225         & 1525
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
+\end{table}
+
+\subsubsection{Gestione dei ruoli}
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\pie[text=legend]{
+			8/Responsabile,
+			8/Amministratore,
+			0/Analista,
+			25/Progettista,
+			42/Programmatore,
+			17/Verificatore
+		}
+	\end{tikzpicture}
+	\caption{Grafico delle proporzioni dei ruoli ricoperti dai membri del gruppo}
+\end{figure}
+
+Per quanto riguarda il ruolo del Programmatore il gruppo ha visto un aumento del tempo dedicato alla codifica, che rappresenta ora il 42\% del totale delle ore,
+rispetto al 25\% dello \textit{sprint} precedente. 
+Questo incremento è il risultato di un maggior impegno nell'attuare concretamente il lavoro, con il \textit{team} che ha focalizzato la sua attenzione sulla scrittura del codice.\\
+D'altra parte, si è registrata una diminuzione nel tempo dedicato alla fase di progettazione (ora pari al 25\%, rispetto al 42\% dello \textit{sprint} precedente). Questa diminuzione è il risultato del fatto che le attività di progettazione si sono concentrate esclusivamente sugli eventuali aggiornamenti all'architettura o al design del sistema, i quali hanno richiesto meno tempo da parte del gruppo. \\
+Si è mantenuta una distribuzione equilibrata del tempo del Responsabile, fissandolo all'8\% sia in questo \textit{sprint} che in quello precedente, mantenendo così costante il livello di gestione del progetto.\\
+In questo \textit{sprint} sono state invece introdotte alcune ore per l'Amministratore, poiché questa fase ha richiesto una maggiore quantità di codifica rispetto agli \textit{sprint} precedenti, rendendo necessario l'inserimento di questo ruolo.\\
+Infine, il ruolo del Verificatore è rimasto costante intorno al 20\% (17\% in questo \textit{sprint} e 25\% nel precedente), per garantire un livello costante di qualità.\\
+La mancanza di ore assegnate al ruolo di Analista durante questo \textit{sprint} è dovuta al fatto che non sono state richieste attività specifiche per tale ruolo.
+
+\subsubsection{Analisi retrospettiva}
+Esaminando le ore impiegate in questo \textit{sprint}, il periodo appena concluso evidenzia delle problematiche relative alla pianificazione del lavoro.\\
+Sia il gruppo del \textit{frontend} che quello del \textit{backend} hanno impiegato più tempo del necessario nella codifica del progetto.
+Il \textit{team} ritiene che tale problematica sia sorta dalla scarsa conoscenza delle tecnologie utilizzate al momento della pianificazione del lavoro, che ha portato ad una sottostima del tempo necessario per la codifica.
+Si registra anche un leggero disallineamento nella velocità di sviluppo dei due gruppi.
+L'aumento delle ore di lavoro è avvenuto senza però determinare un eccessivo aumento dei costi dello \textit{sprint}.\\
+Per quanto riguarda la documentazione, si è in una buona posizione, con la stesura dei documenti in corso e in linea con la pianificazione. 
+Entrambi il "Manuale Utente" e la "Specifica Tecnica" sono stati avviati e si trovano in fase di completamento.
+
+\textbf{Obiettivi raggiunti}:
+\begin{itemize}
+	\item Implementazione delle pagine di \textit{login} e registrazione.
+	\item Implementazione dei servizi per la comunicazione con il \textit{backend}.
+	\item Stesura del "Manuale Utente".
+	\item Stesura della "Specifica Tecnica".
+\end{itemize}
+
+\textbf{Obiettivi mancati}: Nessuno.
+
+\textbf{Problematiche riscontrate}: \begin{itemize}
+	\item Sottostima delle ore assegnate alla codifica.
+\end{itemize}
+
+\textbf{Soluzioni attuate}: \begin{itemize}
+	\item Aumento delle ore assegnate alla codifica.
+\end{itemize}

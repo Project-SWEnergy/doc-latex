@@ -23,7 +23,8 @@
 
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
-		      \item L'Utente base visualizza la lista delle prenotazioni che ha effettuato;
+			  \item L'Utente base seleziona la voce "Prenotazioni" presente nel \textit{header} della pagina, la quale lo reindirizza alla pagina di visualizzazione delle prenotazioni effettuate;
+		      \item L'Utente base visualizza la lista delle prenotazioni che ha effettuato oppure alle quali è stato invitato a partecipare;
 		      \item Il Sistema mostra, di \textit{default}, la lista delle prenotazioni categorizzate nei seguenti stati:
 		            \begin{itemize}
 			            \item In attesa.
@@ -32,7 +33,17 @@
 			            \item In corso.
 			            \item Terminata.
 			            \item Annullata.
+			            \item Pagamento.
 		            \end{itemize}
-		      \item Il Sistema mostra la lista in tale ordine basato sugli stati.
+				\item L'Utente base per ogni singola prenotazione visualizza le seguente informazioni:
+					\begin{itemize}
+						\item Nome del ristorante.
+						\item Numero della prenotazione.
+						\item Stato della prenotazione (lo stato in cui si può trovare una prenotazione è descritto nella lista sopra).
+						\item Metodo di pagamento scelto.
+						\item Orario e data della prenotazione.
+						\item Se la prenotazione è stata accettata o rifiutata dal cliente stesso.
+					\end{itemize}
+				\item L'utente base, per ogni prenotazione, può: Accettare la prenotazione a cui è stato invitato (vedi \autoref{usecase:Accesso alla prenotazione}) oppure rifiutarla (vedi \autoref{usecase:Annullamento della prenotazione}).
 	      \end{enumerate}
 \end{itemize}

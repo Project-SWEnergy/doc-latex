@@ -4,35 +4,28 @@
 
 Il presente documento, intitolato "Specifiche Tecniche", espone e approfondisce
 le scelte architetturali e di design adottate dal gruppo SWEnergy per lo
-sviluppo del progetto "Easy Meal", proposto dall'azienda \href{https://imolainformatica.it}{Imola Informatica} 
-(ultimo accesso 25/03/2024). In particolare, il documento mira a giustificare le
+sviluppo del progetto "\textit{Easy Meal}", proposto dall'azienda \href{https://imolainformatica.it}{Imola Informatica}[19/05/2024].
+In particolare, il documento mira a giustificare le
 scelte implementate al fine di consentire agli sviluppatori di comprendere e
 mantenere il codice in modo efficace ed efficiente. Inoltre, è inclusa una
 sezione dedicata ai requisiti implementati per garantire che il prodotto
 soddisfi le richieste del proponente.
 
 \subsection{Organizzazione del documento}
-
-Il documento è strutturato in 4 sezioni principali:
-
+Il documento è strutturato in quattro sezioni principali:
 \begin{itemize}
+	\item \textbf{Setup}: descrive l'ambiente di sviluppo e di 
+		\textit{deployment} utilizzato per lo sviluppo del progetto;
 	\item \textbf{Tecnologie adottate}: si compone di una descrizione di
 	      ciascuna tecnolgia adottata per lo sviluppo del progetto.
 	      Le tecnologie sono divise in tre categorie: di codifica,
 	      di analisi statica e di analisi dinamica. Alla fine della sezione è
 	      presente una tabella riassuntiva;
-
-	\item \textbf{Architettura di deployment}: illustra l'architettura di
-	      \textit{deployment} e ne motiva la scelta;
-
-	\item \textbf{Architettura implementativa}: espone le scelte implementative
-	      adottate per soddisfare i requisiti richiesti. Inoltre, sono spiegati
-	      i \textit{desing pattern} utilizzati e le motivazioni che hanno
-	      portato alla loro adozione;
-
+	\item \textbf{Architettura}: descrive l'architettura del progetto, sono
+		infatti descritti i \textit{design pattern} e di \textit{deployment} adottati;
 	\item \textbf{Requisiti}: sono riportati i requisiti concordati con il
 	      proponente e descritti in dettaglio nel documento "Analisi dei
-	      Requisiti", nella versione 2.0.0. Per ciascun requisito è indicato lo
+	      Requisiti v3.0.0". Per ciascun requisito è indicato lo
 	      stato di implementazione. Infine, è presente un grafico riassuntivo
 	      dello stato di avanzamento dei requisiti.
 \end{itemize}
@@ -42,7 +35,7 @@ Il documento è strutturato in 4 sezioni principali:
 
 "\textit{Easy Meal}" è una \textit{web app}\g progettata per gestire le
 prenotazioni presso i ristoranti, sia dal lato dei clienti che dei ristoratori.
-Il prodotto finale sarà composto da due parti:
+Il prodotto finale è composto da due parti:
 
 \begin{itemize}
 	\item \textbf{Cliente\g}: consente ai clienti di prenotare un tavolo presso un
@@ -69,45 +62,45 @@ dei termini tecnici o specifici utilizzati nel contesto del progetto.
 
 \subsubsection{Normativi}
 \begin{itemize}
-	\item "Norme di progetto";
+	\item "Norme di progetto v3.0.0";
 	\item 	\href{https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C3.pdf}
-	      {Documento del capitolato d'appalto C3 - \textit{Easy Meal}} (ultimo accesso 20/03/2024);
+		{Documento del capitolato d'appalto C3 - \textit{Easy Meal}}[19/05/2024];
 	\item \href{https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf}
-	      {Regolamento del progetto} (ultimo accesso 25/03/2024);
+		{Regolamento del progetto}[19/05/2024];
 \end{itemize}
 
 \subsubsection{Informativi}
 \begin{itemize}
 	\item Glossario v2.0.0;
-	\item Analisi dei Requisiti v2.0.0;
+	\item Analisi dei Requisiti v3.0.0;
 	\item \href{https://www.math.unipd.it/~rcardin/swea/2023/Diagrammi\%20delle\%20Classi.pdf}
-	      {Linguaggio UML - Diagramma delle classi} (ultimo accesso 4/03/2024);
+		{Linguaggio UML - Diagramma delle classi}[19/05/2024];
 \end{itemize}
 
 \subsubsection{Tecnologici}
 \begin{itemize}
 	\item \href{https://www.typescriptlang.org/}
-	      {Typescript} (ultimo accesso 03/04/2024);
+		{Typescript}[19/05/2024];
 
 	\item \href{https://angular.io/}
-	      {Angular} (ultimo accesso 03/04/2024);
+		{Angular}[19/05/2024];
 
 	\item \href{https://axios-http.com/}
-	      {Axios} (ultimo accesso 03/04/2024);
+		{Axios}[19/05/2024];
 
 	\item \href{https://nestjs.com/}
-	      {NestJS} (ultimo accesso 03/04/2024);
+		{NestJS}[19/05/2024];
 
 	\item \href{https://orm.drizzle.team/}
-	      {Drizzle} (ultimo accesso 03/04/2024);
+		{Drizzle}[19/05/2024];
 
 	\item \href{https://www.docker.com/}
-	      {Docker} (ultimo accesso 03/04/2024);
+		{Docker}[19/05/2024];
 
 	\item \href{https://insomnia.rest/}
-	      {Insomnia} (ultimo accesso 03/04/2024);
+		{Insomnia}[19/05/2024];
 
 	\item \href{https://tailwindcss.com/}
-	      {Tailwind CSS} (ultimo accesso 03/04/2024);
+		{Tailwind CSS}[19/05/2024];
 \end{itemize}
 

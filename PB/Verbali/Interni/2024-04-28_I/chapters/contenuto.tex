@@ -1,0 +1,84 @@
+\section{\textit{Brainstorming}}
+
+I membri del frontend hanno spiegato le funzionalità che sono state completate
+nel mini-sprint concluso. In particolare, è stata completata la gestione delle
+immagini e la visualizzazione delle immagini nei modi richiesti dal proponente.
+Viene completata la gestione degli ingredienti e l'abbinamento degli ingredienti
+ai piatti. Infine, è stata completata la gestione di un'ordinazione condivisa.\\
+Per quanto riguarda il backend, nel mini-sprint concluso sono state completate
+le CRUD per la gestione del database e sono state implementate le api di
+gestione delle immagini.
+
+\section{Preparazione del SAL}
+
+Il gruppo ha discusso rispetto agli argomenti da trattare durante il SAL ed è
+stato concordato il giorno, ovvero martedì 30 aprile. Si chiede al responsabile
+di fissare l'orario con il proponente.\\
+In generale, il gruppo si rende conto che il progetto è in ritardo rispetto al
+piano di lavoro, per questo motivo si vuole chiedere al proponente se è
+possibile ridefinire i requisiti e le scadenze.
+
+\subsection{Chat}
+
+Il gruppo ha discusso rispetto alla chat e si vuole chiedere al proponente di
+rimuoverla dai requisiti obbligatori e quindi dall'MVP. Questo permette di
+tagliare drasticamente i tempi, infatti il gruppo ha dedicato poco tempo
+all'analisi della chat e non ha ancora iniziato a lavorarci.
+
+\subsection{Pagamento}
+
+Il gruppo ha un dubbio rispetto al pagamento, infatti non è chiaro se il
+proponente voglia che sia implementato un sistema di pagamento funzionante,
+oppure se sia sufficiente sviluppare un sistema di pagamento fittizio,
+modificabile in modo tale da poter essere sostituito con un sistema di pagamento
+reale. Si chiede al proponente di chiarire questo punto.
+
+\section{Setup}
+
+Il frontend ha bisogno di un'api che permetta di capire se l'utente è loggato.
+Dunque viene richiesta l'implementazione di un'api che ritorni un oggetto così
+descritto:
+
+\begin{lstlisting}
+{
+	result: boolean,
+	message: string,
+	data: [{
+		"id": number,
+		"role": "user" | "restaurant"
+	}]
+}
+\end{lstlisting}
+
+Così che, se un utente ha i cookie di autenticazione, possa risultare loggato
+anche nel frontend.
+
+\section{Unità di misura}
+
+Gli ingredienti associati ai piatti devono avere una quantità, in modo tale che
+il ristoratore avere un'indicazione di quanto acquistarne. Questo vuol dire che
+ciascun ingrediente ha bisogno anche di un'unità di misura. Il gruppo ha
+discusso rispetto al modo in cui gestire l'unità di misura degli ingredienti ed
+è stato concordato di modificare la tabella \texttt{ingredients} aggiungendo il
+campo \texttt{unit\_of\_measurement}. In questo modo, l'unità di misura diventa
+indipendente dal piatto, viene inserita direttamente nell'ingrediente ed è
+possibile sommare i valori degli ingredienti di ciascun piatto.
+
+\section{Inserimento degli orari}
+
+Per quanto riguarda l'inserimento degli orari di apertura del ristorante, il
+gruppo ha discusso rispetto all'api che permette di inserire un orario di
+apertura. Viene concordato che l'api dovrebbe richiedere un payload del tipo:
+
+\begin{lstlisting}
+[
+	{
+		"id_day": string,
+		"start": string,    // formato HH:MM:SS
+		"end": string       // formato HH:MM:SS
+	},
+]
+\end{lstlisting}
+
+In questo modo è possibile inserire più orari di apertura effettuando una sola
+chiamata al backend.

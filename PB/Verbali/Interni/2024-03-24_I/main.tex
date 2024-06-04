@@ -1,0 +1,32 @@
+\documentclass[a4paper, 12pt]{article}
+
+\newcommand{\template}{../../../../Templates}
+\usepackage{\template/package}
+\graphicspath{{../../../../Assets}}
+
+\newcommand{\Titolo}{Verbale interno}
+\newcommand{\Data}{27/03/2024}
+\newcommand{\Versione}{1.0.0}
+\newcommand{\Descrizione}{Verbale interno del gruppo SWEnergy in data
+24/03/2024.}
+\newcommand{\Stato}{Non approvato}
+\newcommand{\Redattori}{Matteo Bando}
+\newcommand{\Verificatori}{Carlo Rosso}
+\newcommand{\Approvatori}{Davide Maffei}
+\newcommand{\Responsabile}{}
+
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+
+\begin{document}
+\copertina{}
+
+\input{chapters/partecipanti}
+\renewcommand{\contentsname}{Ordine del giorno}
+\tableofcontents
+\newpage
+
+\input{chapters/contenuto}
+\input{chapters/incarichi}
+\end{document}

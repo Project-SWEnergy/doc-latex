@@ -7,11 +7,11 @@
 \graphicspath{{../../Assets/}}
 
 \newcommand{\Titolo}{Analisi dei requisiti}
-\newcommand{\Data}{15/01/2024}
-\newcommand{\Versione}{1.0.0}
+\newcommand{\Data}{19/05/2024}
+\newcommand{\Versione}{3.0.0}
 \newcommand{\Descrizione}{Questo documento fornisce un'analisi dettagliata dei casi d'uso e dei requisiti delineati nel capitolato.}
 \newcommand{\Stato}{Approvato}
-\newcommand{\Redattori}{
+\newcommand{\Redattori}{ 
     Alessandro Tigani Sava, Matteo Bando,  \\
     & Giacomo Gualato, Davide Maffei,    \\
     & Niccolò Carlesso, Carlo Rosso     
@@ -25,7 +25,7 @@
     Prof. Tullio Vardanega \\ 
     & Prof. Riccardo Cardin
     }
-\newcommand{\Approvatori}{Alessandro Tigani Sava}
+\newcommand{\Approvatori}{Davide Maffei} 
 
 \input{\template/variable.tex}
 \input{\template/copertina.tex}
@@ -42,7 +42,11 @@
 
 
 \include{sec/introduzione.tex}
+\newpage
+
 \include{sec/descrizione_prodotto.tex}
+\newpage
+
 \input{sec/use_case.tex}
 
 %% UC DELL'UTENTE GENERICO
@@ -69,20 +73,21 @@
 \input{uc/modifica_dati_utente.tex}
 \input{uc/storico_ordini.tex}
 \input{uc/visualizzazione_lista_prenotazioni_cliente.tex}
-\input{uc/visualizzazione_del_riepilogo_prenotazione.tex}
+%\input{uc/visualizzazione_del_riepilogo_prenotazione.tex}
 \input{uc/notifica_stato_prenotazione.tex}
 \input{uc/eliminazione_account.tex}
 \input{uc/prenotazione_di_un_tavolo.tex}
 \input{uc/condivisione_della_prenotazione.tex}
+\input{uc/divisione_del_conto.tex}
+\input{uc/visualizzazione_errore_divisione_già_effettuata.tex}
 \input{uc/annullamento_prenotazione.tex}
 \input{uc/accesso_alla_prenotazione.tex}
 
 \input{uc/ordinazione_collaborativa_dei_pasti.tex}
-
 \input{uc/annullamento_dell_ordinazione.tex}
+\input{uc/modifica_ordinazione_collaborativa_dei_pasti.tex}
 
-\input{uc/divisione_del_conto.tex}
-\input{uc/visualizzazione_errore_divisione_già_effettuata.tex}
+
 \input{uc/pagamento_conto.tex}
 \input{uc/visualizzazione_errore_pagamento.tex}
 \input{uc/inserimento_di_feedback_e_recensioni.tex}
@@ -90,6 +95,7 @@
 \input{uc/notifica_modifica_al_cliente.tex}
 \input{uc/notifica_risposta_feedback.tex}
 \input{uc/visualizzazione_piatto_con_allergene.tex}
+\input{uc/visualizzazione_menu.tex}
 
 %% UC UTENTE AUTENTICATO
 \input{uc/effettua_logout.tex}
@@ -124,6 +130,7 @@
 %\input{sec/technology_baseline.tex} % diapositiva 11 di T5
 % https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T5.pdf
 
+\newpage
 \input{sec/requisiti.tex}
 
 \end{document}
