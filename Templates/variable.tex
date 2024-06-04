@@ -14,3 +14,30 @@
 	% filecolor=magenta,        % color of file links
 	urlcolor=[RGB]{156,1,198}   % color of external links
 }
+
+\definecolor{lightgray}{gray}{0.95}
+
+% Listing settings
+\lstset{
+    backgroundcolor=\color{lightgray},   % choose the background color
+    basicstyle=\footnotesize\ttfamily,   % the size of the fonts that are used for the code
+    breakatwhitespace=false,             % sets if automatic breaks should only happen at whitespace
+    breaklines=true,                     % sets automatic line breaking
+    captionpos=b,                        % sets the caption-position to bottom
+    frame=single,                        % adds a frame around the code
+    frameshape={RYR}{Y}{Y}{RYR},         % for rounded corners; requires listings 1.4
+    keepspaces=true,                     % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+    numbers=left,                        % where to put the line-numbers; possible values are (none, left, right)
+    numbersep=2pt,                      % how far the line-numbers are from the code, adjusted to fit inside the frame
+    numberstyle=\color{orange},       % the style that is used for the line-numbers
+    rulecolor=\color{black},             % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+    showspaces=false,                    % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+    showstringspaces=false,              % underline spaces within strings only
+    showtabs=false,                      % show tabs within strings adding particular underscores
+    tabsize=2,                           % sets default tabsize to 2 spaces
+    xleftmargin=8pt,                     % left margin
+    xrightmargin=8pt,                    % right margin
+    framexleftmargin=8pt,                % extend frame to include line numbers
+    framexrightmargin=5pt,               % right margin for frame
+    title=\lstname                       % show the filename of files included with \lstinputlisting; also try caption instead of title
+}

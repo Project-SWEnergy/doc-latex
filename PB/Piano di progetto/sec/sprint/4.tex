@@ -1,0 +1,184 @@
+\subsection{Sprint - 4 RTB}
+
+\textbf{Inizio}: 19-02-2024 \\
+\textbf{Fine}: 03-03-2024
+
+\subsubsection{Gestione dei rischi}
+\textbf{Rischi attesi verificati}:
+
+\begin{itemize}
+	\item RC-1 Comunicazione interna carente
+	      \begin{itemize}
+		      \item \textbf{Esito mitigazione}: La comunicazione interna tra i vari componenti del gruppo a volte è risultata inefficace ed inefficiente causando un rallentamento delle attività.
+		            In alcune occasioni venivano svolte delle attività o del lavoro in modo non coordinato, o senza averlo dichiarato in precedenza causando problematiche.
+		            L'azione di mitigazione adottata si è dimostrata efficace.
+		      \item \textbf{Impatto}: Nessuna conseguenza significativa è stata
+		            riscontrata, se non un rallentamento dell'avanzamento del progetto poco significativo, in quanto
+		            i componenti del gruppo si sono riuniti al più presto per poter risolvere la problematica.
+	      \end{itemize}
+\end{itemize}
+
+\subsubsection{Diagramma di Gantt}
+
+\begin{ganttchart}[
+		x unit=0.6cm, % Adjust the width of each day
+		y unit chart=0.6cm,
+		bar/.style={fill=blue!50},
+		bar height=0.5,
+		time slot format=isodate,
+		time slot unit=day,
+		vgrid,
+		today=2024-02-19,
+		today rule/.style={draw=red, ultra thick}
+	]{2024-02-19}{2024-03-03}
+	\gantttitlecalendar{day} \\
+	\ganttbar{Analisi dei requisiti}{2024-02-19}{2024-02-22} \\
+	\ganttbar{Piano di progetto}{2024-02-21}{2024-02-27} \\
+	\ganttbar{Piano di qualifica}{2024-02-21}{2024-02-27} \\
+	\ganttbar{Norme di progetto}{2024-02-19}{2024-02-27} \\
+	\ganttbar{Presentazione RTB}{2024-02-22}{2024-02-29}
+\end{ganttchart}
+
+Dove:
+\begin{itemize}
+	\item \textbf{"Analisi dei requisiti"}: questa \textit{issue} è eseguita da
+	      Davide Maffei. Per
+	      svolgere questa attività, il gruppo ha deciso di dedicare 3 ore;
+
+	\item \textbf{"Piano di progetto"}: questa \textit{issue} è eseguita da
+	      Giacomo Gualato e Davide Maffei. Per svolgere questa attività, il gruppo ha deciso
+	      di dedicare 8 ore;
+
+	\item \textbf{"Piano di qualifica"}: questa \textit{issue} è eseguita da
+	      Alessandro Tigani Sava. Per svolgere questa attività, il gruppo ha
+	      deciso di dedicare 5 ore;
+
+	\item \textbf{"Norme di progetto"}: questa \textit{issue} è eseguita da Carlo Rosso.
+	      Per svolgere questa attività, il gruppo ha deciso di
+	      dedicare 5 ore;
+
+	\item \textbf{"Presentazione RTB"}: questa \textit{issue} è eseguita
+	      da Matteo Bando e Niccolò Carlesso. Per svolgere questa
+	      attività, il gruppo ha deciso di dedicare 9 ore.
+\end{itemize}
+
+\subsubsection{Preventivo}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+		\hline
+		Alessandro            & -           & -           & 5           & -           & -           & -           & 5               \\
+		Carlo                 & -           & -           & 5           & -           & -           & -           & 5               \\
+		Davide                & -           & -           & -           & -           & -           & 5           & 5               \\
+		Giacomo               & -           & -           & -           & -           & -           & 5           & 5               \\
+		Matteo                & -           & 5           & -           & -           & -           & -           & 5               \\
+		Niccolò               & 5           & -           & -           & -           & -           & -           & 5               \\
+		\hline
+		\textbf{Ore totali}   & 5           & 5           & 10          & -           & -           & 10          & 30              \\
+		\textbf{Costo totale} & 150         & 100         & 250         & -           & -           & 150         & 650
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
+\end{table}
+
+\subsubsection{Riassunto delle attività svolte}
+\begin{enumerate}
+	\item \textbf{Verbali interni}: redazione e verifica dei verbali interni, uno datato 12/02/2024 e l'altro 25/02/2024;
+
+	\item \textit{\textbf{Retrospective}}: \textit{Retrospective}  dei documenti in vista della presentazione per la prima fase del RTB;
+
+	\item \textbf{Piano di progetto}: stesura e verifica del quarto \textit{sprint}, comprensivo del consuntivo a finire e di alcune piccole modifiche,
+	      come il controllo dei riferimenti al glossario alla prima occorrenza della parola;
+
+	\item \textbf{Glossario}: aggiornamento continuo;
+
+	\item \textbf{Norme di progetto}: apportate varie modifiche, inclusi riferimenti al glossario in ogni occorrenza della parola,
+	      riferimenti di sezione con simbolo, revisione e aggiornamento costante;
+
+	\item \textbf{Piano di qualifica}: progressivo sviluppo con l'inserimento di ulteriori grafici relativi alle metriche adottate;
+
+	\item \textbf{Analisi dei requisiti}: controllo dei riferimenti al glossario alla prima occorrenza della parola, inserimento di una sezione che indichi la presenza del glossario e revisione e modifiche generali;
+
+	\item \textbf{Presentazione RTB}: elaborazione della presentazione destinata all'incontro con il professor Tullio Vardanega.
+\end{enumerate}
+
+\subsubsection{Consuntivo}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+		\hline
+		Alessandro            & -           & -           & 5           & -           & -           & -           & 5               \\
+		Carlo                 & -           & -           & 5           & -           & -           & -           & 5               \\
+		Davide                & -           & -           & -           & -           & -           & 5           & 5               \\
+		Giacomo               & -           & -           & -           & -           & -           & 5           & 5               \\
+		Matteo                & -           & 5           & -           & -           & -           & -           & 5               \\
+		Niccolò               & 5           & -           & -           & -           & -           & -           & 5               \\
+		\hline
+		\textbf{Ore totali}   & 5           & 5           & 10          & -           & -           & 10          & 30              \\
+		\textbf{Costo totale} & 150         & 100         & 250         & -           & -           & 150         & 650
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
+\end{table}
+
+\newpage
+\subsubsection{Gestione dei ruoli}
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\pie[text=legend]{
+			18/Responsabile,
+			16/Amministratore,
+			33/Analista,
+			0/Progettista,
+			0/Programmatore,
+			33/Verificatore
+		}
+	\end{tikzpicture}
+	\caption{Grafico delle proporzioni dei ruoli ricoperti dai membri del gruppo}
+\end{figure}
+
+Il 18\% delle risorse è stato dedicato al ruolo di Responsabile, indicando una maggiore attenzione nella gestione e coordinamento
+durante la fase successiva alla conclusione del PoC.
+Il 16\% delle risorse è stato assegnato al ruolo di Amministratore, sottolineando la continuità nella gestione delle attività amministrative e di supporto, necessarie ora, ad esempio, per la creazione di documentazione e la preparazione della consegna.
+Il 33\% delle risorse è stato dedicato al ruolo di Analista, riflettendo una significativa concentrazione sulla documentazione.
+Nessuna risorsa è stata assegnata per quanto riguarda i ruoli di Progettista e Programmatore, questo è dovuto al fatto che le attività sono state orientate verso la documentazione piuttosto che verso la progettazione e la codifica, coerente con il completamento del PoC.
+Il 33\% delle risorse è stato assegnato al ruolo di Verificatore, indicando un'impegno considerevole nella verifica della documentazione prodotta, contribuendo alla qualità e all'accuratezza del materiale presentato.
+
+\subsubsection{Analisi retrospettiva}
+
+Esaminando le ore impiegate in questo \textit{sprint} e considerando lo stato di avanzamento del progetto, il periodo appena concluso presenta un bilancio complessivamente positivo,
+nonostante il calo di produttività verificatosi nella prima parte dello \textit{sprint}. Questo rallentamento, causato principalmente dalla sessione d'esami, era stato previsto e gestito evitando
+di sovraccaricare la pianificazione con troppe attività nella prima metà dello \textit{sprint}.
+Durante il quarto \textit{sprint}, tutte le documentazioni destinate alla seconda parte della revisione RTB sono state completate. Inoltre, è stato dedicato sforzo alla preparazione della
+presentazione per il Professor Tullio Vardanega. Il gruppo ha preso la decisione di apportare correzioni al documento di Analisi dei Requisiti in
+risposta agli errori segnalati dal Professor Riccardo Cardin.
+Il Piano di Progetto, le Norme di Progetto, il Piano di Qualifica, così come il Glossario, sono stati aggiornati e sono in procinto di essere approvati.
+
+\textbf{Obiettivi raggiunti}:
+\begin{itemize}
+	\item Correzione del documento Analisi dei Requisiti.
+	\item Preparazione della presentazione per la seconda parte della revisione RTB.
+	\item Conclusione della redazione di tutta la documentazione: Piano di Progetto, Norme di Progetto, Piano di Qualifica e Glossario.
+\end{itemize}
+
+\textbf{Obiettivi mancati}:
+\begin{itemize}
+	\item Nessuno.
+\end{itemize}
+
+\textbf{Problematiche riscontrate}:
+\begin{itemize}
+	\item Nessuno.
+\end{itemize}
+
+\textbf{Soluzioni attuate}:
+\begin{itemize}
+	\item Nessuna.
+\end{itemize}
+

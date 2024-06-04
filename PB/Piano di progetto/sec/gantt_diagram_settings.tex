@@ -1,0 +1,20 @@
+% Define default settings
+\pgfkeys{
+	/ganttchart/.cd,
+	%	hgrid,
+	%vgrid,
+	x unit=0.6cm,
+	y unit title=0.6cm,
+	y unit chart=0.6cm,
+	title height=1,
+	title/.style={fill=none},
+	title label font=\bfseries\footnotesize,
+	bar/.style={fill=blue!50},
+	bar height=0.5,
+	bar label font=\normalsize\color{black},
+	group right shift=0,
+	group top shift=0.7,
+	group height=0.3,
+	group peaks height=0.2,
+	bar incomplete/.append style={fill=red}
+}

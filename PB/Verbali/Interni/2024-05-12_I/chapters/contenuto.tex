@@ -1,0 +1,41 @@
+\section{\textit{Brainstorming}}
+
+Sono state mostrate le nuove funzionalità implementate. In particolare è stata
+corretta la registrazione di un ristorante. Viene mostrata la nuova interfaccia
+per la gestione delle prenotazioni lato ristoratore e il dettaglio di una
+prenotazione. Viene mostrata la pagina di visualizzazione delle notifiche.
+Infine viene mostrata la pagina di gestione delle prenotazioni lato utente base
+e la gestione di una prenotazione lato utente base. Viene notato qualche
+problema nel dettaglio di una prenotazione, per cui è richiesta una correzione.
+Viene riassunto lo stato di copertura dei test: il frontend è coperto oltre il
+90\% per quanto riguarda gli statement e supera l'85\% per quanto riguarda i
+branch coperti. Il backend arriva a coprire il 75\% dei moduli.
+
+\section{Preparazione del SAL}
+
+Dopo aver riassunto lo \textit{status quo} del progetto, sono stati discussi i
+dubbi da esporre al committente. Così si è deciso di chiedere un SAL per
+aggiornare il committente sullo stato del progetto e per discutere i dubbi
+emersi. In particolare è stata aggiornata l'Analisi dei Requisiti, per questo
+motivo si vuole confermare che il proponente sia d'accordo con le modifiche
+apportate. Inoltre, SWEnergy ha bisogno di comprendere se il proponente voglia
+ricevere i documenti: Manuale Utente e Specifiche Tecniche, prima o dopo il test
+di accetazione e dunque con la consegna del prodotto. Infine, il gruppo ha
+deciso di condividere la \textit{repository} del progetto \textit{Easy-Meal} con
+il proponente, per quanto non sia stata ancora rilasciata una versione stabile.
+
+\section{Repository unica}
+
+Il gruppo ha discusso rispetto alle caratteristiche che dovrebbe avere una
+\textit{repository} unica del \textit{software EasyMeal}. In particolare, si è 
+deciso che il prodotto debba partire con un unico comando: 
+\texttt{docker compose up}. Poi devono essere definiti i comandi per gestire il
+database, in particolare per effettuare la prima migrazione e per popolare il
+database con dati di esempio. Si è discusso in merito all'implementazione delle
+github action per il controllo della qualità del codice e per la formattazione
+del codice, in merito a quest'ultimo punto si è deciso di dare una bassa
+priorità per il momento. Infine nella \textit{repository} unica deve essere
+presente un \textit{README} che illustri lo scopo del progetto, come avviarlo e
+come utilizzare il software. Rimane in sospeso la formalizzazione della
+visualizzazione dei test perché il \textit{frontend} e il \textit{backend} 
+utilizzano due \textit{framework} diversi per i test.

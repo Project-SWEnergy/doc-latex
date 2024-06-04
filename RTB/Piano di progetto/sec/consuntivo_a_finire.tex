@@ -1,0 +1,281 @@
+\section{Consuntivo a finire}
+
+Nella seguente sezione sono riportati i dati in forma tabellare
+delle ore totali preventivate per la fase RTB rispetto alle ore effettive
+utilizzate dal gruppo SWEnergy.
+
+\subsection{Analisi RTB}
+
+
+
+\subsubsection{Riepilogo preventivo per la fase RTB}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|c|c|c|c|c|c|c}
+		\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale ore} \\
+		\hline
+		Alessandro    & 5           & -           & 5           & 15          & 10          & -           & 35                  \\
+		Carlo         & 5           & 5           & 10          & 10          & 5           & -           & 35                  \\
+		Davide        & 5           & -           & 20          & -           & 5           & 5           & 35                  \\
+		Giacomo       & 5           & -           & 15          & -           & -           & 5           & 25                  \\
+		Matteo        & -           & 5           & 10          & -           & 10          & 10          & 35                  \\
+		Niccolò       & 5           & -           & 10          & 10          & -           & 10          & 35                  \\
+		\hline
+		%\textbf{Ore totali}   & 25          & 10           & 70          & 35           & 30           & 30           & 60              \\
+		%\textbf{Costo totale} & 300         & 100         & 1000        & 125         & -           & -           & 1525
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
+\end{table}
+
+
+
+
+\subsubsection{Riepilogo consuntivo per la fase RTB}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|c|c|c|c|c|c|c}
+		\textbf{Nome} & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale ore} \\
+		\hline
+		Alessandro    & 5           & 5           & 5           & 10          & 10          & -           & 35                  \\
+		Carlo         & 10          & 10          & 10          & -           & 5           & -           & 35                  \\
+		Davide        & 5           & -           & 20          & -           & 5           & 5           & 35                  \\
+		Giacomo       & 5           & 5           & 5           & 10          & -           & 10          & 35                  \\
+		Matteo        & -           & 5           & 10          & 5           & 10          & 5           & 35                  \\
+		Niccolò       & 5           & -           & 10          & 10          & -           & 10          & 35                  \\
+		\hline
+		%\textbf{Ore totali}   & 30          & 25           & 60          & 35          & 30           & 30           & 60              \\
+		%\textbf{Costo totale} & 300         & 100         & 750         & 375         & -           & -           & 1525
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
+\end{table}
+
+
+
+
+
+
+\subsubsection{Riepilogo a finale RTB}
+
+Di seguito vengono indicate le spese effettive nelle fase RTB del progetto.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|c|c|c|c|c|c}
+		\textbf{Ruolo}    & \textbf{Ore P} & \textbf{Ore E} & \textbf{Diff. ore} & \textbf{Costo P} & \textbf{Costo E} & \textbf{Diff. costo} \\
+		\hline
+		Responsabile      & 25             & 30             & +5                 & 750              & 900              & +150                 \\
+		Amministratore    & 10             & 25             & +15                & 200              & 500              & +300                 \\
+		Analista          & 70             & 60             & -10                & 1750             & 1500             & -250                 \\
+		Progettista       & 35             & 35             & 0                  & 875              & 875              & 0                    \\
+		Programmatore     & 30             & 30             & 0                  & 450              & 450              & 0                    \\
+		Verificatore      & 30             & 30             & 0                  & 450              & 450              & 0                    \\
+		\hline
+		Totale Consuntivo & 200            & 210            & +10                & 4475             & 4675             & +200                 \\
+		\hline
+		%\textbf{Ore totali}   & 10          & 5           & 30          & 15      & -           & 60              \\
+		%\textbf{Costo totale} & 300         & 100         & 750         & 375     & -           & 1525
+	\end{tabular}
+	\caption{Consuntivo periodo RTB, Ore P: Totale Ore preventivate per un singolo ruolo, Ore e: Totale Ore effettive per un singolo ruolo,
+		Diff. ore: Differenza tra ore preventivate e ore effettive, Costo P: totale costo preventivato per un singolo ruolo,
+		Costo E: totale costo effettivo per un singolo ruolo,  Diff. costo: Differenza tra costo preventivato e costo effettivo;
+		Costo P, Costo E, Diff. costo: espressi in (\euro)}
+\end{table}
+
+
+
+
+
+
+\subsubsection{Riepilogo ripartizione percentuale oraria}
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\pie[text=legend]{
+			14/Responsabile,
+			12/Amministratore,
+			29/Analista,
+			17/Progettista,
+			14/Programmatore,
+			14/Verificatore
+		}
+	\end{tikzpicture}
+	\caption{Riepilogo ripartizione percentuale oraria}
+\end{figure}
+\newpage
+
+L'analisi dei dati relativi ai ruoli svolti nei quattro \textit{sprint} mostra una distribuzione equilibrata delle responsabilità all'interno del \textit{team}, riflettendo una gestione oculata delle risorse.
+\begin{itemize}
+	\item \textbf{Responsabile}: La percentuale assegnata al Responsabile mostra un coinvolgimento costante nella gestione e nella direzione del progetto. Il fatto che sia una percentuale significativa
+	      suggerisce un'impegno considerevole nella supervisione e nel coordinamento delle attività.
+	\item \textbf{Amministratore}: La percentuale di tempo dedicato all'Amministratore indica una gestione efficiente delle attività amministrative. Anche se è inferiore rispetto ad alcuni altri ruoli,
+	      ha permesso di avere una buona organizzazione nella gestione della documentazione e delle risorse.
+	\item \textbf{Analista}: L'alta percentuale assegnata all'Analista è dovuta ad una particolare attenzione dedicata all'analisi dei requisiti e alla definizione chiara degli obiettivi del progetto.
+	      Questo impegno iniziale è cruciale per il successo complessivo del progetto.
+	\item \textbf{Progettista} : La percentuale dedicata al Progettista mette in luce un focus significativo sulla fase di progettazione del progetto. Questo è coerente con una pratica sviluppo del \textit{software}
+	      che presta attenzione alla pianificazione e alla progettazione prima della codifica effettiva.
+	\item \textbf{Programmatore}: La percentuale assegnata al Programmatore indica una distribuzione ragionevole del tempo per l'implementazione pratica del progetto. Anche se non è la percentuale più alta,
+	      indica un impegno costante nella fase di sviluppo effettivo.
+	\item: \textbf{Verificatore}: La percentuale dedicata al Verificatore è coerente con gli \textit{standard} di qualità del processo. Un impegno costante nella verifica contribuisce alla riduzione degli errori e
+	      alla produzione di un prodotto di alta qualità.
+\end{itemize}
+
+Complessivamente, la distribuzione dei ruoli riflette una strategia ben ponderata, con un'attenzione particolare alle fasi iniziali di analisi e progettazione, seguite da uno
+sforzo equilibrato nell'implementazione e nella verifica.
+
+
+\newpage
+\subsubsection{Suddivisione ruoli per persona}
+
+\begin{flushleft}
+	\begin{figure}[h]
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+					ybar stacked,
+					bar width=0.6cm,
+					xlabel={}, % Rimuovo l'etichetta dell'asse x
+					ylabel={Ore totali},
+					symbolic x coords={Alessandro, Carlo, Davide, Giacomo, Matteo, Niccolò},
+					xtick=data,
+					x tick label style={rotate=45,anchor=east}, % Nomi obliqui di 45 gradi
+					ytick={0,5,...,50}, % Suddivisione asse y ogni 5 da 0 a 50
+					nodes near coords={},
+					nodes near coords align={vertical},
+					legend style={at={(0.5,-0.3)},anchor=north,legend columns=-1,draw=none}, % Maggiore distanza verticale
+					every node near coord/.append style={font=\tiny}, % Dimensione del font delle etichette (vuoto per rimuoverle)
+					every axis plot/.append style={draw=none}, % Rimuovo i bordi delle barre
+					ymax=50, % Estendo l'asse y fino al valore 50
+				]
+
+				% Dati per l'asse delle x
+				\addplot[fill=colore1] coordinates {(Alessandro, 5) (Carlo, 10) (Davide, 5) (Giacomo, 5) (Matteo, 0) (Niccolò, 5)};
+				\addplot[fill=colore2] coordinates {(Alessandro, 5) (Carlo, 10) (Davide, 0) (Giacomo, 5) (Matteo, 5) (Niccolò, 0)};
+				\addplot[fill=colore3] coordinates {(Alessandro, 5) (Carlo, 10) (Davide, 20) (Giacomo, 5) (Matteo, 10) (Niccolò, 10)};
+				\addplot[fill=colore4] coordinates {(Alessandro, 10) (Carlo, 0) (Davide, 0) (Giacomo, 10) (Matteo, 5) (Niccolò, 10)};
+				\addplot[fill=colore5] coordinates {(Alessandro, 10) (Carlo, 5) (Davide, 5) (Giacomo, 0) (Matteo, 10) (Niccolò, 0)};
+				\addplot[fill=colore6] coordinates {(Alessandro, 0) (Carlo, 0) (Davide, 5) (Giacomo, 10) (Matteo, 5) (Niccolò, 10)};
+
+				\legend{Responsabile, Amministratore, Analista, Progettista, Programmatore, Verificatore}
+
+			\end{axis}
+		\end{tikzpicture}
+		\caption*{Rappresentazione ore assegnate ad una persona che ha eseguito un determinato ruolo}
+	\end{figure}
+\end{flushleft}
+
+
+
+
+
+\subsection{Considerazioni}
+Di seguito viene riportata la tabella delle assegnazione delle ore che il gruppo SWEnergy si impegna a rispettare.
+
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.5}
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Membro}        & \textbf{Re} & \textbf{Am} & \textbf{An}  & \textbf{Pt}
+		                       & \textbf{Pr} & \textbf{Ve} & \textbf{Tot}                                 \\
+		\hline
+		Alessandro Tigani Sava & 16          & 7           & 12           & 15          & 27  & 17  & 94  \\
+		Carlo Rosso            & 16          & 7           & 13           & 15          & 26  & 17  & 94  \\
+		Davide Maffei          & 16          & 7           & 13           & 14          & 27  & 17  & 94  \\
+		Giacomo Gualato        & 16          & 8           & 12           & 15          & 26  & 17  & 94  \\
+		Matteo Bando           & 15          & 8           & 13           & 15          & 27  & 16  & 94  \\
+		Niccolò Carlesso       & 16          & 8           & 12           & 15          & 27  & 16  & 94  \\
+		\hline
+		\textbf{Totale}        & 95          & 45          & 75           & 89          & 160 & 100 & 564 \\
+	\end{tabular}
+
+	\caption{Assegnamento delle ore per persona; valori espressi in ore.
+		Re: Responsabile, Am: Amministratore, An: Analista, Pt:
+		Progettista, Pr: Programmatore, Ve: Verificatore, Tot: Totale ore per
+		membro; valori espressi in ore.}
+\end{table}
+
+Come evidenziato, il team SWEnergy ha scelto di allocare circa 94 ore per ciascun membro. Come si può osservare nella sezione precedente, dopo questi quattro \textit{sprint}, ciascun
+individuo ha utilizzato 35 ore, lasciando una rimanente disponibilità di 59 ore per la fase di PB e CA.
+
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|c}
+		\textbf{Ruolo} & \textbf{Ore utilizzate} \\
+		\hline
+		Responsabile   & 30                      \\
+		Amministratore & 25                      \\
+		Analista       & 60                      \\
+		Progettista    & 35                      \\
+		Programmatore  & 30                      \\
+		Verificatore   & 30                      \\
+		\hline
+		Totale         & 210                     \\
+	\end{tabular}
+	\caption{Ore utilizzate per ruolo; valori espressi in ore.}
+\end{table}
+
+Come si evidenzia, il \textit{team} SWEnergy ha impiegato 210 ore, disponendo quindi di un residuo di 354 ore per la fase PB e CA. Inoltre, rispetto alla pianificazione iniziale,
+si è sottostimata leggermente il numero di ore per il ruolo del Responsabile, attribuendo meno rilevanza all'Amministratore. Tuttavia, la suddivisione oraria prevista per gli altri ruoli,
+formulata all'inizio, è stata attentamente ponderata e sarà mantenuta.
+
+Di conseguenza, si prevede l'utilizzo di circa 13 ore per ciascun membro nel ruolo di Responsabile e di circa 10 ore ciascuno per il ruolo di Amministratore. Va notato che,
+sebbene avessimo leggermente sovrastimato il ruolo di analista, è stata lasciata un'ora residua per eventuali modifiche o integrazioni ai requisiti. Tuttavia, si sta considerando
+la possibilità di ridurre tali ore residue per riallocarle verso ruoli che potrebbero necessitare di maggiori risorse.
+
+Di seguito viene riportata la tabella con la nuova ripartizione oraria per la prossima fase PB:
+
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.5}
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Membro}        & \textbf{Re} & \textbf{Am} & \textbf{An}  & \textbf{Pt}
+		                       & \textbf{Pr} & \textbf{Ve} & \textbf{Tot}                                 \\
+		\hline
+		Alessandro Tigani Sava & 8           & 5           & 4            & 8           & 17  & 17  & 59  \\
+		Carlo Rosso            & 5           & 0           & 3            & 15          & 21  & 15  & 59  \\
+		Davide Maffei          & 8           & 11          & 0            & 12          & 18  & 10  & 59  \\
+		Giacomo Gualato        & 8           & 7           & 2            & 9           & 26  & 7   & 59  \\
+		Matteo Bando           & 13          & 5           & 3            & 10          & 17  & 11  & 59  \\
+		Niccolò Carlesso       & 8           & 10          & 2            & 5           & 27  & 7   & 59  \\
+		\hline
+		\textbf{Totale}        & 95          & 45          & 75           & 89          & 160 & 100 & 564 \\
+	\end{tabular}
+
+	\caption{Preventivo e assegnazione ore per la fase PB; valori espressi in ore.
+		Re: Responsabile, Am: Amministratore, An: Analista, Pt:
+		Progettista, Pr: Programmatore, Ve: Verificatore, Tot: Totale ore per
+		membro; valori espressi in ore.}
+\end{table}
+
+
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|c|c}
+		\textbf{Ruolo} & \textbf{Ore utilizzate} & \textbf{Costo} \\
+		\hline
+		Responsabile   & 50                      & 1500           \\
+		Amministratore & 38                      & 760            \\
+		Analista       & 14                      & 350            \\
+		Progettista    & 59                      & 1475           \\
+		Programmatore  & 126                     & 1890           \\
+		Verificatore   & 66                      & 990            \\
+		\hline
+		Costo totale   &                         & 6965           \\
+	\end{tabular}
+	\caption{Suddivisione oraria per ruolo per la fase PB}
+\end{table}
+
+Pertanto, la somma del costo totale della fase RTB (4675 euro) al costo totale preventivato della fase PB (6965 euro) risulta in un totale di 11.160 euro,
+in perfetta conformità con il \textit{budget} inizialmente preventivato di 11.750 euro.
+
+
+Il conclusione il gruppo SWEnergy conferma nuovamente il \textit{budget} iniziale stimato e anche la data di consegna prevista al 10/05/2024
+
+
+

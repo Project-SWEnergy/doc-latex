@@ -1,0 +1,51 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{../../Templates/package}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{framed}
+\graphicspath{{../../Assets}}
+
+\newcommand{\Titolo}{Manuale Utente}
+\newcommand{\Data}{19/05/2024}
+\newcommand{\Versione}{1.0.0}
+\newcommand{\Descrizione}{Questo documento fornisce istruzioni dettagliate sull'utilizzo della \textit{web app} EasyMeal.}
+\newcommand{\Verificatori}{
+    Alessandro Tigani Sava, \\
+    & Davide Maffei, \\
+    & Niccolò Carlesso, Carlo Rosso     
+}
+\newcommand{\Redattori}{ 
+     Matteo Bando, \\
+    & Giacomo Gualato, Davide Maffei, \\
+    &  Carlo Rosso     
+}
+\newcommand{\Approvatori}{Davide Maffei}
+\newcommand{\Destinatari}{
+    Prof.\ Tullio Vardanega \\ 
+    & Prof.\ Riccardo Cardin \\ 
+    & Alessandro Staffolani
+}
+\newcommand{\Stato}{Approvato}
+
+\input{../../Templates/variable.tex}
+\input{../../Templates/copertina.tex}
+\input{../../Templates/header_footer.tex}
+
+\begin{document}
+\copertina{}
+\input{sec/registro_modifiche.tex}
+\newpage
+
+\setcounter{tocdepth}{3}
+\tableofcontents
+\newpage
+\input{sec/introduzione.tex}
+\newpage
+
+\input{sec/requisiti.tex}
+\input{sec/utente_non_autenticato.tex}
+\input{sec/cliente.tex}
+\input{sec/ristoratore.tex}
+
+\end{document}

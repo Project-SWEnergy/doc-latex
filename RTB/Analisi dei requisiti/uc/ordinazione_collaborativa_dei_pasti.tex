@@ -24,7 +24,7 @@
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
 		      \item L'Utente base visualizza le ordinazioni di tutti gli altri commensali collegati alla stessa prenotazione;
-		      \item L'Utente base crea il proprio ordine (vedi \autoref{usecase:Creazione della propria ordinazione});
+		      \item L'Utente base crea il proprio ordine$^G$ (vedi \autoref{usecase:Creazione della propria ordinazione});
 		      \item L'Utente base modifica il proprio ordine (vedi \autoref{usecase:Modifica della propria ordinazione});
 
 		      \item L'Utente base conferma il riepilogo dell'ordinazione;
@@ -80,55 +80,8 @@
 	\item \textbf{Scenario principale:}
 	      \begin{enumerate}
 		      \item L'Utente base seleziona tra le lista delle pietanze una che vuole aggiungere al proprio ordine;
+		      \item L'Utente base seleziona la quantità della pietanza;
 		      \item L'Utente base conferma la sua selezione;
 		      \item Il Sistema registra la sua selezione.
-	      \end{enumerate}
-\end{itemize}
-
-\subusecasebase{Modifica della propria ordinazione}
-\label{usecase:Modifica della propria ordinazione}
-\begin{itemize}
-	\item \textbf{Attore principale:} Utente base.
-
-	\item \textbf{Precondizione:}
-	      \begin{itemize}
-		      \item L'Utente base sta effettuando un ordinazione collaborativa dei pasti (vedi \autoref{usecase:Creazione dell'ordinazione collaborativa dei pasti});
-		      \item L'utente base deve rispettare un limite temporale: se vuole modificare il proprio ordine deve farlo ventiquattro ore prima a partire dall'ora stabilita della prenotazione.
-	      \end{itemize}
-
-	\item \textbf{Postcondizioni:}
-	      \begin{itemize}
-		      \item L'Utente base ha modificato il proprio ordine.
-		      \item Il Sistema aggiorna le informazioni inerenti al suo ordine.
-	      \end{itemize}
-
-	\item \textbf{Scenario principale:}
-	      \begin{enumerate}
-		      \item L'Utente base modifica una propria pietanza (vedi \autoref{usecase:Modifica pietanza});
-		      \item L'Utente base conferma il proprio ordine;
-		      \item Il Sistema aggiorna il riepilogo dell'ordinazione.
-	      \end{enumerate}
-\end{itemize}
-
-\subsubusecasebase{Modifica pietanza}
-\label{usecase:Modifica pietanza}
-\begin{itemize}
-	\item \textbf{Attore principale:} Utente base.
-
-	\item \textbf{Precondizioni:}  L'Utente base si trova nella sezione "Modifica della propria ordinazione" (vedi \autoref{usecase:Modifica della propria ordinazione}).
-
-
-	\item \textbf{Postcondizione:} L'Utente base ha modificato una pietanza.
-
-	\item \textbf{Scenario principale:}
-	      \begin{enumerate}
-		      \item L'Utente base seleziona tra le pietanze del suo ordine una che vuole modificare, ovvero:
-		            \begin{itemize}
-			            \item Modifica della quantità della pietanza selezionata.
-			            \item Rimozione di ingredienti della pietanza selezionata.
-			            \item Aggiunta di ingredienti della pietanza selezionata.
-		            \end{itemize}
-		      \item L'Utente base conferma la sua modifica;
-		      \item Il Sistema registra la sua modifica.
 	      \end{enumerate}
 \end{itemize}

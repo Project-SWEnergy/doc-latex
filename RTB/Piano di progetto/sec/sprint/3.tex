@@ -1,0 +1,187 @@
+\subsection{Sprint - 3}
+\textbf{Inizio}: 30-12-2023 \\
+\textbf{Fine}: 12-01-2024
+
+\subsubsection{Gestione dei rischi}
+\textbf{Rischi attesi verificati}:
+
+\begin{itemize}
+	\item RP-3 Interfacce incoerenti
+	\begin{itemize}
+		\item \textbf{Esito mitigazione}: A seguito di un tantativo di integrazione tra la parte \textit{front-end} e \textit{back-end}, il gruppo ha riscontrato delle incoerenze tra le interfacce.
+		Attraverso un dialogo interno i membri del gruppo hanno trovato una soluzione al problema. L'esito è risultato soddisfacente poiché alla fine si è riusciti a integrare le due 
+		parti con successo, producendo un PoC funzionante e corretto.
+
+		\item \textbf{Impatto}: Come conseguenza di questo rischio atteso, il gruppo ha dovuto dedicare più tempo del previsto per la realizzazione del PoC, dovendo risolvere 
+		questo problema e andando a sovraccaricare di lavoro alcuni membri del gruppo.
+	\end{itemize}
+\end{itemize}  
+\subsubsection{Diagramma di Gantt}
+
+\begin{ganttchart}[
+		x unit=0.6cm, % Adjust the width of each day
+		y unit chart=0.6cm,
+		bar/.style={fill=blue!50},
+		bar height=0.5,
+		time slot format=isodate,
+		time slot unit=day,
+		vgrid,
+		today=2024-01-8,
+		today rule/.style={draw=red, ultra thick}
+	]{2023-12-30}{2024-01-12}
+	\gantttitlecalendar{day} \\
+	\ganttbar{Analisi dei requisiti}{2023-12-30}{2024-01-05} \\
+	\ganttbar{Piano di qualifica}{2023-12-30}{2024-01-05} \\
+	\ganttbar{Piano di progetto}{2024-01-07}{2024-01-12} \\
+	\ganttbar{PoC \textit{front-end}}{2023-12-30}{2024-01-12} \\
+	\ganttbar{PoC \textit{back-end}}{2023-12-30}{2024-01-12}
+\end{ganttchart}
+
+Dove:
+\begin{itemize}
+	\item \textbf{"Analisi dei requisiti"}: questa \textit{issue} è eseguita da
+	      Carlo Rosso. Per svolgere questa attività, il gruppo ha deciso di
+	      dedicare 5 ore;
+
+	\item \textbf{"Piano di progetto"}: questa \textit{issue} è eseguita da
+	      Giacomo Gualato. Per svolgere questa attività, il gruppo ha deciso
+	      di dedicare 5 ore;
+
+	\item \textbf{"PoC \textit{front-end}"}: questa \textit{issue} è eseguita
+	      da Alessandro Tigani Sava e Matteo Bando. Per svolgere questa
+	      attività, il gruppo ha deciso di dedicare 15 ore.
+
+	\item \textbf{"PoC \textit{back-end}"}: questa \textit{issue} è eseguita
+	      da Carlo Rosso, Davide Maffei, Niccolò Carlesso. Per svolgere questa
+	      attività, il gruppo ha deciso di dedicare 20 ore.
+
+	\item \textbf{Verifica dei documenti}: questo compito è eseguito da
+	      Matteo Bando. Per svolgere questa attività, il gruppo ha deciso
+	      di dedicare 5 ore.
+\end{itemize}
+
+\subsubsection{Preventivo}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+		\hline
+		Alessandro            & -           & -           & -           & -           & 10          & -           & 10              \\
+		Carlo                 & -           & -           & 5           & -           & 5           & -           & 10              \\
+		Davide                & 5           & -           & -           & -           & 5           & -           & 10              \\
+		Giacomo               & -           & -           & 5           & -           & -           & -           & 5               \\
+		Matteo                & -           & -           & -           & -           & -           & 10          & 10              \\
+		Niccolò               & -           & -           & -           & 10          & -           & -           & 10              \\
+		\hline
+		\textbf{Ore totali}   & 5           & -           & 10          & 10          & 20          & 10          & 55              \\
+		\textbf{Costo totale} & 150         & -           & 250         & 250         & 300         & 150         & 1100
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
+\end{table}
+
+\subsubsection{Riassunto delle attività svolte}
+
+\begin{itemize}
+	\item \textbf{Verifica documenti}: verifica delle "Norme di progetto" e
+	      "Piano di progetto";
+
+	\item \textbf{Glossario}: aggiornamento del documento;
+
+	\item \textbf{Norme di progetto}: aggiornamento del documento;
+
+	\item \textbf{Analisi dei requisiti}: inserimento degli UML;
+
+	\item \textbf{PoC front-end}: realizzazione di un PoC in TypeScript, secondo
+	      i requisiti concordati con il proponente;
+
+	\item \textbf{PoC back-end}: realizzazione di un PoC in TypeScript, secondo
+	      i requisiti concordati con il proponente;
+\end{itemize}
+
+\subsubsection{Consuntivo}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+		\hline
+		Alessandro            & -           & -           & -           & -           & 10          & -           & 10              \\
+		Carlo                 & -           & -           & 5           & -           & 5           & -           & 10              \\
+		Davide                & 5           & -           & -           & -           & 5           & -           & 10              \\
+		Giacomo               & -           & 5           & 5           & -           & -           & -           & 10              \\
+		Matteo                & -           & -           & -           & -           & 5           & 5           & 10              \\
+		Niccolò               & -           & -           & -           & 10          & -           & -           & 10              \\
+		\hline
+		\textbf{Ore totali}   & 5           & 5           & 10          & 10          & 25          & 5           & 60              \\
+		\textbf{Costo totale} & 150         & 100         & 250         & 250         & 375         & 75          & 1200
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
+\end{table}
+
+\subsubsection{Gestione dei ruoli}
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\pie[text=legend]{
+            11/Responsabile,
+            8/Amministratore,
+            16/Analista,
+            16/Progettista,
+            41/Programmatore,
+            8/Verificatore
+        }
+	\end{tikzpicture}
+    \caption{Grafico delle proporzioni dei ruoli ricoperti dai membri del gruppo}
+\end{figure}
+
+L'11\% delle risorse è stato dedicato al ruolo di Responsabile, indicando un impegno continuo nella gestione e coordinamento durante il terzo \textit{sprint}.
+L'8\% delle risorse è stato assegnato al ruolo di Amministratore, sottolineando la gestione attenta delle attività amministrative e di supporto necessarie per la conclusione del PoC.
+Il 16\% delle risorse è stato dedicato al ruolo di Analista, riflettendo un'attenzione costante all'analisi dei requisiti.
+Altro 16\% è stato destinato al ruolo di Progettista, indicando un \textit{focus} continuo sulla progettazione delle soluzioni.
+Un significativo 41\% delle risorse è stato assegnato al ruolo di Programmatore, evidenziando un aumento considerevole rispetto agli \textit{sprint} precedenti. 
+Questo è coerente con il contesto del PoC, sottolineando un maggiore sforzo nella fase di codifica durante la realizzazione del progetto.
+L'8\% delle risorse è stato dedicato al ruolo di Verificatore, indicando che, nonostante l'attenzione sulla codifica, si è mantenuta una proporzione di risorse per le attività di verifica, contribuendo alla qualità del PoC.
+
+\subsubsection{Analisi retrospettiva}
+
+Durante il terzo \textit{sprint}, il gruppo ha concentrato i suoi sforzi sull'avanzamento del progetto, con particolare attenzione alla realizzazione del \textit{Proof of Concept} 
+(PoC) sia per il \textit{front-end} che per il \textit{back-end}.
+
+Esaminando le ore impiegate nel terzo \textit{sprint} in relazione allo stato di avanzamento del progetto, il periodo precedente si presenta sostanzialmente positivo, ma 
+non del tutto soddisfacente, in quanto saranno necessarie alcune modifiche ai documenti per poterli concludere definitivamente. In particolare, l'alto impegno 
+orario nel ruolo del programmatore ha portato al completamento della Proof of Concept (PoC), che ha subito notevoli miglioramenti grazie all'aggiunta di nuove funzionalità, portando lo stato 
+complessivo a un livello completo. Il secondo ruolo più significativo è stato quello dell'analista, poiché durante questa fase è stato completato il documento di Analisi dei Requisiti.
+Questa attenzione particolare a tali ruoli è dovuta al fatto che il gruppo ha sostenuto l'incontro di revisione dell'RTB con il professore Riccardo Cardin, ottenendo il semaforo verde.
+Con la conclusione di questo \textit{sprint}, il gruppo ha preso una pausa a seguito della sessione d'esami.
+
+\textbf{Obiettivi raggiunti}:
+\begin{itemize}
+	\item Conclusione del PoC e del documento Analisi dei Requisiti.
+	\item Il gruppo è avanzato nella stesura delle Norme di Progetto, Piano di Progetto e del Piano di Qualifica.
+	\item Inserimento dei diagrammi di Gantt e dei grafici a torta all'interno del Piano di Progetto.
+	\item Aggiornamento del Glossario.
+\end{itemize}
+
+\textbf{Obiettivi mancati}:
+\begin{itemize}
+	\item Conclusione della stesura delle Norme di Progetto, Piano di Progetto, Piano di Qualifica e del Glossario.
+\end{itemize}
+
+\textbf{Problematiche riscontrate}:
+\begin{itemize}
+	\item Carico di lavoro eccessivo per alcuni membri del gruppo.
+	\item Ripartizione scorretta delle attività da svolgere.
+	\item Il \textit{team} ha incontrato delle scadenze di consegna e requisiti documentali inizialmente poco chiari, generando un aumento del carico di lavoro necessario per rispettarle.
+\end{itemize}
+
+\textbf{Soluzioni attuate}:
+\begin{itemize}
+	\item Impegnarsi a fissare delle scadenze chiare così da ridurre il carico di lavoro.
+\end{itemize}
+
+
+

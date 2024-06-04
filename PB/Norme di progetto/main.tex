@@ -1,0 +1,70 @@
+\documentclass[a4paper, 12pt]{article}
+
+\newcommand{\template}{../../Templates}
+\usepackage{\template/package}
+\graphicspath{{../../Assets}}
+
+
+\usepackage{cleveref}
+\crefname{section}{Sezione \S}{Sezioni}
+\crefname{subsection}{Sottosezione \S}{Sottosezioni}
+
+
+
+\newcommand{\Titolo}{Norme di progetto}
+\newcommand{\Data}{26/03/2024}
+\newcommand{\Versione}{2.1.0}
+\newcommand{\Descrizione}{Elenco delle procedure interne e delle buone pratiche 
+di progetto adottate dal gruppo.}
+\newcommand{\Redattori}{
+    Alessandro Tigani Sava \\
+    & Carlo Rosso \\
+    & Davide Maffei\\
+    & Matteo Bando
+}
+\newcommand{\Verificatori}{
+    Giacomo Gualato \\
+    & Niccolò Carlesso \\
+    & Matteo Bando
+}
+\newcommand{\Approvatori}{Niccolò Carlesso}
+\newcommand{\Stato}{Approvato}
+
+
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+
+\begin{document}
+\copertina{}
+\input{sec/registro_modifiche.tex}
+\newpage
+
+\setcounter{tocdepth}{3}
+\tableofcontents
+\newpage
+\input{sec/introduzione.tex}
+\newpage
+
+\input{sec/primari/primari.tex}
+\newpage
+\input{sec/supporto/supporto.tex}
+\newpage
+\input{sec/organizzativi/organizzativi.tex}
+\newpage
+
+\input{sec/tutti/tutti.tex}
+\newpage
+\input{sec/responsabile/responsabile.tex}
+\newpage
+\input{sec/amministratore/amministratore.tex}
+\newpage
+\input{sec/analista/analista.tex}
+\newpage
+\input{sec/progettista/progettista.tex}
+\newpage
+\input{sec/programmatore/programmatore.tex}
+\newpage
+\input{sec/verificatore/verificatore.tex}
+
+\end{document}
