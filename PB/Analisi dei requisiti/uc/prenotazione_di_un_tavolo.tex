@@ -1,0 +1,45 @@
+\usecasebase{Prenotazione di un tavolo}
+\label{usecase:Prenotazione di un tavolo}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.999\textwidth]{./uml/UCB7-UCB8.png} 
+	\caption{Prenotazione di un tavolo}
+	\label{fig:UCB8-10}
+  \end{figure}
+
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente base.
+	\item \textbf{Precondizioni:}
+	      \begin{itemize}
+		      \item Un Utente base ha effettuato l'accesso al Sistema (vedi \autoref{usecase:Effettua accesso}).
+		      \item Un Utente base visualizza la pagina di dettaglio di un ristorante (\autoref{usecase:Visualizzazione di un ristorante}).
+	      \end{itemize}
+	\item \textbf{Postcondizione:} L'Utente base ha effettuato una prenotazione ed è tornato alla lista delle sue prenotazioni (vedi \autoref{usecase:Visualizzazione lista delle prenotazioni}).
+
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+		      \item L'Utente base compila una \textit{form} di prenotazione con i seguenti campi:
+			 \begin{itemize}
+				\item L'Utente base seleziona il giorno e l'ora;
+		      	\item L'Utente base seleziona il numero di persone;
+		      	\item L'Utente base seleziona il metodo di pagamento (vedi \autoref{usecase:Selezione della modalità di divisione del conto});
+		      	\item L'Utente base condivide la prenotazione con altri commensali. (vedi \autoref{usecase:Condivisione della prenotazione}).
+			 \end{itemize}
+		      \item L'Utente base invia la prenotazione;
+		      \item Il Sistema registra la prenotazione.
+
+	      \end{enumerate}
+
+	\item \textbf{Scenario secondario:}
+	      \begin{itemize}
+		      \item L'Utente base annulla la prenotazione (vedi
+		            \autoref{usecase:Annullamento della prenotazione}).
+		            \begin{enumerate}
+			            \item L'Utente base annulla la prenotazione;
+			            \item Il Sistema aggiorna la prenotazione;
+		            \end{enumerate}
+	      \end{itemize}
+\end{itemize}
+

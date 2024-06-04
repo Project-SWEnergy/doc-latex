@@ -1,0 +1,49 @@
+\usecasebase{Visualizzazione lista delle prenotazioni}
+\label{usecase:Visualizzazione lista delle prenotazioni}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{./uml/UCB4.png} 
+	\caption{Visualizzazione lista delle prenotazioni}
+	\label{fig:UCB4}
+  \end{figure}
+
+\begin{itemize}
+	\item \textbf{Attore principale:} Utente base.
+
+	\item \textbf{Precondizioni:}
+	      \begin{itemize}
+		      \item L'Utente ha eseguito correttamente l'accesso al Sistema come Utente base (vedi \autoref{usecase:Effettua accesso}).
+		      \item L'Utente base ha precedentemente effettuato una prenotazione (vedi \autoref{usecase:Prenotazione di un tavolo}).
+	      \end{itemize}
+
+
+	\item \textbf{Postcondizione:}
+	      L'Utente base visualizza la lista di tutte le sue prenotazioni.
+
+	\item \textbf{Scenario principale:}
+	      \begin{enumerate}
+			  \item L'Utente base seleziona la voce "Prenotazioni" presente nel \textit{header} della pagina, la quale lo reindirizza alla pagina di visualizzazione delle prenotazioni effettuate;
+		      \item L'Utente base visualizza la lista delle prenotazioni che ha effettuato oppure alle quali è stato invitato a partecipare;
+		      \item Il Sistema mostra, di \textit{default}, la lista delle prenotazioni categorizzate nei seguenti stati:
+		            \begin{itemize}
+			            \item In attesa.
+			            \item Accettata.
+			            \item Rifiutata.
+			            \item In corso.
+			            \item Terminata.
+			            \item Annullata.
+			            \item Pagamento.
+		            \end{itemize}
+				\item L'Utente base per ogni singola prenotazione visualizza le seguente informazioni:
+					\begin{itemize}
+						\item Nome del ristorante.
+						\item Numero della prenotazione.
+						\item Stato della prenotazione (lo stato in cui si può trovare una prenotazione è descritto nella lista sopra).
+						\item Metodo di pagamento scelto.
+						\item Orario e data della prenotazione.
+						\item Se la prenotazione è stata accettata o rifiutata dal cliente stesso.
+					\end{itemize}
+				\item L'utente base, per ogni prenotazione, può: Accettare la prenotazione a cui è stato invitato (vedi \autoref{usecase:Accesso alla prenotazione}) oppure rifiutarla (vedi \autoref{usecase:Annullamento della prenotazione}).
+	      \end{enumerate}
+\end{itemize}

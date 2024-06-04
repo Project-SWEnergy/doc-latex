@@ -1,0 +1,34 @@
+\documentclass[a4paper, 12pt]{article}
+\newcommand{\template}{../../../../Templates}
+\usepackage{\template/package}
+\graphicspath{{../../../../Assets}}
+
+\newcommand{\Titolo}{Verbale esterno - Imola Informatica}
+\newcommand{\Data}{11/03/2024}
+\newcommand{\Versione}{1.0.0}
+\newcommand{\Descrizione}{Ripresa dei lavori in seguito all'RTB.}
+\newcommand{\Stato}{Approvato}
+\newcommand{\Redattori}{Carlo Rosso}
+\newcommand{\Verificatori}{Davide Maffei}
+
+\newcommand{\Approvatori}{Matteo Bando}
+\newcommand{\ApprovatoriEsterni}{Alessandro Staffolani}
+
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+\input{\template/header_footer.tex}
+\input{\template/firma.tex}
+
+\begin{document}
+\copertina{}
+
+\input{sec/partecipanti}
+\renewcommand{\contentsname}{Ordine del giorno}
+\tableofcontents
+\newpage
+
+\input{sec/contenuto}
+\input{sec/incarichi}
+\newpage
+\firma{}
+\end{document}

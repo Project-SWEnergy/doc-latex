@@ -1,0 +1,11 @@
+\riskplan{name}
+\label{risk:name}
+\begin{itemize}
+	\item \textbf{Descrizione}:
+	\item \textbf{Identificazione}:
+	\begin{itemize}
+	\end{itemize}
+	\item \textbf{Mitigazione}:
+	\begin{itemize}
+	\end{itemize}
+\end{itemize}

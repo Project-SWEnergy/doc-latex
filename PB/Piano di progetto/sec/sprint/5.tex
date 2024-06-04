@@ -1,0 +1,190 @@
+\subsection{Sprint - 5 PB}
+\textbf{Inizio}: 11-03-2024 \\
+\textbf{Fine}: 24-03-2024
+
+\subsubsection{Gestione dei rischi}
+\textbf{Rischi attesi verificati}:
+
+\begin{itemize}
+	\item RC-3 Comunicazione esterna carente
+	      \begin{itemize}
+		      \item \textbf{Esito mitigazione}: La comunicazione esterna è
+		            risultata carente, infatti non è stato organizzato il SAL
+		            con il proponente prima della fine dello \textit{sprint}.
+
+		      \item \textbf{Impatto}: Il ritardo accumulato potrebbe portare
+		            ad una lesione del rapporto con il proponente.
+	      \end{itemize}
+
+	\item RC-4 Mancanza di chiarezza nei ruoli e responsabilità
+	      \begin{itemize}
+		      \item \textbf{Esito mitigazione}: La mancanza di chiarezza nei
+		            ruoli e responsabilità ha portato ad un ritardo nel cambio
+		            dei ruoli, rallentando a cascata il lavoro di tutto il
+		            gruppo.
+
+		      \item \textbf{Impatto}: Non è stato organizzato il SAL con il
+		            proponente e il cambio dei ruoli è stato effettuato in
+		            ritardo.
+	      \end{itemize}
+\end{itemize}
+
+\subsubsection{Diagramma di Gantt}
+
+\begin{ganttchart}[
+		x unit=0.6cm, % Adjust the width of each day
+		y unit chart=0.6cm,
+		bar/.style={fill=blue!50},
+		bar height=0.5,
+		time slot format=isodate,
+		time slot unit=day,
+		vgrid,
+		today=2024-03-12,
+		today rule/.style={draw=red, ultra thick}
+	]{2024-03-11}{2024-03-24}
+	\gantttitlecalendar{day} \\
+	\ganttbar{Studio Tecnologie}{2024-03-11}{2024-03-17} \\
+	\ganttbar{Documentazione}{2024-03-18}{2024-03-24} \\
+	\ganttbar{Pianificazione}{2024-03-18}{2024-03-24} \\
+	\ganttbar{Database}{2024-03-18}{2024-03-24} \\
+\end{ganttchart}
+
+Dove:
+\begin{itemize}
+	\item \textbf{"Studio tecnologie"}: questa \textit{issue} è eseguita da
+	      ciascun componente di SWEnergy;
+
+	\item \textbf{"Documentazione"}: questa \textit{issue} è eseguita da
+	      Davide Maffei e Niccolò Carlesso. Per svolgere questa attività, il
+	      gruppo ha deciso di dedicare 10 ore;
+
+	\item \textbf{"Pianificazione"}: questa \textit{issue} è eseguita da
+	      Alessandro Tigani Sava e Carlo Rosso. Per svolgere questa attività,
+	      il gruppo ha deciso di dedicare 10 ore;
+
+	\item \textbf{"Database"}: questa \textit{issue} è eseguita da
+	      Giacomo Gualato e Matteo Bando. Per svolgere questa attività, il
+	      gruppo ha deciso di dedicare 10 ore;
+\end{itemize}
+
+\subsubsection{Preventivo}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+		\hline
+		Alessandro            & -           & -           & -           & 5           & -           & 5           & 10              \\
+		Carlo                 & -           & -           & -           & 5           & -           & 5           & 10              \\
+		Davide                & -           & -           & -           & 10          & -           & -           & 10              \\
+		Giacomo               & -           & -           & -           & -           & 10          & -           & 10              \\
+		Matteo                & 5           & -           & -           & -           & 5           & -           & 10              \\
+		Niccolò               & -           & -           & -           & 5           & -           & -           & 5               \\
+		\hline
+		\textbf{Ore totali}   & 5           & -           & -           & 25          & 15          & 10          & 55              \\
+		\textbf{Costo totale} & 150         & -           & -           & 625         & 225         & 150         & 1150
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
+\end{table}
+
+\subsubsection{Riassunto delle attività svolte}
+\begin{enumerate}
+	\item \textbf{Studio tecnologie}: Alessandro Tigani Sava e Carlo Rosso hanno
+	      tenuto due presentazioni per spiegare le tecnologie utilizzate nei PoC
+	      agli altri componenti di SWEnergy;
+
+	\item \textbf{Correzione della documentazione}: sono stati corretti i
+	      documenti rispetto all'esito RTB, per quanto riguarda gli errori
+	      commessi e compresi;
+
+	\item \textbf{Approfondimento della correzione}: è stata stilata una lista
+	      di argomenti e domande da porre ai committenti per chiarire i dubbi
+	      inerenti all'esito della revisione RTB;
+
+	\item \textbf{Pianificazione della documentazione}: sono stati indagati i
+	      documenti da consegnare per la revisione PB. Inoltre, è stato
+	      approfondito in quale modo deve evolvere il contenuto di tutti i
+	      documenti;
+
+	\item \textbf{Database}: è stato ristrutturato il \textit{database}, in modo da
+	      renderlo adatto a soddisfare tutti i requisiti;
+\end{enumerate}
+
+\subsubsection{Consuntivo}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|r|r|r|r|r|r|r}
+		\textbf{Nome}         & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+		\hline
+		Alessandro            & -           & -           & -           & 5           & -           & 5           & 10              \\
+		Carlo                 & -           & -           & -           & 5           & -           & 5           & 10              \\
+		Davide                & -           & -           & -           & 10          & -           & -           & 10              \\
+		Giacomo               & -           & -           & -           & -           & 10          & -           & 10              \\
+		Matteo                & 5           & -           & -           & -           & 5           & -           & 10              \\
+		Niccolò               & -           & -           & -           & 5           & -           & 5           & 10              \\
+		\hline
+		\textbf{Ore totali}   & 5           & -           & -           & 25          & 15          & 15          & 60              \\
+		\textbf{Costo totale} & 150         & -           & -           & 625         & 225         & 225         & 1225
+	\end{tabular}
+	\caption{Re: Responsabile, Am: Amministratore, An: Analista, Pt: Progettista,
+		Pr: Programmatore, Ve: Verificatore, Totale: Totale per persona; valori espressi in ore; Costo totale espresso in euro.}
+\end{table}
+
+\newpage
+\subsubsection{Gestione dei ruoli}
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\pie[text=legend]{
+			8/Responsabile,
+			0/Amministratore,
+			0/Analista,
+			42/Progettista,
+			25/Programmatore,
+			25/Verificatore
+		}
+	\end{tikzpicture}
+	\caption{Grafico delle proporzioni dei ruoli ricoperti dai membri del gruppo}
+\end{figure}
+
+L' 8\% delle risorse sono state dedicate al ruolo di Responsabile, il quale ha avuto una riduzione rispetto allo \textit{sprint} precedente. Nonostante sia
+cruciale per la pianificazione e la definizione degli obiettivi dello \textit{sprint} si è deciso di ridurre il tempo dedicato a questo ruolo per dare più spazio agli altri, ma anche perchè il gruppo ha acquisito una maggiore esperienza e autonomia. Il 42\% delle risorse sono state dedicate al ruolo di Progettista, il quale ha avuto un aumento rispetto allo \textit{sprint} precedente dettato dalla necessittà in fase di PB di effettuare una progettazione più dettagliata per realizzare un MVP funzionante e solido.
+Il 25\% delle risorse sono state dedicate al ruolo di Programmatore, ruolo fondamentale per la realizzazione del \textit{software}. La percentuale è ancora bassa poichè
+il gruppo ha iniziato a programmare solo nella seconda settimana dello \textit{sprint}, ma è destinata ad aumentare nei prossimi \textit{sprint}.
+Il 25\% delle risorse sono state dedicate al ruolo di Verificatore, determinando una leggera diminuzione dallo \textit{sprint} precedente, derivata dal passaggio da RTB a PB che ha spinto il gruppo a concentrarsi maggiormente sulle attività di progettazione.
+Amministratore e Analista non hanno avuto risorse dedicate in quanto non sono stati necessari per lo svolgimento delle attività.
+
+
+\subsubsection{Analisi retrospettiva}
+Esaminando le ore impiegate in questo \textit{sprint} e considerando lo stato di avanzamento del progetto, il periodo appena concluso presenta un bilancio complessivamente positivo.
+Si è dovuto ristrutturare il \textit{database} per la realizzazione del MVP ed effettuare uno studio delle tecnologie da utilizzare per la realizzazione del \textit{software} da parte di tutto il gruppo.\\
+Per quanto riguarda la documentazione, nella seconda settimana è avvenuto un approfondimento della correzione che il gruppo ha ricevuto a seguito della valutazione della fase RTB.
+A seguito di ciò tutta la documentazione è stata corretta secondo le indicazioni ricevute ed è avvenuta una pianificazione della documentazione da consegnare per la revisione PB.
+
+\textbf{Obiettivi raggiunti}:
+\begin{itemize}
+	\item Studio delle tecnologie.
+	\item Ristrutturazione del \textit{database}.
+	\item Correzione della documentazione e inizio stesura della documentazione per la revisione PB.
+	\item Stesura iniziale del codice.
+\end{itemize}
+
+
+\textbf{Obiettivi mancati}:
+\begin{itemize}
+	\item Nessuno.
+\end{itemize}
+
+\textbf{Problematiche riscontrate}:
+\begin{itemize}
+	\item Ripresa e organizzazione del lavoro.
+\end{itemize}
+
+\textbf{Soluzioni attuate}:
+\begin{itemize}
+	\item Pianificazione delle attività da svolgere.
+	\item Riunione per la ripartizione dei compiti e organizzazione del lavoro rimasto.
+\end{itemize}

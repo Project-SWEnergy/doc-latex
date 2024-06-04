@@ -1,0 +1,384 @@
+\section{Requirements baseline}
+
+In questa sezione sono presentati i requisiti individuati durante la fase di analisi, derivanti dai casi d'uso, dall'esame del capitolato d'appalto e dagli incontri
+sia interni che esterni con il proponente. Ciascun requisito è associato a un codice univoco, seguendo un formalismo stabilito tramite simboli.
+
+Sono state individuate tre principali tipologie di requisiti:
+\begin{enumerate}
+	\item Funzionali, relativi all'usabilità del prodotto finale;
+	\item Di qualità, riguardanti gli strumenti e la documentazione da fornire;
+	\item Di vincolo, concernenti le tecnologie da presentare.
+\end{enumerate}
+
+\subsection{Funzionali}
+\label{sec:funzionali}
+
+Di seguito viene riportata la specifica relativa ai requisiti funzionali, che delineano le funzionalità del Sistema, le azioni eseguibili
+da parte del Sistema e le informazioni che il Sistema può fornire. La presenza di ogni requisito viene giustificata riportando la fonte, che può essere un UC oppure presente
+nel testo del capitolato d'appalto. Mentre i codici univoci sottostanti indicano:
+\begin{enumerate}
+	\item RFO: Requisito Funzionale Obbligatorio;
+	\item RFF: Requisito Funzionale Facoltativo;
+	\item RFD: Requisito Funzionale Desiderabile.
+\end{enumerate}
+
+
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.5}
+	\centering
+	\begin{tabularx}{\textwidth}{l|X|p{2cm}}
+		\textbf{ID} & \textbf{Descrizione}                                                                                       & \textbf{Fonte}                                                                                                                                               \\
+		\hline
+		RFO1        & L'Utente generico e L'Utente base devono poter visualizzare l'elenco dei ristoranti disponibili.           & \autoref{usecase:Visualizzazione elenco ristoranti}                                                                                                          \\
+		\hline
+		RFO2        & L'Utente generico e L'Utente base devono poter ricercare un ristorante attraverso il nome.				  & \autoref{usecase:Ricerca ristoranti per nome}                                                                                                                      \\
+		\hline
+		RFO3        & L'Utente generico e L'Utente base devono poter visualizzare un ristorante.                                 & \autoref{usecase:Visualizzazione di un ristorante}                                                                                                           \\
+		\hline
+		RFD4        & L'Utente generico e L'Utente base devono poter condividere il \textit{link} di un ristorante.              & \autoref{usecase:Condivisione link del ristorante}                                                                                                           \\
+		\hline
+		RFD5        & L'Utente generico e L'Utente base devono poter visualizzare la pagina delle  \textit{\ac{FAQ}}.            & \autoref{usecase:Visualizzazione FAQ}                                                                                                                        \\
+		\hline
+		RFO6        & L'Utente generico deve poter effettuare l'accesso al Sistema.                                              & \autoref{usecase:Effettua accesso}, \autoref{usecase:Effettua accesso tradizionale}                      \\
+		\hline
+		RFO7        & L'Utente generico deve poter effettuare la registrazione al Sistema come Utente base o Utente ristoratore. & \autoref{usecase:Effettua registrazione}, \autoref{usecase:Effettua registrazione Utente base} e \autoref{usecase:Effettua registrazione Utente ristoratore} \\
+		\hline
+		RFO8        & L'Utente generico deve visualizzare un messaggio d'errore se l'accesso fallisce.                           & \autoref{usecase:Visualizzazione errore d'accesso}                                                                                                           \\
+		\hline
+		RFO9        & L'Utente generico deve visualizzare un messaggio d'errore se la registrazione fallisce.                    & \autoref{usecase:Errore registrazione account esistente} e \autoref{usecase:Errore registrazione recapito occupato}                                          \\
+		\hline
+		RFD10       & L'Utente base deve poter visualizzare i suoi dati utente.                                                  & \autoref{usecase:Visualizzazione dati utente}                                                                                                                \\
+		\hline
+		RFD11       & L'Utente base deve poter modificare i suoi dati utente.                                                    & \autoref{usecase:Modifica dati utente}                                                                                                                       \\
+		\hline
+		RFD12       & L'Utente base deve poter visualizzare lo storico dei suoi ordini.                                          & \autoref{usecase:Storico ordini}                                                                                                                             \\
+	\end{tabularx}
+	\caption{Tabella dei requisiti funzionali}
+\end{table}
+
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.5}
+	\centering
+	\begin{tabularx}{\textwidth}{l|X|p{2cm}}
+		\textbf{ID} & \textbf{Descrizione}                                                                                           & \textbf{Fonte}                                                                                                     \\
+		\hline
+		RFO13       & L'Utente base deve poter visualizzare la lista delle sue prenotazioni.								         & \autoref{usecase:Visualizzazione lista delle prenotazioni} \\
+		\hline
+		RFO14       & L'Utente base deve poter visualizzare la notifica dello stato della sua prenotazione.                          & \autoref{usecase:Visualizzazione notifica stato della prenotazione}                                                \\
+		\hline
+		RFD15       & L'Utente base deve poter elimare il proprio \textit{account}.                                                  & \autoref{usecase:Eliminazione account}                                                                             \\
+		\hline
+		RFO16       & L'Utente base deve poter prenotare un tavolo.                                                                  & \autoref{usecase:Prenotazione di un tavolo}                                                                        \\
+		\hline
+		RFO17       & L'Utente base deve poter condividere la prenotazione.                                                          & \autoref{usecase:Condivisione della prenotazione}                                                                  \\
+		\hline
+		RFO18       & L'Utente base deve poter annullare la prenotazione.                                                            & \autoref{usecase:Annullamento della prenotazione}                                                                  \\
+		\hline
+		RFO19       & L'Utente base deve poter accedere ad una prenotazione a lui condivisa.										 & \autoref{usecase:Accesso alla prenotazione}                                                                        \\
+		\hline
+		RFO20       & L'Utente base deve poter annullare il proprio ordine.                                                          & \autoref{usecase:Annullamento dell'ordinazione}                                                                    \\
+		\hline
+		RFO21       & L'Utente base deve poter creare un ordinazione collaborativa dei pasti.                                        & \autoref{usecase:Creazione dell'ordinazione collaborativa dei pasti}                                               \\
+		\hline
+		RFO22       & L'Utente base deve poter dividere il conto in maniera equa oppure proporzionale.                               & \autoref{usecase:Selezione della modalità di divisione del conto}                                                  \\
+		\hline
+		RFD23       & L'Utente base deve poter visualizzare il messaggio d'errore che la divisione del conto è stata già effettuata. & \autoref{usecase:Visualizzazione errore divisione del conto già effettuata}                                        \\
+		\hline
+		RFF24       & L'Utente base deve poter pagare il conto.                                                                      & \autoref{usecase:Pagamento del conto}                                                                              \\
+		\hline
+		RFF25       & L'Utente base deve poter visualizzare l'errore relativo al pagamento fallito.                                  & \autoref{usecase:Visualizzazione errore pagamento}                                                                 \\
+		% dal momento che il pagamento non è obbligatorio, anche questo
+		% requisito diventa desiderabile
+	\end{tabularx}
+	\caption{Tabella dei requisiti funzionali}
+\end{table}
+
+
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.5}
+	\centering
+	\begin{tabularx}{\textwidth}{l|X|p{2cm}}
+		\textbf{ID} & \textbf{Descrizione}                                                                                                 & \textbf{Fonte}                                                                                \\
+		\hline
+		RFD26       & L'Utente base deve poter inserire \textit{feedback}.                                                                 & \autoref{usecase:Inserimento di feedback}                                                     \\
+		\hline
+		RFD27       & L'Utente base deve poter visualizzare la notifica di richiesta di inserimento \textit{feedback}.                     & \autoref{usecase:Visualizzazione della notifica di richiesta di inserimento feedback}         \\
+		\hline
+		RFD28       & L'Utente base deve poter visualizzare la notifica relativa alla modifica della sua ordinazione.                      & \autoref{usecase:Visualizzazione notifica modifica ordinazione}                               \\
+		\hline
+		RFF29       & L'Utente base deve poter visualizzare la notifica relativa al suo \textit{feedback} che ha ricevuto una risposta.    & \autoref{usecase:Visualizzazione notifica risposta feedback}                                  \\
+		\hline
+		RFD30       & L'Utente base deve poter inserire e modificare le proprie allergie.                                                  & \autoref{usecase:Effettua registrazione Utente base} e \autoref{usecase:Modifica dati utente} \\
+		\hline
+		RFD31       & L'Utente base deve poter visualizzare un messaggio se seleziona un piatto di cui è allergico.                        & \autoref{usecase:Visualizzazione messaggio di selezione di una pietanza con allergene}        \\
+		\hline
+		RFO32       & L'Utente base deve poter visualizzare il menù di un ristorante.                                                      & \autoref{usecase:Visualizzazione menù}                                                        \\
+		\hline
+		RFO33       & L'Utente autenticato deve poter effettuare il \textit{logout}.                                                       & \autoref{usecase:Effettua Logout}                                                             \\
+		\hline
+		RFD34       & L'Utente autenticato deve poter comunicare attraverso la \textit{chat}.                                              & \autoref{usecase:Comunicazione attraverso chat}                                               \\
+		\hline
+		RFD35       & L'Utente autenticato deve poter visualizzare la notifica relativa all'arrivo di un nuovo messaggio in \textit{chat}. & \autoref{usecase:Visualizzazione notifica nuovo messaggio in chat}                            \\
+		\hline
+		RFO36       & L'Utente ristoratore deve poter visualizzare la notifica relativa ad una nuova prenotazione.                         & \autoref{usecase:Visualizzazione notifica nuova prenotazione}                                 \\
+		\hline
+		RFO37       & L'Utente ristoratore deve poter visualizzare la notifica relativa ad un nuovo ordine.                                & \autoref{usecase:Visualizzazione notifica nuovo ordine}                                       \\
+		\hline
+		RFO38       & L'Utente ristoratore deve poter visualizzare la notifica relativa all'avvenuto pagamento.                            & \autoref{usecase:Visualizzazione notifica di avvenuto pagamento}                              \\
+		\hline
+		RFD39       & L'Utente ristoratore deve poter visualizzare la notifica relativa all'inserimento di un \textit{feedback}.           & \autoref{usecase:Visualizzazione notifica di inserimento feedback}                            \\
+	\end{tabularx}
+	\caption{Tabella dei requisiti funzionali}
+\end{table}
+
+
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.5}
+	\centering
+	\begin{tabularx}{\textwidth}{l|X|c}
+		\textbf{ID} & \textbf{Descrizione}                                                                                                    & \textbf{Fonte}                                                       \\
+		\hline
+		RFO40       & L'Utente ristoratore deve poter visualizzare la lista delle prenotazioni												  & \autoref{usecase:Visualizzazione lista prenotazioni}                 \\
+		\hline
+		RFO41       & L'Utente ristoratore deve poter accettare una prenotazione.                                                             & \autoref{usecase:Accetta prenotazione}                               \\
+		\hline
+		RFO42       & L'Utente ristoratore deve poter rifiutare una prenotazione.                                                             & \autoref{usecase:Rifiuta prenotazione}                               \\
+		\hline
+		RFO43       & L'Utente ristoratore deve poter terminare una prenotazione.                                                             & \autoref{usecase:Termina prenotazione}                               \\
+		\hline
+		RFO44       & L'Utente ristoratore deve poter visualizzare la lista delle ordinazioni.                                                & \autoref{usecase:Visualizzazione lista ordinazioni}                  \\
+		\hline
+		RFD45       & L'Utente ristoratore deve poter modificare un ordinazione.                                                              & \autoref{usecase:Modifica ordinazione}                               \\
+		\hline
+		RFO46       & L'Utente ristoratore deve poter visualizzare lo stato di pagamento di una prenotazione.                                 & \autoref{usecase:Visualizzazione stato di pagamento}                 \\
+		\hline
+		RFD47       & L'Utente ristoratore deve poter visualizzare la lista dei \textit{feedback}.                                            & \autoref{usecase:Visualizzazione lista feedback}                     \\
+		\hline
+		RFD48       & L'Utente ristoratore deve poter segnalare un \textit{feedback}.                                                         & \autoref{usecase:Segnalazione di un feedback}                        \\
+		\hline
+		RFD49       & L'Utente ristoratore deve poter rispondere ad un \textit{feedback}.                                                     & \autoref{usecase:Risposta ad un feedback}                            \\
+		\hline
+		RFD50       & L'Utente ristoratore deve poter modificare le informazioni del suo ristorante.                                          & \autoref{usecase:Modifica informazioni ristorante}                   \\
+		\hline
+		RFO51       & L'Utente ristoratore deve poter gestire il menù, inserendo, eliminando e modificando dei piatti.                        & \autoref{usecase:Modifica menù}                                      \\
+		\hline
+		RFO52       & L'Utente ristoratore deve poter gestire gli ingredienti, inserendo e eliminando degli ingredienti.                      & \autoref{usecase:Modifica lista ingredienti}                         \\
+		\hline
+		RFO53       & L'Utente ristoratore deve poter assegnare gli ingredienti ad un piatto.                                                 & \autoref{usecase:Assegnamento ingredienti ad un piatto}              \\
+		\hline
+		RFO54       & L'Utente ristoratore deve poter visualizzare la notifica relativa all'annullamento di un ordinazione.                   & \autoref{usecase:Visualizzazione notifica annullamento ordine}       \\
+		\hline
+		RFO55       & L'Utente ristoratore deve poter visualizzare la notifica relativa all'annullamento di una prenotazione.                 & \autoref{usecase:Visualizzazione notifica annullamento prenotazione} \\
+		\end{tabularx}
+	\caption{Tabella dei requisiti funzionali}
+\end{table}
+
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.5}
+	\centering
+	\begin{tabularx}{\textwidth}{l|X|c}
+		\textbf{ID} & \textbf{Descrizione}                                                                                                    & \textbf{Fonte}                                                       \\
+		\hline
+		RFF56       & L'Utente generico deve poter effettuare l'accesso al Sistema attraverso un sistema di terze parti.                 	& \autoref{usecase:Effettua accesso per terze parti} \\
+		\hline
+		RFD57	   & L'Utente generico e L'Utente base devono poter ricercare un
+		ristorante attraverso luogo e filtri.  					&
+		\autoref{usecase:Ricerca ristoranti per luogo} , \autoref{usecase:Ricerca ristoranti per filtri} \\
+		\hline
+		RFO58	   & L'Utente ristoratore deve poter visualizzare la lista degli ingredienti necessari per soddisfare gli ordini di una giornata. & \autoref{usecase:Consultazione lista ingredienti} \\ 
+		\hline
+		RFO59	   & L'Utente base deve poter modificare la propria ordinazione.  & \autoref{usecase:Modifica della propria ordinazione} \\
+		\hline
+		RFO60	   & L'Utente base deve poter togliere qualche ingrediente da un piatto ordinato. & \autoref{usecase:Modifica pietanza} \\	
+	\end{tabularx}
+	\caption{Tabella dei requisiti funzionali}
+\end{table}
+
+\newpage
+\subsubsection{Tracciamento}
+Il tracciamento "Requisito - Fonti" è presente nella tabella soprastante (vedi \autoref{sec:funzionali}), in cui è possibile vedere la corrispondenza tra i requisiti e le fonti da cui derivano.\\
+La seguente tabella è relativa al tracciamento "Fonti - Requisito", in cui è possibile vedere la corrispondenza tra le fonti e i requisiti a cui fanno riferimento.\\
+
+\begin{longtable}{|l|c|}
+	\hline
+	\textbf{Fonte}                                                                                                                                               & \textbf{ ID requisito} \\
+	\hline
+	\autoref{usecase:Visualizzazione elenco ristoranti}                                                                                                          & RFO1                   \\
+	\hline
+	\autoref{usecase:Ricerca di ristoranti}                                                                                                                      & RFO2                   \\
+	\hline
+	\autoref{usecase:Visualizzazione di un ristorante}                                                                                                           & RFO3                   \\
+	\hline
+	\autoref{usecase:Condivisione link del ristorante}                                                                                                           & RFD4                   \\
+	\hline
+	\autoref{usecase:Visualizzazione FAQ}                                                                                                                        & RFD5                   \\
+	\hline
+	\autoref{usecase:Effettua accesso}, \autoref{usecase:Effettua accesso tradizionale}, \autoref{usecase:Effettua accesso per terze parti}                      & RFO6                   \\
+	\hline
+	\autoref{usecase:Effettua registrazione}, \autoref{usecase:Effettua registrazione Utente base} e \autoref{usecase:Effettua registrazione Utente ristoratore} & RFO7                   \\
+	\hline
+	\autoref{usecase:Visualizzazione errore d'accesso}                                                                                                           & RFO8                   \\
+	\hline
+	\autoref{usecase:Errore registrazione account esistente} e \autoref{usecase:Errore registrazione recapito occupato}                                          & RFO9                   \\
+	\hline
+	\autoref{usecase:Visualizzazione dati utente}                                                                                                                & RFD10                  \\
+	\hline
+	\autoref{usecase:Modifica dati utente}                                                                                                                       & RFD11                  \\
+	\hline
+	\autoref{usecase:Storico ordini}                                                                                                                             & RFD12                  \\
+	\hline
+	\autoref{usecase:Visualizzazione lista delle prenotazioni}                                           														& RFO13                  \\
+	\hline
+	\autoref{usecase:Visualizzazione notifica stato della prenotazione}                                                                                          & RFO14                  \\
+	\hline
+	\autoref{usecase:Eliminazione account}                                                                                                                       & RFD15                  \\
+	\hline
+	\autoref{usecase:Prenotazione di un tavolo}                                                                                                                  & RFO16                  \\
+	\hline
+	\autoref{usecase:Condivisione della prenotazione}                                                                                                            & RFO17                  \\
+	\hline
+	\autoref{usecase:Annullamento della prenotazione}                                                                                                            & RFO18                  \\
+	\hline
+	\autoref{usecase:Accesso alla prenotazione}                                                                                                                  & RFO19                  \\
+	\hline
+	\autoref{usecase:Annullamento dell'ordinazione}                                                                                                              & RFO20                  \\
+	\hline
+	\autoref{usecase:Creazione dell'ordinazione collaborativa dei pasti}                                                                                         & RFO21                  \\
+	\hline
+	\autoref{usecase:Selezione della modalità di divisione del conto}                                                                                            & RFO22                  \\
+	\hline
+	\autoref{usecase:Visualizzazione errore divisione del conto già effettuata}                                                                                  & RFD23                  \\
+	\hline
+	\autoref{usecase:Pagamento del conto}                                                                                                                        & RFD24                  \\
+	\hline
+	\autoref{usecase:Visualizzazione errore pagamento}                                                                                                           & RFD25                  \\
+	\hline
+	\autoref{usecase:Inserimento di feedback}                                                                                                                    & RFD26                  \\
+	\hline
+	\autoref{usecase:Visualizzazione della notifica di richiesta di inserimento feedback}                                                                        & RFD27                  \\
+	\hline
+	\autoref{usecase:Visualizzazione notifica modifica ordinazione}                                                                                              & RFD28                  \\
+	\hline
+	\autoref{usecase:Visualizzazione notifica risposta feedback}                                                                                                 & RFD29                  \\
+	\hline
+	\autoref{usecase:Effettua registrazione Utente base} e \autoref{usecase:Modifica dati utente}                                                                & RFD30                  \\
+	\hline
+	\autoref{usecase:Visualizzazione messaggio di selezione di una pietanza con allergene}                                                                       & RFD31                  \\
+	\hline
+	\autoref{usecase:Visualizzazione menù}                                                                                                                       & RFO32                  \\
+	\hline
+	\autoref{usecase:Effettua Logout}                                                                                                                            & RFO33                  \\
+	\hline
+	\autoref{usecase:Comunicazione attraverso chat}                                                                                                              & RFD34                  \\
+	\hline
+	\autoref{usecase:Visualizzazione notifica nuovo messaggio in chat}                                                                                           & RFD35                  \\
+	\hline
+	\autoref{usecase:Visualizzazione notifica nuova prenotazione}                                                                                                & RFO36                  \\
+	\hline
+	\autoref{usecase:Visualizzazione notifica nuovo ordine}                                                                                                      & RFO37                  \\
+	\hline
+	\autoref{usecase:Visualizzazione notifica di avvenuto pagamento}                                                                                             & RFO38                  \\
+	\hline
+	\autoref{usecase:Visualizzazione notifica di inserimento feedback}                                                                                           & RFD39                  \\
+	\hline
+	\autoref{usecase:Visualizzazione lista prenotazioni}                                                                                                         & RFO40                  \\
+	\hline
+	\autoref{usecase:Accetta prenotazione}                                                                                                                       & RFO41                  \\
+	\hline
+	\autoref{usecase:Rifiuta prenotazione}                                                                                                                       & RFO42                  \\
+	\hline
+	\autoref{usecase:Termina prenotazione}                                                                                                                       & RFO43                  \\
+	\hline
+	\autoref{usecase:Visualizzazione lista ordinazioni}                                                                                                          & RFO44                  \\
+	\hline
+	\autoref{usecase:Modifica ordinazione}                                                                                                                       & RFD45                  \\
+	\hline
+	\autoref{usecase:Visualizzazione stato di pagamento}                                                                                                         & RFO46                  \\
+	\hline
+	\autoref{usecase:Visualizzazione lista feedback}                                                                                                             & RFD47                  \\
+	\hline
+	\autoref{usecase:Segnalazione di un feedback}                                                                                                                & RFD48                  \\
+	\hline
+	\autoref{usecase:Risposta ad un feedback}                                                                                                                    & RFD49                  \\
+	\hline
+	\autoref{usecase:Modifica informazioni ristorante}                                                                                                           & RFD50                  \\
+	\hline
+	\autoref{usecase:Modifica menù}                                                                                                                              & RFO51                  \\
+	\hline
+	\autoref{usecase:Modifica lista ingredienti}                                                                                                                 & RFO52                  \\
+	\hline
+	\autoref{usecase:Assegnamento ingredienti ad un piatto}                                                                                                      & RFO53                  \\
+	\hline
+	\autoref{usecase:Visualizzazione notifica annullamento ordine}                                                                                               & RFO54                  \\
+	\hline
+	\autoref{usecase:Visualizzazione notifica annullamento prenotazione}                                                                                         & RFO55				\\
+	\hline
+	\autoref{usecase:Effettua accesso per terze parti} 																											&RFF56                  \\
+	\hline
+	\autoref{usecase:Ricerca ristoranti per luogo} , \autoref{usecase:Ricerca ristoranti per filtri}															&RFD57                  \\
+	\hline
+	\autoref{usecase:Consultazione lista ingredienti} 																											&RFO58                  \\
+	\hline
+	\autoref{usecase:Modifica della propria ordinazione}																										&RFO59					\\
+	\hline
+	\autoref{usecase:Modifica pietanza}																															&RFO60                  \\
+	\caption{Tabella "Fonti - Requisito"}
+\end{longtable}
+
+
+
+\subsection{Di qualità}
+
+Di seguito viene riportata la specifica relativa ai requisiti di qualità, che delineano le caratteristiche di come un Sistema
+deve essere o comportarsi al fine di soddisfare le necessità dell'utente.
+La presenza di ogni requisito viene giustificata riportando la fonte, che può essere un UC oppure presente
+nel testo del capitolato d'appalto. Mentre i codici univoci sottostanti indicano:
+\begin{enumerate}
+	\item RQO: Requisito di Qualità Obbligatorio;
+	\item RQF: Requisito di Qualità Facoltativo;
+	\item RQD: Requisito di Qualità Desiderabile.
+\end{enumerate}
+
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.5}
+	\centering
+	\begin{tabularx}{\textwidth}{l|X|c}
+		\textbf{ID} & \textbf{Descrizione}                                                                                                                                                                                                 & \textbf{Fonte} \\
+		\hline
+		RQO1        & Il codice sorgente deve essere coperto da test almeno per il 80\%                                                                                                                                                    & Capitolato     \\
+		\hline
+		RQO2        & Deve essere prodotta della documentazione denominata "Specifica Tecnica" sulle scelte implementative e progettuali, descrivendo e motivando tutte le scelte architetturali.                                                  & Capitolato     \\
+		\hline
+		RQF3        & Fornire un'analisi rispetto al carico massimo supportato in numero di dispositivi e di quale sarebbe il servizio \textit{cloud} più adatto per supportarlo analizzando prezzo, stabilità del servizio ed assistenza. 
+		Bisogna comparare i principali servizi \textit{cloud} (ARS, Google, Microsoft) prendendo in esame il costo per le varie \textit{Virtual Machine} al variare delle loro dimensioni & Capitolato     \\
+		\hline
+		RQO4        & Fornire una documentazione, denominata "Manuale Utente", per illustrare le istruzioni per l'utilizzo e le funzionalità fornite dall'applicazione. 																									& Capitolato     \\
+		\hline
+	\end{tabularx}
+	\caption{Tabella dei requisiti di qualità}
+\end{table}
+\newpage
+\subsection{Di vincolo}
+
+Segue la specifica relativa ai requisiti di vincolo, i quali delineano i limiti e le restrizioni che il Sistema deve osservare per adempiere alle esigenze dell'utente.
+La presenza di ogni requisito viene giustificata riportando la fonte, che può essere un UC oppure presente
+nel testo del capitolato d'appalto. Mentre i codici univoci sottostanti indicano:
+\begin{enumerate}
+	\item RVO: Requisito di Vincolo Obbligatorio;
+	\item RVF: Requisito di Vincolo Facoltativo;
+	\item RVD: Requisito di Vincolo Desiderabile.
+\end{enumerate}
+
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.5}
+	\centering
+	\begin{tabularx}{\textwidth}{l|X|c}
+		\textbf{ID} & \textbf{Descrizione}                                                                                                     & \textbf{Fonte} \\
+		\hline
+		RVO1        & L'interfaccia degli utenti deve essere un'applicazione \textit{web responsive} del tipo \textit{single page application} & Capitolato     \\
+		\hline
+		RVO2        & L'applicazione \textit{web} deve essere supportata dai seguenti \textit{browser}: Google Chrome v.123, Arc v.1.26, Opera GX v.108, Firefox v.124 , Safari v.17.3 , Microsfot Edge v.123  & Capitolato     \\
+		\hline
+	\end{tabularx}
+	\caption{Tabella dei requisiti di vincolo}
+\end{table}
