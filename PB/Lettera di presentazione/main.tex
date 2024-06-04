@@ -1,0 +1,26 @@
+\documentclass[a4paper, 12pt]{article}
+\newcommand{\template}{../../Templates}
+\usepackage{\template/package}
+\graphicspath{{../../Assets}}
+
+\newcommand{\Titolo}{Lettera di presentazione}
+\newcommand{\Data}{04/06/2024}
+\newcommand{\Versione}{1.0.0}
+\newcommand{\Stato}{Approvato}
+\newcommand{\Redattori}{Davide Maffei}
+\newcommand{\Verificatori}{Carlo Rosso}
+\newcommand{\Approvatori}{Giacomo Gualato}
+\newcommand{\Destinatari}{Prof. Tullio Vardanega \\ & Prof. Riccardo Cardin}
+\newcommand{\Descrizione}{Lettera di presentazione del gruppo SWEnergy relativa
+alla revisione PB.}
+
+\input{\template/variable.tex}
+\input{\template/copertina.tex}
+
+\begin{document}
+\copertina{}
+
+\newpage
+\input{sec/content.tex}
+
+\end{document}
