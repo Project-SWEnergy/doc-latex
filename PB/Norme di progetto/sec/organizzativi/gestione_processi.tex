@@ -2,46 +2,218 @@
 
 La gestione dei processi comprende le attività di pianificazione, monitoraggio
 e controllo dei processi di ciclo di vita del \textit{software} all'interno del
-progetto, assicurando che siano condotti in modo efficace ed efficiente.
-
-\subsubsection{Scopo}
+progetto, assicurando che siano condotti in modo efficace ed efficiente.\\
 Il principale obiettivo della gestione dei processi è migliorare la qualità
 del \textit{software} prodotto e l'efficienza dello sviluppo, attraverso la
 standardizzazione dei processi e l'implementazione delle migliori pratiche.
 
-\subsubsection{Attività}
-\subsubsubsection{Pianificazione dei Processi} 
+\subsubsection{Pianificazione dei Processi} 
 Definire gli obiettivi, le
 	  procedure e i piani per l'esecuzione e il controllo dei processi di
 	  ciclo di vita del \textit{software} (vedi
-	  \cref{pianificazione-attivia} 
+	  \cref{pianificazione-attivia}) 
 
-\input{sec/responsabile/aggiornare-pdp.tex}
 
-\subsubsubsection{Monitoraggio e Controllo} 
+
+
+\subsubsection{Aggiornamento del "Piano di progetto"}
+\label{aggiornare-pdp}
+
+\subsubsection*{Trigger}
+\begin{itemize}
+	\item Inizio di uno \textit{sprint};
+	\item Fine di uno \textit{sprint};
+\end{itemize}
+
+\subsubsection*{Scopo}
+\begin{itemize}
+	\item Formalizzare la pianificazione delle attività da svolgere durante
+		lo \textit{sprint};
+
+	\item Disambiguare la pianificazione;
+
+	\item Aggiornare le informazioni relative ai rischi e al modello di
+		sviluppo;
+
+	\item Aggiornare le informazioni utili alla verifica dello stato di
+		avanzamento del progetto;
+\end{itemize}
+
+\subsubsection*{Svolgimento}
+\begin{itemize}
+	\item \textbf{Rischi e modello di sviluppo}: il responsabile aggiorna
+		le informazioni in esse contenute in base all'esperienza maturata
+		durante il periodo da responsabile;
+
+	\item \textbf{Pianificazione}: il responsabile aggiorna la sezione di
+		pianificazione rispettando la struttura già definita nel documento.
+		Eventualmente può proporre modifiche alla struttura di pianificazione
+		di perido. Queste sono discusse nelle riunioni interne.
+		Di seguito sono riportati i passi da seguire per aggiornare la sezione
+		di pianificazione:
+		\begin{enumerate}
+			\item \textbf{Creazione}: nella cartella \texttt{sprint} viene
+					aggiunto un nuovo file \\ \texttt{<numero\_dello\_sprint>.tex};
+
+			\item \textbf{Diagramma di Gantt}: il responsabile copia il
+					diagramma di Gantt sviluppato nel \textit{project} di
+					GitHub\g;
+
+			\item \textbf{Spiegazione del diagramma}: per ciascuna attività
+					riportata nel diagramma di Gantt, il responsabile riporta
+					chi se ne occupa e la durata prevista in ore;
+
+			\item \textbf{Preventivo}: il responsabile riporta in forma
+					tabellare le ore preventivate per ciascuna persona divisa
+					per ruolo e calcola le ore ed il costo totali per il
+					periodo;
+		\end{enumerate}
+
+	\item \textbf{Consuntivo}:
+		\begin{enumerate}
+			\item \textbf{Riassunto delle attività svolte}: il responsabile
+					legge i \textit{commit} e le \textit{issue\g} chiuse durante
+					lo \textit{sprint} e ne riporta un riassunto nel documento;
+
+			\item \textbf{Consuntivo}: il responsabile riporta in forma
+					tabellare le ore effettivamente impiegate per ciascuna
+					persona divise per ruolo e calcola le ore ed il costo
+					totali per il periodo. Le ore effettive si trovano sul foglio di calcolo condiviso su Google Drive.
+
+			\item \textbf{Gestione dei ruoli}: il responsabile riporta in
+					un diagramma a torta la distribuzione delle ore per ruolo
+					effettivamente impiegate durante lo \textit{sprint}.
+		\end{enumerate}
+
+	\item \textbf{Modifica di un documento}: dal momento che
+		l'aggiornamento del documento "Piano di progetto" rientra nella
+		casistica di modifica di un documento, si rimanda alla sezione
+		che illustra come redigere un documento (vedi
+		\ref{redazione-documento}).
+\end{itemize}
+
+\subsubsection*{Strumenti}
+\begin{itemize}
+	\item \textbf{GitHub\g:} per la gestione del codice sorgente e altro
+		materiale di progetto;
+
+	\item \textbf{Google Drive:} per la gestione dei fogli di calcolo;
+
+	\item \textbf{Preventivi:} si tratta di un programma autoprodotto che
+		permette di calcolare in modo automatico le ore e i costi totali per
+		il periodo oltre a comporre i grafici del documento.
+\end{itemize}
+	  
+
+
+
+
+
+\subsubsection{Monitoraggio e Controllo} 
 Tenere traccia dei progressi
 	  rispetto ai piani stabiliti e intervenire in caso di deviazioni, per
 	  assicurare l'allineamento con gli obiettivi di progetto.
 
-\subsubsubsection{Valutazione dei Processi} 
+\subsubsection{Valutazione dei Processi} 
 Analizzare periodicamente
 	  l'efficacia e l'efficienza dei processi attuati, identificando aree di
 	  miglioramento.
 
-\subsubsubsection{Miglioramento dei Processi} 
+\subsubsection{Miglioramento dei Processi} 
 Implementare azioni correttive e
 	  miglioramenti basati sui risultati delle valutazioni, per ottimizzare
 	  i processi di ciclo di vita del \textit{software}.
 
-\input{sec/responsabile/organizzare-meeting-interno.tex}
 
-\subsubsection{Strumenti}
+
+
+\subsubsection{Organizzare un \textit{meeting} interno}
+\label{organizzare-meeting-interno}
+
+Il responsabile coordina gli incontri interni, noti anche come \textit{stand-up}.
+Queste riunioni, della durata approssimativa di 30 minuti, si tengono sulla piattaforma Discord e affrontano i seguenti punti chiave:
 \begin{itemize}
-	\item \textbf{GitHub Projects}: Strumento per la pianificazione e il
-	      monitoraggio delle attività di progetto;
+	\item \textbf{\textit{Brainstorming}:} breve riassunto delle attività svolte durante la settimana;
+	\item \textbf{Problemi riscontrati:} vengono presentati e discussi i problemi emersi nel corso della settimana;
+	\item \textbf{\textit{To-do list}:} si discutono i compiti previsti per la settimana successiva;
+	\item \textbf{Dubbi:} si chiariscono eventuali incertezze relative alle attività imminenti;
+	\item \textbf{Restrospettiva:} i membri del gruppo condividono riflessioni sui successi e sulle difficoltà incontrate durante la settimana, esplorando insieme possibili soluzioni.
+		Questi problemi possono riguardare, ad esempio, l'organizzazione del lavoro o la comunicazione all'interno del \textit{team} o con il proponente.
+\end{itemize}
 
-	\item \textbf{Git}: Sistema di controllo versione per la gestione degli
-	      artefatti;
+\subsubsection*{Trigger}
+\begin{itemize}
+	\item Ogni venerdì, per dare tempo al responsabile di preparare il materiale
+		per la \textit{stand-up}.
+\end{itemize}
 
-	\item \textbf{Discord e Telegram}: Strumenti di comunicazione interna;
+\subsubsection*{Scopo}
+\begin{itemize}
+	\item Rendere la comunicazione tra i membri del gruppo più efficace ed
+		efficiente;
+
+	\item Creare della documentazione usufruibile in caso di dubbi o
+		problematiche;
+
+	\item Formalizzare le decisioni prese durante la riunione.
+\end{itemize}
+
+\subsubsection*{Svolgimento}
+\begin{itemize}
+
+	\item \textbf{Pianificazione:} il responsabile deve decidere quando
+		svolgere la \textit{stand-up}. Di seguito i passi:
+		\begin{enumerate}
+			\item \textbf{Anticipare la data:} nella \textit{stand-up}
+					precedente il responsabile si informa sulle disponibilità
+					dei membri del gruppo rispetto alla prossima
+					\textit{stand-up};
+
+			\item \textbf{Pianificare la data:} il responsabile propone delle
+					date e degli orari per la prossima \textit{stand-up} sul
+					gruppo Telegram\g del gruppo. I membri di SWEnergy esprimono
+					la loro preferenza attraverlo un sondaggio.
+		\end{enumerate}
+
+	\item \textbf{Ordine del giorno:} il responsabile stila l'ordine del
+		giorno, ovvero una lista degli argomenti da trattare durante la
+		riunione. Di seguito i passi:
+		\begin{enumerate}
+			\item \textbf{\textit{Template}:} il responsabile utilizza il \textit{template}
+					delle \textit{stand-up} situato nella \textit{repository\g}
+					\texttt{appunti-swe/stand-up/template-stand-up.md};
+
+			\item \textbf{Brainstorming:} il responsabile si informa con i
+					membri del gruppo attraverso Telegram\g in merito ai
+					punti che bisogna trattare durante la riunione;
+
+			\item \textbf{\textit{To-do list}:} il responsabile stila la lista
+					delle attività da svolgere nella settimana successiva. La
+					lista viene poi discussa e approvata durante la riunione.
+		\end{enumerate}
+
+	\item \textbf{Verbale della riunione:} il responsabile redige il
+		verbale della riunione, in cui vengono riportati gli argomenti
+		trattati e le decisioni prese. Di seguito i passi per redigere il
+		verbale interno:
+		\begin{enumerate}
+			\item \textbf{Appunti:} l'ordine del giorno (il punto precedente)
+					viene utilizzato come base per stilare il verbale interno;
+
+			\item \textbf{\textit{Template}:} viene copiata la cartella di \textit{template} dei
+					verbali interni e viene rinominata
+					seguendo il formato: \texttt{YYYY-MM-DD\_I};
+
+			\item \textbf{Stesura:} poichè si tratta di un documento, si
+					rimanda alla sottosezione che illustra come redigere un
+					documento (vedi \cref{redazione-documento}).
+		\end{enumerate}
+\end{itemize}
+
+\subsubsection*{Strumenti}
+\begin{itemize}
+	\item \textbf{Discord\g:} per svolgere la riunione;
+	\item \textbf{Telegram\g:} per comunicare con i membri del gruppo;
+	\item \textbf{GitHub\g:} per la gestione del codice sorgente e altro
+		materiale di progetto.
 \end{itemize}

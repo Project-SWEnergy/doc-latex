@@ -1,41 +1,189 @@
 \subsection{Revisioni Congiunte con il Cliente}
-
 Le revisioni congiunte con il cliente sono incontri strutturati tra il \textit{team} di
 sviluppo e gli \textit{stakeholder} o i clienti per esaminare il progresso del
-prodotto \textit{software}, discutere problemi e trovare soluzioni congiunte.
-
-\subsubsection{Scopo}
+prodotto \textit{software}, discutere problemi e trovare soluzioni congiunte.\\
 L'obiettivo di queste revisioni è assicurare che il prodotto \textit{software}
 in sviluppo rispecchi fedelmente i requisiti e le aspettative del committente e
 del proponente, e che eventuali discrepanze o incomprensioni siano risolte
-tempestivamente.
-
-\subsubsection{Attività}
-\subsubsubsection{Conduzione della Revisione} 
-Presentare il lavoro svolto,
-	  discutere i progressi e raccogliere \textit{feedback\g} dagli
-	  \textit{stakeholder}.
-
-\input{sec/responsabile/organizzare-meeting-esterno.tex}
-
-\subsubsubsection{Riscontro ai feedback\g} 
-Analizzare e discutere i
-	  \textit{feedback\g} ricevuti per determinare le azioni correttive
-	  necessarie.
-
-\input{sec/responsabile/pianificazione-attivita.tex}
-
-\subsubsubsection{\textit{Follow-up}} 
-Monitorare l'attuazione delle azioni
-	  correttive e organizzare revisioni successive se necessario.
-
-\subsubsection{Partecipanti}
-Includono membri del \textit{team} di sviluppo, rappresentanti del cliente o degli
+tempestivamente.\\
+I partecipanti alla revisione includono membri del \textit{team} di sviluppo, rappresentanti del cliente o degli
 \textit{stakeholder}, e possono includere anche esperti di dominio o utenti
-finali.
-
-\subsubsection{Documentazione}
+finali.\\
 Tutti gli aspetti salienti della revisione, compresi i \textit{feedback\g}, le
 decisioni prese e le azioni correttive pianificate, devono essere documentati
 all'interno dei verbali esterni e resi disponibili a tutti i partecipanti per
 riferimento futuro.
+
+\subsubsection{Conduzione della Revisione} 
+Presentare il lavoro svolto,
+	  discutere i progressi e raccogliere \textit{feedback\g} dagli
+	  \textit{stakeholder}.
+
+
+\subsubsection{Organizzare un \textit{meeting} esterno}
+\label{organizzare-meeting-esterno}
+Il responsabile organizza i \textit{meeting} esterni, ovvero i SAL\g
+tenuti tra il proponente e SWEnergy.
+I SAL\g sono riunioni brevi, della durata di circa 30 minuti, che hanno
+luogo su \textit{Teams}. In esse
+sono trattati i seguenti argomenti:
+\begin{itemize}
+	\item \textbf{Riassunto:} il responsabile riassume le attività svolte dal
+	      gruppo durante lo \textit{sprint};
+
+	\item \textbf{Problemi riscontrati:} il responsabile espone i problemi
+	      riscontrati durante lo \textit{sprint};
+
+	\item \textbf{\textit{To-do list}:} sono discussi i compiti da svolgere nella
+	      settimana successiva tra il gruppo e il proponente;
+
+	\item \textbf{\textit{Dubbi}:} il responsabile esponge i dubbi riguardo alle
+	      attività da svolgere;
+
+	\item \textbf{Restrospettiva:} il responsabile guida la discussione sulla
+	      qualità del prodotto e soprattutto del processo.
+\end{itemize}
+
+\subsubsection*{Trigger}
+\begin{itemize}
+	\item La domanica precedente al SAL\g.
+\end{itemize}
+
+\subsubsection*{Scopo}
+\begin{itemize}
+	\item Rendere la comunicazione tra i membri del gruppo più efficace ed
+	      efficiente;
+
+	\item Creare della documentazione usufruibile in caso di dubbi o
+	      problematiche;
+
+	\item Formalizzare le decisioni prese durante la riunione.
+\end{itemize}
+
+\subsubsection*{Svolgimento}
+\begin{itemize}
+
+	\item \textbf{Pianificazione:} il responsabile deve decidere quando svolgere
+	      un SAL\g. Di seguito i passi:
+	      \begin{enumerate}
+		      \item \textbf{Anticipare la data:} nel SAL\g
+		            precedente il responsabile e il proponente concordano
+		            la data del prossimo SAL\g;
+
+		      \item \textbf{Pianificare l'ora:} il responsabile contatta su
+		            Telegram\g il proponente, gli condivide l'ordine del
+		            giorno e concorda l'ora del SAL\g. Le due attività
+		            sono svolte in concomitanza, siccome si può prevedere la
+		            durata del SAL\g solo dopo aver stilato l'ordine del
+		            giorno.
+	      \end{enumerate}
+
+	\item \textbf{Ordine del giorno:} il responsabile stila l'ordine del
+	      giorno, ovvero una lista degli argomenti da trattare durante la
+	      riunione. Di seguito i passi:
+	      \begin{enumerate}
+		      \item \textbf{Template:} il responsabile utilizza il \textit{template}
+		            dei SAL\g, situato nella \textit{repository\g}
+		            \texttt{appunti-swe/SAL/template-SAL.md};
+
+		      \item \textbf{Brainstorming:} il responsabile si informa con i
+		            membri del gruppo attraverso le \textit{stand-up} in merito
+		            allo \textit{status quo} del progetto;
+
+		      \item \textbf{\textit{To-do list}:} il responsabile stila la lista
+		            delle attività da svolgere nello \textit{sprint} successivo. La
+		            lista viene poi discussa e approvata durante la riunione.
+	      \end{enumerate}
+
+	\item \textbf{Verbale della riunione:} il responsabile deve redigere il
+	      verbale della riunione, in cui vengono riportati gli argomenti
+	      trattati e le decisioni prese. Di seguito i passi per redigere il
+	      verbale interno:
+	      \begin{enumerate}
+		      \item \textbf{Appunti:} l'ordine del giorno (il punto precedente)
+		            viene utilizzato come base per stilare il verbale esterno;
+
+		      \item \textbf{\textit{Template}:} viene copiata la cartella di \textit{template} dei
+		            verbali esterni e viene rinominata seguendo il formato:
+		            \texttt{YYYY-MM-DD\_E};
+
+		      \item \textbf{Stesura:} poichè si tratta di un documento, si
+		            rimanda alla sottosezione che illustra come redigere un
+		            documento (vedi \cref{redazione-documento}).
+	      \end{enumerate}
+\end{itemize}
+
+\subsubsection*{Strumenti}
+\begin{itemize}
+	\item \textbf{Telegram\g:} per comunicare con il proponente e con i membri del
+	      gruppo;
+
+	\item \textbf{Microsoft Teams:} per svolgere il SAL\g;
+
+	\item \textbf{GitHub\g:} per condividere l'ordine del giorno e il verbale
+	      esterno;
+
+	\item \textbf{\textit{Mail}:} per la condivisione di documenti e per la
+	      comunicazione con il proponente.
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Riscontro ai feedback\g} 
+Analizzare e discutere i
+	  \textit{feedback\g} ricevuti per determinare le azioni correttive
+	  necessarie.
+
+
+
+
+
+\subsubsection{Pianificazione delle attività}
+\label{pianificazione-attivia}
+
+Il responsabile pianifica le attività da svolgere durante lo \textit{sprint}
+e le suddivide tra i membri del gruppo. Inoltre, aggiorna il "Piano di progetto"
+in base alle attività svolte e a quelle da svolgere. La pianificazione avviene
+tramite l'uso dei diagrammi di Gantt disponibili su GitHub\g.
+
+\subsubsection*{Trigger}
+\begin{itemize}
+	\item Comincia una nuova iterazione, che sia uno \textit{sprint}\g o un
+		\textit{mini-sprint}\g.
+\end{itemize}
+
+\subsubsection*{Scopo}
+\begin{itemize}
+	\item Pianificare le attività da svolgere durante l'iterazione corrente;
+	\item Guidare lo svolgimento delle attività;
+\end{itemize}
+
+\subsubsection*{Svolgimento}
+\begin{itemize}
+	\item \textbf{Creazione delle \textit{issue\g}}: il responsabile crea
+		delle \textit{issue}\g che descrivono le attività da svolgere fornendo informazioni utili alla loro esecuzione.
+		Di seguito sono riportati i passi per definire le \textit{issue\g}:
+		\begin{enumerate}
+			\item \textbf{Identificazione}: il responsabile identifica le
+					attività da svolgere e le aggiunge su GitHub\g;
+
+			\item \textbf{Scadenza}: il responsabile assegna una data di
+					scadenza alle \textit{issue}\g in base alla priorità e alla durata
+					dell'attività. L'attività viene quindi inserita nel
+					\textit{project} di GitHub\g corrispondente alla
+					\textit{milestone} di riferimento. In questo modo viene
+					aggiornato il diagramma di Gantt;
+
+			\item \textbf{Perfezionamento}: il responsabile guida la
+					discussione in merito alle \textit{issue\g} durante le
+					riunioni. In questo modo sono aggiornate scadenza e
+					descrizione;
+
+			\item \textbf{Assegnazione}: il responsabile assegna le \textit{issue}\g
+					ai membri del gruppo in base alle loro competenze e
+					disponibilità.
+		\end{enumerate}
+\end{itemize}

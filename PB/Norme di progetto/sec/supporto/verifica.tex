@@ -1,22 +1,106 @@
 \subsection{Verifica}
+Il processo di verifica è essenziale per assicurare che il codice prodotto sia conforme alle aspettative e agli \textit{standard} definiti. 
+Questo processo coinvolge una serie di attività dettagliate per valutare la qualità e la correttezza del codice.\\
+Lo scopo è assicurare che il codice sia non solo funzionale ma anche conforme agli \textit{standard} qualitativi stabiliti, contribuendo significativamente alla qualità generale del prodotto \textit{software} e dei documenti.\\
+A seconda che il prodotto da controllare sia un documento o del codice sorgente, sono previste le attività di verifica presenti della seguente sottosezione.
 
-Il processo di verifica è essenziale per assicurare che il codice prodotto sia
-conforme alle aspettative e agli \textit{standard} definiti. Questo processo coinvolge
-una serie di attività dettagliate per valutare la qualità e la correttezza del
-codice.
+\subsubsection{Verifica del codice}
+\label{verifica-codice}
+Il verificatore deve effettuare dei controlli di conformità sul codice prodotto. 
+Questo controllo deve essere effettuato in modo sistematico e ripetitivo.
 
-\subsubsection{Scopo}
-Questo processo assicura che il codice sia non solo funzionale ma anche
-conforme agli \textit{standard} qualitativi stabiliti, contribuendo significativamente
-alla qualità generale del prodotto \textit{software} e dei documenti.
+\subsubsection*{Trigger}
+\begin{itemize}
+	\item Viene prodotto un incremento sulla \textit{code base};
+	\item Un componente di SWEnergy segnala la necessità di una verifica.
+\end{itemize}
 
-\subsubsection{Attività}
-A seconda che il prodotto da controllare sia un documento o del codice sorgente,
-sono previste le seguenti attività di verifica:
+\subsubsection*{Scopo}
+\begin{itemize}
+	\item Evidenziare gli errori nel codice e segnalarli al programmatore;
+	\item Assicurarsi che il codice soddisfi le norme qui sotto descritte;
+	\item Convalidare l'incremento di codice per garantirne l'integrità agli
+	      altri componenti di SWEnergy.
+\end{itemize}
 
-\subsubsubsection{Verifica del Documento} 
-Valutare la correttezza e la
-	  completezza del documento rispetto agli \textit{standard} e alle linee guida
-	  stabilite (vedi \cref{verifica-documento}).
+\subsubsection*{Norme}
+\begin{itemize}
+	\item \textbf{Commenti:} per ciascuna funzione o metodo, deve essere
+	      spiegato lo scopo. In particolare, deve essere sempre presente la
+	      spiegazione dei parametri in ingresso e del valore di ritorno;
 
-\input{sec/verificatore/verifica-codice.tex}
+	\item \textbf{Test:} per ciascuna funzione o metodo, deve essere presente
+	      almeno un test che ne verifica il corretto funzionamento e fornisce un
+	      esempio di utilizzo;
+
+	\item \textbf{Nomi:} i nomi delle variabili devono essere significativi. 
+		  Di seguito sono riportate le regole di forma per ciascun tipo di variabile:
+	      \begin{itemize}
+		      \item \textbf{Variabili:} devono essere scritte in minuscolo e
+		            devono essere separate da underscore (es.
+		            \texttt{nome\_variabile});
+		      \item \textbf{Costanti:} devono essere scritte in maiuscolo e
+		            devono essere separate da underscore (es.
+		            \texttt{NOME\_COSTANTE});
+		      \item \textbf{Interfacce:} la prima lettera di ogni parola è
+		            maiuscola e le parole sono unite senza spazi (es.
+		            \texttt{NomeInterfaccia});
+		      \item \textbf{Classi:} la prima lettera di ogni parola è
+		            maiuscola e le parole sono unite senza spazi (es.
+		            \texttt{NomeClasse});
+		      \item \textbf{Metodi:} devono essere scritte in minuscolo e
+		            devono essere separate da underscore (es.
+		            \texttt{nome\_metodo});
+		      \item \textbf{Funzioni:} devono essere scritte in minuscolo e
+		            devono essere separate da underscore (es.
+		            \texttt{nome\_funzione});
+		      \item \textbf{\textit{File}:} devono essere scritte in minuscolo e
+		            devono essere separate da underscore (es.
+		            \texttt{nome\_file}). In ogni \textit{file} ci può essere al
+		            più una classe o un'interfaccia che ha lo stesso nome del
+		            \textit{file}.
+	      \end{itemize}
+\end{itemize}
+
+\subsubsection*{Svolgimento}
+\begin{itemize}
+	\item \textbf{Correzione del codice:} il verificatore deve controllare che per
+	      ciascuna funzione o metodo sia presente una descrizione dello scopo,
+	      dei parametri in ingresso e del valore di ritorno. Di seguito sono
+	      riportati i passi da seguire:
+	      \begin{itemize}
+		      \item \textbf{Commenti:} il verificatore legge i commenti della
+		            funzione e ne intuisce lo scopo;
+
+		      \item \textbf{Funzionamento:} il verificatore legge il corpo
+		            della funzione o del metodo e ne verifica il funzionamento
+		            staticamente;
+
+		      \item \textbf{Test:} il verificatore verifica che sia
+		            presente almeno un test per la funzione o il metodo;
+
+		            %		      \item \textbf{\textit{Edge cases}:} il verificatore verifica
+		            %		            che i test siano completi e che coprano tutti i casi
+		            %		            particolari;
+
+		      \item \textbf{Nomi:} il verificatore controlla che i nomi definiti
+		            dal programmatore rispettino le regole di forma definite
+		            precedentemente;
+
+		      \item \textbf{Correzioni:} il verificatore riporta
+		            gli errori riscontrati al programmatore;
+
+		      \item \textbf{Aggiornamento della versione:} dopo che il codice
+		            viene corretto dal programmatore, il verificare deve aggiornare
+		            la versione del codice;
+
+		      \item \textbf{Versione:} sia $X.Y.Z$ la versione del codice,
+		            dopo la verifica, il valore di $Z$ viene incrementato di
+		            $1$, se le modifiche apportate al codice non aggiungono
+		            nuove funzionalità. Se invece le modifiche apportate al
+		            codice aggiungono nuove funzionalità, il valore di $Y$ viene
+		            incrementato di $1$ e il valore di $Z$ viene reimpostato a
+		            $0$. Una funzionalità coincide con un requisito.
+	      \end{itemize}
+\end{itemize}
+
